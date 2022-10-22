@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Grid from '@mui/material/Unstable_Grid2';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid container direction='row' sx={{width: '100vw', height: '100vh'}}>
+      <Grid item xs={3} sx={{backgroundColor: 'primary.dark'}}>
+        <div>1</div>
+      </Grid>
+      <Grid container xs={9} direction='column'>
+        <Grid item xs sx={{backgroundColor: 'primary.light'}}>
+          <div>2</div>
+        </Grid>
+        <Grid item xs sx={{backgroundColor: 'secondary.light'}}>
+          <div>3</div>
+        </Grid>
+      </Grid>
+    </Grid>
   );
 }
 
