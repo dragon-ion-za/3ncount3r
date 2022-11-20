@@ -1,3 +1,7 @@
+body {
+  background: url('../public/assets/parchmentBackground.jpg');
+}
+
 .App {
   text-align: center;
 }

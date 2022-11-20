@@ -8,17 +8,17 @@ const SplitThreeLayout : React.FC = () => {
             <Grid container direction='row' sx={{width: '100vw', height: '100vh'}}>
                 <Grid item 
                 xs={4} 
-                sx={{backgroundColor: 'primary.dark'}}
+                sx={{}}
                 >
                 </Grid>
                 <Grid container xs direction='column'>
                     <Grid item xs 
-                    sx={{backgroundColor: 'primary.light'}}
+                    sx={{}}
                     >
                     
                     </Grid>
                     <Grid item xs 
-                    sx={{backgroundColor: 'secondary.light'}}
+                    sx={{}}
                     >
                     
                     </Grid>

@@ -14,6 +14,7 @@ enum LogoTransitionKeyFrames {
 }
 
 const drawerWidth: number = 240;
+const drawerCollapsedWidth: number = 64;
 
 const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,
@@ -30,7 +31,7 @@ const closedMixin = (theme: Theme): CSSObject => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflowX: 'hidden',
-  width: `calc(${theme.spacing(7)} + 1px)`
+  width: drawerCollapsedWidth
 });
 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
