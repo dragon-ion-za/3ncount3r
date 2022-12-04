@@ -6,6 +6,7 @@ import { CreatureViewModel } from '../../../view-models/creature.view-model.ts';
 import { EncounterCreatureViewModel } from '../../../view-models/encounter-creature.view-model.ts';
 import { EncounterContextModel } from '../../contexts/encounter.context-model.ts';
 import { EncounterContext } from '../../contexts/encounter.context-provider.tsx';
+import { getCreatureToken, parseAlignment } from '../../services/creature.service.ts';
 import { ConfigureCreatureModal } from './modals/ConfigureCreatureModal.tsx';
 
 interface SearchResultComponentProps {
@@ -16,8 +17,6 @@ const SearchResultComponent : React.FC<SearchResultComponentProps> = ({viewModel
 
     const { encounterState, setEncounterState } = useContext<EncounterContextModel>(EncounterContext);
     const [open, setOpen] = useState(false);
-
-    const imagePath: string = `http://localhost:5001/creatures/image/${viewModel.sourceId}/${viewModel.name}`;
 
     const toggleModal = (open: boolean) => {
         setOpen(open);
@@ -30,34 +29,17 @@ const SearchResultComponent : React.FC<SearchResultComponentProps> = ({viewModel
         toggleModal(false);
     };
 
-    function renderAlignment(alignment: string[]): string {
-        let expandedAlignment: string = '';
-
-        alignment.forEach(x => {
-            switch(x) {
-                case 'N': expandedAlignment += ' Neutral'; break;
-                case 'E': expandedAlignment += ' Evil'; break;
-                case 'G': expandedAlignment += ' Good'; break;
-                case 'C': expandedAlignment += ' Chaotic'; break;
-                case 'L': expandedAlignment += ' Lawful'; break;
-                deafult: break;
-            }
-        });
-
-        return expandedAlignment.trim();
-    }
-
     return (
         <>
             <Paper sx={{":hover":{ backgroundColor: '#efefef' }}} onClick={() => toggleModal(true)}>
                 <Grid container>
                     <Grid xs={2}>
-                        <Avatar src={imagePath} sx={{width: 64, height: 64, margin: '5px'}} />
+                        <Avatar src={getCreatureToken(viewModel.sourceId, viewModel.name)} sx={{width: 64, height: 64, margin: '5px'}} />
                     </Grid>
                     <Grid xs={8}>
                         <Card>
                             <CardContent>
-                                <Typography sx={{ fontSize: 10}}>{viewModel.type} {renderAlignment(viewModel.alignment)}</Typography>
+                                <Typography sx={{ fontSize: 10}}>{viewModel.type} {parseAlignment(viewModel.alignment)}</Typography>
                                 <Typography variant="h5">{viewModel.name}</Typography>
                                 <Typography sx={{ fontSize: 10}}>
                                     {viewModel.hitpointSpecial 

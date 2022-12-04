@@ -2,7 +2,7 @@ import { Stack } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { useState } from 'react';
 import { CreatureViewModel } from '../../../view-models/creature.view-model.ts';
-import { doCreatureSearch } from '../../services/search-service.ts';
+import { doCreatureSearch } from '../../services/search.service.ts';
 import SearchResultComponent from './SearchResultComponent.tsx';
 
 const SearchComponent : React.FC = () => {

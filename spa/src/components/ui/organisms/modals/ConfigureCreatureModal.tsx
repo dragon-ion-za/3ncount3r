@@ -1,6 +1,7 @@
 import { Box, ToggleButtonGroup, ToggleButton, Button, Typography, Stack, Modal } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2';
 import { useState } from 'react';
+import { doDiceFormulaCalculation } from '../../../services/dice.service.ts';
 import { CreatureViewModel } from '../../../view-models/creature.view-model.ts';
 import { EncounterCreatureViewModel } from '../../../view-models/encounter-creature.view-model.ts';
 
@@ -41,37 +42,18 @@ export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = ({
             case 'dice':
                 setShowAvg(false);
                 setShowDice(true);
+                setRolledHitpoints(0);
                 break;
         }
       };
 
     const handleDiceRoll = () => {
-        let formulaPieces: string[] = viewModel.hitpointFormula.split('+');
-        console.log(formulaPieces);
-
-        let calculatedHitPoints: number = 0;
-        formulaPieces.forEach((expression) => {
-            if (expression.indexOf('d') > 0) {
-                let diceExpression: string[] = expression.split('d');
-                let diceValue: number = parseInt(diceExpression[1]);
-                for (let n = 0; n < parseInt(diceExpression[0]); n++) {
-                    let diceResult: number = Math.floor(Math.random() * diceValue) + 1;
-                    calculatedHitPoints += diceResult;
-                    console.log(diceResult);
-                }
-            } else {
-                calculatedHitPoints += parseInt(expression);
-            }
-        });
-
-        setRolledHitpoints(calculatedHitPoints);
+        setRolledHitpoints(doDiceFormulaCalculation(viewModel.hitpointFormula));
     };
 
     const acceptConfiguration = () : EncounterCreatureViewModel => {
         let encounterCreature: EncounterCreatureViewModel = {...viewModel} as EncounterCreatureViewModel;
-
         encounterCreature.hitpointMax = encounterCreature.currentHitpoints = rolledHitpoints;
-
         return encounterCreature;
     }
 
