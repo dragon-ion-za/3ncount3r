@@ -1,10 +1,12 @@
-import { Avatar, Card, CardContent, css, Typography } from '@mui/material';
+import { Avatar, Card, CardContent, css, Typography, Modal } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CreatureViewModel } from '../../../view-models/creature.view-model.ts';
+import { EncounterCreatureViewModel } from '../../../view-models/encounter-creature.view-model.ts';
 import { EncounterContextModel } from '../../contexts/encounter.context-model.ts';
 import { EncounterContext } from '../../contexts/encounter.context-provider.tsx';
+import { ConfigureCreatureModal } from './modals/ConfigureCreatureModal.tsx';
 
 interface SearchResultComponentProps {
     viewModel: CreatureViewModel;
@@ -13,13 +15,19 @@ interface SearchResultComponentProps {
 const SearchResultComponent : React.FC<SearchResultComponentProps> = ({viewModel}) => { 
 
     const { encounterState, setEncounterState } = useContext<EncounterContextModel>(EncounterContext);
+    const [open, setOpen] = useState(false);
 
     const imagePath: string = `http://localhost:5001/creatures/image/${viewModel.sourceId}/${viewModel.name}`;
 
-    const clickHanlder = (e) => {
+    const toggleModal = (open: boolean) => {
+        setOpen(open);
+    }
+
+    const acceptHandler = (encounterCreature: EncounterCreatureViewModel) => {
         let contextState = encounterState;
-        contextState.creatures.push(viewModel);
+        contextState.creatures.push(encounterCreature);
         setEncounterState({...contextState});
+        toggleModal(false);
     };
 
     function renderAlignment(alignment: string[]): string {
@@ -41,7 +49,7 @@ const SearchResultComponent : React.FC<SearchResultComponentProps> = ({viewModel
 
     return (
         <>
-            <Paper sx={{":hover":{ backgroundColor: '#efefef' }}} onClick={clickHanlder}>
+            <Paper sx={{":hover":{ backgroundColor: '#efefef' }}} onClick={() => toggleModal(true)}>
                 <Grid container>
                     <Grid xs={2}>
                         <Avatar src={imagePath} sx={{width: 64, height: 64, margin: '5px'}} />
@@ -65,6 +73,13 @@ const SearchResultComponent : React.FC<SearchResultComponentProps> = ({viewModel
                     </Grid>
                 </Grid>
             </Paper>
+            <Modal
+                open={open}>
+                <ConfigureCreatureModal 
+                    viewModel={viewModel} 
+                    handleCancel={() => toggleModal(false)} 
+                    handleAccept={acceptHandler}/>
+            </Modal>
         </>
     );
 }
