@@ -1,9 +1,10 @@
-import { Box, ToggleButtonGroup, ToggleButton, Button, Typography, Stack, Modal } from '@mui/material'
+import { Box, ToggleButtonGroup, ToggleButton, Button, Typography, Stack } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2';
-import { useState } from 'react';
+import { forwardRef, useState } from 'react';
 import { doDiceFormulaCalculation } from '../../../services/dice.service.ts';
 import { CreatureViewModel } from '../../../view-models/creature.view-model.ts';
 import { EncounterCreatureViewModel } from '../../../view-models/encounter-creature.view-model.ts';
+import { v4 as uuid } from 'uuid';
 
 interface ConfigureCreatureModalProps {
     viewModel: CreatureViewModel;
@@ -24,7 +25,7 @@ const style = {
     textAlign: 'center'
   };
 
-export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = ({ viewModel, handleAccept, handleCancel }) => {
+export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = forwardRef(({ viewModel, handleAccept, handleCancel }, ref) => {
     const [showAvg, setShowAvg] = useState(false);
     const [showDice, setShowDice] = useState(false);
     const [rolledHitpoints, setRolledHitpoints] = useState(0);
@@ -54,6 +55,7 @@ export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = ({
     const acceptConfiguration = () : EncounterCreatureViewModel => {
         let encounterCreature: EncounterCreatureViewModel = {...viewModel} as EncounterCreatureViewModel;
         encounterCreature.hitpointMax = encounterCreature.currentHitpoints = rolledHitpoints;
+        encounterCreature.id = uuid();
         return encounterCreature;
     }
 
@@ -86,7 +88,7 @@ export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = ({
                     </Grid>
                     <Grid item xs={12}>
                         <Button variant="outlined" 
-                            disabled={showAvg || (showDice && rolledHitpoints > 0) ? null : 'disabled'}
+                            disabled={showAvg || (showDice && rolledHitpoints > 0) ? false : true}
                             onClick={() => handleAccept(acceptConfiguration())}>Accept</Button>
                         <Button variant="outlined" onClick={handleCancel}>Cancel</Button>
                     </Grid>
@@ -94,4 +96,4 @@ export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = ({
             </Box>
         </>
     );
-};
+});

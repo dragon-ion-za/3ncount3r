@@ -1,10 +1,12 @@
-import { CSSObject, styled, Theme, Typography } from '@mui/material';
+import { CSSObject, IconButton, styled, Theme, Typography } from '@mui/material';
 import { CSSTransition } from "react-transition-group";
 import MuiDrawer from '@mui/material/Drawer'
 import React, { useState } from 'react';
 import { Outlet } from 'react-router';
 
-import EncountersMenu from './EncountersMenu.tsx';
+import EncountersMenu from '../encountersMenu/encountersMenu.tsx';
+import { ChevronLeft, ChevronRight } from '@mui/icons-material';
+import { expanderButtonStyles } from './mainLayout.styles.ts';
 
 enum LogoTransitionKeyFrames {
   FullLogo,
@@ -76,8 +78,6 @@ const MainLayout : React.FC = () => {
     <>
       <Drawer variant='permanent' 
         open={isMenuOpen}
-        onMouseEnter={toggleMenu} 
-        onMouseLeave={toggleMenu}
       >
         <CSSTransition
           in={logoTransition === LogoTransitionKeyFrames.FullLogo}
@@ -104,6 +104,11 @@ const MainLayout : React.FC = () => {
           </Typography>
         </CSSTransition>
         <EncountersMenu isExpanded={isMenuOpen} />
+        <IconButton sx={expanderButtonStyles} aria-label="expand menu" onClick={toggleMenu}>
+            {isMenuOpen 
+            ? <ChevronLeft />
+            : <ChevronRight />}
+        </IconButton>
       </Drawer>
       <Outlet></Outlet>
     </>

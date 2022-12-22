@@ -10,7 +10,7 @@ interface EncountersMenuProps {
 const EncountersMenu : React.FC<EncountersMenuProps> = (props: EncountersMenuProps) => {
 
     let navigate = useNavigate(); 
-    const routeChange = (target: string) =>{ 
+    const routeChange = (target: string) => { 
         let path = target; 
         navigate(path);
         return;
@@ -18,7 +18,7 @@ const EncountersMenu : React.FC<EncountersMenuProps> = (props: EncountersMenuPro
 
     return (!props.isExpanded ? 
         <>
-            <IconButton aria-label="delete">
+            <IconButton aria-label="add" onClick={() => {routeChange('encounter'); return;}}>
                 <AddIcon />
             </IconButton>
         </>

@@ -1,6 +1,6 @@
 {
   "name": "3ncount3r",
-  "version": "0.1.0",
+  "version": "AcidSplash",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -17,6 +17,7 @@
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "typescript": "^4.8.4",
+    "uuid4": "^2.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

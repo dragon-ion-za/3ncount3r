@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import { EncounterPage } from "./components/pages/EncounterPage.tsx";
-import MainLayout from "./components/ui/organisms/MainLayout.tsx";
+import { EncounterPage } from "./components/pages/encounter/encounter.page.tsx";
+import MainLayout from "./components/ui/organisms/mainLayout/mainLayout.tsx";
 
 const router = createBrowserRouter([
     {

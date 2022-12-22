@@ -1,7 +1,6 @@
 import Grid from '@mui/material/Unstable_Grid2';
-import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box'
-import SearchComponent from './SearchComponent.tsx';
+import SearchCreatures from '../searchCreatures/searchCreatures.tsx';
 
 const HeaderBar : React.FC = () => {
 
@@ -16,7 +15,7 @@ const HeaderBar : React.FC = () => {
 
                 </Grid>
                 <Grid item xs={4}>
-                    <SearchComponent />
+                    <SearchCreatures />
                 </Grid>
             </Grid>
         </Box>
