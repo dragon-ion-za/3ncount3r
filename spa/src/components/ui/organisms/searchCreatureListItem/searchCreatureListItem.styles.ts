@@ -1,5 +1,4 @@
 export const searchResultPaperStyles = {
-    backgroundColor: '#e6ddbe',
     marginTop: '2px',
     marginBottom: '2px',
     ":hover": { 

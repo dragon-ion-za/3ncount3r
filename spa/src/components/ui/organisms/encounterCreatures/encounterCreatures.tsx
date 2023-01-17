@@ -10,7 +10,6 @@ export const EncounterCreatures : React.FC = () => {
     const encounterContext = useContext<EncounterContextModel>(EncounterContext);
 
     useEffect(() => {
-        console.log(encounterContext);
     }, encounterContext.encounterState.creatures)
 
     return (

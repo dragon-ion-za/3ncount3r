@@ -20,9 +20,9 @@ const SearchCreatureListItem : React.FC<SearchCreatureListItemProps> = ({viewMod
                         <Avatar src={getCreatureToken(viewModel.sourceId, viewModel.name)} sx={searchResultAvatarStyles} />
                     </Grid>
                     <Grid xs={8}>
-                        <Typography sx={smallFontStyle}>{viewModel.type} {parseAlignment(viewModel.alignment)}</Typography>
-                        <Typography variant="h5">{viewModel.name}</Typography>
-                        <Typography sx={smallFontStyle}>
+                        <Typography variant='subtitle1'>{viewModel.type} {parseAlignment(viewModel.alignment)}</Typography>
+                        <Typography variant="h2">{viewModel.name}</Typography>
+                        <Typography variant='subtitle1'>
                             {viewModel.hitpointSpecial 
                                 ? viewModel.hitpointSpecial 
                                 : `${viewModel.hitpointAverage} (${viewModel.hitpointFormula})`

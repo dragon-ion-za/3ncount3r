@@ -2,4 +2,5 @@ import { EncounterCreatureViewModel } from "../../view-models/encounter-creature
 
 export class EncounterContextModel {
     creatures: EncounterCreatureViewModel[] = [];
+    selectedCreature: EncounterCreatureViewModel = null;
 }

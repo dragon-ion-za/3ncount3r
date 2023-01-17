@@ -9,16 +9,27 @@ import { MovementSpeedIcon } from "../../molecules/icons/movementSpeed.icon.tsx"
 import { FlyingSpeedIcon } from "../../molecules/icons/flyingSpeed.icon.tsx";
 import { SwimmingSpeedIcon } from "../../molecules/icons/swimmingSpeed.icon.tsx";
 import { ClimbingSpeedIcon } from "../../molecules/icons/climbingSpeed.icon.tsx";
+import { useContext } from "react";
+import { EncounterContextModel } from "../../../contexts/encounter.context-model.ts";
+import { EncounterContext } from '../../../contexts/encounter.context-provider.tsx';
+import { BurrowingSpeedIcon } from "../../molecules/icons/burrowingSpeed.icon.tsx";
 
 interface EncounterCreatureListItemProps {
     viewModel: EncounterCreatureViewModel;
 }
 
 export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps> = ({viewModel}) => {
+    const { encounterState, setEncounterState } = useContext<EncounterContextModel>(EncounterContext);
+    
+    const handleCreatureSelection = () => {
+        let contextState = encounterState;
+        contextState.selectedCreature = viewModel;
+        setEncounterState({...contextState});
+    };
 
     return (
         <> 
-            <Card sx={encounterCreatureCardStyles}>
+            <Card sx={encounterCreatureCardStyles} onClick={handleCreatureSelection}>
                 <CardContent> 
                     <Grid container>
                         <Grid xs={2}> 
@@ -26,13 +37,14 @@ export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps
                         </Grid>
                         <Grid xs={8}>
                             <Stack>
-                                <Typography sx={{ fontSize: 10}}>{viewModel.type} {parseAlignment(viewModel.alignment)}</Typography>
-                                <Typography variant="h5">{viewModel.name}</Typography>
+                                <Typography variant='subtitle1'>{viewModel.type} {parseAlignment(viewModel.alignment)}</Typography>
+                                <Typography variant="h2">{viewModel.name}</Typography>
                                 <Container sx={encounterCreatureChipContainer}>
                                     {(viewModel.walkingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<MovementSpeedIcon />} label={viewModel.walkingSpeed} />)}
                                     {(viewModel.flyingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<FlyingSpeedIcon />} label={viewModel.flyingSpeed} />)}
                                     {(viewModel.swimmingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<SwimmingSpeedIcon />} label={viewModel.swimmingSpeed} />)}
                                     {(viewModel.climbingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<ClimbingSpeedIcon />} label={viewModel.climbingSpeed} />)}
+                                    {(viewModel.burrowingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<BurrowingSpeedIcon />} label={viewModel.burrowingSpeed} />)}
                                 </Container>
                             </Stack>
                         </Grid>

@@ -1,5 +1,4 @@
 export const encounterCreatureCardStyles = {
-    backgroundColor: '#e6ddbe',
     margin: '5px',
     ":hover": { 
         boxShadow: '2px 2px 5px 3px #817a5e'
