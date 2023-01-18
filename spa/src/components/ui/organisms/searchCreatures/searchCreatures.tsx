@@ -5,7 +5,7 @@ import React, { useRef, useState } from 'react';
 import { useOnClickOutside } from '../../../hooks/useOnClickOutside.hook';
 import { doCreatureSearch } from '../../../services/search.service';
 import { useEncounterContext } from '../../../contexts/encounter.context-provider';
-import { ConfigureCreatureModal } from '../modals/ConfigureCreatureModal';
+import { ConfigureCreatureModal } from '../modals/configureCreature.modal';
 import SearchCreatureListItem from '../searchCreatureListItem/searchCreatureListItem';
 
 import { CreatureViewModel } from '../../../../view-models/creature.view-model';

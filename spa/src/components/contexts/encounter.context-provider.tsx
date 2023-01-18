@@ -12,6 +12,7 @@ interface EncounterContextProviderProps {
 const EncounterContext = createContext<IEncounterContext>({ 
     creatures: [], 
     selectedCreature: null,
+    setCreatures: () => { throw new Error('Encounter State is uninitialised.')},
     addCreature: () => { throw new Error('Encounter State is uninitialised.')},
     removeCreature: () => { throw new Error('Encounter State is uninitialised.')},
     setSelectedCreature: () => {throw new Error('Encounter State is uninitialised.')}
@@ -22,11 +23,22 @@ export const useEncounterContext = () => useContext(EncounterContext);
 export const EncounterContextProvider : React.FC<EncounterContextProviderProps> = ({children}) => {
     const [creatures, setCreaturesInternal] = useState<EncounterCreatureViewModel[]>([]);
     const [selectedCreature, setSelectedCreatureInternal] = useState<EncounterCreatureViewModel | null>(null);
+
+    const creatureInitiativeEqualityComparer = (x: EncounterCreatureViewModel, y: EncounterCreatureViewModel) => {
+        if (x.initiative > y.initiative) return -1;
+        if (y.initiative > x.initiative) return 1;
+        return 0;
+    };
+
+    const setCreatures = (creatures: EncounterCreatureViewModel[]) => {
+        let sortedCreatures = creatures.sort((x, y) => creatureInitiativeEqualityComparer(x,y));
+        setCreaturesInternal(sortedCreatures);
+    };
     
     const addCreature = (creature: EncounterCreatureViewModel) => {
         let state = creatures;
         state.push(creature);
-        setCreaturesInternal([...state]);
+        setCreatures([...state]);
     };
 
     const removeCreature = (creature: EncounterCreatureViewModel) => {
@@ -41,6 +53,7 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
         <EncounterContext.Provider value={{
             creatures,
             selectedCreature,
+            setCreatures,
             addCreature,
             removeCreature,
             setSelectedCreature

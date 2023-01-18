@@ -8,24 +8,13 @@ import { doDiceFormulaCalculation } from '../../../services/dice.service';
 import { CreatureViewModel } from '../../../../view-models/creature.view-model';
 import { EncounterCreatureViewModel } from '../../../../view-models/encounter-creature.view-model';
 
+import { modalContainer } from '../../../../styles/modals.styles';
+
 interface ConfigureCreatureModalProps {
     viewModel: CreatureViewModel;
     handleAccept: (encounterCreature: EncounterCreatureViewModel) => void;
     handleCancel: () => void;
 }
-
-const style = {
-    position: 'absolute' as 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-    textAlign: 'center'
-  };
 
 export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = forwardRef(({ viewModel, handleAccept, handleCancel }, ref) => {
     const [showAvg, setShowAvg] = useState(false);
@@ -63,7 +52,7 @@ export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = fo
 
     return (
         <>
-            <Box sx={style}>
+            <Box sx={modalContainer}>
                 <Grid container direction='row'>
                     <Grid xs={12}>
                         <Typography variant="h5">{viewModel.name}</Typography>

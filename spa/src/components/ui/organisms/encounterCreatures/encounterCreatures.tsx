@@ -1,5 +1,5 @@
 import { Stack } from "@mui/material";
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 
 import { useEncounterContext } from "../../../contexts/encounter.context-provider";
 import { EncounterCreatureListItem } from "../encounterCreatureListItem/encounterCreatureListItem";
