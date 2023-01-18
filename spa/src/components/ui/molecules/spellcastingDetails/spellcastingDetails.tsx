@@ -1,7 +1,9 @@
 import { Chip, Container, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { h3Override } from "../../../../styles/details.styles.ts";
-import { KnownSpellsViewModel, SpellcastingViewModel, SpellTypes } from "../../../../view-models/creature.view-model.ts";
+
+import { KnownSpellsViewModel, SpellcastingViewModel, SpellTypes } from "../../../../view-models/creature.view-model";
+
+import { h3Override } from "../../../../styles/details.styles";
 
 interface SpellcastingDetailsProps {
     spellcasting: SpellcastingViewModel;
@@ -17,7 +19,7 @@ export const SpellcastingDetails : React.FC<SpellcastingDetailsProps> = ({spellc
 
     useEffect(() => {
         const matches = spellcasting.entries[0].match(/spellcasting ability is (?<ability>\w*) \((spell save \{@dc (?<spellSave>\d*)\})(, \{@hit (?<toHit>\d)\} to hit)?/);
-        if (matches) {
+        if (matches && matches.groups) {
             setSpellcastingAbility(matches.groups['ability']);
 
             if (matches.groups['spellSave']) {
@@ -25,7 +27,7 @@ export const SpellcastingDetails : React.FC<SpellcastingDetailsProps> = ({spellc
             };
 
             if (matches.groups['toHit']) { 
-                setToHitModifier(matches.groups['toHit']);
+                setToHitModifier(parseInt(matches.groups['toHit']));
             };
         }
 

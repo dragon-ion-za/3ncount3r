@@ -5,8 +5,8 @@ import {
 } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from '@mui/material';
 
-import router from './Router.tsx';
-import { theme } from './theme.tsx'
+import router from './Router';
+import { theme } from './theme'
 
 class App extends React.Component {
   render() {

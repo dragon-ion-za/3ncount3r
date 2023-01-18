@@ -1,35 +1,34 @@
+import React, { useContext } from "react";
 import { Card, CardContent, Typography, Avatar, Stack, Chip, Container } from "@mui/material";
 import { LocalHospital, Shield } from "@mui/icons-material"
 import Grid from '@mui/material/Unstable_Grid2';
-import { EncounterCreatureViewModel } from "../../../../view-models/encounter-creature.view-model.ts";
-import { getCreatureToken, parseAlignment } from "../../../services/creature.service.ts";
-import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreatureChipContainer } from './encounterCreatureListItem.styles.ts';
-import { InitiativeIcon } from "../../molecules/icons/initiativeOrder.icon.tsx";
-import { MovementSpeedIcon } from "../../molecules/icons/movementSpeed.icon.tsx";
-import { FlyingSpeedIcon } from "../../molecules/icons/flyingSpeed.icon.tsx";
-import { SwimmingSpeedIcon } from "../../molecules/icons/swimmingSpeed.icon.tsx";
-import { ClimbingSpeedIcon } from "../../molecules/icons/climbingSpeed.icon.tsx";
-import { useContext } from "react";
-import { EncounterContextModel } from "../../../contexts/encounter.context-model.ts";
-import { EncounterContext } from '../../../contexts/encounter.context-provider.tsx';
-import { BurrowingSpeedIcon } from "../../molecules/icons/burrowingSpeed.icon.tsx";
+
+import { EncounterCreatureViewModel } from "../../../../view-models/encounter-creature.view-model";
+import { getCreatureToken, parseAlignment } from "../../../services/creature.service";
+import { useEncounterContext } from '../../../contexts/encounter.context-provider';
+import { InitiativeIcon } from "../../molecules/icons/initiativeOrder.icon";
+import { MovementSpeedIcon } from "../../molecules/icons/movementSpeed.icon";
+import { FlyingSpeedIcon } from "../../molecules/icons/flyingSpeed.icon";
+import { SwimmingSpeedIcon } from "../../molecules/icons/swimmingSpeed.icon";
+import { ClimbingSpeedIcon } from "../../molecules/icons/climbingSpeed.icon";
+import { BurrowingSpeedIcon } from "../../molecules/icons/burrowingSpeed.icon";
+
+import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreatureChipContainer } from './encounterCreatureListItem.styles';
 
 interface EncounterCreatureListItemProps {
     viewModel: EncounterCreatureViewModel;
 }
 
 export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps> = ({viewModel}) => {
-    const { encounterState, setEncounterState } = useContext<EncounterContextModel>(EncounterContext);
+    const encounterContext = useEncounterContext();
     
     const handleCreatureSelection = () => {
-        let contextState = encounterState;
-        contextState.selectedCreature = viewModel;
-        setEncounterState({...contextState});
+        encounterContext.setSelectedCreature(viewModel);
     };
 
     return (
         <> 
-            <Card sx={encounterCreatureCardStyles} onClick={handleCreatureSelection}>
+            <Card sx={encounterCreatureCardStyles} onClick={() => { handleCreatureSelection() }}>
                 <CardContent> 
                     <Grid container>
                         <Grid xs={2}> 
@@ -51,7 +50,7 @@ export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps
                         <Grid xs={2}>
                             <Stack>
                                 <Chip sx={encounterCreatureChipStyle} icon={<LocalHospital />} label={viewModel.currentHitpoints} />
-                                <Chip sx={encounterCreatureChipStyle} icon={<Shield />} label={viewModel.armourClass.armourClass} />
+                                <Chip sx={encounterCreatureChipStyle} icon={<Shield />} label={viewModel.armourClass?.armourClass ?? '-'} />
                                 <Chip sx={encounterCreatureChipStyle} icon={<InitiativeIcon />} label={viewModel.initiative ?? '-'} />
                             </Stack>
                         </Grid>

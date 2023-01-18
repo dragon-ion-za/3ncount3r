@@ -1,7 +1,9 @@
 import { Container, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React, { useEffect } from "react";
-import { h3Override } from "../../../../styles/details.styles.ts";
-import { SpecialActionViewModel } from "../../../../view-models/creature.view-model.ts";
+
+import { SpecialActionViewModel } from "../../../../view-models/creature.view-model";
+
+import { h3Override } from "../../../../styles/details.styles";
 
 interface SpecialActionDetailsProps {
     specialActions: SpecialActionViewModel[];

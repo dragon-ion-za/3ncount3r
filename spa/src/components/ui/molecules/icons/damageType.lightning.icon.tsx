@@ -1,6 +1,7 @@
-import { SvgIcon, Tooltip } from "@mui/material";
+import { SvgIcon, SvgIconProps, Tooltip } from "@mui/material";
+import React from "react";
 
-export function LightningDamageIcon(props) {
+export function LightningDamageIcon(props: SvgIconProps) {
     return (
       <Tooltip title='Lightning Damage'>
         <SvgIcon viewBox='0 0 36 36' {...props}>

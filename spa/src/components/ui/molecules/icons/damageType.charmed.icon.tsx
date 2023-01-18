@@ -1,6 +1,7 @@
-import { SvgIcon, Tooltip } from "@mui/material";
+import { SvgIcon, SvgIconProps, Tooltip } from "@mui/material";
+import React from "react";
 
-export function CharmedDamageIcon(props) {
+export function CharmedDamageIcon(props: SvgIconProps) {
     return (
       <Tooltip title='Charmed'>
         <SvgIcon viewBox='0 0 512 512' {...props}>

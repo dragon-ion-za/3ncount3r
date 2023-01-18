@@ -1,22 +1,20 @@
-import { Box, DialogContent, Modal, Pagination, Stack } from '@mui/material';
+import { DialogContent, Modal, Pagination, Stack } from '@mui/material';
 import TextField from '@mui/material/TextField';
-import React, { useContext, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
-import { EncounterContextModel } from '../../../contexts/encounter.context-model.ts';
-import { CreatureViewModel } from '../../../../view-models/creature.view-model.ts';
-import { EncounterCreatureViewModel } from '../../../../view-models/encounter-creature.view-model.ts';
+import { useOnClickOutside } from '../../../hooks/useOnClickOutside.hook';
+import { doCreatureSearch } from '../../../services/search.service';
+import { useEncounterContext } from '../../../contexts/encounter.context-provider';
+import { ConfigureCreatureModal } from '../modals/ConfigureCreatureModal';
+import SearchCreatureListItem from '../searchCreatureListItem/searchCreatureListItem';
 
-import { useOnClickOutside } from '../../../hooks/useOnClickOutside.hook.ts';
-import { doCreatureSearch } from '../../../services/search.service.ts';
+import { CreatureViewModel } from '../../../../view-models/creature.view-model';
+import { EncounterCreatureViewModel } from '../../../../view-models/encounter-creature.view-model';
 
-import { EncounterContext } from '../../../contexts/encounter.context-provider.tsx';
-import { ConfigureCreatureModal } from '../modals/ConfigureCreatureModal.tsx';
-import SearchCreatureListItem from '../searchCreatureListItem/searchCreatureListItem.tsx';
-
-import { searchResultContainerStyle } from './searchCreatures.styles.ts'
+import { searchResultContainerStyle } from './searchCreatures.styles'
 
 const SearchCreatures : React.FC = () => {
-    const { encounterState, setEncounterState } = useContext<EncounterContextModel>(EncounterContext);
+    const encounterContext = useEncounterContext();
 
     const [creatures, setCreatures] = useState<CreatureViewModel[]>([]);
     const [selectedCreature, setSelectedCreature] = useState<CreatureViewModel>();
@@ -26,14 +24,14 @@ const SearchCreatures : React.FC = () => {
     const [page, setPage] = React.useState(1);
     const [noOfPages, setNoOfPages] = React.useState(0);
 
-    const handleChange = (event, value) => {
+    const handleChange = (event: any, value: any) => {
         setPage(value);
     };
 
     const wrapperRef = useRef(null);
     useOnClickOutside(wrapperRef, () => { setHasFocus(false); }, () => { setHasFocus(true); });
 
-    const doSearch = (e) => {
+    const doSearch = (e: any) => {
         e.preventDefault();
         setHasFocus(true);
 
@@ -60,9 +58,7 @@ const SearchCreatures : React.FC = () => {
     }
 
     const acceptHandler = (encounterCreature: EncounterCreatureViewModel) => {
-        let contextState = encounterState;
-        contextState.creatures.push(encounterCreature);
-        setEncounterState({...contextState});
+        encounterContext.addCreature(encounterCreature);
         toggleModal(false);
     };
 
@@ -89,9 +85,8 @@ const SearchCreatures : React.FC = () => {
             open={open}
             disablePortal>
                 <DialogContent>
-                    <ConfigureCreatureModal 
-                        ref={wrapperRef}
-                        viewModel={selectedCreature} 
+                    <ConfigureCreatureModal
+                        viewModel={selectedCreature!} 
                         handleCancel={() => toggleModal(false)} 
                         handleAccept={acceptHandler}/>
                 </DialogContent>

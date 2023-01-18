@@ -1,6 +1,7 @@
-import { SvgIcon, Tooltip } from "@mui/material";
+import { SvgIcon, SvgIconProps, Tooltip } from "@mui/material";
+import React from "react";
 
-export function MagicalPiercingDamageIcon(props) {
+export function MagicalPiercingDamageIcon(props: SvgIconProps) {
     return (
       <Tooltip title='Piercing Damage From Magical Weapons'>
         <SvgIcon viewBox='0 0 511.999 511.999' {...props}>

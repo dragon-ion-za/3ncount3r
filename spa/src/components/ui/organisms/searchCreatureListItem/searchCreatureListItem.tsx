@@ -1,13 +1,17 @@
-import { Avatar, Card, CardContent, Typography } from '@mui/material';
+import React from 'react';
+import { Avatar, Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
-import { CreatureViewModel } from '../../../../view-models/creature.view-model.ts';
-import { getCreatureToken, parseAlignment } from '../../../services/creature.service.ts';
-import { searchResultPaperStyles, searchResultAvatarStyles, smallFontStyle } from './searchCreatureListItem.styles.ts'
+
+import { getCreatureToken, parseAlignment } from '../../../services/creature.service';
+
+import { CreatureViewModel } from '../../../../view-models/creature.view-model';
+
+import { searchResultPaperStyles, searchResultAvatarStyles } from './searchCreatureListItem.styles'
 
 interface SearchCreatureListItemProps {
     viewModel: CreatureViewModel;
-    selectCreature: (viewModel: CreatureViewModel) => {};
+    selectCreature: (viewModel: CreatureViewModel) => void;
 }
 
 const SearchCreatureListItem : React.FC<SearchCreatureListItemProps> = ({viewModel, selectCreature}) => { 

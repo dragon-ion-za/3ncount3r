@@ -1,12 +1,13 @@
+import React, { useState } from 'react';
 import { CSSObject, IconButton, styled, Theme, Typography } from '@mui/material';
 import { CSSTransition } from "react-transition-group";
 import MuiDrawer from '@mui/material/Drawer'
-import React, { useState } from 'react';
 import { Outlet } from 'react-router';
-
-import EncountersMenu from '../encountersMenu/encountersMenu.tsx';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
-import { expanderButtonStyles } from './mainLayout.styles.ts';
+
+import EncountersMenu from '../encountersMenu/encountersMenu';
+
+import { expanderButtonStyles } from './mainLayout.styles';
 
 enum LogoTransitionKeyFrames {
   FullLogo,
@@ -57,7 +58,7 @@ const MainLayout : React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [logoTransition, setLogoTransition] = useState(LogoTransitionKeyFrames.HalfLogo);
 
-  const toggleMenu = event => {
+  const toggleMenu = (event: any) => {
     if (logoTransition !== LogoTransitionKeyFrames.TransitioningToFullLogo && logoTransition !== LogoTransitionKeyFrames.TransitioningToHalfLogo) {
       setIsMenuOpen(!isMenuOpen);
       setLogoTransition(!isMenuOpen ? LogoTransitionKeyFrames.TransitioningToFullLogo : LogoTransitionKeyFrames.TransitioningToHalfLogo);

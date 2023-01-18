@@ -1,6 +1,7 @@
-import { SvgIcon, Tooltip } from "@mui/material";
+import { SvgIcon, SvgIconProps, Tooltip } from "@mui/material";
+import React from "react";
 
-export function BurrowingSpeedIcon(props) {
+export function BurrowingSpeedIcon(props: SvgIconProps) {
     return (
       <Tooltip title='Burrowing Speed'>
         <SvgIcon viewBox='0 0 512 512' {...props}>

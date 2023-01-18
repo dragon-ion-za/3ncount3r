@@ -1,15 +1,17 @@
+import React, { forwardRef, useState } from 'react';
 import { Box, ToggleButtonGroup, ToggleButton, Button, Typography, Stack } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2';
-import { forwardRef, useState } from 'react';
-import { doDiceFormulaCalculation } from '../../../services/dice.service.ts';
-import { CreatureViewModel } from '../../../view-models/creature.view-model.ts';
-import { EncounterCreatureViewModel } from '../../../view-models/encounter-creature.view-model.ts';
 import { v4 as uuid } from 'uuid';
+
+import { doDiceFormulaCalculation } from '../../../services/dice.service';
+
+import { CreatureViewModel } from '../../../../view-models/creature.view-model';
+import { EncounterCreatureViewModel } from '../../../../view-models/encounter-creature.view-model';
 
 interface ConfigureCreatureModalProps {
     viewModel: CreatureViewModel;
-    handleAccept: (encounterCreature: EncounterCreatureViewModel) => {};
-    handleCancel: () => {};
+    handleAccept: (encounterCreature: EncounterCreatureViewModel) => void;
+    handleCancel: () => void;
 }
 
 const style = {
@@ -38,7 +40,7 @@ export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = fo
             case 'avg':
                 setShowAvg(true);
                 setShowDice(false);
-                setRolledHitpoints(parseInt(viewModel.hitpointAverage));
+                setRolledHitpoints(viewModel.hitpointAverage);
                 break;
             case 'dice':
                 setShowAvg(false);
@@ -63,10 +65,10 @@ export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = fo
         <>
             <Box sx={style}>
                 <Grid container direction='row'>
-                    <Grid item xs={12}>
+                    <Grid xs={12}>
                         <Typography variant="h5">{viewModel.name}</Typography>
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid xs={12}>
                         <ToggleButtonGroup
                             color="primary"
                             exclusive
@@ -76,17 +78,17 @@ export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = fo
                             <ToggleButton value="dice">Roll Hit Points</ToggleButton>
                         </ToggleButtonGroup>
                     </Grid>
-                    <Grid item xs={12} sx={showAvg ? {'display': 'block'} : {'display': 'none'}}>
+                    <Grid xs={12} sx={showAvg ? {'display': 'block'} : {'display': 'none'}}>
                         {viewModel.hitpointAverage}
                     </Grid>
-                    <Grid item xs={12} sx={showDice ? {'display': 'block'} : {'display': 'none'}}>
+                    <Grid xs={12} sx={showDice ? {'display': 'block'} : {'display': 'none'}}>
                         <Stack>
                             {viewModel.hitpointFormula}
                             <Button variant="outlined" onClick={handleDiceRoll}>Roll!</Button>
                             {rolledHitpoints}
                         </Stack>                        
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid xs={12}>
                         <Button variant="outlined" 
                             disabled={showAvg || (showDice && rolledHitpoints > 0) ? false : true}
                             onClick={() => handleAccept(acceptConfiguration())}>Accept</Button>

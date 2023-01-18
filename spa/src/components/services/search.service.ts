@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { CreatureViewModel } from "../../view-models/creature.view-model.ts";
+
+import { CreatureViewModel } from "../../view-models/creature.view-model";
 
 export async function doCreatureSearch(criteria: string) : Promise<CreatureViewModel[]> {
     let creatures: CreatureViewModel[] = [];

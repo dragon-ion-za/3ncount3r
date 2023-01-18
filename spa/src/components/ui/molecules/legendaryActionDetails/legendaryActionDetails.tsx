@@ -1,11 +1,14 @@
 import { Container, Typography } from "@mui/material";
 import React, { useEffect } from "react";
-import { h3Override } from "../../../../styles/details.styles.ts";
-import { CreatureTraitViewModel } from "../../../../view-models/creature.view-model.ts";
+
+import { CreatureTraitViewModel } from "../../../../view-models/creature.view-model";
+
+import { h3Override } from "../../../../styles/details.styles";
+
 
 interface LegendaryActionDetailsProps {
     legendaryActions: CreatureTraitViewModel[];
-    actionCount: string;
+    actionCount: number;
 }
 
 export const LegendaryActionDetails : React.FC<LegendaryActionDetailsProps> = ({legendaryActions, actionCount}) => { 
