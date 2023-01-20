@@ -2,7 +2,7 @@ import { Container, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 
 
-import { CreatureTraitViewModel } from "../../../../view-models/creature.view-model";
+import { CreatureTraitViewModel } from "../../../../view-models/shared.view-model";
 
 import { h3Override } from "../../../../styles/details.styles";
 
@@ -20,7 +20,7 @@ export const TraitDetails : React.FC<TraitDetailsProps> = ({traits}) => {
             <Container>
                 {traits.map((trait: CreatureTraitViewModel, index) => 
                     (<Typography key={`trait_${index}`} variant="body1"><strong>{trait.name}: </strong>
-                    {trait.entries.map((x, innerIndex) => <Typography key={`trait_inner_${innerIndex}`} variant="body1" display="inline" component="span">{x}</Typography>)}</Typography>)
+                    {trait.entries.map((x: string, innerIndex: number) => <Typography key={`trait_inner_${innerIndex}`} variant="body1" display="inline" component="span">{x}</Typography>)}</Typography>)
                 )}
             </Container>
         </>

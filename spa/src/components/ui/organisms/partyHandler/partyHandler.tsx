@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import { Button, Modal, DialogContent } from "@mui/material";
 
 import { useEncounterContext } from "../../../contexts/encounter.context-provider";
-import { InitiativeModal } from "../modals/initiative.modal";
 import { EncounterCreatureViewModel } from "../../../../view-models/encounter-creature.view-model";
 
-import { initiativeButtonStyles } from "./initiativeHandler.styles";
+import { initiativeButtonStyles } from "../initiativeHandler/initiativeHandler.styles";
+import { PartyExplorerModal } from "../modals/partyExplorer.modal";
 
-export const InitiativeHandler : React.FC = () => { 
+export const PartyHandler : React.FC = () => { 
     const [open, setOpen] = useState(false);
     const encounterContext = useEncounterContext();
 
-    const handleAccept = (creatures: EncounterCreatureViewModel[], partyName: string) => {
-        encounterContext.setCreatures(creatures);
-        encounterContext.setSelectedParty(partyName);
-        toggleModal(false)
+    const handleSelectedParty = (partyName: string) => {
+        if (!partyName) {
+            
+        }
     };
 
     const toggleModal = (toggle: boolean) => {
@@ -24,21 +24,18 @@ export const InitiativeHandler : React.FC = () => {
     return (
         <>
             <Button 
-                sx={initiativeButtonStyles} variant="contained" 
-                disabled={encounterContext.creatures.length === 0}
+                sx={initiativeButtonStyles} variant="contained"
                 onClick={() => { toggleModal(true); }}>
-                    Roll Initiative!
+                    Add Party
             </Button>
 
             <Modal 
                 open={open}
                 disablePortal>
                     <DialogContent>
-                        <InitiativeModal
-                            creaturesList={encounterContext.creatures} 
-                            partyName={encounterContext.selectedParty}
+                        <PartyExplorerModal
                             handleCancel={() => toggleModal(false)} 
-                            handleAccept={handleAccept} />
+                            handleAccept={handleSelectedParty} />
                     </DialogContent>
             </Modal>
         </>

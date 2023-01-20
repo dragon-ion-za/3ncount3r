@@ -12,7 +12,7 @@ import { ActionDetails } from "../../molecules/actionDetails/actionDetails";
 import { LegendaryActionDetails } from "../../molecules/legendaryActionDetails/legendaryActionDetails";
 import { SpecialActionDetails } from "../../molecules/specialActionDetails/specialActionDetails";
 
-import { ResistanceViewModel } from "../../../../view-models/creature.view-model";
+import { ResistanceViewModel } from "../../../../view-models/shared.view-model";
 
 import { actionBox } from "./creatureDetails.styles";
 
@@ -107,7 +107,9 @@ export const CreatureDetails : React.FC = () => {
                 <Grid container direction='row' sx={{height: '100%'}}>
                     <Grid xs={2}>
                         <Avatar 
-                            src={getCreatureToken(encounterContext.selectedCreature.sourceId, encounterContext.selectedCreature.name)} 
+                            src={getCreatureToken(encounterContext.selectedCreature.sourceId, 
+                                                encounterContext.selectedCreature.isPlayerCharacter ? encounterContext.selectedCreature.id : encounterContext.selectedCreature.name, 
+                                                encounterContext.selectedCreature.isPlayerCharacter)} 
                             sx={{width: 128, height: 128, margin: 'auto', top: 'calc(50% - 64px)'}} />
                     </Grid>
                     <Grid xs={5}>

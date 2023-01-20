@@ -1,7 +1,7 @@
 import { Chip, Container, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
-import { KnownSpellsViewModel, SpellcastingViewModel, SpellTypes } from "../../../../view-models/creature.view-model";
+import { KnownSpellsViewModel, SpellcastingViewModel, SpellTypes } from "../../../../view-models/shared.view-model";
 
 import { h3Override } from "../../../../styles/details.styles";
 

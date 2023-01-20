@@ -1,4 +1,5 @@
 const imagePath: string = 'http://localhost:5001/creatures/image/';
+const imagePathCharacters: string = 'http://localhost:5001/parties/characterimage/';
 
 export function parseAlignment(alignment: string[]): string {
     let expandedAlignment: string = '';
@@ -17,8 +18,8 @@ export function parseAlignment(alignment: string[]): string {
     return expandedAlignment.trim();
 }
 
-export function getCreatureToken(sourceId: string, name: string): string {
-    return imagePath.concat(sourceId, '/', name);
+export function getCreatureToken(sourceId: string, name: string, isPlayerCharacter: boolean): string {
+    return isPlayerCharacter ? imagePathCharacters.concat(name) : imagePath.concat(sourceId, '/', name);
 }
 
 export function calculateAbilityScoreModifier(abilityScore: number) : number {

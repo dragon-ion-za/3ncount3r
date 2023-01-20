@@ -32,7 +32,9 @@ export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps
                 <CardContent> 
                     <Grid container>
                         <Grid xs={2}> 
-                            <Avatar src={getCreatureToken(viewModel.sourceId, viewModel.name)} sx={{width: 64, height: 64, margin: '5px'}} />
+                            <Avatar src={getCreatureToken(viewModel.sourceId, 
+                                                            viewModel.isPlayerCharacter ? viewModel.id : viewModel.name, 
+                                                            viewModel.isPlayerCharacter)} sx={{width: 64, height: 64, margin: '5px'}} />
                         </Grid>
                         <Grid xs={8}>
                             <Stack>

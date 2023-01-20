@@ -1,15 +1,20 @@
-import { ArmourClassViewModel, CreatureSizes, CreatureTraitViewModel, ResistanceViewModel, SkillModifierViewModel, SpecialActionViewModel, SpellcastingViewModel } from "./shared.view-model";
+import { ItemViewModel } from "./item.view-model";
+import { CreatureSizes, CreatureTraitViewModel, ResistanceViewModel, SpellcastingViewModel } from "./shared.view-model";
 
-export class CreatureViewModel {
+export interface ClassViewModel {
+    name: string;
+    level: number;
+}
+
+export class CharacterViewModel {
+    id: string = '';
     name: string = '';
-    sourceId: string = '';
     size: CreatureSizes = CreatureSizes.Unknown;
-    type: string = '';
-    alignment: string[] = [];
-    armourClass: ArmourClassViewModel | null = null;
-    hitpointAverage: number = 0;
-    hitpointFormula: string = '';
-    hitpointSpecial: string = '';
+    level: number = 0;
+    race: string = '';
+    classes: ClassViewModel[] = [];
+    hitpointMaximum: number = 0;
+    proficiencyBonus: number = 0;
     walkingSpeed: number = 0;
     climbingSpeed: number = 0;
     burrowingSpeed: number = 0;
@@ -23,19 +28,16 @@ export class CreatureViewModel {
     attributeInt: number = 0;
     attributeWis: number = 0;
     attributeCha: number = 0;
-    skillModifiers: SkillModifierViewModel[] = [];
+    skillProficiencies: string[] = [];
+    savingThrowProficiencies: string[] = [];
     passivePerception: number = 0;
     resistances: ResistanceViewModel[] = [];
     immunities: ResistanceViewModel[] = [];
     languages: string[] = [];
-    challengeRating: number = 0;
     traits: CreatureTraitViewModel[] = [];
     actions: CreatureTraitViewModel[] = [];
     reactions: CreatureTraitViewModel[] = [];
-    legendaryActions: CreatureTraitViewModel[] = [];
-    legendaryCount: number = 3;
     spellcasting: SpellcastingViewModel[] = [];
-    lairActions: SpecialActionViewModel[] = [];
-    regionalEffects: SpecialActionViewModel[] = [];
-    mythicEncounter: SpecialActionViewModel[] = [];
+    equipment: ItemViewModel[] = [];
+    inventory: ItemViewModel[] = [];
 }

@@ -1,7 +1,7 @@
 import { Container, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 
-import { CreatureTraitViewModel } from "../../../../view-models/creature.view-model";
+import { CreatureTraitViewModel } from "../../../../view-models/shared.view-model";
 
 import { h3Override } from "../../../../styles/details.styles";
 
