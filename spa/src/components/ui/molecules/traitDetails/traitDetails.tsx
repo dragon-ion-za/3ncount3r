@@ -1,4 +1,4 @@
-import { Container, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Container, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 
 
@@ -16,13 +16,17 @@ export const TraitDetails : React.FC<TraitDetailsProps> = ({traits}) => {
 
     return (
         <>
-            <Typography variant="h3" sx={h3Override}>Traits</Typography>
-            <Container>
-                {traits.map((trait: CreatureTraitViewModel, index) => 
-                    (<Typography key={`trait_${index}`} variant="body1"><strong>{trait.name}: </strong>
-                    {trait.entries.map((x: string, innerIndex: number) => <Typography key={`trait_inner_${innerIndex}`} variant="body1" display="inline" component="span">{x}</Typography>)}</Typography>)
-                )}
-            </Container>
+            <Accordion>
+                <AccordionSummary>
+                    <Typography variant="h3" sx={h3Override}>Traits</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    {traits.map((trait: CreatureTraitViewModel, index) => 
+                        (<Typography key={`trait_${index}`} variant="body1"><strong>{trait.name}: </strong>
+                        {trait.entries.map((x: string, innerIndex: number) => <Typography key={`trait_inner_${innerIndex}`} variant="body1" display="inline" component="span">{x}</Typography>)}</Typography>)
+                    )}
+                </AccordionDetails>
+            </Accordion>
         </>
     );
 }

@@ -1,9 +1,10 @@
-import { Chip, Container, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Chip, Container, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
-import { KnownSpellsViewModel, SpellcastingViewModel, SpellTypes } from "../../../../view-models/shared.view-model";
+import { KnownSpellsViewModel, SpecialActionViewModel, SpellcastingViewModel, SpellTypes } from "../../../../view-models/shared.view-model";
 
 import { h3Override } from "../../../../styles/details.styles";
+import { title } from "process";
 
 interface SpellcastingDetailsProps {
     spellcasting: SpellcastingViewModel;
@@ -55,37 +56,43 @@ export const SpellcastingDetails : React.FC<SpellcastingDetailsProps> = ({spellc
 
     return (
         <>
-            <Typography variant="h3" sx={h3Override}>{spellcasting.name}</Typography>
-            <Chip label={spellcastingAbility} />
-            {spellSave && (<Chip label={`DC ${spellSave}`} />)}
-            {toHitModifier && (<Chip label={`${(toHitModifier >= 0 ? '+' : '')}${toHitModifier} to hit`} />)}
+            <Accordion>
+                <AccordionSummary>
+                    <Typography variant="h3" sx={h3Override}>{spellcasting.name}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Chip label={spellcastingAbility} />
+                    {spellSave && (<Chip label={`DC ${spellSave}`} />)}
+                    {toHitModifier && (<Chip label={`${(toHitModifier >= 0 ? '+' : '')}${toHitModifier} to hit`} />)}
 
-            {spellcasting.entries.map(x => (<Typography variant="body1">{x}</Typography>))}
-            
-            {spellcasting.atWill.length > 0 && (
-                <Container>
-                    <Typography variant="subtitle2">At Will</Typography>
-                    {spellcasting.atWill.map(x => <Chip key={`innate_${x}`} label={cleanSpellName(x)} />)}
-                </Container>
-            )}
-            
-            {nonSlotSpells.length > 0 && (
-                nonSlotSpells.map(spellType => {return (
-                    <Container>
-                        <Typography variant="subtitle2">{`${SpellTypes[spellType.type]} (${spellType.resource})`}</Typography>
-                        {spellType.spells.map(spell => <Chip key={`nonSlot_${spell}`} label={cleanSpellName(spell)} />)}
-                    </Container>
-                )})
-            )}
+                    {spellcasting.entries.map(x => (<Typography variant="body1">{x}</Typography>))}
+                    
+                    {spellcasting.atWill.length > 0 && (
+                        <Container>
+                            <Typography variant="subtitle2">At Will</Typography>
+                            {spellcasting.atWill.map(x => <Chip key={`innate_${x}`} label={cleanSpellName(x)} />)}
+                        </Container>
+                    )}
+                    
+                    {nonSlotSpells.length > 0 && (
+                        nonSlotSpells.map(spellType => {return (
+                            <Container>
+                                <Typography variant="subtitle2">{`${SpellTypes[spellType.type]} (${spellType.resource})`}</Typography>
+                                {spellType.spells.map(spell => <Chip key={`nonSlot_${spell}`} label={cleanSpellName(spell)} />)}
+                            </Container>
+                        )})
+                    )}
 
-            {slotSpells.length > 0 && (
-                slotSpells.map(spellLevel => {return (
-                    <Container>
-                        <Typography variant="subtitle2">{printSpellLevel(spellLevel.level, spellLevel.resource)}</Typography>
-                        {spellLevel.spells.map(spell => <Chip key={`slot_${spell}`} label={cleanSpellName(spell)} />)}
-                    </Container>
-                )})
-            )}
+                    {slotSpells.length > 0 && (
+                        slotSpells.map(spellLevel => {return (
+                            <Container>
+                                <Typography variant="subtitle2">{printSpellLevel(spellLevel.level, spellLevel.resource)}</Typography>
+                                {spellLevel.spells.map(spell => <Chip key={`slot_${spell}`} label={cleanSpellName(spell)} />)}
+                            </Container>
+                        )})
+                    )}
+                </AccordionDetails>
+            </Accordion>
         </>
     );
 };
