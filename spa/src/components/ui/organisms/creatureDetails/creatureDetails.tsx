@@ -51,6 +51,7 @@ export const CreatureDetails : React.FC = () => {
 
             setActionsList(actions);
         }
+        console.log(encounterContext.selectedCreature);
     }, [encounterContext.selectedCreature])
 
     const buildAttributeDetails = (attributeValue: number): string => {

@@ -17,3 +17,8 @@ export const damageConditionChips = {
         marginRight:'0px !important'
     }
 }
+
+export const actionItemContainerStyle = {
+    padding: '0px !important',
+    marginBottom: '5px !important'
+}

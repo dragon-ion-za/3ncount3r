@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 import { CreatureTraitViewModel } from "../../../../view-models/shared.view-model";
 
-import { h3Override } from "../../../../styles/details.styles";
+import { actionItemContainerStyle, h3Override } from "../../../../styles/details.styles";
 
 interface ActionDetailsProps {
     actions: CreatureTraitViewModel[];
@@ -12,7 +12,7 @@ interface ActionDetailsProps {
 
 export const ActionDetails : React.FC<ActionDetailsProps> = ({actions, title}) => { 
 
-    useEffect(() => {}, [actions]);
+    useEffect(() => {console.log(actions)}, [actions]);
 
     return (
         <>
@@ -22,9 +22,12 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actions, title}) =
                 </AccordionSummary>
                 <AccordionDetails>
                     {actions.map((trait: CreatureTraitViewModel) => 
-                        (<Typography variant="body1">
-                            <strong>{trait.name}:</strong> {trait.entries.map(x => (<Typography variant="body1" display="inline">{x}</Typography>))}
-                        </Typography>)
+                        (
+                            <Container sx={actionItemContainerStyle}>
+                                <Typography variant="body1" display='inline'><strong>{trait.name}:</strong></Typography>
+                                {trait.entries.map((x, index) => (<Typography variant="body1" display={index === 0 ? 'inline' : 'block'}>{x}</Typography>))}
+                            </Container>
+                        )
                     )}
                 </AccordionDetails>
             </Accordion>
