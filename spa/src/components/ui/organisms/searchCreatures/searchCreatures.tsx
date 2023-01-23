@@ -1,4 +1,4 @@
-import { DialogContent, Modal, Pagination, Stack } from '@mui/material';
+import { Container, DialogContent, Modal, Pagination, Stack } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import React, { useRef, useState } from 'react';
 
@@ -11,7 +11,7 @@ import SearchCreatureListItem from '../searchCreatureListItem/searchCreatureList
 import { CreatureViewModel } from '../../../../view-models/creature.view-model';
 import { EncounterCreatureViewModel } from '../../../../view-models/encounter-creature.view-model';
 
-import { searchResultContainerStyle } from './searchCreatures.styles'
+import { searchContainerStyles, searchResultContainerStyle } from './searchCreatures.styles'
 
 const SearchCreatures : React.FC = () => {
     const encounterContext = useEncounterContext();
@@ -63,7 +63,7 @@ const SearchCreatures : React.FC = () => {
     };
 
     return (
-        <div ref={wrapperRef}>
+        <Container sx={searchContainerStyles} ref={wrapperRef}>
             <TextField label="Search" variant="standard" sx={{width: '25vw'}} onChange={doSearch} />
 
             {(hasFocus && creatures.length > 0 && 
@@ -91,7 +91,7 @@ const SearchCreatures : React.FC = () => {
                         handleAccept={acceptHandler}/>
                 </DialogContent>
             </Modal>
-        </div>
+        </Container>
     );
 
 }

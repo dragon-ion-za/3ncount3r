@@ -39,4 +39,5 @@ export class CreatureViewModel {
     regionalEffects: SpecialActionViewModel[] = [];
     mythicEncounter: SpecialActionViewModel[] = [];
     senses: string[] = [];
+    savingThrows: SkillModifierViewModel[] = [];
 }

@@ -3,3 +3,8 @@ export const searchResultContainerStyle = {
     width: '25vw',
     position: 'absolute'
 };
+
+export const searchContainerStyles = {
+    position: 'absolute',
+    zIndex: 999
+}

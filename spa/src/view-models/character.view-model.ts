@@ -40,4 +40,5 @@ export class CharacterViewModel {
     spellcasting: SpellcastingViewModel[] = [];
     equipment: ItemViewModel[] = [];
     inventory: ItemViewModel[] = [];
+    senses: string[] = [];
 }

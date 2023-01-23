@@ -135,6 +135,15 @@ export const CreatureDetails : React.FC = () => {
                                 </Typography>
                             )}
 
+                            {encounterContext.selectedCreature.savingThrows.length > 0 &&
+                            (
+                                <Typography variant="body1">
+                                    <strong>Saving Throws:</strong> {encounterContext.selectedCreature.savingThrows
+                                                                        .map(x => `${x.skillName} ${x.modifier > 0 ? '+' : ''}${x.modifier}`)
+                                                                        .join(', ')}
+                                </Typography>
+                            )}
+
                             <Divider />
 
                             {encounterContext.selectedCreature.resistances.length > 0 && 
