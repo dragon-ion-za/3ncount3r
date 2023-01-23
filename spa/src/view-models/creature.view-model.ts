@@ -38,4 +38,5 @@ export class CreatureViewModel {
     lairActions: SpecialActionViewModel[] = [];
     regionalEffects: SpecialActionViewModel[] = [];
     mythicEncounter: SpecialActionViewModel[] = [];
+    senses: string[] = [];
 }
