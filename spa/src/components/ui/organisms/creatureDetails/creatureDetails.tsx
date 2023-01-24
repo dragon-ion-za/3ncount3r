@@ -12,12 +12,14 @@ import { ActionDetails } from "../../molecules/actionDetails/actionDetails";
 import { LegendaryActionDetails } from "../../molecules/legendaryActionDetails/legendaryActionDetails";
 import { SpecialActionDetails } from "../../molecules/specialActionDetails/specialActionDetails";
 
-import { ResistanceViewModel } from "../../../../view-models/shared.view-model";
+import { KeyValuePair, ResistanceViewModel } from "../../../../view-models/shared.view-model";
+import { AttributeDetails } from "../../molecules/attributeDetails/attributeDetails";
 
 export const CreatureDetails : React.FC = () => { 
 
     const encounterContext = useEncounterContext();
     const [actionsList, setActionsList] = useState<Record<string, ReactElement>>({});
+    const [attributeList, setAttributeList] = useState<KeyValuePair<string,number>[]>([]);
 
     useEffect(() => {
         if (encounterContext.selectedCreature) {
@@ -51,13 +53,17 @@ export const CreatureDetails : React.FC = () => {
 
             setActionsList(actions);
         }
-        console.log(encounterContext.selectedCreature);
-    }, [encounterContext.selectedCreature])
+        
+        let attr: KeyValuePair<string,number>[] = [];
+        attr.push({ key: 'STR', value: encounterContext.selectedCreature?.attributeStr ?? 0 })
+        attr.push({ key: 'DEX', value: encounterContext.selectedCreature?.attributeDex ?? 0 })
+        attr.push({ key: 'CON', value: encounterContext.selectedCreature?.attributeCon ?? 0 })
+        attr.push({ key: 'INT', value: encounterContext.selectedCreature?.attributeInt ?? 0 })
+        attr.push({ key: 'WIS', value: encounterContext.selectedCreature?.attributeWis ?? 0 })
+        attr.push({ key: 'CHA', value: encounterContext.selectedCreature?.attributeCha ?? 0 })
+        setAttributeList(attr);
 
-    const buildAttributeDetails = (attributeValue: number): string => {
-        let modifier: number = calculateAbilityScoreModifier(attributeValue);
-        return `${attributeValue} (${modifier > 0 ? '+' : ''}${modifier})`;
-    }
+    }, [encounterContext.selectedCreature])
 
     return (
         <>
@@ -77,44 +83,7 @@ export const CreatureDetails : React.FC = () => {
                             
                             <Divider />
 
-                            <Grid container>
-                                <Grid xs={2}>
-                                    <Stack>
-                                        <Typography variant="subtitle2">STR</Typography>
-                                        <Typography variant="subtitle2">{buildAttributeDetails(encounterContext.selectedCreature.attributeStr)}</Typography>
-                                    </Stack>
-                                </Grid>
-                                <Grid xs={2}>
-                                    <Stack>
-                                        <Typography variant="subtitle2">DEX</Typography>
-                                        <Typography variant="subtitle2">{buildAttributeDetails(encounterContext.selectedCreature.attributeDex)}</Typography>
-                                    </Stack>
-                                </Grid>
-                                <Grid xs={2}>
-                                    <Stack>
-                                        <Typography variant="subtitle2">CON</Typography>
-                                        <Typography variant="subtitle2">{buildAttributeDetails(encounterContext.selectedCreature.attributeCon)}</Typography>
-                                    </Stack>
-                                </Grid>
-                                <Grid xs={2}>
-                                    <Stack>
-                                        <Typography variant="subtitle2">INT</Typography>
-                                        <Typography variant="subtitle2">{buildAttributeDetails(encounterContext.selectedCreature.attributeInt)}</Typography>
-                                    </Stack>
-                                </Grid>
-                                <Grid xs={2}>
-                                    <Stack>
-                                        <Typography variant="subtitle2">WIS</Typography>
-                                        <Typography variant="subtitle2">{buildAttributeDetails(encounterContext.selectedCreature.attributeWis)}</Typography>
-                                    </Stack>
-                                </Grid>
-                                <Grid xs={2}>
-                                    <Stack>
-                                        <Typography variant="subtitle2">CHA</Typography>
-                                        <Typography variant="subtitle2">{buildAttributeDetails(encounterContext.selectedCreature.attributeCha)}</Typography>
-                                    </Stack>
-                                </Grid>
-                            </Grid>
+                            <AttributeDetails attributeList={attributeList} />
 
                             <Divider />
 

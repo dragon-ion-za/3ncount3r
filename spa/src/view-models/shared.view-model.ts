@@ -56,3 +56,8 @@ export class SpecialActionViewModel {
     type: string = '';
     items: string[] = [];
 }
+
+export interface KeyValuePair<TKey, TValue> {
+    key: TKey;
+    value: TValue;
+}
