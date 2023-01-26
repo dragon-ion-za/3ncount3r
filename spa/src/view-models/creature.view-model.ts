@@ -1,4 +1,4 @@
-import { ActionGroupViewModel, ArmourClassViewModel, CreatureSizes, CreatureTraitViewModel, ResistanceViewModel, SkillModifierViewModel, SpecialActionViewModel, SpellcastingViewModel } from "./shared.view-model";
+import { ActionGroupViewModel, ArmourClassViewModel, CreatureSizes, ResistanceViewModel, SkillModifierViewModel } from "./shared.view-model";
 
 export class CreatureViewModel {
     name: string = '';
@@ -29,15 +29,7 @@ export class CreatureViewModel {
     immunities: ResistanceViewModel[] = [];
     languages: string[] = [];
     challengeRating: number = 0;
-    traits: CreatureTraitViewModel[] = [];
-    actions: CreatureTraitViewModel[] = [];
-    reactions: CreatureTraitViewModel[] = [];
-    legendaryActions: CreatureTraitViewModel[] = [];
     legendaryCount: number = 3;
-    spellcasting: SpellcastingViewModel[] = [];
-    lairActions: SpecialActionViewModel[] = [];
-    regionalEffects: SpecialActionViewModel[] = [];
-    mythicEncounter: SpecialActionViewModel[] = [];
     senses: string[] = [];
     savingThrows: SkillModifierViewModel[] = [];
     actionGroups: ActionGroupViewModel[] = [];

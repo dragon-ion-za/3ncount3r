@@ -1,5 +1,5 @@
 import { Accordion, AccordionDetails, AccordionSummary, Container, List, ListItem, ListItemText, Typography } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { SyntheticEvent, useEffect, useState } from "react";
 
 import { ActionGroupViewModel, SpecialActionViewModel } from "../../../../view-models/shared.view-model";
 
@@ -10,6 +10,7 @@ interface ActionDetailsProps {
 }
 
 export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => { 
+    const [currentPanel, setCurrentPanel] = useState<string>('');
 
     useEffect(() => {}, [actionGroups]);
 
@@ -84,13 +85,17 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
         return detailsNodes;
     };
 
+    const togglePanel = (panel: string) => (event: SyntheticEvent, isExpanded: boolean) => {
+        setCurrentPanel(isExpanded ? panel : '');
+    }
+
     return (
         <>
             {actionGroups && (actionGroups.map((actionGroup) => {
                 if (actionGroup.items.length === 0) return (<></>);
 
                 return (
-                    <Accordion key={actionGroup.name}>
+                    <Accordion key={actionGroup.name} expanded={currentPanel === actionGroup.name} onChange={togglePanel(actionGroup.name)}>
                         <AccordionSummary>
                             <Typography variant="h3" sx={h3Override}>{actionGroup.name}</Typography>
                         </AccordionSummary>

@@ -57,10 +57,7 @@ export const convertCharactToEncounterCreatureViewModel = (model: CharacterViewM
     creature.walkingSpeed = model.walkingSpeed;
     creature.armourClass = buildArmourClass(model.equipment);
     creature.hitpointMax = creature.currentHitpoints = model.hitpointMaximum;
-    creature.traits = model.traits;
-    creature.actions = model.actions;
-    creature.reactions = model.reactions;
-    creature.spellcasting = model.spellcasting;
+    creature.actionGroups = model.actionGroups;
     creature.attributeCha = model.attributeCha;
     creature.attributeCon = model.attributeCon;
     creature.attributeDex = model.attributeDex;
