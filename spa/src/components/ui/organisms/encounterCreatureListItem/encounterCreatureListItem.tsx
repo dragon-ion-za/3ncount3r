@@ -17,9 +17,11 @@ import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreat
 
 interface EncounterCreatureListItemProps {
     viewModel: EncounterCreatureViewModel;
+    index: number;
+    manageHitpoints: (index: number) => void;
 }
 
-export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps> = ({viewModel}) => {
+export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps> = ({viewModel, index, manageHitpoints}) => {
     const encounterContext = useEncounterContext();
     
     const handleCreatureSelection = () => {
@@ -51,7 +53,7 @@ export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps
                         </Grid>
                         <Grid xs={2}>
                             <Stack>
-                                <Chip sx={encounterCreatureChipStyle} icon={<LocalHospital />} label={viewModel.currentHitpoints} />
+                                <Chip sx={encounterCreatureChipStyle} icon={<LocalHospital />} label={viewModel.currentHitpoints} onClick={() => {manageHitpoints(index)}} />
                                 <Chip sx={encounterCreatureChipStyle} icon={<Shield />} label={viewModel.armourClass?.armourClass ?? '-'} />
                                 <Chip sx={encounterCreatureChipStyle} icon={<InitiativeIcon />} label={viewModel.initiative ?? '-'} />
                             </Stack>

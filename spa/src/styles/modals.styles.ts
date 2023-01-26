@@ -15,3 +15,7 @@ export const modalContainerWide = {
     ...modalContainer,
     width: 600
 }
+
+export const modalButtonsContainer = {
+  marginTop: '5px'
+}
