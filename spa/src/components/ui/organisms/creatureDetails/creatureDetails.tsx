@@ -1,104 +1,31 @@
-import React, { ReactElement, useState } from "react";
-import { Avatar, Box, Container, Divider, Stack, Typography } from "@mui/material";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Avatar, Container, Divider, Stack, Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
 import { getCreatureToken} from "../../../services/creature.service";
 import { useEncounterContext } from '../../../contexts/encounter.context-provider';
 import { DamageConditionType } from "../../molecules/damageConditionType/damageConditionType";
-import { SpellcastingDetails } from "../../molecules/spellcastingDetails/spellcastingDetails";
-import { TraitDetails } from "../../molecules/traitDetails/traitDetails";
 import { ActionDetails } from "../../molecules/actionDetails/actionDetails";
-import { LegendaryActionDetails } from "../../molecules/legendaryActionDetails/legendaryActionDetails";
-import { SpecialActionDetails } from "../../molecules/specialActionDetails/specialActionDetails";
 
-import { ResistanceViewModel } from "../../../../view-models/shared.view-model";
-
-import { actionBox } from "./creatureDetails.styles";
+import { KeyValuePair, ResistanceViewModel } from "../../../../view-models/shared.view-model";
+import { AttributeDetails } from "../../molecules/attributeDetails/attributeDetails";
 
 export const CreatureDetails : React.FC = () => { 
 
     const encounterContext = useEncounterContext();
-    const [activeDetailElement, setActiveDetailElement] = useState<ReactElement | null>();
-    const [actionsList, setActionsList] = useState<Record<string, string>>({});
+    const [attributeList, setAttributeList] = useState<KeyValuePair<string,number>[]>([]);
 
-    useEffect(() => {
-        if (encounterContext.selectedCreature) {
+    useEffect(() => {        
+        let attr: KeyValuePair<string,number>[] = [];
+        attr.push({ key: 'STR', value: encounterContext.selectedCreature?.attributeStr ?? 0 })
+        attr.push({ key: 'DEX', value: encounterContext.selectedCreature?.attributeDex ?? 0 })
+        attr.push({ key: 'CON', value: encounterContext.selectedCreature?.attributeCon ?? 0 })
+        attr.push({ key: 'INT', value: encounterContext.selectedCreature?.attributeInt ?? 0 })
+        attr.push({ key: 'WIS', value: encounterContext.selectedCreature?.attributeWis ?? 0 })
+        attr.push({ key: 'CHA', value: encounterContext.selectedCreature?.attributeCha ?? 0 })
+        setAttributeList(attr);
 
-            let actions : Record<string, string> = {};
-
-            actions.traits = 'Traits';
-
-            if (encounterContext.selectedCreature.spellcasting.some(x => {return x.name === 'Innate Spellcasting'}))
-                actions.innatespellcasting = 'Innate Spellcasting';
-
-            if (encounterContext.selectedCreature.spellcasting.some(x => {return x.name === 'Spellcasting'}))
-                actions.spellcasting = 'Spellcasting';
-
-                actions.actions = 'Actions';
-
-            if (encounterContext.selectedCreature.reactions && encounterContext.selectedCreature.reactions.length > 0)
-                actions.reactions = 'Reactions';
-
-            if (encounterContext.selectedCreature.legendaryActions && encounterContext.selectedCreature.legendaryActions.length > 0)
-                actions.legendary = 'Legendary Actions';
-
-            if (encounterContext.selectedCreature.lairActions && encounterContext.selectedCreature.lairActions.length > 0)
-                actions.lair = 'Lair Actions';
-
-            if (encounterContext.selectedCreature.regionalEffects && encounterContext.selectedCreature.regionalEffects.length > 0)
-                actions.regional = 'Regional Effects';
-
-            if (encounterContext.selectedCreature.mythicEncounter && encounterContext.selectedCreature.mythicEncounter.length > 0)
-                actions.mythic = 'Mythical Encounter';
-
-            setActionsList(actions);
-
-            setActiveDetailElement(<TraitDetails traits={encounterContext.selectedCreature.traits} />);
-        }
     }, [encounterContext.selectedCreature])
-
-    const displayDetails = (type: string) => {
-        if (!encounterContext.selectedCreature) return;
-
-        switch (type){
-            case 'traits': 
-                setActiveDetailElement(<TraitDetails traits={encounterContext.selectedCreature.traits} />); 
-                break;
-
-            case 'innatespellcasting': 
-                setActiveDetailElement(<SpellcastingDetails spellcasting={encounterContext.selectedCreature.spellcasting.filter(x => {return x.name === 'Innate Spellcasting'})[0]} />); 
-                break;
-
-            case 'spellcasting': 
-                setActiveDetailElement(<SpellcastingDetails spellcasting={encounterContext.selectedCreature.spellcasting.filter(x => {return x.name === 'Spellcasting'})[0]} />); 
-                break;
-
-            case 'actions': 
-                setActiveDetailElement(<ActionDetails actions={encounterContext.selectedCreature.actions} />); 
-                break;
-
-            case 'reactions': 
-                setActiveDetailElement(<ActionDetails actions={encounterContext.selectedCreature.reactions} />); 
-                break;
-
-            case 'legendary': 
-                setActiveDetailElement(<LegendaryActionDetails legendaryActions={encounterContext.selectedCreature.legendaryActions} actionCount={encounterContext.selectedCreature.legendaryCount} />); 
-                break;
-
-            case 'lair': 
-                setActiveDetailElement(<SpecialActionDetails specialActions={encounterContext.selectedCreature.lairActions} title='Lair Actions' />); 
-                break;
-
-            case 'regional': 
-                setActiveDetailElement(<SpecialActionDetails specialActions={encounterContext.selectedCreature.regionalEffects} title='Regional Effects' />); 
-                break;
-
-            case 'mythic': 
-                setActiveDetailElement(<SpecialActionDetails specialActions={encounterContext.selectedCreature.mythicEncounter} title='Mythic Encounter' />); 
-                break;
-        };
-    };
 
     return (
         <>
@@ -115,6 +42,41 @@ export const CreatureDetails : React.FC = () => {
                     <Grid xs={5}>
                         <Stack>
                             <Typography variant="h1">{encounterContext.selectedCreature.name}</Typography>
+                            
+                            <Divider />
+
+                            <AttributeDetails attributeList={attributeList} />
+
+                            <Divider />
+
+                            <Typography variant="body1">
+                                <strong>Passive Perception:</strong> {encounterContext.selectedCreature.passivePerception}
+                            </Typography>
+
+                            {encounterContext.selectedCreature.languages.length > 0 &&
+                            (
+                                <Typography variant="body1">
+                                    <strong>Languages:</strong> {encounterContext.selectedCreature.languages.join(', ')}
+                                </Typography>
+                            )}
+
+                            {encounterContext.selectedCreature.senses.length > 0 &&
+                            (
+                                <Typography variant="body1">
+                                    <strong>Senses:</strong> {encounterContext.selectedCreature.senses.join(', ')}
+                                </Typography>
+                            )}
+
+                            {encounterContext.selectedCreature.savingThrows.length > 0 &&
+                            (
+                                <Typography variant="body1">
+                                    <strong>Saving Throws:</strong> {encounterContext.selectedCreature.savingThrows
+                                                                        .map(x => `${x.skillName} ${x.modifier > 0 ? '+' : ''}${x.modifier}`)
+                                                                        .join(', ')}
+                                </Typography>
+                            )}
+
+                            <Divider />
 
                             {encounterContext.selectedCreature.resistances.length > 0 && 
                             (
@@ -142,15 +104,10 @@ export const CreatureDetails : React.FC = () => {
                                 
                             )}
 
-                            <Divider />
-
-                            <Container>
-                                {Object.entries(actionsList).map(([k,v]) => (<Box key={k} sx={actionBox} onClick={() => {displayDetails(k)}}>{v}</Box>))}
-                            </Container>
                         </Stack>
                     </Grid>
                     <Grid xs={5}>
-                        {activeDetailElement}
+                        <ActionDetails actionGroups={encounterContext.selectedCreature.actionGroups} />
                     </Grid>
                 </Grid>
             )}

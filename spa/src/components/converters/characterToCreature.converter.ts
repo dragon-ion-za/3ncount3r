@@ -1,7 +1,8 @@
 import { CharacterViewModel, ClassViewModel } from "../../view-models/character.view-model";
 import { EncounterCreatureViewModel } from "../../view-models/encounter-creature.view-model";
 import { ItemPropertyTypes, ItemTypes, ItemViewModel } from "../../view-models/item.view-model";
-import { ArmourClassViewModel } from "../../view-models/shared.view-model";
+import { ArmourClassViewModel, SkillModifierViewModel } from "../../view-models/shared.view-model";
+import { calculateAbilityScoreModifier } from "../services/creature.service";
 
 const buildArmourClass = (equipment: ItemViewModel[]) : ArmourClassViewModel => {
     let model: ArmourClassViewModel = new ArmourClassViewModel();
@@ -23,6 +24,29 @@ const parseClasses = (classes: ClassViewModel[]): string => {
     return classString.join(' ');
 }
 
+const buildSavingThrows = (model: CharacterViewModel): SkillModifierViewModel[] => {
+    let savingThrows: SkillModifierViewModel[] = [];
+
+    model.savingThrowProficiencies.forEach(x => {
+        let modifier: SkillModifierViewModel = new SkillModifierViewModel();
+        modifier.skillName = x;
+
+        switch (x) {
+            case 'str': modifier.modifier = calculateAbilityScoreModifier(model.attributeStr); break;
+            case 'dex': modifier.modifier = calculateAbilityScoreModifier(model.attributeDex); break;
+            case 'con': modifier.modifier = calculateAbilityScoreModifier(model.attributeCon); break;
+            case 'wis': modifier.modifier = calculateAbilityScoreModifier(model.attributeWis); break;
+            case 'int': modifier.modifier = calculateAbilityScoreModifier(model.attributeInt); break;
+            case 'cha': modifier.modifier = calculateAbilityScoreModifier(model.attributeCha); break;
+        }
+
+        modifier.modifier += model.proficiencyBonus;
+        savingThrows.push(modifier);
+    });
+
+    return savingThrows;
+}
+
 export const convertCharactToEncounterCreatureViewModel = (model: CharacterViewModel): EncounterCreatureViewModel => {
     let creature: EncounterCreatureViewModel = new EncounterCreatureViewModel();
 
@@ -33,16 +57,17 @@ export const convertCharactToEncounterCreatureViewModel = (model: CharacterViewM
     creature.walkingSpeed = model.walkingSpeed;
     creature.armourClass = buildArmourClass(model.equipment);
     creature.hitpointMax = creature.currentHitpoints = model.hitpointMaximum;
-    creature.traits = model.traits;
-    creature.actions = model.actions;
-    creature.reactions = model.reactions;
-    creature.spellcasting = model.spellcasting;
+    creature.actionGroups = model.actionGroups;
     creature.attributeCha = model.attributeCha;
     creature.attributeCon = model.attributeCon;
     creature.attributeDex = model.attributeDex;
     creature.attributeInt = model.attributeInt;
     creature.attributeStr = model.attributeStr;
     creature.attributeWis = model.attributeWis;
+    creature.passivePerception = model.passivePerception;
+    creature.languages = model.languages;
+    creature.senses = model.senses;
+    creature.savingThrows = buildSavingThrows(model);
 
     return creature;
 }

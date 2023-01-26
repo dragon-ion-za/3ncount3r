@@ -1,5 +1,5 @@
 import { ItemViewModel } from "./item.view-model";
-import { CreatureSizes, CreatureTraitViewModel, ResistanceViewModel, SpellcastingViewModel } from "./shared.view-model";
+import { ActionGroupViewModel, CreatureSizes, ResistanceViewModel } from "./shared.view-model";
 
 export interface ClassViewModel {
     name: string;
@@ -34,10 +34,8 @@ export class CharacterViewModel {
     resistances: ResistanceViewModel[] = [];
     immunities: ResistanceViewModel[] = [];
     languages: string[] = [];
-    traits: CreatureTraitViewModel[] = [];
-    actions: CreatureTraitViewModel[] = [];
-    reactions: CreatureTraitViewModel[] = [];
-    spellcasting: SpellcastingViewModel[] = [];
     equipment: ItemViewModel[] = [];
     inventory: ItemViewModel[] = [];
+    senses: string[] = [];
+    actionGroups: ActionGroupViewModel[] = [];
 }

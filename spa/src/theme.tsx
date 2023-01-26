@@ -79,6 +79,41 @@ export const theme = createTheme({
                 fontWeight: 'normal'
             }
         }
+    },
+    MuiAccordion: {
+        styleOverrides: {
+            root: {
+                background: 'none',
+                border: 'none',
+                boxShadow: 'none',
+                minHeight: '38px',
+                '&:before': {
+                    display: 'none'
+                },
+                '&.Mui-expanded': {
+                    margin: '0px !important',
+                    minHeight: '38px !important',
+                },
+                '.Mui-expanded': {
+                    minHeight: '38px !important',
+                }
+            }            
+        }
+    },
+    MuiAccordionSummary: {
+        styleOverrides: {
+            root: {
+                width: '100%',
+                border: 'none',
+                '.Mui-expanded': {
+                    margin: '0px !important',
+                }
+            },
+            content : {
+                display: 'block',
+                margin: '0px'
+            }
+        }
     }
    }
 });

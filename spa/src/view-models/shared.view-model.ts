@@ -32,27 +32,18 @@ export class ResistanceViewModel {
     condition: string = '';
 }
 
-export class CreatureTraitViewModel {
-    name: string = '';
-    entries: string[] = [];
-}
-
-export class SpellcastingViewModel {
-    name: string = '';
-    entries: string[] = [];
-    atWill: string[] = [];
-    withResources: KnownSpellsViewModel[] = [];
-    ability: string = '';
-}
-
-export class KnownSpellsViewModel {
-    type: SpellTypes = SpellTypes.Unknown;
-    resource: string = '';
-    level: string = '';
-    spells: string[] = [];
-}
-
 export class SpecialActionViewModel {
     type: string = '';
-    items: string[] = [];
+    name: string = '';
+    items: (string | SpecialActionViewModel)[] = [];
+}
+
+export interface KeyValuePair<TKey, TValue> {
+    key: TKey;
+    value: TValue;
+}
+
+export interface ActionGroupViewModel {
+    name: string;
+    items: SpecialActionViewModel[];
 }
