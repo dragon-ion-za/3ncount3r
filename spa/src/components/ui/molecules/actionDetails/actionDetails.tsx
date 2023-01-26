@@ -23,7 +23,17 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
                         detailsNodes.push(
                             <Container sx={actionItemContainerStyle}>
                                 <Typography variant="body1" display='inline'><strong>{specialAction.name}: </strong></Typography>
-                                {specialAction.items.map((x, entryIndex) => (<Typography key={`${specialAction.name}_body_${entryIndex}`} variant="body1" display={entryIndex === 0 ? 'inline' : 'block'}>{x as string}</Typography>))}
+                                {specialAction.items.map(
+                                    (x, entryIndex) => {
+                                        if (typeof x === 'string') {
+                                            return (<Typography key={`${specialAction.name}_body_${entryIndex}`} variant="body1" display={entryIndex === 0 ? 'inline' : 'block'}>{x as string}</Typography>);
+                                        }
+                                        else {
+                                            let castAction: SpecialActionViewModel = x;
+                                            return (renderDetails([castAction]));
+                                        }
+                                    }
+                                )}
                             </Container>
                         );
                     } else {
