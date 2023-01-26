@@ -24,7 +24,7 @@ export const SpecialActionDetails : React.FC<SpecialActionDetailsProps> = ({spec
                     {specialActions.map((specialAction: SpecialActionViewModel) => {
                         switch(specialAction.type) {
                             case 'additional':
-                            case 'entry': return specialAction.items.map(x => <Typography variant="body1">{x}</Typography>);
+                            case 'entry': return specialAction.items.map(x => <Typography variant="body1">{x as string}</Typography>);
 
                             case 'list': return (<List dense={true} sx={{zIndex: -1}}>
                                                     <ListItem>

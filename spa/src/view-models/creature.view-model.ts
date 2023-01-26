@@ -1,4 +1,4 @@
-import { ArmourClassViewModel, CreatureSizes, CreatureTraitViewModel, ResistanceViewModel, SkillModifierViewModel, SpecialActionViewModel, SpellcastingViewModel } from "./shared.view-model";
+import { ActionGroupViewModel, ArmourClassViewModel, CreatureSizes, CreatureTraitViewModel, ResistanceViewModel, SkillModifierViewModel, SpecialActionViewModel, SpellcastingViewModel } from "./shared.view-model";
 
 export class CreatureViewModel {
     name: string = '';
@@ -40,4 +40,5 @@ export class CreatureViewModel {
     mythicEncounter: SpecialActionViewModel[] = [];
     senses: string[] = [];
     savingThrows: SkillModifierViewModel[] = [];
+    actionGroups: ActionGroupViewModel[] = [];
 }

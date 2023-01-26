@@ -54,10 +54,16 @@ export class KnownSpellsViewModel {
 
 export class SpecialActionViewModel {
     type: string = '';
-    items: string[] = [];
+    name: string = '';
+    items: (string | SpecialActionViewModel)[] = [];
 }
 
 export interface KeyValuePair<TKey, TValue> {
     key: TKey;
     value: TValue;
+}
+
+export interface ActionGroupViewModel {
+    name: string;
+    items: SpecialActionViewModel[];
 }
