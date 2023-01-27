@@ -13,7 +13,7 @@ import { SwimmingSpeedIcon } from "../../molecules/icons/swimmingSpeed.icon";
 import { ClimbingSpeedIcon } from "../../molecules/icons/climbingSpeed.icon";
 import { BurrowingSpeedIcon } from "../../molecules/icons/burrowingSpeed.icon";
 
-import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreatureChipContainer } from './encounterCreatureListItem.styles';
+import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreatureChipContainer, creatureDeathStateStyle, creatureAvatarStyle } from './encounterCreatureListItem.styles';
 
 interface EncounterCreatureListItemProps {
     viewModel: EncounterCreatureViewModel;
@@ -34,9 +34,10 @@ export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps
                 <CardContent> 
                     <Grid container>
                         <Grid xs={2}> 
-                            <Avatar src={getCreatureToken(viewModel.sourceId, 
-                                                            viewModel.isPlayerCharacter ? viewModel.id : viewModel.name, 
-                                                            viewModel.isPlayerCharacter)} sx={{width: 64, height: 64, margin: '5px'}} />
+                            <Avatar sx={viewModel.currentHitpoints <= 0 ? creatureDeathStateStyle : creatureAvatarStyle} 
+                                src={getCreatureToken(viewModel.sourceId, 
+                                                        viewModel.isPlayerCharacter ? viewModel.id : viewModel.name, 
+                                                        viewModel.isPlayerCharacter)} />
                         </Grid>
                         <Grid xs={8}>
                             <Stack>

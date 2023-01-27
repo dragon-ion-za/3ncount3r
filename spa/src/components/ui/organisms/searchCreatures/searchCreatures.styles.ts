@@ -6,5 +6,6 @@ export const searchResultContainerStyle = {
 
 export const searchContainerStyles = {
     position: 'absolute',
+    width: '24vw',
     zIndex: 999
 }

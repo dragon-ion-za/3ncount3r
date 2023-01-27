@@ -8,6 +8,13 @@ export const theme = createTheme({
         fontFamily: 'ScalySansRemake, MrEavesRemake, Arial'
     },
    components: {
+    MuiCssBaseline : {
+        styleOverrides: {
+            body: {
+                
+            }
+        }
+    },
     MuiPaper: {
         styleOverrides: {
             root: {

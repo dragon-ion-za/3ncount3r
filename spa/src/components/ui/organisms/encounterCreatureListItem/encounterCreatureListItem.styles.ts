@@ -14,3 +14,34 @@ export const encounterCreatureChipStyle = {
 export const encounterCreatureChipContainer = {
     padding: '0px !important'
 }
+
+export const creatureAvatarStyle = {
+    width: 64, 
+    height: 64, 
+    margin: '5px'
+}
+
+export const creatureDeathStateStyle = {
+    ...creatureAvatarStyle,
+    'img': {
+        filter: 'grayscale(100%)',
+    },
+    ':before, :after': {
+        position: 'absolute',
+        content: '""',
+        background: 'red',
+        display: 'block',
+        width: '100%',
+        height: '16px',
+        transform: 'rotate(-45deg)',
+        left: '0',
+        right: '0',
+        top: '0',
+        bottom: '0',
+        margin: 'auto',
+        zIndex: '2'
+    },
+    ':after': {
+        transform: 'rotate(45deg)'
+    }
+}
