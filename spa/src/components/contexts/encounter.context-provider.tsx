@@ -13,8 +13,12 @@ const EncounterContext = createContext<IEncounterContext>({
     creatures: [], 
     selectedCreature: null,
     selectedParty: '',
+    encounterName: '',
+    encounterId: '',
     setSelectedParty: () => { throw new Error('Encounter State is uninitialised.')},
     setCreatures: () => { throw new Error('Encounter State is uninitialised.')},
+    setEncounterName: () => { throw new Error('Encounter State is uninitialised.')},
+    setEncounterId: () => { throw new Error('Encounter State is uninitialised.')},
     addCreature: () => { throw new Error('Encounter State is uninitialised.')},
     removeCreature: () => { throw new Error('Encounter State is uninitialised.')},
     setSelectedCreature: () => {throw new Error('Encounter State is uninitialised.')}
@@ -26,6 +30,8 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
     const [creatures, setCreaturesInternal] = useState<EncounterCreatureViewModel[]>([]);
     const [selectedCreature, setSelectedCreatureInternal] = useState<EncounterCreatureViewModel | null>(null);
     const [selectedParty, setSelectedPartyInternal] = useState<string>('');
+    const [encounterName, setEncounterNameInternal] = useState<string>('');
+    const [encounterId, setEncounterIdInternal] = useState<string>('');
 
     const creatureInitiativeEqualityComparer = (x: EncounterCreatureViewModel, y: EncounterCreatureViewModel) => {
         if (x.initiative > y.initiative) return -1;
@@ -56,13 +62,25 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
         setSelectedPartyInternal(partyName);
     }
 
+    const setEncounterName = (name: string) => {
+        setEncounterNameInternal(name);
+    }
+
+    const setEncounterId = (id: string) => {
+        setEncounterIdInternal(id);
+    }
+
     return (<>
         <EncounterContext.Provider value={{
             creatures,
             selectedCreature,
             selectedParty,
+            encounterName,
+            encounterId,
             setSelectedParty,
             setCreatures,
+            setEncounterName,
+            setEncounterId,
             addCreature,
             removeCreature,
             setSelectedCreature

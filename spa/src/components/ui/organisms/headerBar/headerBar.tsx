@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 
 import SearchCreatures from '../searchCreatures/searchCreatures';
 import { InitiativeHandler } from '../initiativeHandler/initiativeHandler';
-import { PartyHandler } from '../partyHandler/partyHandler';
+import { SaveHandler } from '../saveHandler/saveHandler';
 
 const HeaderBar : React.FC = () => {
     return (
@@ -17,6 +17,7 @@ const HeaderBar : React.FC = () => {
                         <InitiativeHandler />
                     </Grid>
                     <Grid xs={1}>
+                        <SaveHandler />
                     </Grid>
                     <Grid xs={6}>
 
