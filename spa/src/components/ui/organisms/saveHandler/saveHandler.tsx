@@ -5,21 +5,31 @@ import { useEncounterContext } from "../../../contexts/encounter.context-provide
 import { SaveEncounterModal } from "../modals/saveEncounter.modal";
 
 import { initiativeButtonStyles } from "../initiativeHandler/initiativeHandler.styles";
-import { saveEncounter } from "../../../services/encounter.service";
+import { saveEncounter, updateEncounter } from "../../../services/encounter.service";
 
 export const SaveHandler : React.FC = () => { 
     const [open, setOpen] = useState(false);
     const encounterContext = useEncounterContext();
 
+    useEffect(() => {}, [encounterContext.encounterId]);
+
     const handleAccept = async (encounterName: string) => {
         encounterContext.setEncounterName(encounterName);
 
-        let encounterId:string = await saveEncounter(encounterName, encounterContext.creatures, encounterContext.selectedParty);
+        if (encounterContext.encounterId === '') {
+            let encounterId: string = await saveEncounter(encounterName, encounterContext.creatures, encounterContext.selectedParty);
 
-        if (encounterId !== 'FAILED') {
-            encounterContext.setEncounterId(encounterId);
+            if (encounterId !== '') {
+                encounterContext.setEncounterId(encounterId);
+            } else {
+                console.log('save failed!!!');
+            }
         } else {
-            console.log('save failed!!!');
+            let encounterId: string = await updateEncounter(encounterName, encounterContext.encounterId, encounterContext.creatures, encounterContext.selectedParty);
+
+            if (encounterId === '') {
+                console.log('save failed!!!');
+            }
         }
         
         toggleModal(false)
@@ -42,7 +52,7 @@ export const SaveHandler : React.FC = () => {
                 disablePortal>
                     <DialogContent>
                         <SaveEncounterModal
-                        currentEncounterName={encounterContext.encounterName}
+                            currentEncounterName={encounterContext.encounterName}
                             handleCancel={() => toggleModal(false)} 
                             handleAccept={handleAccept} />
                     </DialogContent>

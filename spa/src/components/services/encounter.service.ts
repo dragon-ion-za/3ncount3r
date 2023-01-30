@@ -11,3 +11,14 @@ export async function saveEncounter(encounterName: string, encounterCreatures: E
 
      return response.data as string;
 }
+
+export async function updateEncounter(encounterName: string, encounterId: string, encounterCreatures: EncounterCreatureViewModel[], encounterParty: string): Promise<string> {
+    const response = await axios.put('http://localhost:5001/encounters', { 
+        name: encounterName,
+        id: encounterId,
+        creatures: encounterCreatures,
+        selectedParty: encounterParty
+     });
+
+     return response.data as string;
+}
