@@ -14,7 +14,7 @@ export const InitiativeHandler : React.FC = () => {
     const handleAccept = (creatures: EncounterCreatureViewModel[], partyName: string) => {
         encounterContext.setCreatures(creatures);
         encounterContext.setSelectedParty(partyName);
-        toggleModal(false)
+        toggleModal(false);
     };
 
     const toggleModal = (toggle: boolean) => {
