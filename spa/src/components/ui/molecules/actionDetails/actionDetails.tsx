@@ -1,6 +1,8 @@
 import { Accordion, AccordionDetails, AccordionSummary, Container, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React, { SyntheticEvent, useEffect, useState } from "react";
 
+import { RichTextEntry } from "../richTextEntry/richTextEntry";
+
 import { ActionGroupViewModel, SpecialActionViewModel } from "../../../../view-models/shared.view-model";
 
 import { actionItemContainerStyle, h3Override } from "../../../../styles/details.styles";
@@ -27,7 +29,7 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
                                 {specialAction.items.map(
                                     (x, entryIndex) => {
                                         if (typeof x === 'string') {
-                                            return (<Typography key={`${specialAction.name}_body_${entryIndex}`} variant="body1" display={entryIndex === 0 ? 'inline' : 'block'}>{x as string}</Typography>);
+                                            return (<RichTextEntry key={`${specialAction.name}_body_${entryIndex}`} entryIndex={entryIndex} entryText={x as string} />);
                                         }
                                         else {
                                             let castAction: SpecialActionViewModel = x;

@@ -22,3 +22,11 @@ export const actionItemContainerStyle = {
     padding: '0px !important',
     marginBottom: '5px !important'
 }
+
+export const diceContainerStyle = {
+    padding: '0px !important',
+    margin: '0px !important',
+    top: '8px',
+    position: 'relative',
+    display: 'inline'
+}
