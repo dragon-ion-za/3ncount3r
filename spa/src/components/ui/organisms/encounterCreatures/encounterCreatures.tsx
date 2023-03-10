@@ -1,12 +1,14 @@
-import { DialogContent, Modal, Stack } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import { DialogContent, Modal, Stack } from "@mui/material";
 
 import { useEncounterContext } from "../../../contexts/encounter.context-provider";
 import { EncounterCreatureListItem } from "../encounterCreatureListItem/encounterCreatureListItem";
 
 import { EncounterCreatureViewModel } from "../../../../view-models/encounter-creature.view-model";
-import { ConfigureCreatureModal } from "../modals/configureCreature.modal";
 import { HitpointManagementModal } from "../modals/hitpointManagement.modal";
+
+import { getEncounterById } from "../../../services/encounter.service";
 
 export const EncounterCreatures : React.FC = () => {
     const [open, setOpen] = useState(false);
@@ -14,8 +16,33 @@ export const EncounterCreatures : React.FC = () => {
     
     const encounterContext = useEncounterContext();
 
+    const {id} = useParams();
+
     useEffect(() => {
-    }, encounterContext.creatures)
+        encounterContext.setCreatures([]);
+        encounterContext.setEncounterId('');
+        encounterContext.setEncounterName('');
+        encounterContext.setSelectedParty('');
+    }, []);
+
+    useEffect(() => {
+        if (id) {
+            getEncounterById(id).then(x => {
+                encounterContext.setCreatures(x.creatures);
+                encounterContext.setEncounterId(x.id);
+                encounterContext.setEncounterName(x.name);
+                encounterContext.setSelectedParty(x.selectedParty);
+            });
+        } else {
+            encounterContext.setCreatures([]);
+            encounterContext.setEncounterId('');
+            encounterContext.setEncounterName('');
+            encounterContext.setSelectedParty('');
+        }
+    }, [id]);
+
+    useEffect(() => {
+    }, [encounterContext.creatures])
 
     const doHitpointManagement = (index: number) => {
         setSelectedIndex(index);
