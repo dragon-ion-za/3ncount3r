@@ -16,7 +16,7 @@ export const RichTextEntry : React.FC<RichTextEntryProps> = ({key, entryIndex, e
 
     const parseText = (text: string) : JSX.Element => {
 
-        let splits = text.split(/(\{@\w+?\s.*?\})/)
+        let splits = text.split(/(\{@\w\}|\{@spell\s.*\}\s\(.*\)|\{@\w+?\s.*?\})/)
 
         return (
             <>
