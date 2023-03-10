@@ -1,0 +1,5 @@
+{
+    "connectionStrings": {
+        "3ncount3rContext": "mongodb://localhost:27017/3ncount3r"
+    }
+}

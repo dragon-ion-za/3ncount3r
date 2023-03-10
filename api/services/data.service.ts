@@ -1,10 +1,12 @@
 import * as mongoDB from "mongodb";
 import { v4 as uuid } from 'uuid';
 
+const config = require('config');
+
 import { EncounterModel } from "../models/encounter.model";
 
 export class DataService {
-    private static dbUrl: string = 'mongodb://localhost:27017/3ncount3r';
+    private static dbUrl: string = config.get('connectionStrings.3ncount3rContext');
     private static mongoClient: mongoDB.MongoClient = new mongoDB.MongoClient(this.dbUrl);
     private static collections: { encounters?: mongoDB.Collection<EncounterModel> } = {};
 
