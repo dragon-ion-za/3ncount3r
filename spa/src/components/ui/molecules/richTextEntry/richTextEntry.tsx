@@ -40,7 +40,9 @@ export const RichTextEntry : React.FC<RichTextEntryProps> = ({key, entryIndex, e
                                     return <Typography variant="body1" display='inline'><Link href='#'>{split.reverse()[0]}</Link></Typography>;
                                 case '@creature': 
                                     let cuttoffIndex = parts[2].indexOf('||');
-                                    return <Typography variant="body1" display='inline'><Link href='#'>{parts[2].substring(0, cuttoffIndex)}</Link></Typography>;
+                                    return <Typography variant="body1" display='inline'>
+                                            <Link href='#'>{cuttoffIndex < 0 ? parts[2] : parts[2].substring(0, cuttoffIndex)}</Link>
+                                        </Typography>;
 
                                 case '@atk': text = translateAttackType(parts[2]); break;
                                 case '@hit': text = translateToHit(parts[2]); break;
