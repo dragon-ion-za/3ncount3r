@@ -1,6 +1,8 @@
 import { Accordion, AccordionDetails, AccordionSummary, Container, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React, { SyntheticEvent, useEffect, useState } from "react";
 
+import { RichTextEntry } from "../richTextEntry/richTextEntry";
+
 import { ActionGroupViewModel, SpecialActionViewModel } from "../../../../view-models/shared.view-model";
 
 import { actionItemContainerStyle, h3Override } from "../../../../styles/details.styles";
@@ -23,11 +25,11 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
                     if (specialAction.name) {
                         detailsNodes.push(
                             <Container sx={actionItemContainerStyle}>
-                                <Typography variant="body1" display='inline'><strong>{specialAction.name}: </strong></Typography>
+                                <RichTextEntry key={`${specialAction.name}_heading`} isHeading={true} entryIndex={0} entryText={`${specialAction.name}: `} />
                                 {specialAction.items.map(
                                     (x, entryIndex) => {
                                         if (typeof x === 'string') {
-                                            return (<Typography key={`${specialAction.name}_body_${entryIndex}`} variant="body1" display={entryIndex === 0 ? 'inline' : 'block'}>{x as string}</Typography>);
+                                            return (<RichTextEntry key={`${specialAction.name}_body_${entryIndex}`} entryIndex={entryIndex} entryText={x as string} />);
                                         }
                                         else {
                                             let castAction: SpecialActionViewModel = x;
@@ -38,42 +40,50 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
                             </Container>
                         );
                     } else {
-                        specialAction.items.forEach((x, entryIndex) => detailsNodes.push(<Typography key={`${index}_no-name_${entryIndex}`} variant="body1">{x as string}</Typography>))
+                        specialAction.items.forEach((x, entryIndex) => detailsNodes.push(<RichTextEntry key={`${index}_no-name_${entryIndex}`} entryIndex={entryIndex} entryText={x as string} />))
                     }
                 break;
 
                 case 'list': 
                     detailsNodes.push(
                         <List dense={true} sx={{zIndex: -1}}>
-                            <ListItem>
-                                <ListItemText>
-                                    {specialAction.items.map((x, entryIndex) => {
-                                        if (typeof x === 'string') {
-                                            return (<Typography key={`${index}_list-item_${entryIndex}`} variant="body1">{`- ${x}`}</Typography>)
-                                        } else {
-                                            let castAction: SpecialActionViewModel = x;
-                                            return (
-                                                <Container key={`${castAction.name}_container_${entryIndex}`} sx={actionItemContainerStyle}>
-                                                    <Typography variant="body1" display='inline'><strong>{castAction.name}: </strong></Typography>
+                            {specialAction.items.map((x, entryIndex) => {
+                                if (typeof x === 'string') {
+                                    return (
+                                        <ListItem key={`${index}_list-item_${entryIndex}`}>
+                                            <ListItemText>
+                                                <RichTextEntry key='' entryIndex={entryIndex} entryText={`- ${x}`} />
+                                            </ListItemText>
+                                        </ListItem>
+                                    )                                            
+                                } else {
+                                    let castAction: SpecialActionViewModel = x;
+                                    return (
+                                        <ListItem key={`${castAction.name}_container_${entryIndex}`}>
+                                            <ListItemText>
+                                                <Container sx={actionItemContainerStyle}>
+                                                    <RichTextEntry key={`${castAction.name}_heading_${entryIndex}`} isHeading={true} entryIndex={1} entryText={`${castAction.name}: `} />
                                                     {castAction.items.map(
                                                         (innerEntry, innerEntryIndex) => {
-                                                            let display: string = 'block';
+                                                            let display: number = 1;
 
                                                             if (castAction.type === 'list-entry') {
-                                                                display = innerEntryIndex === 0 ? 'inline' : 'block';
+                                                                display = innerEntryIndex;
+                                                            } else if (castAction.type === 'list-item-inline') {
+                                                                display = 0;
                                                             }
 
                                                             return (
-                                                                <Typography variant="body1" display={display}>{innerEntry as string}</Typography>
+                                                                <RichTextEntry key={`${castAction.name}_body_${innerEntryIndex}`} entryIndex={display} entryText={innerEntry as string} />
                                                             );
                                                         }
                                                     )}
                                                 </Container>
-                                            );
-                                        }
-                                    })}
-                                </ListItemText>
-                            </ListItem>
+                                            </ListItemText>
+                                        </ListItem>
+                                    );
+                                }
+                            })}
                         </List>
                     );
                 break;

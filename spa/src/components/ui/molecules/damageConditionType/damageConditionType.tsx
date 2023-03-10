@@ -23,6 +23,8 @@ import { ProneDamageIcon } from "../icons/damageType.prone.icon";
 import { StunnedDamageIcon } from "../icons/damageType.stunned.icon";
 import { AcidDamageIcon } from "../icons/damageType.acid.icon";
 import { FireDamageIcon } from "../icons/damageType.fire.icon";
+import { RestrainedDamageIcon } from "../icons/damageType.restrained.icon";
+import { BlindedDamageIcon } from "../icons/damageType.blinded.icon";
 
 import { damageConditionChips } from "../../../../styles/details.styles";
 
@@ -37,6 +39,7 @@ export const DamageConditionType : React.FC<DamageConditionTypeProps> = ({key, t
     const getDamageTypeIcon = (damageType: string, isMagical: boolean = false) => {
         switch (damageType) {
             case 'acid': return (<AcidDamageIcon />);
+            case 'blinded': return (<BlindedDamageIcon />);
             case 'bludgeoning': return isMagical ? (<MagicalBludgeoningDamageIcon />) : (<BludgeoningDamageIcon />);
             case 'charmed': return (<CharmedDamageIcon />);
             case 'cold': return (<ColdDamageIcon />);
@@ -53,6 +56,7 @@ export const DamageConditionType : React.FC<DamageConditionTypeProps> = ({key, t
             case 'poisoned': return (<PoisonedDamageIcon />);
             case 'prone': return (<ProneDamageIcon />);
             case 'psychic': return (<PsychicDamageIcon />);
+            case 'restrained': return (<RestrainedDamageIcon />);
             case 'slashing': return isMagical ? (<MagicalSlashingDamageIcon />) : (<SlashingDamageIcon />);
             case 'stunned': return (<StunnedDamageIcon />);
 
