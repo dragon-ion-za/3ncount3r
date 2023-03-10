@@ -25,7 +25,7 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
                     if (specialAction.name) {
                         detailsNodes.push(
                             <Container sx={actionItemContainerStyle}>
-                                <RichTextEntry key='' isHeading={true} entryIndex={0} entryText={`${specialAction.name}: `} />
+                                <RichTextEntry key={`${specialAction.name}_heading`} isHeading={true} entryIndex={0} entryText={`${specialAction.name}: `} />
                                 {specialAction.items.map(
                                     (x, entryIndex) => {
                                         if (typeof x === 'string') {
@@ -62,7 +62,7 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
                                         <ListItem key={`${castAction.name}_container_${entryIndex}`}>
                                             <ListItemText>
                                                 <Container sx={actionItemContainerStyle}>
-                                                    <RichTextEntry key='' isHeading={true} entryIndex={1} entryText={`${castAction.name}: `} />
+                                                    <RichTextEntry key={`${castAction.name}_heading_${entryIndex}`} isHeading={true} entryIndex={1} entryText={`${castAction.name}: `} />
                                                     {castAction.items.map(
                                                         (innerEntry, innerEntryIndex) => {
                                                             let display: number = 1;
@@ -74,7 +74,7 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
                                                             }
 
                                                             return (
-                                                                <RichTextEntry key='' entryIndex={display} entryText={innerEntry as string} />
+                                                                <RichTextEntry key={`${castAction.name}_body_${innerEntryIndex}`} entryIndex={display} entryText={innerEntry as string} />
                                                             );
                                                         }
                                                     )}

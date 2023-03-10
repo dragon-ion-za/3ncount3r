@@ -20,7 +20,7 @@ export const RichTextEntry : React.FC<RichTextEntryProps> = ({key, entryIndex, e
 
         return (
             <>
-                {splits.map(x => {
+                {splits.map((x, index) => {
                     if (x.startsWith('{@')) {
                         let parts = x.replace('{', '').replace('}', '').match(/(@\w+?)\s(.*)/);
 
@@ -30,7 +30,7 @@ export const RichTextEntry : React.FC<RichTextEntryProps> = ({key, entryIndex, e
                                 case '@damage':
                                 case '@dice': return renderDiceFormula(parts[2]);
                                 
-                                case '@condition': return <DamageConditionType key='' type={parts[2]} condition='' />;
+                                case '@condition': return <DamageConditionType key={`${key}_${index}_condi`} type={parts[2]} condition='' />;
                                 case '@spell': return <Chip sx={{textTransform: 'capitalize', ...spellChipsStyle}} label={parts[2]} />
 
                                 case '@skill': return <Typography variant="body1" display='inline'><Link href='#'>{parts[2]}</Link></Typography>;
@@ -53,10 +53,10 @@ export const RichTextEntry : React.FC<RichTextEntryProps> = ({key, entryIndex, e
                                 default: text = `${parts[1]} ${parts[2]}`; break;
                             }
 
-                            return <Typography key={key} variant="body1" display='inline'><strong>{text}</strong></Typography>;
+                            return <Typography key={`${key}_${index}`} variant="body1" display='inline'><strong>{text}</strong></Typography>;
                         }
                     } else {
-                        return <Typography key={key} variant='body1' display='inline'>
+                        return <Typography key={`${key}_${index}`} variant='body1' display='inline'>
                                 {isHeading ? (<strong>{x}</strong>) : x}
                             </Typography>;
                     }
