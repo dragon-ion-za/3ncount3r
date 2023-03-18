@@ -1,5 +1,11 @@
 {
     "connectionStrings": {
         "3ncount3rContext": "mongodb://localhost:27017/3ncount3r"
-    }
+    },
+    "byoapis": [
+        {
+            "id": "5eapi",
+            "baseUrl": "http://localhost:5001/"
+        }
+    ]
 }
