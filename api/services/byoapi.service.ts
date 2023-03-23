@@ -11,7 +11,7 @@ export class ByoApiService {
         let creatures: CreatureModel[] = [];
         let endpoints: ByoApiConfig[] = config.get('byoapis');
 
-        let calls: Record<string, Promise<AxiosResponse<CreatureModel, any>>> = {};
+        let calls: Record<string, Promise<AxiosResponse<CreatureModel[], any>>> = {};
         endpoints.forEach(endpoint => {
             calls[endpoint.id] = axios.get(`${endpoint.baseUrl}creatures?${queryString}`);
         });
@@ -20,7 +20,9 @@ export class ByoApiService {
         await Promise.all(callsToAwait);
 
         Object.entries(calls).map(([k,v]) => k).forEach(async (key) => {
-            creatures.push((await calls[key]).data);
+            let data = (await calls[key]).data;
+            data.forEach(x => { x.byoapiId = key; });
+            creatures.push(...data);
         });
 
         return creatures;

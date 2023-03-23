@@ -1,5 +1,6 @@
-const imagePath: string = 'http://localhost:5001/creatures/image/';
-const imagePathCharacters: string = 'http://localhost:5001/parties/characterimage/';
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const imagePath: string = `${BASE_URL}creatures/image/`;
+const imagePathCharacters: string = `${BASE_URL}parties/characterimage/`;
 
 export function parseAlignment(alignment: string[]): string {
     let expandedAlignment: string = '';

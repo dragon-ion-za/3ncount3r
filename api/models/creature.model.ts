@@ -2,6 +2,7 @@ import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, C
 
 export class CreatureModel {
     name: string;
+    byoapiId: string = '';
     sourceId: string = '';
     size: CreatureSizes = CreatureSizes.Unknown;
     type: string = '';
