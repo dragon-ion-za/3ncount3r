@@ -1,3 +1,5 @@
+const path = require('path');
+
 import { ByoApiService } from "../services/byoapi.service";
 
 export class CreaturesController {

@@ -42,6 +42,7 @@ export class CreatureModel {
     senses: string[] = [];
     savingThrows: SkillModifierModel[] = [];
     actionGroups: ActionGroupModel[] = [];
+    imageUrl: string = '';
 
     constructor (name: string) {
         this.name = name;

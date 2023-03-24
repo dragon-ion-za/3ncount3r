@@ -21,7 +21,7 @@ const SearchCreatureListItem : React.FC<SearchCreatureListItemProps> = ({viewMod
             <Paper sx={searchResultPaperStyles} onClick={() => selectCreature(viewModel)}>
                 <Grid container>
                     <Grid xs={2}>
-                        <Avatar src={getCreatureToken(viewModel.sourceId, viewModel.name, false)} sx={searchResultAvatarStyles} />
+                        <Avatar src={viewModel.imageUrl} sx={searchResultAvatarStyles} />
                     </Grid>
                     <Grid xs={8}>
                         <Typography variant='subtitle1'>{viewModel.type} {parseAlignment(viewModel.alignment)}</Typography>
