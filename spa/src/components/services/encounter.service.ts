@@ -37,3 +37,9 @@ export async function getEncounterById(id: string) : Promise<EncounterViewModel>
 
     return response.data as EncounterViewModel;
 }
+
+export async function getEncounterTemplateById(id: string) : Promise<EncounterViewModel> {
+    const response = await axios.get(`${BASE_URL}encountertemplates/${id}`);
+
+    return response.data as EncounterViewModel;
+}

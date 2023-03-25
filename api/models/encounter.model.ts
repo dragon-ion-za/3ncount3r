@@ -5,4 +5,6 @@ export class EncounterModel {
     name: string = '';
     creatures: EncounterCreatureModel[] = [];
     selectedParty: string = '';
+    roundCount: number = 0;
+    currentTurn: string = '';
 }
