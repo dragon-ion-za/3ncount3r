@@ -16,6 +16,10 @@ const router = createBrowserRouter([
             {
                 path: 'encounter/:id',
                 element: <EncounterPage />
+            },
+            {
+                path: 'encounter/:id/template',
+                element: <EncounterPage />
             }
         ]
     }

@@ -7,7 +7,7 @@ import { getEncounterById, getEncounters } from "../../../services/encounter.ser
 import { modalContainerWide } from "../../../../styles/modals.styles";
 
 export interface LoadEncounterModalProps {
-    handleAccept: (encounterId: string) => void;
+    handleAccept: (encounterId: string, isTemplate: boolean) => void;
     handleCancel: () => void;
 }
 
@@ -32,7 +32,7 @@ export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef
                         <InputLabel id="party_label">Select Encounter</InputLabel>
                         <Select 
                             labelId="party_label"
-                            onChange={(event: SelectChangeEvent) => {handleAccept(event.target.value)}}>
+                            onChange={(event: SelectChangeEvent) => {handleAccept(event.target.value, true)}}>
                             {encounters && encounters.map((x: EncounterViewModel) => (<MenuItem key={x.id} value={x.id}>{x.name}</MenuItem>))}
                         </Select>
                     </FormControl>

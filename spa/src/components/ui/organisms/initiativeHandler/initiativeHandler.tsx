@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import { Button, Modal, DialogContent } from "@mui/material";
 
 import { useEncounterContext } from "../../../contexts/encounter.context-provider";
@@ -11,9 +12,11 @@ export const InitiativeHandler : React.FC = () => {
     const [open, setOpen] = useState(false);
     const encounterContext = useEncounterContext();
 
+    let navigate = useNavigate();
     const handleAccept = (creatures: EncounterCreatureViewModel[], partyName: string) => {
         encounterContext.setCreatures(creatures);
         encounterContext.setSelectedParty(partyName);
+        navigate(`encounter/${encounterId}`);
         toggleModal(false);
     };
 
