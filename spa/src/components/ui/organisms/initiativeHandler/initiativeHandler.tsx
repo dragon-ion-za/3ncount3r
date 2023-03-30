@@ -7,16 +7,35 @@ import { InitiativeModal } from "../modals/initiative.modal";
 import { EncounterCreatureViewModel } from "../../../../view-models/encounter-creature.view-model";
 
 import { initiativeButtonStyles } from "./initiativeHandler.styles";
+import { saveEncounter, updateEncounter } from "../../../services/encounter.service";
 
 export const InitiativeHandler : React.FC = () => { 
     const [open, setOpen] = useState(false);
     const encounterContext = useEncounterContext();
 
     let navigate = useNavigate();
-    const handleAccept = (creatures: EncounterCreatureViewModel[], partyName: string) => {
+    const handleAccept = async (creatures: EncounterCreatureViewModel[], partyName: string) => {
         encounterContext.setCreatures(creatures);
         encounterContext.setSelectedParty(partyName);
-        navigate(`encounter/${encounterId}`);
+
+        let encounterId: string = '';
+        if (encounterContext.encounterId === '') {
+            encounterId = await saveEncounter(encounterContext.encounterName, encounterContext.creatures, encounterContext.selectedParty);
+
+            if (encounterId !== '') {
+                encounterContext.setEncounterId(encounterId);
+            } else {
+                console.log('save failed!!!');
+            }
+        } else {
+            encounterId = await updateEncounter(encounterContext.encounterName, encounterContext.encounterId, encounterContext.creatures, encounterContext.selectedParty);
+
+            if (encounterId === '') {
+                console.log('save failed!!!');
+            }
+        }
+
+        navigate(`/encounter/${encounterId}`);
         toggleModal(false);
     };
 
