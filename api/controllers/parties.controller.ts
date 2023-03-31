@@ -15,23 +15,17 @@ export class PartiesController {
         res.send(encounterId);
     }
 
-    public static getEncounterTemplates = async (req: any, res: any) => {
-        let encounters: EncounterModel[] = await (await DataService.getEncounterTemplates())
-                                                    .map(x => { return { 
-                                                        name: x.name, 
-                                                        id: x.id, 
-                                                        creatures: x.creatures, 
-                                                        selectedParty: x.selectedParty, 
-                                                        roundCount: x.roundCount, 
-                                                        currentTurn: x.currentTurn } });
+    public static getParties = async (req: any, res: any) => {
+        let parties: PartyModel[] = await (await DataService.getParties())
+                                                    .map(x => { return { ...x } });
 
-        res.send(encounters);
+        res.send(parties);
     }
 
-    public static getEncounterTemplateById = async (req: any, res: any) => {
+    public static getPartyById = async (req: any, res: any) => {
         let id: string = req.params.id.toLocaleLowerCase();
-        let encounter: EncounterModel = await DataService.getEncounterTemplateById(id);
+        let party: PartyModel = await DataService.getPartyById(id);
 
-        res.send(encounter);
+        res.send(party);
     }
 }

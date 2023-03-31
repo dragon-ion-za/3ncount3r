@@ -118,4 +118,30 @@ export class DataService {
             return '';
         }
     }
+
+    public static async updateParty(party: PartyModel) : Promise<string> {
+        await this.connectToDb();
+
+        let result = await this.collections.parties?.updateOne({id: party.id}, { $set: { 
+            ...party
+         } });
+
+        if (result?.acknowledged) {
+            return party.id;
+        } else {
+            return '';
+        }
+    }
+
+    public static async getParties(): Promise<PartyModel[]> {
+        await this.connectToDb();
+        return (await this.collections.parties?.find({}).toArray()) as PartyModel[];
+    }
+
+    public static async getPartyById(id: string): Promise<PartyModel> {
+        await this.connectToDb();
+        let party = (await this.collections.parties?.findOne({ id: id })) as PartyModel;
+
+        return party;
+    }
 }
