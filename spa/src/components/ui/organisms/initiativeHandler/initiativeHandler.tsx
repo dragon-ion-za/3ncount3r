@@ -14,12 +14,17 @@ export const InitiativeHandler : React.FC = () => {
     const encounterContext = useEncounterContext();
 
     let navigate = useNavigate();
+
     const handleAccept = async (creatures: EncounterCreatureViewModel[], partyName: string) => {
+        // Store an 'is new' value before setting anything so that we know if this needs to be a new encounter
+        // from a template or an update to an existing encounter
+        let isNew: boolean = encounterContext.selectedParty !== undefined || encounterContext.selectedParty !== '';
+
         encounterContext.setCreatures(creatures);
         encounterContext.setSelectedParty(partyName);
 
         let encounterId: string = '';
-        if (encounterContext.encounterId === '') {
+        if (isNew) {
             encounterId = await saveEncounter(encounterContext.encounterName, encounterContext.creatures, encounterContext.selectedParty);
 
             if (encounterId !== '') {

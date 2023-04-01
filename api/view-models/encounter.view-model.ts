@@ -1,6 +1,5 @@
 import { EncounterCreatureViewModel } from "./encounterCreature.view-model";
 
-
 export class EncounterViewModel {
     id: string = '';
     name: string = '';

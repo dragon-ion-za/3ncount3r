@@ -10,7 +10,7 @@ import { PartyViewModel } from "../../../../view-models/party.view-model";
 import { CharacterViewModel } from "../../../../view-models/character.view-model";
 
 import { modalContainerWide } from "../../../../styles/modals.styles";
-import { convertCharactToEncounterCreatureViewModel } from "../../../converters/characterToCreature.converter";
+import { convertCharacterToEncounterCreatureViewModel } from "../../../converters/characterToCreature.converter";
 
 export interface InitiativeModalProps {
     creaturesList: EncounterCreatureViewModel[];
@@ -38,15 +38,16 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
 
     const hanldePartySelection = (partyName: string) => {
         setSelectedPary(partyName);
-        getPartyMembers(partyName).then((partyMembers: CharacterViewModel[]) => {
-            let state = [...creatures];
+        let selectedParty = parties.find(x => x.name === partyName ?? '');
+        let partyMembers: CharacterViewModel[] = selectedParty!.characters;
+
+        let state = [...creatures];
             
-            partyMembers.forEach((member: CharacterViewModel) => {
-                state.push(convertCharactToEncounterCreatureViewModel(member));
-            });
-            
-            setCreatures(state);
+        partyMembers.forEach((member: CharacterViewModel) => {
+            state.push(convertCharacterToEncounterCreatureViewModel(member));
         });
+        
+        setCreatures(state);
     }
 
     useEffect(() => {

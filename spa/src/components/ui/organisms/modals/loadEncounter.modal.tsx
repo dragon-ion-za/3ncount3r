@@ -2,7 +2,7 @@ import React, { forwardRef, useEffect, useState } from "react";
 import { Box, Grid, Typography, FormControl, InputLabel, Select, SelectChangeEvent, MenuItem } from "@mui/material";
 
 import { EncounterViewModel } from "../../../../view-models/encounter.view-model";
-import { getEncounterById, getEncounters } from "../../../services/encounter.service";
+import { getEncounters } from "../../../services/encounter.service";
 
 import { modalContainerWide } from "../../../../styles/modals.styles";
 
@@ -33,7 +33,11 @@ export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef
                         <Select 
                             labelId="party_label"
                             onChange={(event: SelectChangeEvent) => {handleAccept(event.target.value, true)}}>
-                            {encounters && encounters.map((x: EncounterViewModel) => (<MenuItem key={x.id} value={x.id}>{x.name}</MenuItem>))}
+                            {encounters && encounters.map((x: EncounterViewModel) => (
+                                <MenuItem key={x.id} value={x.id}>
+                                    {`${x.name}${x.selectedParty !== undefined && x.selectedParty !== '' ? '(' + x.selectedParty + ')' : ''}`}
+                                </MenuItem>
+                            ))}
                         </Select>
                     </FormControl>
                 </Grid>
