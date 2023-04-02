@@ -53,14 +53,14 @@ export const CreatureDetails : React.FC = () => {
                                 <strong>Passive Perception:</strong> {encounterContext.selectedCreature.passivePerception}
                             </Typography>
 
-                            {encounterContext.selectedCreature.languages.length > 0 &&
+                            {encounterContext.selectedCreature.languages?.length > 0 &&
                             (
                                 <Typography variant="body1">
                                     <strong>Languages:</strong> {encounterContext.selectedCreature.languages.join(', ')}
                                 </Typography>
                             )}
 
-                            {encounterContext.selectedCreature.senses.length > 0 &&
+                            {encounterContext.selectedCreature.senses?.length > 0 &&
                             (
                                 <Typography variant="body1">
                                     <strong>Senses:</strong> {encounterContext.selectedCreature.senses.join(', ')}

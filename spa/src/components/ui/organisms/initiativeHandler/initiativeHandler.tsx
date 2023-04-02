@@ -20,12 +20,9 @@ export const InitiativeHandler : React.FC = () => {
         // from a template or an update to an existing encounter
         let isNew: boolean = encounterContext.selectedParty !== undefined || encounterContext.selectedParty !== '';
 
-        encounterContext.setCreatures(creatures);
-        encounterContext.setSelectedParty(partyName);
-
         let encounterId: string = '';
         if (isNew) {
-            encounterId = await saveEncounter(encounterContext.encounterName, encounterContext.creatures, encounterContext.selectedParty);
+            encounterId = await saveEncounter(encounterContext.encounterName, creatures, partyName);
 
             if (encounterId !== '') {
                 encounterContext.setEncounterId(encounterId);
@@ -33,7 +30,7 @@ export const InitiativeHandler : React.FC = () => {
                 console.log('save failed!!!');
             }
         } else {
-            encounterId = await updateEncounter(encounterContext.encounterName, encounterContext.encounterId, encounterContext.creatures, encounterContext.selectedParty);
+            encounterId = await updateEncounter(encounterContext.encounterName, encounterContext.encounterId, creatures, partyName);
 
             if (encounterId === '') {
                 console.log('save failed!!!');
