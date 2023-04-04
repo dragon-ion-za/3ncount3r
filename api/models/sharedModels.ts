@@ -38,16 +38,6 @@ export class SkillModifierModel {
     }
 }
 
-export class CreatureTraitModel {
-    name: string;
-    entries: string[];
-
-    constructor(name: string, entries: string[]) {
-        this.name = name;
-        this.entries = entries;
-    }
-}
-
 export class ResistanceModel {
     resistantTo: string;
     condition: string;
@@ -56,21 +46,6 @@ export class ResistanceModel {
         this.resistantTo = resistantTo;
         this.condition = condition;
     }
-}
-
-export class SpellcastingModel {
-    name: string = '';
-    entries: string[] = [];
-    atWill: string[] = [];
-    withResources: KnownSpellsModel[] = [];
-    ability: string = '';
-}
-
-export class KnownSpellsModel {
-    type: SpellTypes = SpellTypes.Unknown;
-    resource: string = '';
-    level: string = '';
-    spells: string[] = [];
 }
 
 export class SpecialActionModel {

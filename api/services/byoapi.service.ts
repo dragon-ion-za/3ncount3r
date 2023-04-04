@@ -2,13 +2,14 @@ import axios, { AxiosResponse } from 'axios';
 
 import { ByoApiConfig } from '../models/byoApi.config.model';
 import { CreatureModel } from '../models/creature.model';
+import { CreatureViewModel } from '../view-models/creature.view-model';
 
 const config = require('config');
 
 export class ByoApiService {
 
-    public static async searchForCreatures(queryString: string) : Promise<CreatureModel[]> {
-        let creatures: CreatureModel[] = [];
+    public static async searchForCreatures(queryString: string) : Promise<CreatureViewModel[]> {
+        let creatures: CreatureViewModel[] = [];
         let endpoints: ByoApiConfig[] = config.get('byoapis');
 
         let calls: Record<string, Promise<AxiosResponse<CreatureModel[], any>>> = {};
@@ -21,8 +22,10 @@ export class ByoApiService {
 
         Object.entries(calls).map(([k,v]) => k).forEach(async (key) => {
             let data = (await calls[key]).data;
-            data.forEach(x => { x.byoapiId = key; });
-            creatures.push(...data);
+            data.forEach(x => { 
+                let creature: CreatureViewModel = { byoapiId: key, ...x };
+                creatures.push(creature); 
+            });
         });
 
         return creatures;

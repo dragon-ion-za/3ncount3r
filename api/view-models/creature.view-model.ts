@@ -2,6 +2,7 @@ import { ActionGroupViewModel, ArmourClassViewModel, CreatureSizes, ResistanceVi
 
 export class CreatureViewModel {
     name: string = '';
+    byoapiId: string = '';
     sourceId: string = '';
     size: CreatureSizes = CreatureSizes.Unknown;
     type: string = '';
@@ -33,4 +34,5 @@ export class CreatureViewModel {
     senses: string[] = [];
     savingThrows: SkillModifierViewModel[] = [];
     actionGroups: ActionGroupViewModel[] = [];
+    imageUrl: string = '';
 }

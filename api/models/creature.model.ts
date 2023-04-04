@@ -1,8 +1,7 @@
-import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, CreatureTraitModel, SpellcastingModel, SpecialActionModel, ActionGroupModel } from "./sharedModels";
+import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, ActionGroupModel } from "./sharedModels";
 
 export class CreatureModel {
     name: string;
-    byoapiId: string = '';
     sourceId: string = '';
     size: CreatureSizes = CreatureSizes.Unknown;
     type: string = '';
@@ -30,15 +29,7 @@ export class CreatureModel {
     immunities: ResistanceModel[] = [];
     languages: string[] = [];
     challengeRating: number = 0;
-    traits: CreatureTraitModel[] = [];
-    actions: CreatureTraitModel[] = [];
-    reactions: CreatureTraitModel[] = [];
-    legendaryActions: CreatureTraitModel[] = [];
     legendaryCount: number = 3;
-    spellcasting: SpellcastingModel[] = [];
-    lairActions: SpecialActionModel[] = [];
-    regionalEffects: SpecialActionModel[] = [];
-    mythicEncounter: SpecialActionModel[] = [];
     senses: string[] = [];
     savingThrows: SkillModifierModel[] = [];
     actionGroups: ActionGroupModel[] = [];

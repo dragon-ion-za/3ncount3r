@@ -5,7 +5,7 @@ export enum CreatureSizes {
     Medium,
     Large,
     Huge,
-    Gargantuant
+    Gargantuan
 }
 
 export enum SpellTypes {
