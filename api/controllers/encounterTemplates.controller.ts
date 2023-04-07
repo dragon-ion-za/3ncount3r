@@ -17,13 +17,7 @@ export class EncounterTemplatesController {
 
     public static getEncounterTemplates = async (req: any, res: any) => {
         let encounters: EncounterViewModel[] = await (await DataService.getEncounterTemplates())
-                                                    .map(x => { return { 
-                                                        name: x.name, 
-                                                        id: x.id, 
-                                                        creatures: x.creatures, 
-                                                        selectedParty: x.selectedParty, 
-                                                        roundCount: x.roundCount, 
-                                                        currentTurn: x.currentTurn } as EncounterViewModel });
+                                                    .map(x => { return { ...x } as EncounterViewModel });
 
         res.send(encounters);
     }

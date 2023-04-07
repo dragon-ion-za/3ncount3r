@@ -30,30 +30,18 @@ export class EncountersController {
     }
 
     public static getEncounters = async (req: any, res: any) => {
-        let encounters: EncounterModel[] = await (await DataService.getEncounters())
-                                                    .map(x => { return { 
-                                                        name: x.name, 
-                                                        id: x.id, 
-                                                        creatures: x.creatures, 
-                                                        selectedParty: x.selectedParty, 
-                                                        roundCount: x.roundCount, 
-                                                        currentTurn: x.currentTurn } });
+        let encounters: EncounterViewModel[] = await (await DataService.getEncounters())
+                                                    .map(x => { return { ...x } as EncounterViewModel });
 
-        let encounterTemplates: EncounterModel[] = await (await DataService.getEncounterTemplates())
-                                                        .map(x => { return { 
-                                                            name: x.name, 
-                                                            id: x.id, 
-                                                            creatures: x.creatures, 
-                                                            selectedParty: x.selectedParty, 
-                                                            roundCount: x.roundCount, 
-                                                            currentTurn: x.currentTurn } });
+        let encounterTemplates: EncounterViewModel[] = await (await DataService.getEncounterTemplates())
+                                                        .map(x => { return { ...x } as EncounterViewModel });
 
         res.send(encounters.concat(encounterTemplates));
     }
 
     public static getEncounterById = async (req: any, res: any) => {
         let id: string = req.params.id.toLocaleLowerCase();
-        let encounter: EncounterModel = await DataService.getEncounterById(id) as EncounterModel;
+        let encounter: EncounterViewModel = await DataService.getEncounterById(id) as EncounterViewModel;
 
         console.log(encounter);
 

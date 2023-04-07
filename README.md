@@ -23,6 +23,7 @@ If you want to learn more about creating good readme files then refer the follow
 
 There's a docker image somewhere (local only which is the issue).
 To start it do:
+wsl
 docker start 0d847a6338972bea3a6f74d2cb849796b87fa0315584c6a8207fb783c4af0b3d
 
 To set it up do:
