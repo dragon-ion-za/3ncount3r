@@ -1,5 +1,7 @@
 import { PartyModel } from "../models/party.model";
+import { CharacterService } from "../services/character.service";
 import { DataService } from "../services/data.service"
+import { CharacterViewModel } from "../view-models/character.view-model";
 import { PartyViewModel } from "../view-models/party.view-model";
 
 export class PartiesController { 
@@ -21,8 +23,11 @@ export class PartiesController {
 
         let expandedParties: PartyViewModel[] = [];
         parties.forEach(x => {
-            // TODO: implement character search on Character API, then populate
-            // viewmodel with model and characters
+            let expandedParty: PartyViewModel = { ...x };
+            x.characterIds.forEach(async y => {
+                let character: CharacterViewModel = await CharacterService.getCharacterById(y);
+                expandedParty.characters.push(character);
+            });
         });
 
         res.send(parties);
