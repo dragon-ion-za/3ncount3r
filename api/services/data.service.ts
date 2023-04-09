@@ -5,6 +5,7 @@ const config = require('config');
 
 import { EncounterModel } from "../models/encounter.model";
 import { PartyModel } from "../models/party.model";
+import { CharacterModel } from "../models/character.model";
 
 export class DataService {
     private static dbUrl: string = config.get('connectionStrings.3ncount3rContext');
@@ -12,7 +13,8 @@ export class DataService {
     private static collections: { 
         encounterTemplates? : mongoDB.Collection<EncounterModel>, 
         encounters?: mongoDB.Collection<EncounterModel>,
-        parties?: mongoDB.Collection<PartyModel> } = {};
+        parties?: mongoDB.Collection<PartyModel>,
+        characters?: mongoDB.Collection<CharacterModel> } = {};
 
     private static async connectToDb() {
         await this.mongoClient.connect();
@@ -143,5 +145,43 @@ export class DataService {
         let party = (await this.collections.parties?.findOne({ id: id })) as PartyModel;
 
         return party;
+    }
+
+    public static async saveCharacter(character: CharacterModel) : Promise<string> {
+        await this.connectToDb();
+        character.id = uuid();
+        let result = await this.collections.characters?.insertOne(character);
+
+        if (result?.acknowledged) {
+            return character.id;
+        } else {
+            return '';
+        }
+    }
+
+    public static async updateCharacter(character: CharacterModel) : Promise<string> {
+        await this.connectToDb();
+
+        let result = await this.collections.characters?.updateOne({id: character.id}, { $set: { 
+            ...character
+         } });
+
+        if (result?.acknowledged) {
+            return character.id;
+        } else {
+            return '';
+        }
+    }
+
+    public static async getCharacters(): Promise<CharacterModel[]> {
+        await this.connectToDb();
+        return (await this.collections.characters?.find({}).toArray()) as CharacterModel[];
+    }
+
+    public static async getCharacterById(id: string): Promise<CharacterModel> {
+        await this.connectToDb();
+        let character = (await this.collections.characters?.findOne({ id: id })) as CharacterModel;
+
+        return character;
     }
 }

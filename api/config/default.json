@@ -7,5 +7,8 @@
             "id": "5eapi",
             "baseUrl": "http://localhost:5001/"
         }
-    ]
+    ],
+    "characterApi": {
+        "baseUrl": "http://localhost:5002/"
+    }
 }

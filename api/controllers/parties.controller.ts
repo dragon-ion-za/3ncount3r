@@ -1,5 +1,6 @@
 import { PartyModel } from "../models/party.model";
 import { DataService } from "../services/data.service"
+import { PartyViewModel } from "../view-models/party.view-model";
 
 export class PartiesController { 
     public static saveParty = async (req: any, res: any) => {
@@ -17,6 +18,12 @@ export class PartiesController {
     public static getParties = async (req: any, res: any) => {
         let parties: PartyModel[] = await (await DataService.getParties())
                                                     .map(x => { return { ...x } });
+
+        let expandedParties: PartyViewModel[] = [];
+        parties.forEach(x => {
+            // TODO: implement character search on Character API, then populate
+            // viewmodel with model and characters
+        });
 
         res.send(parties);
     }
