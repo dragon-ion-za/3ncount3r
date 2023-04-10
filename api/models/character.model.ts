@@ -1,15 +1,33 @@
 import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, ActionGroupModel } from "./sharedModels";
 
+export class ClassModel {
+    name: string = '';
+    level: number = 0;
+    byoapiId: string = '';
+}
+
+export class EquipmentModel {
+    name: string = '';
+    byoapiId: string = '';
+}
+
 export class CharacterModel {
     id: string = '';
     name: string;
+
     size: CreatureSizes = CreatureSizes.Unknown;
-    type: string = '';
+    race: string = '';
+    classes: ClassModel[] = [];
     alignment: string[] = [];
-    armourClass: ArmourClassModel | null = null;
-    hitpointAverage: number = 0;
-    hitpointFormula: string = '';
-    hitpointSpecial: string = '';
+    level: number = 0;
+
+    equipment: EquipmentModel[] = [];
+    inventory: EquipmentModel[] = [];
+    
+    hitpointMax: 0;
+    hitpointCurrent: 0;
+    hitpointTemporary: 0;
+
     walkingSpeed: number = 0;
     climbingSpeed: number = 0;
     burrowingSpeed: number = 0;
@@ -17,22 +35,28 @@ export class CharacterModel {
     flyingSpeed: number = 0;
     canHover: boolean = false;
     speedConditions: string[] = [];
+
     attributeStr: number = 0;
     attributeDex: number = 0;
     attributeCon: number = 0;
     attributeInt: number = 0;
     attributeWis: number = 0;
     attributeCha: number = 0;
+    
     skillModifiers: SkillModifierModel[] = [];
+    savingThrows: SkillModifierModel[] = [];
+    languages: string[] = [];
+
     passivePerception: number = 0;
+    senses: string[] = [];
+
     resistances: ResistanceModel[] = [];
     immunities: ResistanceModel[] = [];
-    languages: string[] = [];
-    challengeRating: number = 0;
-    legendaryCount: number = 3;
-    senses: string[] = [];
-    savingThrows: SkillModifierModel[] = [];
+
     actionGroups: ActionGroupModel[] = [];
+    initiative: number = 0;
+
+    challengeRating: number = 0;
     imageUrl: string = '';
 
     constructor (name: string) {

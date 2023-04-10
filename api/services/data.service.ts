@@ -6,6 +6,7 @@ const config = require('config');
 import { EncounterModel } from "../models/encounter.model";
 import { PartyModel } from "../models/party.model";
 import { CharacterModel } from "../models/character.model";
+import { UtilityService } from "./utilit.service";
 
 export class DataService {
     private static dbUrl: string = config.get('connectionStrings.3ncount3rContext');
@@ -149,7 +150,7 @@ export class DataService {
 
     public static async saveCharacter(character: CharacterModel) : Promise<string> {
         await this.connectToDb();
-        character.id = uuid();
+        character.id = `${character.name}.${UtilityService.getRandomInt(1000, 9999)}`;
         let result = await this.collections.characters?.insertOne(character);
 
         if (result?.acknowledged) {

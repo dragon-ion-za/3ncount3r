@@ -1,6 +1,8 @@
 import { EncounterModel } from "../models/encounter.model";
+import { ByoApiService } from "../services/byoapi.service";
 import { DataService } from "../services/data.service"
 import { EncounterViewModel } from "../view-models/encounter.view-model";
+import { EncounterCreatureViewModel } from "../view-models/encounterCreature.view-model";
 
 export class EncountersController { 
     public static saveEncounter = async (req: any, res: any) => {
@@ -30,13 +32,28 @@ export class EncountersController {
     }
 
     public static getEncounters = async (req: any, res: any) => {
-        let encounters: EncounterViewModel[] = await (await DataService.getEncounters())
-                                                    .map(x => { return { ...x } as EncounterViewModel });
+        let encounters: EncounterModel[] = await (await DataService.getEncounters())
+                                                    .map(x => { return x });
 
-        let encounterTemplates: EncounterViewModel[] = await (await DataService.getEncounterTemplates())
-                                                        .map(x => { return { ...x } as EncounterViewModel });
+        let encounterTemplates: EncounterModel[] = await (await DataService.getEncounterTemplates())
+                                                        .map(x => { return x });
 
-        res.send(encounters.concat(encounterTemplates));
+        let expandedEncounters: EncounterViewModel[] = [];
+        encounters.concat(encounterTemplates).forEach(x => {
+            let expandedEncounter: EncounterViewModel = { 
+                ...x, 
+                creatures: x.creatures.map(async y => {
+                    return { 
+                        ...await ByoApiService.getCreatureById(y.id, y.byoapiId),
+
+                    } as EncounterCreatureViewModel
+                }) 
+            };
+
+            expandedEncounters.push(expandedEncounter);
+        });
+
+        res.send(expandedEncounters);
     }
 
     public static getEncounterById = async (req: any, res: any) => {

@@ -1,7 +1,7 @@
 import { PartyModel } from "../models/party.model";
 import { CharacterService } from "../services/character.service";
 import { DataService } from "../services/data.service"
-import { CharacterViewModel } from "../view-models/character.view-model";
+import { EncounterCreatureViewModel } from "../view-models/encounterCreature.view-model";
 import { PartyViewModel } from "../view-models/party.view-model";
 
 export class PartiesController { 
@@ -23,14 +23,16 @@ export class PartiesController {
 
         let expandedParties: PartyViewModel[] = [];
         parties.forEach(x => {
-            let expandedParty: PartyViewModel = { ...x };
+            let expandedParty: PartyViewModel = { characters: [], ...x };
             x.characterIds.forEach(async y => {
-                let character: CharacterViewModel = await CharacterService.getCharacterById(y);
+                let character: EncounterCreatureViewModel = await CharacterService.getCharacterById(y);
                 expandedParty.characters.push(character);
             });
+
+            expandedParties.push(expandedParty);
         });
 
-        res.send(parties);
+        res.send(expandedParties);
     }
 
     public static getPartyById = async (req: any, res: any) => {

@@ -1,6 +1,6 @@
-import { CreatureModel } from "../models/creature.model";
+import { CreatureViewModel } from "./creature.view-model";
 
-export class EncounterCreatureViewModel extends CreatureModel {
+export class EncounterCreatureViewModel extends CreatureViewModel {
     id: string = '';
     sourceId: string = '';
     byoapiId: string = '';
