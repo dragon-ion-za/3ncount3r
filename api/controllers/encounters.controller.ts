@@ -42,13 +42,13 @@ export class EncountersController {
         encounters.concat(encounterTemplates).forEach(x => {
             let expandedEncounter: EncounterViewModel = { 
                 ...x, 
-                creatures: x.creatures.map(async y => {
-                    return { 
-                        ...await ByoApiService.getCreatureById(y.id, y.byoapiId),
-
-                    } as EncounterCreatureViewModel
-                }) 
+                creatures: []
             };
+
+            x.creatures.forEach(async y => {
+                let creature  = await ByoApiService.getCreatureById(y.id, y.byoapiId);
+                expandedEncounter.creatures.push({ ...creature } as EncounterCreatureViewModel);
+            })
 
             expandedEncounters.push(expandedEncounter);
         });
@@ -58,10 +58,18 @@ export class EncountersController {
 
     public static getEncounterById = async (req: any, res: any) => {
         let id: string = req.params.id.toLocaleLowerCase();
-        let encounter: EncounterViewModel = await DataService.getEncounterById(id) as EncounterViewModel;
+        let encounter: EncounterModel = await DataService.getEncounterById(id);
 
-        console.log(encounter);
+        let expandedEncounter: EncounterViewModel = { 
+            ...encounter, 
+            creatures: []
+        };
 
-        res.send(encounter);
+        encounter.creatures.forEach(async x => {
+            let creature  = await ByoApiService.getCreatureById(x.id, x.byoapiId);
+            expandedEncounter.creatures.push({ ...creature } as EncounterCreatureViewModel);
+        });
+
+        res.send(expandedEncounter);
     }
 }
