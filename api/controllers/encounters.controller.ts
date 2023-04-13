@@ -1,5 +1,6 @@
 import { EncounterModel } from "../models/encounter.model";
 import { ByoApiService } from "../services/byoapi.service";
+import { CharacterService } from "../services/character.service";
 import { DataService } from "../services/data.service"
 import { EncounterViewModel } from "../view-models/encounter.view-model";
 import { EncounterCreatureViewModel } from "../view-models/encounterCreature.view-model";
@@ -46,7 +47,7 @@ export class EncountersController {
             };
 
             x.creatures.forEach(async y => {
-                let creature  = await ByoApiService.getCreatureById(y.id, y.byoapiId);
+                let creature = y.isPlayerCharacter ? await CharacterService.getCharacterById(y.id) : await ByoApiService.getCreatureByName(y.name, y.byoapiId);
                 expandedEncounter.creatures.push({ ...creature } as EncounterCreatureViewModel);
             })
 
@@ -66,7 +67,7 @@ export class EncountersController {
         };
 
         encounter.creatures.forEach(async x => {
-            let creature  = await ByoApiService.getCreatureById(x.id, x.byoapiId);
+            let creature = x.isPlayerCharacter ? await CharacterService.getCharacterById(x.id) : await ByoApiService.getCreatureByName(x.name, x.byoapiId);
             expandedEncounter.creatures.push({ ...creature } as EncounterCreatureViewModel);
         });
 

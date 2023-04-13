@@ -1,5 +1,6 @@
 export class EncounterCreatureModel {
     id: string = '';
+    name: string = '';
     sourceId: string = '';
     byoapiId: string = '';
     hitpointMax: number = 0;

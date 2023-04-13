@@ -31,10 +31,10 @@ export class ByoApiService {
         return creatures;
     }
 
-    public static async getCreatureById(id: string, byoapiId: string) : Promise<CreatureViewModel> {
+    public static async getCreatureByName(name: string, byoapiId: string) : Promise<CreatureViewModel> {
         let creature: CreatureViewModel;
         let endpoint: ByoApiConfig = config.get('byoapis').find((x: ByoApiConfig) => x.id === byoapiId);
-        let result = await axios.get(`${endpoint.baseUrl}creatures/${id}`);
+        let result = await axios.get(`${endpoint.baseUrl}creatures/${name}`);
 
         creature = result.data as CreatureViewModel;
 
