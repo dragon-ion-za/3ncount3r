@@ -20,8 +20,8 @@ export abstract class BaseController<TModel, TViewModel> {
         res.send(model);
     }
 
-    protected abstract doSave(model: TModel) : string;
-    protected abstract doUpdate(model: TModel) : string;
-    protected abstract doGet() : TViewModel[];
-    protected abstract doGetById(id: string) : TViewModel;
+    protected abstract doSave(model: TModel) : Promise<string>;
+    protected abstract doUpdate(model: TModel) : Promise<string>;
+    protected abstract doGet() : Promise<TViewModel[]>;
+    protected abstract doGetById(id: string) : Promise<TViewModel>;
 }

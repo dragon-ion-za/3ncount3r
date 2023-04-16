@@ -25,7 +25,7 @@ router.put('/parties', PartiesController.updateParty);
 router.get('/parties', PartiesController.getParties);
 router.get('/parties/:id', PartiesController.getPartyById);
 
-router.post('/characters', CharactersController.saveCharacter);
-router.put('/characters', CharactersController.updateCharacter);
-router.get('/characters', CharactersController.getCharacters);
-router.get('/characters/:id', CharactersController.getCharacterById);
+router.post('/characters', new CharactersController().save);
+router.put('/characters', new CharactersController().update);
+router.get('/characters', new CharactersController().get);
+router.get('/characters/:id', new CharactersController().getById);
