@@ -1,5 +1,6 @@
 const express = require("express");
 
+import { CharactersController } from './controllers/characters.controller';
 import { CreaturesController } from './controllers/creatures.controller';
 import { EncountersController } from './controllers/encounters.controller';
 import { EncounterTemplatesController } from './controllers/encounterTemplates.controller';
@@ -23,3 +24,8 @@ router.post('/parties', PartiesController.saveParty);
 router.put('/parties', PartiesController.updateParty);
 router.get('/parties', PartiesController.getParties);
 router.get('/parties/:id', PartiesController.getPartyById);
+
+router.post('/characters', CharactersController.saveCharacter);
+router.put('/characters', CharactersController.updateCharacter);
+router.get('/characters', CharactersController.getCharacters);
+router.get('/characters/:id', CharactersController.getCharacterById);

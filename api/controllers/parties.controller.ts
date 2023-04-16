@@ -22,15 +22,15 @@ export class PartiesController {
                                                     .map(x => { return { ...x } });
 
         let expandedParties: PartyViewModel[] = [];
-        parties.forEach(x => {
-            let expandedParty: PartyViewModel = { characters: [], ...x };
-            x.characterIds.forEach(async y => {
-                let character: EncounterCreatureViewModel = await CharacterService.getCharacterById(y);
+        for (const party of parties) {
+            let expandedParty: PartyViewModel = { characters: [], ...party };
+            for (const characterId of party.characterIds) {
+                let character: EncounterCreatureViewModel = await CharacterService.getCharacterById(characterId);
                 expandedParty.characters.push(character);
-            });
+            }
 
             expandedParties.push(expandedParty);
-        });
+        }
 
         res.send(expandedParties);
     }

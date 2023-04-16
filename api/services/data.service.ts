@@ -24,6 +24,7 @@ export class DataService {
         this.collections.encounters = db.collection<EncounterModel>('Encounters');
         this.collections.encounterTemplates = db.collection<EncounterModel>('EncounterTemplates');
         this.collections.parties = db.collection<PartyModel>('Parties');
+        this.collections.characters = db.collection<CharacterModel>('Characters');
         
         console.log(`Successfully connected to database: ${db.databaseName}`);
     }
@@ -36,7 +37,7 @@ export class DataService {
         if (result?.acknowledged) {
             return encounter.id;
         } else {
-            return '';
+            return 'Error occurred';
         }
     }
 
@@ -52,7 +53,7 @@ export class DataService {
         if (result?.acknowledged) {
             return encounter.id;
         } else {
-            return '';
+            return 'Error occurred';
         }
     }
 
@@ -156,7 +157,8 @@ export class DataService {
         if (result?.acknowledged) {
             return character.id;
         } else {
-            return '';
+            console.log(result);
+            return 'Error occurred';
         }
     }
 
@@ -170,7 +172,7 @@ export class DataService {
         if (result?.acknowledged) {
             return character.id;
         } else {
-            return '';
+            return 'Error occurred';
         }
     }
 

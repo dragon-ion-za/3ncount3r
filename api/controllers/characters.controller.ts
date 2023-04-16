@@ -29,13 +29,15 @@ export class CharactersController {
                                                         hitpointAverage: x.hitpointMax,
                                                         hitpointMax: x.hitpointMax,
                                                         currentHitpoints: x.hitpointCurrent,
-                                                        type: `${x.race} ${UtilityService.concatClasses(x.classes)}` } });
+                                                        type: `${x.race} ${UtilityService.concatClasses(x.classes)}`,
+                                                        skillModifiers: [],
+                                                        savingThrows: [] } }); 
 
         res.send(characters);
     }
 
     public static getCharacterById = async (req: any, res: any) => {
-        let id: string = req.params.id.toLocaleLowerCase();
+        let id: string = req.params.id;
 
         let model: CharacterModel = await DataService.getCharacterById(id);
         let character: EncounterCreatureViewModel = {  
@@ -50,7 +52,9 @@ export class CharactersController {
         hitpointAverage: model.hitpointMax,
         hitpointMax: model.hitpointMax,
         currentHitpoints: model.hitpointCurrent,
-        type: `${model.race} ${UtilityService.concatClasses(model.classes)}` };
+        type: `${model.race} ${UtilityService.concatClasses(model.classes)}`,
+        skillModifiers: [],
+        savingThrows: []  };
 
         res.send(character);
     }

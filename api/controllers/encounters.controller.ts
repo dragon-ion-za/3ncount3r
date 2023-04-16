@@ -40,20 +40,24 @@ export class EncountersController {
                                                         .map(x => { return x });
 
         let expandedEncounters: EncounterViewModel[] = [];
-        encounters.concat(encounterTemplates).forEach(x => {
+        let unionedEncounters: EncounterModel[] = encounters.concat(encounterTemplates);
+
+        for (const encounter of unionedEncounters) {
             let expandedEncounter: EncounterViewModel = { 
-                ...x, 
+                ...encounter, 
                 creatures: []
             };
 
-            x.creatures.forEach(async y => {
-                let creature = y.isPlayerCharacter ? await CharacterService.getCharacterById(y.id) : await ByoApiService.getCreatureByName(y.name, y.byoapiId);
-                expandedEncounter.creatures.push({ ...creature } as EncounterCreatureViewModel);
-            })
+            for (const creature of encounter.creatures) {
+                let foundCreature = creature.isPlayerCharacter 
+                    ? await CharacterService.getCharacterById(creature.id) 
+                    : await ByoApiService.getCreatureByName(creature.name, creature.byoapiId);
+                expandedEncounter.creatures.push({ ...foundCreature } as EncounterCreatureViewModel);
+            }
 
             expandedEncounters.push(expandedEncounter);
-        });
-
+        }
+        
         res.send(expandedEncounters);
     }
 
@@ -65,11 +69,12 @@ export class EncountersController {
             ...encounter, 
             creatures: []
         };
-
-        encounter.creatures.forEach(async x => {
-            let creature = x.isPlayerCharacter ? await CharacterService.getCharacterById(x.id) : await ByoApiService.getCreatureByName(x.name, x.byoapiId);
-            expandedEncounter.creatures.push({ ...creature } as EncounterCreatureViewModel);
-        });
+        for (const creature of encounter.creatures) {
+            let foundCreature = creature.isPlayerCharacter 
+                ? await CharacterService.getCharacterById(creature.id) 
+                : await ByoApiService.getCreatureByName(creature.name, creature.byoapiId);
+            expandedEncounter.creatures.push({ ...foundCreature } as EncounterCreatureViewModel);
+        }
 
         res.send(expandedEncounter);
     }

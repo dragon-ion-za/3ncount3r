@@ -43,8 +43,10 @@ export class CharacterModel {
     attributeWis: number = 0;
     attributeCha: number = 0;
     
-    skillModifiers: SkillModifierModel[] = [];
-    savingThrows: SkillModifierModel[] = [];
+    skillProficiencies: string[] = [];
+    skillProficiencyModifiers: SkillModifierModel[] = [];
+    savingThrowProficiencies: string[] = [];
+    savingThrowModifiers: SkillModifierModel[] = [];
     languages: string[] = [];
 
     passivePerception: number = 0;
