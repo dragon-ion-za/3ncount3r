@@ -70,9 +70,24 @@ export class EncountersController {
             creatures: []
         };
         for (const creature of encounter.creatures) {
-            let foundCreature = creature.isPlayerCharacter 
-                ? await CharacterService.getCharacterById(creature.id) 
-                : await ByoApiService.getCreatureByName(creature.name, creature.byoapiId);
+            let foundCreature: EncounterCreatureViewModel | undefined = undefined;
+            if (creature.isPlayerCharacter) {
+                foundCreature = { 
+                    ...await CharacterService.getCharacterById(creature.id),
+                    id: creature.id,
+                    initiative: creature.initiative,
+                    isPlayerCharacter: false };
+            } else {
+                foundCreature = { 
+                    id: creature.id,
+                    hitpointMax: creature.hitpointMax,
+                    currentHitpoints: creature.currentHitpoints,
+                    initiative: creature.initiative,
+                    isPlayerCharacter: false,
+                    ...await ByoApiService.getCreatureByName(creature.name, creature.byoapiId) 
+                }
+            }
+
             expandedEncounter.creatures.push({ ...foundCreature } as EncounterCreatureViewModel);
         }
 

@@ -20,6 +20,11 @@ export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef
 
     useEffect(() => {}, [encounters])
 
+    const doAccept = (encounterId: string) => {
+        let encounter = encounters.find(x => x.id === encounterId);
+        handleAccept(encounterId, encounter?.selectedParty === undefined || encounter?.selectedParty === '');
+    }
+
     return (
         <>
         <Box sx={modalContainerWide}>
@@ -32,7 +37,7 @@ export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef
                         <InputLabel id="party_label">Select Encounter</InputLabel>
                         <Select 
                             labelId="party_label"
-                            onChange={(event: SelectChangeEvent) => {handleAccept(event.target.value, true)}}>
+                            onChange={(event: SelectChangeEvent) => {doAccept(event.target.value)}}>
                             {encounters && encounters.map((x: EncounterViewModel) => (
                                 <MenuItem key={x.id} value={x.id}>
                                     {`${x.name}${x.selectedParty !== undefined && x.selectedParty !== '' ? '(' + x.selectedParty + ')' : ''}`}

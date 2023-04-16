@@ -34,6 +34,9 @@ export class ByoApiService {
     public static async getCreatureByName(name: string, byoapiId: string) : Promise<CreatureViewModel> {
         let creature: CreatureViewModel;
         let endpoint: ByoApiConfig = config.get('byoapis').find((x: ByoApiConfig) => x.id === byoapiId);
+
+        if (endpoint === undefined) return new CreatureViewModel();
+
         let result = await axios.get(`${endpoint.baseUrl}creatures/${name}`);
 
         creature = result.data as CreatureViewModel;

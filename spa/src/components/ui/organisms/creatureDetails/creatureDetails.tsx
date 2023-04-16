@@ -67,7 +67,7 @@ export const CreatureDetails : React.FC = () => {
                                 </Typography>
                             )}
 
-                            {encounterContext.selectedCreature.savingThrows.length > 0 &&
+                            {encounterContext.selectedCreature.savingThrows?.length > 0 &&
                             (
                                 <Typography variant="body1">
                                     <strong>Saving Throws:</strong> {encounterContext.selectedCreature.savingThrows
@@ -78,7 +78,7 @@ export const CreatureDetails : React.FC = () => {
 
                             <Divider />
 
-                            {encounterContext.selectedCreature.resistances.length > 0 && 
+                            {encounterContext.selectedCreature.resistances?.length > 0 && 
                             (
                                 <>
                                     <Typography variant="h3">Resistances</Typography>
@@ -91,7 +91,7 @@ export const CreatureDetails : React.FC = () => {
                                 
                             )}
 
-                            {encounterContext.selectedCreature.immunities.length > 0 && 
+                            {encounterContext.selectedCreature.immunities?.length > 0 && 
                             (
                                 <>
                                     <Typography variant="h3">Immunities</Typography>

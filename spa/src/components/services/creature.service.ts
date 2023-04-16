@@ -3,6 +3,8 @@ const imagePath: string = `${BASE_URL}creatures/image/`;
 const imagePathCharacters: string = `${BASE_URL}parties/characterimage/`;
 
 export function parseAlignment(alignment: string[]): string {
+    if (alignment === undefined) return '';
+
     let expandedAlignment: string = '';
 
     alignment.forEach(x => {
