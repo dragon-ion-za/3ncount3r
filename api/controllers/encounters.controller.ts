@@ -4,35 +4,35 @@ import { CharacterService } from "../services/character.service";
 import { DataService } from "../services/data.service"
 import { EncounterViewModel } from "../view-models/encounter.view-model";
 import { EncounterCreatureViewModel } from "../view-models/encounterCreature.view-model";
+import { BaseController } from "./base.controller";
 
-export class EncountersController { 
-    public static saveEncounter = async (req: any, res: any) => {
-        let encounter: EncounterModel = req.body as EncounterModel;
+export class EncountersController extends BaseController<EncounterModel, EncounterViewModel> { 
+
+    protected override async doSave(model: EncounterModel): Promise<string> {
         let encounterId = '';
         
-        if (encounter.selectedParty !== undefined && encounter.selectedParty !== '') {
-            encounterId = await DataService.saveEncounter(encounter);
+        if (model.selectedParty !== undefined && model.selectedParty !== '') {
+            encounterId = await DataService.saveEncounter(model);
         } else {
-            encounterId = await DataService.saveEncounterTemplate(encounter);
+            encounterId = await DataService.saveEncounterTemplate(model);
         }
 
-        res.send(encounterId);
+        return encounterId;
     }
 
-    public static updateEncounter = async (req: any, res: any) => {
-        let encounter: EncounterModel = req.body as EncounterModel;
+    protected override async doUpdate(model: EncounterModel): Promise<string> {
         let encounterId = '';
         
-        if (encounter.selectedParty !== undefined && encounter.selectedParty !== '') {
-            encounterId = await DataService.updateEncounter(encounter);
+        if (model.selectedParty !== undefined && model.selectedParty !== '') {
+            encounterId = await DataService.updateEncounter(model);
         } else {
-            encounterId = await DataService.updateEncounterTemplate(encounter);
+            encounterId = await DataService.updateEncounterTemplate(model);
         }
 
-        res.send(encounterId);
+        return encounterId;
     }
 
-    public static getEncounters = async (req: any, res: any) => {
+    protected override async doGet(): Promise<EncounterViewModel[]> {
         let encounters: EncounterModel[] = await (await DataService.getEncounters())
                                                     .map(x => { return x });
 
@@ -57,12 +57,11 @@ export class EncountersController {
 
             expandedEncounters.push(expandedEncounter);
         }
-        
-        res.send(expandedEncounters);
+
+        return expandedEncounters;
     }
 
-    public static getEncounterById = async (req: any, res: any) => {
-        let id: string = req.params.id.toLocaleLowerCase();
+    protected override async doGetById(id: string): Promise<EncounterViewModel> {
         let encounter: EncounterModel = await DataService.getEncounterById(id);
 
         let expandedEncounter: EncounterViewModel = { 
@@ -91,6 +90,6 @@ export class EncountersController {
             expandedEncounter.creatures.push({ ...foundCreature } as EncounterCreatureViewModel);
         }
 
-        res.send(expandedEncounter);
+        return expandedEncounter;
     }
 }

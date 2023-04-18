@@ -3,21 +3,19 @@ import { CharacterService } from "../services/character.service";
 import { DataService } from "../services/data.service"
 import { EncounterCreatureViewModel } from "../view-models/encounterCreature.view-model";
 import { PartyViewModel } from "../view-models/party.view-model";
+import { BaseController } from "./base.controller";
 
-export class PartiesController { 
-    public static saveParty = async (req: any, res: any) => {
-        let encounterId = await DataService.saveParty(req.body as PartyModel);
-
-        res.send(encounterId);
+export class PartiesController extends BaseController<PartyModel, PartyViewModel> {
+    
+    protected override async doSave(model: PartyModel): Promise<string> {
+        return await DataService.saveParty(model);
     }
 
-    public static updateParty = async (req: any, res: any) => {
-        let encounterId = await DataService.updateParty(req.body as PartyModel);
-
-        res.send(encounterId);
+    protected override async doUpdate(model: PartyModel): Promise<string> {
+        return await DataService.updateParty(model);
     }
 
-    public static getParties = async (req: any, res: any) => {
+    protected override async doGet(): Promise<PartyViewModel[]> {
         let parties: PartyModel[] = await (await DataService.getParties())
                                                     .map(x => { return { ...x } });
 
@@ -32,13 +30,18 @@ export class PartiesController {
             expandedParties.push(expandedParty);
         }
 
-        res.send(expandedParties);
+        return expandedParties;
     }
 
-    public static getPartyById = async (req: any, res: any) => {
-        let id: string = req.params.id.toLocaleLowerCase();
+    protected override async doGetById(id: string): Promise<PartyViewModel> {
         let party: PartyModel = await DataService.getPartyById(id);
 
-        res.send(party);
+        let expandedParty: PartyViewModel = { characters: [], ...party };
+        for (const characterId of party.characterIds) {
+            let character: EncounterCreatureViewModel = await CharacterService.getCharacterById(characterId);
+            expandedParty.characters.push(character);
+        }
+
+        return expandedParty;
     }
 }

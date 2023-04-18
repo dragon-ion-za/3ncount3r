@@ -8,22 +8,22 @@ import { PartiesController } from './controllers/parties.controller';
 
 export const router = express.Router();
 
-router.post('/encounters', EncountersController.saveEncounter);
-router.put('/encounters', EncountersController.updateEncounter);
-router.get('/encounters', EncountersController.getEncounters);
-router.get('/encounters/:id', EncountersController.getEncounterById);
+router.post('/encounters', new EncountersController().save);
+router.put('/encounters', new EncountersController().update);
+router.get('/encounters', new EncountersController().get);
+router.get('/encounters/:id', new EncountersController().getById);
 
-router.post('/encountertemplates', EncounterTemplatesController.saveEncounterTemplate);
-router.put('/encountertemplates', EncounterTemplatesController.updateEncounterTemplate);
-router.get('/encountertemplates', EncounterTemplatesController.getEncounterTemplates);
-router.get('/encountertemplates/:id', EncounterTemplatesController.getEncounterTemplateById);
+router.post('/encountertemplates', new EncounterTemplatesController().save);
+router.put('/encountertemplates', new EncounterTemplatesController().update);
+router.get('/encountertemplates', new EncounterTemplatesController().get);
+router.get('/encountertemplates/:id', new EncounterTemplatesController().getById);
 
 router.get('/creatures', CreaturesController.getCreatures);
 
-router.post('/parties', PartiesController.saveParty);
-router.put('/parties', PartiesController.updateParty);
-router.get('/parties', PartiesController.getParties);
-router.get('/parties/:id', PartiesController.getPartyById);
+router.post('/parties', new PartiesController().save);
+router.put('/parties', new PartiesController().update);
+router.get('/parties', new PartiesController().get);
+router.get('/parties/:id', new PartiesController().getById);
 
 router.post('/characters', new CharactersController().save);
 router.put('/characters', new CharactersController().update);
