@@ -1,4 +1,5 @@
 import { EncounterModel } from "../models/encounter.model";
+import { EncounterCreatureModel } from "../models/encounterCreature.model";
 import { ByoApiService } from "../services/byoapi.service";
 import { CharacterService } from "../services/character.service";
 import { DataService } from "../services/data.service"
@@ -36,22 +37,16 @@ export class EncountersController extends BaseController<EncounterModel, Encount
         let encounters: EncounterModel[] = await (await DataService.getEncounters())
                                                     .map(x => { return x });
 
-        let encounterTemplates: EncounterModel[] = await (await DataService.getEncounterTemplates())
-                                                        .map(x => { return x });
-
         let expandedEncounters: EncounterViewModel[] = [];
-        let unionedEncounters: EncounterModel[] = encounters.concat(encounterTemplates);
 
-        for (const encounter of unionedEncounters) {
+        for (const encounter of encounters) {
             let expandedEncounter: EncounterViewModel = { 
                 ...encounter, 
                 creatures: []
             };
 
             for (const creature of encounter.creatures) {
-                let foundCreature = creature.isPlayerCharacter 
-                    ? await CharacterService.getCharacterById(creature.id) 
-                    : await ByoApiService.getCreatureByName(creature.name, creature.byoapiId);
+                let foundCreature: EncounterCreatureViewModel = await this.getEncounterCreatureFromCreatureModel(creature);
                 expandedEncounter.creatures.push({ ...foundCreature } as EncounterCreatureViewModel);
             }
 
@@ -69,27 +64,32 @@ export class EncountersController extends BaseController<EncounterModel, Encount
             creatures: []
         };
         for (const creature of encounter.creatures) {
-            let foundCreature: EncounterCreatureViewModel | undefined = undefined;
-            if (creature.isPlayerCharacter) {
-                foundCreature = { 
-                    ...await CharacterService.getCharacterById(creature.id),
-                    id: creature.id,
-                    initiative: creature.initiative,
-                    isPlayerCharacter: false };
-            } else {
-                foundCreature = { 
-                    id: creature.id,
-                    hitpointMax: creature.hitpointMax,
-                    currentHitpoints: creature.currentHitpoints,
-                    initiative: creature.initiative,
-                    isPlayerCharacter: false,
-                    ...await ByoApiService.getCreatureByName(creature.name, creature.byoapiId) 
-                }
-            }
-
+            let foundCreature: EncounterCreatureViewModel = await this.getEncounterCreatureFromCreatureModel(creature);
             expandedEncounter.creatures.push({ ...foundCreature } as EncounterCreatureViewModel);
         }
 
         return expandedEncounter;
+    }
+
+    private async getEncounterCreatureFromCreatureModel(creature: EncounterCreatureModel) : Promise<EncounterCreatureViewModel> {
+        let foundCreature: EncounterCreatureViewModel | undefined = undefined;
+        if (creature.isPlayerCharacter) {
+            foundCreature = { 
+                ...await CharacterService.getCharacterById(creature.id),
+                id: creature.id,
+                initiative: creature.initiative,
+                isPlayerCharacter: false };
+        } else {
+            foundCreature = { 
+                id: creature.id,
+                hitpointMax: creature.hitpointMax,
+                currentHitpoints: creature.currentHitpoints,
+                initiative: creature.initiative,
+                isPlayerCharacter: false,
+                ...await ByoApiService.getCreatureByName(creature.name, creature.byoapiId) 
+            }
+        }
+
+        return foundCreature;
     }
 }
