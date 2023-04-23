@@ -27,7 +27,7 @@ const parseClasses = (classes: ClassViewModel[]): string => {
 const buildSavingThrows = (model: CharacterViewModel): SkillModifierViewModel[] => {
     let savingThrows: SkillModifierViewModel[] = [];
 
-    model.savingThrowProficiencies.forEach(x => {
+    model.savingThrowProficiencies?.forEach(x => {
         let modifier: SkillModifierViewModel = new SkillModifierViewModel();
         modifier.skillName = x;
 
@@ -47,7 +47,7 @@ const buildSavingThrows = (model: CharacterViewModel): SkillModifierViewModel[] 
     return savingThrows;
 }
 
-export const convertCharactToEncounterCreatureViewModel = (model: CharacterViewModel): EncounterCreatureViewModel => {
+export const convertCharacterToEncounterCreatureViewModel = (model: CharacterViewModel): EncounterCreatureViewModel => {
     let creature: EncounterCreatureViewModel = new EncounterCreatureViewModel();
 
     creature.isPlayerCharacter = true;

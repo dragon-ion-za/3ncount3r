@@ -35,9 +35,7 @@ export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps
                     <Grid container>
                         <Grid xs={2}> 
                             <Avatar sx={viewModel.currentHitpoints <= 0 ? creatureDeathStateStyle : creatureAvatarStyle} 
-                                src={getCreatureToken(viewModel.sourceId, 
-                                                        viewModel.isPlayerCharacter ? viewModel.id : viewModel.name, 
-                                                        viewModel.isPlayerCharacter)} />
+                                src={viewModel.imageUrl} />
                         </Grid>
                         <Grid xs={8}>
                             <Stack>
