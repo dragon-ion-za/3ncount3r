@@ -34,9 +34,7 @@ export const CreatureDetails : React.FC = () => {
                 <Grid container direction='row' sx={{height: '100%'}}>
                     <Grid xs={2}>
                         <Avatar 
-                            src={getCreatureToken(encounterContext.selectedCreature.sourceId, 
-                                                encounterContext.selectedCreature.isPlayerCharacter ? encounterContext.selectedCreature.id : encounterContext.selectedCreature.name, 
-                                                encounterContext.selectedCreature.isPlayerCharacter)} 
+                            src={encounterContext.selectedCreature.imageUrl} 
                             sx={{width: 128, height: 128, margin: 'auto', top: 'calc(50% - 64px)'}} />
                     </Grid>
                     <Grid xs={5}>

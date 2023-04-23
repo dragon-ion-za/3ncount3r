@@ -27,7 +27,7 @@ wsl
 docker start 0d847a6338972bea3a6f74d2cb849796b87fa0315584c6a8207fb783c4af0b3d
 
 To wipe the DB:
-docker exe -it 5etools-api-3ncount3r bash
+docker exec -it 5etools-api-3ncount3r bash
 mongosh
 use 3ncount3r_data
 db.dropDatabase()

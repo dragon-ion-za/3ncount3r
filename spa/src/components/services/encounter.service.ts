@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 import { EncounterCreatureViewModel } from "../../view-models/encounter-creature.view-model";
 import { EncounterViewModel } from "../../view-models/encounter.view-model";
@@ -15,6 +15,15 @@ export async function saveEncounter(encounterName: string, encounterCreatures: E
      return response.data as string;
 }
 
+export async function saveEncounterTemplate(encounterName: string, encounterCreatures: EncounterCreatureViewModel[]): Promise<string> {
+    const response = await axios.post(`${BASE_URL}encountertemplates`, { 
+        name: encounterName,
+        creatures: encounterCreatures
+     });
+
+     return response.data as string;
+}
+
 export async function updateEncounter(encounterName: string, encounterId: string, encounterCreatures: EncounterCreatureViewModel[], encounterParty: string): Promise<string> {
     const response = await axios.put(`${BASE_URL}encounters`, { 
         name: encounterName,
@@ -26,10 +35,29 @@ export async function updateEncounter(encounterName: string, encounterId: string
      return response.data as string;
 }
 
-export async function getEncounters() : Promise<EncounterViewModel[]> {
-    const response = await axios.get(`${BASE_URL}encounters`);
+export async function updateEncounterTemplate(encounterName: string, encounterId: string, encounterCreatures: EncounterCreatureViewModel[]): Promise<string> {
+    const response = await axios.put(`${BASE_URL}encountertemplates`, { 
+        name: encounterName,
+        id: encounterId,
+        creatures: encounterCreatures
+     });
 
-    return response.data as EncounterViewModel[];
+     return response.data as string;
+}
+
+export async function getEncounters() : Promise<EncounterViewModel[]> {
+    let calls: Promise<AxiosResponse<EncounterViewModel[], any>>[] = [];
+    calls.push(axios.get(`${BASE_URL}encounters`));
+    calls.push(axios.get(`${BASE_URL}encountertemplates`));
+
+    await Promise.all(calls);
+
+    let response: EncounterViewModel[] = [];
+    for (let call of calls) {
+        response.push(...(await call).data)
+    }
+
+    return response;
 }
 
 export async function getEncounterById(id: string) : Promise<EncounterViewModel> {

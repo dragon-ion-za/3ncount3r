@@ -23,7 +23,7 @@ const SearchCreatureListItem : React.FC<SearchCreatureListItemProps> = ({viewMod
                     <Grid xs={2}>
                         <Avatar src={viewModel.imageUrl} sx={searchResultAvatarStyles} />
                     </Grid>
-                    <Grid xs={8}>
+                    <Grid xs={7}>
                         <Typography variant='subtitle1'>{viewModel.type} {parseAlignment(viewModel.alignment)}</Typography>
                         <Typography variant="h2">{viewModel.name}</Typography>
                         <Typography variant='subtitle1'>
@@ -32,6 +32,9 @@ const SearchCreatureListItem : React.FC<SearchCreatureListItemProps> = ({viewMod
                                 : `${viewModel.hitpointAverage} (${viewModel.hitpointFormula})`
                             }
                         </Typography>          
+                    </Grid>
+                    <Grid xs={1}>
+                        <Typography variant='subtitle1'>{viewModel.byoapiId}</Typography>
                     </Grid>
                     <Grid xs={2}>
                         <Avatar sx={searchResultAvatarStyles}>{viewModel.challengeRating}</Avatar>                        

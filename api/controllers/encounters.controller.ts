@@ -10,26 +10,14 @@ import { BaseController } from "./base.controller";
 export class EncountersController extends BaseController<EncounterModel, EncounterViewModel> { 
 
     protected override async doSave(model: EncounterModel): Promise<string> {
-        let encounterId = '';
-        
-        if (model.selectedParty !== undefined && model.selectedParty !== '') {
-            encounterId = await DataService.saveEncounter(model);
-        } else {
-            encounterId = await DataService.saveEncounterTemplate(model);
-        }
-
+        let encounterId = '';        
+        encounterId = await DataService.saveEncounter(model);
         return encounterId;
     }
 
     protected override async doUpdate(model: EncounterModel): Promise<string> {
-        let encounterId = '';
-        
-        if (model.selectedParty !== undefined && model.selectedParty !== '') {
-            encounterId = await DataService.updateEncounter(model);
-        } else {
-            encounterId = await DataService.updateEncounterTemplate(model);
-        }
-
+        let encounterId = '';        
+        encounterId = await DataService.updateEncounter(model);
         return encounterId;
     }
 

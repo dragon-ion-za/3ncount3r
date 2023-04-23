@@ -41,6 +41,6 @@ export class ByoApiService {
 
         creature = result.data as CreatureViewModel;
 
-        return creature;
+        return { ...creature, byoapiId: byoapiId };
     }
 }
