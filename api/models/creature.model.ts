@@ -1,13 +1,12 @@
-import { ActionGroupViewModel, ArmourClassViewModel, CreatureSizes, ResistanceViewModel, SkillModifierViewModel } from "./shared.view-model";
+import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, ActionGroupModel } from "./sharedModels";
 
-export class CreatureViewModel {
-    name: string = '';
+export class CreatureModel {
+    name: string;
     sourceId: string = '';
-    byoapiId: string = '';
     size: CreatureSizes = CreatureSizes.Unknown;
     type: string = '';
     alignment: string[] = [];
-    armourClass: ArmourClassViewModel | null = null;
+    armourClass: ArmourClassModel | null = null;
     hitpointAverage: number = 0;
     hitpointFormula: string = '';
     hitpointSpecial: string = '';
@@ -24,15 +23,19 @@ export class CreatureViewModel {
     attributeInt: number = 0;
     attributeWis: number = 0;
     attributeCha: number = 0;
-    skillModifiers: SkillModifierViewModel[] = [];
+    skillModifiers: SkillModifierModel[] = [];
     passivePerception: number = 0;
-    resistances: ResistanceViewModel[] = [];
-    immunities: ResistanceViewModel[] = [];
+    resistances: ResistanceModel[] = [];
+    immunities: ResistanceModel[] = [];
     languages: string[] = [];
     challengeRating: number = 0;
     legendaryCount: number = 3;
     senses: string[] = [];
-    savingThrows: SkillModifierViewModel[] = [];
-    actionGroups: ActionGroupViewModel[] = [];
+    savingThrows: SkillModifierModel[] = [];
+    actionGroups: ActionGroupModel[] = [];
     imageUrl: string = '';
+
+    constructor (name: string) {
+        this.name = name;
+    }
 }

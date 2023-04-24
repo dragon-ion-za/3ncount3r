@@ -2,8 +2,8 @@ import { ActionGroupViewModel, ArmourClassViewModel, CreatureSizes, ResistanceVi
 
 export class CreatureViewModel {
     name: string = '';
-    sourceId: string = '';
     byoapiId: string = '';
+    sourceId: string = '';
     size: CreatureSizes = CreatureSizes.Unknown;
     type: string = '';
     alignment: string[] = [];

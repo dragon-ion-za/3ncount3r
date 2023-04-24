@@ -5,7 +5,7 @@ import { useEncounterContext } from "../../../contexts/encounter.context-provide
 import { SaveEncounterModal } from "../modals/saveEncounter.modal";
 
 import { initiativeButtonStyles } from "../initiativeHandler/initiativeHandler.styles";
-import { saveEncounter, updateEncounter } from "../../../services/encounter.service";
+import { saveEncounter, saveEncounterTemplate, updateEncounter, updateEncounterTemplate } from "../../../services/encounter.service";
 
 export const SaveHandler : React.FC = () => { 
     const [open, setOpen] = useState(false);
@@ -17,7 +17,13 @@ export const SaveHandler : React.FC = () => {
         encounterContext.setEncounterName(encounterName);
 
         if (encounterContext.encounterId === '') {
-            let encounterId: string = await saveEncounter(encounterName, encounterContext.creatures, encounterContext.selectedParty);
+            let encounterId: string = '';
+            
+            if (encounterContext.selectedParty === undefined || encounterContext.selectedParty === '') {
+                await saveEncounterTemplate(encounterName, encounterContext.creatures);
+            } else {
+                await saveEncounter(encounterName, encounterContext.creatures, encounterContext.selectedParty);
+            }
 
             if (encounterId !== '') {
                 encounterContext.setEncounterId(encounterId);
@@ -25,7 +31,13 @@ export const SaveHandler : React.FC = () => {
                 console.log('save failed!!!');
             }
         } else {
-            let encounterId: string = await updateEncounter(encounterName, encounterContext.encounterId, encounterContext.creatures, encounterContext.selectedParty);
+            let encounterId: string = '';
+
+            if (encounterContext.selectedParty === undefined || encounterContext.selectedParty === '') {
+                await updateEncounterTemplate(encounterName, encounterContext.encounterId, encounterContext.creatures);
+            } else {
+                await updateEncounter(encounterName, encounterContext.encounterId, encounterContext.creatures, encounterContext.selectedParty);
+            }
 
             if (encounterId === '') {
                 console.log('save failed!!!');

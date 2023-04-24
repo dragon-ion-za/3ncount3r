@@ -34,9 +34,7 @@ export const CreatureDetails : React.FC = () => {
                 <Grid container direction='row' sx={{height: '100%'}}>
                     <Grid xs={2}>
                         <Avatar 
-                            src={getCreatureToken(encounterContext.selectedCreature.sourceId, 
-                                                encounterContext.selectedCreature.isPlayerCharacter ? encounterContext.selectedCreature.id : encounterContext.selectedCreature.name, 
-                                                encounterContext.selectedCreature.isPlayerCharacter)} 
+                            src={encounterContext.selectedCreature.imageUrl} 
                             sx={{width: 128, height: 128, margin: 'auto', top: 'calc(50% - 64px)'}} />
                     </Grid>
                     <Grid xs={5}>
@@ -53,21 +51,21 @@ export const CreatureDetails : React.FC = () => {
                                 <strong>Passive Perception:</strong> {encounterContext.selectedCreature.passivePerception}
                             </Typography>
 
-                            {encounterContext.selectedCreature.languages.length > 0 &&
+                            {encounterContext.selectedCreature.languages?.length > 0 &&
                             (
                                 <Typography variant="body1">
                                     <strong>Languages:</strong> {encounterContext.selectedCreature.languages.join(', ')}
                                 </Typography>
                             )}
 
-                            {encounterContext.selectedCreature.senses.length > 0 &&
+                            {encounterContext.selectedCreature.senses?.length > 0 &&
                             (
                                 <Typography variant="body1">
                                     <strong>Senses:</strong> {encounterContext.selectedCreature.senses.join(', ')}
                                 </Typography>
                             )}
 
-                            {encounterContext.selectedCreature.savingThrows.length > 0 &&
+                            {encounterContext.selectedCreature.savingThrows?.length > 0 &&
                             (
                                 <Typography variant="body1">
                                     <strong>Saving Throws:</strong> {encounterContext.selectedCreature.savingThrows
@@ -78,7 +76,7 @@ export const CreatureDetails : React.FC = () => {
 
                             <Divider />
 
-                            {encounterContext.selectedCreature.resistances.length > 0 && 
+                            {encounterContext.selectedCreature.resistances?.length > 0 && 
                             (
                                 <>
                                     <Typography variant="h3">Resistances</Typography>
@@ -91,7 +89,7 @@ export const CreatureDetails : React.FC = () => {
                                 
                             )}
 
-                            {encounterContext.selectedCreature.immunities.length > 0 && 
+                            {encounterContext.selectedCreature.immunities?.length > 0 && 
                             (
                                 <>
                                     <Typography variant="h3">Immunities</Typography>

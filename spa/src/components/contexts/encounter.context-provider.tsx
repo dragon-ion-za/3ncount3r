@@ -34,8 +34,8 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
     const [encounterId, setEncounterIdInternal] = useState<string>('');
 
     const creatureInitiativeEqualityComparer = (x: EncounterCreatureViewModel, y: EncounterCreatureViewModel) => {
-        if (x.initiative > y.initiative) return -1;
-        if (y.initiative > x.initiative) return 1;
+        if (x?.initiative > y?.initiative) return -1;
+        if (y?.initiative > x?.initiative) return 1;
         return 0;
     };
 
