@@ -1,12 +1,19 @@
 {
   "name": "api",
-  "version": "1.0.0",
+  "version": "AdamantineArmor",
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "start": "nodemon server.ts",
-    "build": "webpack",
+    "start": "nodemon",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "."
+    ],
+    "ext": "ts",
+    "exec": "ts-node ./server.ts"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +26,7 @@
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "mongodb": "^4.13.0",
+    "mongodb-client-encryption": "^2.7.1",
     "ts-node": "^10.9.1",
     "uuid": "^9.0.0"
   },
@@ -26,7 +34,7 @@
     "@types/node": "^18.11.9",
     "@types/uuid": "^9.0.0",
     "nodemon": "^2.0.20",
-    "webpack-cli": "^5.0.2",
-    "ts-loader": "^9.4.2"
+    "ts-loader": "^9.4.2",
+    "webpack-cli": "^5.0.2"
   }
 }

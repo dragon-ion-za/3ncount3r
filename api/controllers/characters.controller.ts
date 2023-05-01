@@ -16,7 +16,7 @@ export class CharactersController extends BaseController<CharacterModel, Encount
     }
     
     protected override async doGet(): Promise<EncounterCreatureViewModel[]> {
-        return await (await DataService.getCharacters())
+        return (await DataService.getCharacters())
             .map(x => { 
                 return { 
                     sourceId: '', 
