@@ -1,4 +1,4 @@
-name: API CI
+name: SPA CI
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - 'feat/*'
       - '!main'
     paths:
-      - api/**
+      - spa/**
 
 jobs:
   build:
@@ -26,6 +26,6 @@ jobs:
 
     - name: Build
       run: |
-        cd api
+        cd spa
         npm install
         npm run build
