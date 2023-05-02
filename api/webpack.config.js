@@ -13,6 +13,7 @@ module.exports = {
     ]
   },
   resolve: {
+    modules: ['node_modules'],
     extensions: [".tsx", ".ts", ".js",".json"]
   },
   target: 'node',

@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon server.ts",
     "build": "webpack",
+    "start:dist": "node ./dist/api.bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
