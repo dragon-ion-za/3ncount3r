@@ -24,9 +24,9 @@ export class CharacterModel {
     equipment: EquipmentModel[] = [];
     inventory: EquipmentModel[] = [];
     
-    hitpointMax: 0;
-    hitpointCurrent: 0;
-    hitpointTemporary: 0;
+    hitpointMax: number = 0;
+    hitpointCurrent: number = 0;
+    hitpointTemporary: number = 0;
 
     walkingSpeed: number = 0;
     climbingSpeed: number = 0;

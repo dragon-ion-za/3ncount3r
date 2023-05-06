@@ -22,7 +22,7 @@ export class EncountersController extends BaseController<EncounterModel, Encount
     }
 
     protected override async doGet(): Promise<EncounterViewModel[]> {
-        let encounters: EncounterModel[] = await (await DataService.getEncounters())
+        let encounters: EncounterModel[] = (await DataService.getEncounters())
                                                     .map(x => { return x });
 
         let expandedEncounters: EncounterViewModel[] = [];
