@@ -1,0 +1,9 @@
+FROM node:16
+
+WORKDIR /api
+
+COPY dist/** ./
+
+EXPOSE 8000
+
+CMD ["node", "api.bundle.js"]

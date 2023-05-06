@@ -1,10 +1,9 @@
-name: API CI
+name: API CD
 
 on:
   push:
     branches:
-      - 'feat/*'
-      - '!main'
+      - 'main'
     paths:
       - api/**
 
