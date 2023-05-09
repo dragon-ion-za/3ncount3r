@@ -7,6 +7,24 @@ on:
     paths:
       - api/**
 
+env:
+  LAST_VERSION: ''
+
 jobs:
   call-workflow:
     uses: ./.github/workflows/step_build.yml
+
+  tagAndVersion:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Get last tag
+        shell: pwsh
+        run: | 
+          $latest = git describe --tag --always
+          $latest
+
+      - name: Get version
+        shell: pwsh
+        run: |
+          if ($latest.IndexOf('-') = -1) { echo 'test' }
