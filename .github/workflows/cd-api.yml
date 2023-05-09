@@ -3,9 +3,7 @@ name: API CD
 on:
   push:
     branches:
-      - 'main'
-    paths:
-      - api/**
+      - '*'
 
 env:
   LAST_VERSION: ''
