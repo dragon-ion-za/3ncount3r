@@ -25,4 +25,4 @@ jobs:
       - name: Get version
         shell: pwsh
         run: |
-          if ($latest.IndexOf('-') = -1) { echo 'test' }
+          if ($latest.IndexOf('-') = -1) { echo 'test' } 
