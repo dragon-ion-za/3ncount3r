@@ -9,8 +9,11 @@ env:
 jobs:
   call-workflow:
     uses: ./.github/workflows/step_build.yml
+    with:
+      sourcePath: "api"
 
   tagAndVersion:
+    needs: [ call-workflow ]
     runs-on: ubuntu-latest
     steps:
 
