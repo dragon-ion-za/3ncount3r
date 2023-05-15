@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
 
 env:
+  LAST_TAG: ''
   LAST_VERSION: ''
 
 jobs:
@@ -16,14 +17,7 @@ jobs:
     needs: [ call-workflow ]
     runs-on: ubuntu-latest
     steps:
-
-      - name: Get last tag
-        shell: pwsh
-        run: | 
-          $latest = git describe --tag --always
-          $latest
-
       - name: Get version
         shell: pwsh
         run: |
-          if ($latest.IndexOf('-') = -1) { echo 'test' } 
+          if ($env:LAST_TAG.IndexOf('-') = -1) { echo 'test' } 

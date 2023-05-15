@@ -18,6 +18,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Get last tag
+      shell: pwsh
+      run: | 
+        echo "LAST_TAG = $(git describe --tag --always)" >> $env:GITHUB_ENV
+        $env:LAST_TAG
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
