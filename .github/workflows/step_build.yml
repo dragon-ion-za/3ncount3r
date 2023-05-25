@@ -24,6 +24,13 @@ jobs:
         echo "LAST_TAG = $(git describe --tag --always)" >> $env:GITHUB_ENV
         $env:LAST_TAG
 
+    - name: Get current version name
+      shell: pwsh
+      run: | 
+        $version = (Get-Content ${{ inputs.sourcePath }}/package.json) -join "`n" | ConvertFrom-Json | Select -ExpandProperty "version"
+        echo "VERSION_NAME = $version" >> $env:GITHUB_ENV
+        $env:VERSION_NAME
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:

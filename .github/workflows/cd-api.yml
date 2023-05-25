@@ -17,7 +17,14 @@ jobs:
     needs: [ build ]
     runs-on: ubuntu-latest
     steps:
-      - name: Get version
+      - name: Create Tag Name
         shell: pwsh
         run: |
-          if ($env:LAST_TAG.IndexOf('-') = -1) { echo 'test' } 
+          . "./scripts/get-ordinal-number.ps1"
+
+          if ($env:LAST_TAG.IndexOf('-') = -1 || $env:LAST_TAG.IndexOf($env:VERSION_NAME) = -1) { 
+            $versionOrdinalNumber = Get-OrdinalNumber(1)
+            echo "NEXT_VERSION = '$env:VERSION_NAME, $versionOrdinalNumber Level'" >> $env:GITHUB_ENV
+          }
+
+          $env:NEXT_VERSION
