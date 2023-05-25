@@ -8,13 +8,13 @@ env:
   LAST_VERSION: ''
 
 jobs:
-  call-workflow:
+  build:
     uses: ./.github/workflows/step_build.yml
     with:
       sourcePath: "api"
 
   tagAndVersion:
-    needs: [ call-workflow ]
+    needs: [ build ]
     runs-on: ubuntu-latest
     steps:
       - name: Get version
