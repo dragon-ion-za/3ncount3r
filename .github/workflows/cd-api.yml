@@ -5,7 +5,8 @@ on:
 
 env:
   LAST_TAG: ''
-  LAST_VERSION: ''
+  VERSION_NAME: ''
+  NEXT_VERSION: ''
 
 jobs:
   build:
@@ -20,11 +21,54 @@ jobs:
       - name: Create Tag Name
         shell: pwsh
         run: |
-          . "./scripts/get-ordinal-number.ps1"
+          Function Get-OrdinalNumber {
+              Param(
+                  [Parameter(Mandatory=$true)]
+                  [int64]$num
+              )
 
-          if ($env:LAST_TAG.IndexOf('-') = -1 || $env:LAST_TAG.IndexOf($env:VERSION_NAME) = -1) { 
-            $versionOrdinalNumber = Get-OrdinalNumber(1)
-            echo "NEXT_VERSION = '$env:VERSION_NAME, $versionOrdinalNumber Level'" >> $env:GITHUB_ENV
+              $Suffix = Switch -regex ($Num) {
+                  '1(1|2|3)$' { 'th'; break }
+                  '.?1$'      { 'st'; break }
+                  '.?2$'      { 'nd'; break }
+                  '.?3$'      { 'rd'; break }
+                  default     { 'th'; break }
+              }
+              Write-Output "$Num$Suffix"
           }
 
+          echo Variables
+          ${{ needs.build.outputs.lastTag }}
+          ${{ needs.build.outputs.versionName }}
+
+          echo Generate next version
+          if ($env:LAST_TAG.IndexOf('-') -eq -1 -Or $env:LAST_TAG.IndexOf($env:VERSION_NAME) -eq -1) { 
+            $versionOrdinalNumber = Get-OrdinalNumber(1)
+          }
+
+          if ($env:LAST_TAG.IndexOf($env:VERSION_NAME) -ge 0) { 
+            $env:VERSION_NAME -match ', (\d*)\w\w level'
+            $versionOrdinalNumber = Get-OrdinalNumber($matches[1])
+          }
+
+          echo "NEXT_VERSION = '$env:VERSION_NAME, $versionOrdinalNumber Level'" >> $env:GITHUB_ENV
           $env:NEXT_VERSION
+
+      - name: Create tag
+        uses: actions/github-script@v5
+        with:
+          script: |
+            github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: 'refs/tags/${{ env.NEXT_VERSION }}',
+              sha: context.sha
+            })
+
+  dockerImage:
+    needs: [ tagAndVersion ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Image
+        run: docker build . --file "api/dockerfile" --tag api-${{ env.NEXT_VERSION }}
+

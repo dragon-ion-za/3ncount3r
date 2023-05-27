@@ -6,10 +6,18 @@ on:
       sourcePath:
         required: true
         type: string
+    outputs:
+      lastTag: 
+        value: ${{ jobs.build.outputs.lastTag }}
+      versionName: 
+        value: ${{ jobs.build.outputs.versionName }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      lastTag: ${{ steps.getTag.outputs.tag }}
+      versionName: ${{ steps.getVersion.outputs.version }}
 
     strategy:
       matrix:
@@ -19,17 +27,17 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Get last tag
+      id: getTag
       shell: pwsh
       run: | 
-        echo "LAST_TAG = $(git describe --tag --always)" >> $env:GITHUB_ENV
-        $env:LAST_TAG
+        echo "tag = $(git describe --tag --always)" >> $env:GITHUB_OUTPUT
 
     - name: Get current version name
+      id: getVersion
       shell: pwsh
       run: | 
         $version = (Get-Content ${{ inputs.sourcePath }}/package.json) -join "`n" | ConvertFrom-Json | Select -ExpandProperty "version"
-        echo "VERSION_NAME = $version" >> $env:GITHUB_ENV
-        $env:VERSION_NAME
+        echo "version = $version" >> $env:GITHUB_OUTPUT
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -41,3 +49,9 @@ jobs:
         cd ${{ inputs.sourcePath }}
         npm install
         npm run build
+
+    - name: Display Version Detail
+      shell: pwsh
+      run: | 
+        Write-Host ${{ steps.getTag.outputs.tag }}
+        Write-Host ${{ steps.getVersion.outputs.version }}
