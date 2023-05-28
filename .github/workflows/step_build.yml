@@ -8,21 +8,16 @@ on:
         type: string
     outputs:
       lastTag: 
-        value: ${{ jobs.build.outputs.lastTag }}
+        value: ${{ jobs.build.outputs.outTag }}
       versionName: 
-        value: ${{ jobs.build.outputs.versionName }}
+        value: ${{ jobs.build.outputs.outVersionName }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      lastTag: ${{ steps.getTag.outputs.tag }}
-      versionName: ${{ steps.getVersion.outputs.version }}
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-
+      outTag: ${{ steps.getTag.outputs.tag }}
+      outVersionName: ${{ steps.getVersion.outputs.verName }}
     steps:
     - uses: actions/checkout@v3
 
@@ -30,14 +25,14 @@ jobs:
       id: getTag
       shell: pwsh
       run: | 
-        echo "tag = $(git describe --tag --always)" >> $env:GITHUB_OUTPUT
+        echo "tag=$(git describe --tag --always)" >> $env:GITHUB_OUTPUT
 
     - name: Get current version name
       id: getVersion
       shell: pwsh
       run: | 
-        $version = (Get-Content ${{ inputs.sourcePath }}/package.json) -join "`n" | ConvertFrom-Json | Select -ExpandProperty "version"
-        echo "version = $version" >> $env:GITHUB_OUTPUT
+        $vName = (Get-Content ${{ inputs.sourcePath }}/package.json) -join "`n" | ConvertFrom-Json | Select -ExpandProperty "version"
+        echo "verName=$vName" >> $env:GITHUB_OUTPUT
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -55,3 +50,10 @@ jobs:
       run: | 
         Write-Host ${{ steps.getTag.outputs.tag }}
         Write-Host ${{ steps.getVersion.outputs.version }}
+    
+    - name: Publish Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: publish-artifacts
+        path: |
+          dist
