@@ -1,0 +1,10 @@
+FROM node:16-alpine
+
+WORKDIR /api
+
+COPY dist/** ./
+COPY config/** ./config/
+
+EXPOSE 3000
+
+CMD ["node", "api.bundle.js"]

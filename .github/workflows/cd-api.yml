@@ -1,0 +1,74 @@
+name: API CD
+
+on:
+  workflow_dispatch:
+
+env:
+  NEXT_VERSION: ''
+
+jobs:
+  build:
+    uses: ./.github/workflows/step_build.yml
+    with:
+      sourcePath: "api"
+
+  tagAndVersion:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Tag Name
+        shell: pwsh
+        run: |
+          Function Get-OrdinalNumber {
+              Param(
+                  [Parameter(Mandatory=$true)]
+                  [int64]$num
+              )
+
+              $Suffix = Switch -regex ($Num) {
+                  '1(1|2|3)$' { 'th'; break }
+                  '.?1$'      { 'st'; break }
+                  '.?2$'      { 'nd'; break }
+                  '.?3$'      { 'rd'; break }
+                  default     { 'th'; break }
+              }
+              Write-Output "$Num$Suffix"
+          }
+
+          echo Variables
+          echo ${{ needs.build.outputs.lastTag }}
+          echo ${{ needs.build.outputs.versionName }}
+          $last_tag = "${{ needs.build.outputs.lastTag }}"
+          $version_name = "${{ needs.build.outputs.versionName }}"
+
+          echo GenerateNextVersion
+          if ($last_tag.IndexOf('-') -eq -1 -Or $last_tag.IndexOf($version_name) -eq -1) { 
+            $versionOrdinalNumber = Get-OrdinalNumber(1)
+          }
+
+          if ($last_tag.IndexOf($version_name) -ge 0) { 
+            $version_name -match ', (\d*)\w\w level'
+            $versionOrdinalNumber = Get-OrdinalNumber($matches[1])
+          }
+
+          echo "NEXT_VERSION = '$version_name-${versionOrdinalNumber}Level'" >> $env:GITHUB_ENV
+          $env:NEXT_VERSION
+
+      - name: Create tag
+        uses: actions/github-script@v5
+        with:
+          script: |
+            github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: 'refs/tags/${{ env.NEXT_VERSION }}',
+              sha: context.sha
+            })
+
+  dockerImage:
+    needs: [ tagAndVersion ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Image
+        run: docker build . --file "api/dockerfile" --tag "3ncount3r-api:${{ env.NEXT_VERSION }}"
+

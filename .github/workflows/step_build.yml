@@ -1,0 +1,59 @@
+name: Build Step
+
+on:
+  workflow_call:
+    inputs:
+      sourcePath:
+        required: true
+        type: string
+    outputs:
+      lastTag: 
+        value: ${{ jobs.build.outputs.outTag }}
+      versionName: 
+        value: ${{ jobs.build.outputs.outVersionName }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      outTag: ${{ steps.getTag.outputs.tag }}
+      outVersionName: ${{ steps.getVersion.outputs.verName }}
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Get last tag
+      id: getTag
+      shell: pwsh
+      run: | 
+        echo "tag=$(git describe --tag --always)" >> $env:GITHUB_OUTPUT
+
+    - name: Get current version name
+      id: getVersion
+      shell: pwsh
+      run: | 
+        $vName = (Get-Content ${{ inputs.sourcePath }}/package.json) -join "`n" | ConvertFrom-Json | Select -ExpandProperty "version"
+        echo "verName=$vName" >> $env:GITHUB_OUTPUT
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build
+      run: |
+        cd ${{ inputs.sourcePath }}
+        npm install
+        npm run build
+
+    - name: Display Version Detail
+      shell: pwsh
+      run: | 
+        Write-Host ${{ steps.getTag.outputs.tag }}
+        Write-Host ${{ steps.getVersion.outputs.version }}
+    
+    - name: Publish Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: publish-artifacts
+        path: |
+          dist

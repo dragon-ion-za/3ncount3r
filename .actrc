@@ -1,0 +1,2 @@
+-P ubuntu-latest=ghcr.io/catthehacker/ubuntu:pwsh-20.04
+-e event.json
