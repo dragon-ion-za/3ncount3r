@@ -5,6 +5,7 @@ on:
 
 env:
   NEXT_VERSION: ''
+
   ARTIFACT_NAME: 'api'
 
 jobs:
@@ -17,6 +18,8 @@ jobs:
   tagAndVersion:
     needs: build
     runs-on: ubuntu-latest
+    permissions: write-all
+
     steps:
       - name: Create Tag Name
         shell: pwsh
