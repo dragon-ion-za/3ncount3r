@@ -52,7 +52,7 @@ jobs:
       shell: pwsh
       run: | 
         Write-Host ${{ steps.getTag.outputs.tag }}
-        Write-Host ${{ steps.getVersion.outputs.version }}
+        Write-Host ${{ steps.getVersion.outputs.verName }}
     
     - name: Publish Artifacts
       uses: actions/upload-artifact@v3

@@ -52,7 +52,7 @@ jobs:
           }
 
           if ($last_tag.IndexOf($version_name) -ge 0) { 
-            $version_name -match ', (\d*)\w\w level'
+            $version_name -match '-(\d*)\w\wlevel'
             $versionOrdinalNumber = Get-OrdinalNumber($matches[1])
           }
 
