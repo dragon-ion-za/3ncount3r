@@ -11,10 +11,11 @@ jobs:
   build:
     env:
       artifactName: ${{ env.ARTIFACT_NAME }}
-    uses: ./.github/workflows/step_build.yml
-    with:
-      sourcePath: "api"
-      artifactName: ${{ env.artifactName }}
+    steps:
+      - uses: ./.github/workflows/step_build.yml
+        with:
+          sourcePath: "api"
+          artifactName: ${{ env.artifactName }}
 
   tagAndVersion:
     needs: build
