@@ -9,14 +9,10 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    env:
-      artifactName: ${{ env.ARTIFACT_NAME }}
-    steps:
-      - uses: ./.github/workflows/step_build.yml
-        with:
-          sourcePath: "api"
-          artifactName: ${{ env.artifactName }}
+    uses: ./.github/workflows/step_build.yml
+    with:
+      sourcePath: "api"
+      artifactName: "api"
 
   tagAndVersion:
     needs: build
