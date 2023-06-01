@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/step_build.yml
     with:
       sourcePath: "api"
-      artifactName: ${{ env.ARTIFACT_NAME }}
+      artifactName: "${{ env.ARTIFACT_NAME }}"
 
   tagAndVersion:
     needs: build
