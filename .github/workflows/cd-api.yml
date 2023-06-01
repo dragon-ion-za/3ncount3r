@@ -18,6 +18,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     permissions: write-all
+    outputs:
+      nextVersion: ""
     steps:
       - name: Create Tag Name
         shell: pwsh
@@ -55,6 +57,7 @@ jobs:
           }
 
           echo "NEXT_VERSION=$version_name-${versionOrdinalNumber}Level" >> $env:GITHUB_ENV
+          echo "nextVersion=NEXT_VERSION" >> $env:GITHUB_OUTPUT
           $env:NEXT_VERSION
 
       - name: Create tag
@@ -79,5 +82,5 @@ jobs:
           name: ${{ env.ARTIFACT_NAME }}
 
       - name: Build Image
-        run: docker build . --file "api/dockerfile" --tag "3ncount3r-api:${{ env.NEXT_VERSION }}"
+        run: docker build . --file "api/dockerfile" --tag "3ncount3r-api:${{ needs.tagAndVersion.outputs.nextVersion }}"
 
