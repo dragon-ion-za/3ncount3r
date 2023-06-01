@@ -28,6 +28,7 @@ jobs:
       id: getTag
       shell: pwsh
       run: | 
+        git describe --tag --always
         echo "tag=$(git describe --tag --always)" >> $env:GITHUB_OUTPUT
 
     - name: Get current version name
