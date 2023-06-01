@@ -15,7 +15,7 @@ jobs:
   tagAndVersion:
     needs: build
     runs-on: ubuntu-latest
-    permissions: read-all|write-all
+    permissions: write-all
     steps:
       - name: Create Tag Name
         shell: pwsh
