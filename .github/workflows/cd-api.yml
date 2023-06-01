@@ -54,7 +54,7 @@ jobs:
             $versionOrdinalNumber = Get-OrdinalNumber($matches[1])
           }
 
-          echo "NEXT_VERSION = '$version_name-${versionOrdinalNumber}Level'" >> $env:GITHUB_ENV
+          echo "NEXT_VERSION='$version_name-${versionOrdinalNumber}Level'" >> $env:GITHUB_ENV
           $env:NEXT_VERSION
 
       - name: Create tag

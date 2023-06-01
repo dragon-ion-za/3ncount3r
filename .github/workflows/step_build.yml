@@ -59,4 +59,4 @@ jobs:
       with:
         name: ${{ inputs.artifactName }}
         path: |
-          dist
+          ${{ inputs.sourcePath }}/dist
