@@ -85,6 +85,7 @@ jobs:
       - name: Move Files To Dist
         shell: pwsh
         run: |
+          ls
           Move-Item . ./dist -Exclude "dockerfile"
 
       - name: Build Image
