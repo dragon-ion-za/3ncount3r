@@ -23,6 +23,8 @@ jobs:
       outVersionName: ${{ steps.getVersion.outputs.verName }}
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: Get last tag
       id: getTag
