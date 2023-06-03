@@ -83,5 +83,5 @@ jobs:
           name: ${{ env.ARTIFACT_NAME }}
 
       - name: Build Image
-        run: docker build . --file "api/dockerfile" --tag "3ncount3r-api:${{ needs.tagAndVersion.outputs.nextVersion }}"
+        run: docker build . --file "dockerfile" --tag "3ncount3r-api:${{ needs.tagAndVersion.outputs.nextVersion }}"
 
