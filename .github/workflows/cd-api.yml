@@ -58,8 +58,8 @@ jobs:
           }
 
           echo "NEXT_VERSION=$version_name-${versionOrdinalNumber}Level" >> $env:GITHUB_ENV
-          echo "nextVersion=${{ env.NEXT_VERSION }}" >> $env:GITHUB_OUTPUT
-          echo ${{ env.NEXT_VERSION }}
+          echo "nextVersion=$version_name-${versionOrdinalNumber}Level" >> $env:GITHUB_OUTPUT
+          echo $version_name-${versionOrdinalNumber}Level
 
       - name: Create tag
         if: ${{ !env.ACT }}
