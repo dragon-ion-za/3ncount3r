@@ -1,0 +1,31 @@
+services:
+  mongo:
+    image: mongo
+    restart: always
+    volumes:
+      - 3ncount3rData:/data/db
+    networks:
+      - net-internal
+  api:
+    image: 3ncount3r-api
+    restart: always
+    ports:
+      - '13130:13130'
+    networks:
+      - net-internal
+      - net-external
+  spa:
+    image: 3ncount3r-spa
+    restart: always
+    ports:
+      - '13131:13131'
+    networks:
+      - net-internal
+      - net-external
+volumes:
+  3ncount3rData:
+networks:
+  net-internal:
+    driver: bridge
+  net-external:
+    external: true
