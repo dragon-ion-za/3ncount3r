@@ -19,9 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions: write-all
     outputs:
-      nextVersion: ""
+      nextVersion: ${{ steps.createTagName.outputs.nextVersion }}
     steps:
       - name: Create Tag Name
+        id: createTagName
         shell: pwsh
         run: |
           Function Get-OrdinalNumber {
@@ -58,7 +59,7 @@ jobs:
 
           echo "NEXT_VERSION=$version_name-${versionOrdinalNumber}Level" >> $env:GITHUB_ENV
           echo "nextVersion=${{ env.NEXT_VERSION }}" >> $env:GITHUB_OUTPUT
-          $env:NEXT_VERSION
+          echo ${{ env.NEXT_VERSION }}
 
       - name: Create tag
         if: ${{ !env.ACT }}
