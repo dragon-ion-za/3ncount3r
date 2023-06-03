@@ -1,6 +1,6 @@
 services:
   mongo:
-    image: mongo
+    image: mongo:latest
     restart: always
     volumes:
       - 3ncount3rData:/data/db
@@ -12,7 +12,7 @@ services:
     networks:
       - net-internal
   api:
-    image: ghcr.io/dragon-ion-za/3ncount3r-api
+    image: ghcr.io/dragon-ion-za/3ncount3r-api:adamantinearmor-9thlevel
     restart: always
     ports:
       - '13130:13130'
