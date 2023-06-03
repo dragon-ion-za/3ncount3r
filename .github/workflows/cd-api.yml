@@ -33,7 +33,9 @@ jobs:
         run: docker build . --file "dockerfile" --tag "3ncount3r-api:${{ needs.generateVersion.outputs.nextVersion }}"
 
       - name: Push Image
-        run: docker push "ghcr.io/dragon-ion-za/3ncount3r-api:${{ needs.generateVersion.outputs.nextVersion }}"
+        run: |
+          docker images
+          docker push ghcr.io/dragon-ion-za/3ncount3r-api:${{ needs.generateVersion.outputs.nextVersion }}
 
   tag:
     needs: [generateVersion, dockerBuildAndPublish]
