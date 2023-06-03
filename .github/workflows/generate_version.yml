@@ -1,0 +1,60 @@
+name: Generate Version
+
+on:
+  workflow_call:
+    inputs:
+      lastTag:
+        required: true
+        type: string
+      versionName:
+        required: true
+        type: string
+    outputs:
+      nextVersion: 
+        value: ${{ jobs.createVersion.outputs.nextVersion }}
+
+jobs:
+  createVersion:
+    runs-on: ubuntu-latest
+      outputs:
+        nextVersion: ${{ steps.createTagName.outputs.nextVersion }}
+      steps:
+        - name: Create Tag Name
+          id: createTagName
+          shell: pwsh
+          run: |
+            Function Get-OrdinalNumber {
+                Param(
+                    [Parameter(Mandatory=$true)]
+                    [int64]$num
+                )
+
+                $Suffix = Switch -regex ($Num) {
+                    '1(1|2|3)$' { 'th'; break }
+                    '.?1$'      { 'st'; break }
+                    '.?2$'      { 'nd'; break }
+                    '.?3$'      { 'rd'; break }
+                    default     { 'th'; break }
+                }
+                Write-Output "$Num$Suffix"
+            }
+
+            echo ::Variables::          
+            $last_tag = "${{ inputs.lastTag }}"
+            $version_name = "${{ inputs.versionName }}"
+            $last_tag
+            $version_name
+
+            echo ::GenerateNextVersion::
+            if ($last_tag.IndexOf('-') -eq -1 -Or $last_tag.IndexOf($version_name) -eq -1) { 
+              $versionOrdinalNumber = Get-OrdinalNumber(1)
+            }
+
+            if ($last_tag.IndexOf($version_name) -ge 0) { 
+              $last_tag -match '-(\d*)\w\wlevel'
+              $versionOrdinalNumber = Get-OrdinalNumber([int]$matches[1] + 1)
+            }
+
+            echo ::NextVersionNumber::
+            echo "nextVersion=$version_name-${versionOrdinalNumber}Level" >> $env:GITHUB_OUTPUT
+            echo $version_name-${versionOrdinalNumber}Level

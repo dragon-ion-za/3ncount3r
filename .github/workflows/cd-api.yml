@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
 
 env:
-  NEXT_VERSION: ''
   ARTIFACT_NAME: 'api'
 
 jobs:
@@ -14,67 +13,15 @@ jobs:
       sourcePath: "api"
       artifactName: "api"
 
-  tagAndVersion:
+  generateVersion:
     needs: build
-    runs-on: ubuntu-latest
-    permissions: write-all
-    outputs:
-      nextVersion: ${{ steps.createTagName.outputs.nextVersion }}
-    steps:
-      - name: Create Tag Name
-        id: createTagName
-        shell: pwsh
-        run: |
-          Function Get-OrdinalNumber {
-              Param(
-                  [Parameter(Mandatory=$true)]
-                  [int64]$num
-              )
+    uses: ./.github/workflows/generate_version.yml
+    with:
+      lastTag: ${{ needs.build.outputs.lastTag }}
+      versionName: ${{ needs.build.outputs.versionName }}
 
-              $Suffix = Switch -regex ($Num) {
-                  '1(1|2|3)$' { 'th'; break }
-                  '.?1$'      { 'st'; break }
-                  '.?2$'      { 'nd'; break }
-                  '.?3$'      { 'rd'; break }
-                  default     { 'th'; break }
-              }
-              Write-Output "$Num$Suffix"
-          }
-
-          echo Variables          
-          $last_tag = "${{ needs.build.outputs.lastTag }}"
-          $version_name = "${{ needs.build.outputs.versionName }}"
-          $last_tag
-          $version_name
-
-          echo GenerateNextVersion
-          if ($last_tag.IndexOf('-') -eq -1 -Or $last_tag.IndexOf($version_name) -eq -1) { 
-            $versionOrdinalNumber = Get-OrdinalNumber(1)
-          }
-
-          if ($last_tag.IndexOf($version_name) -ge 0) { 
-            $last_tag -match '-(\d*)\w\wlevel'
-            $versionOrdinalNumber = Get-OrdinalNumber([int]$matches[1] + 1)
-          }
-
-          echo "NEXT_VERSION=$version_name-${versionOrdinalNumber}Level" >> $env:GITHUB_ENV
-          echo "nextVersion=$version_name-${versionOrdinalNumber}Level" >> $env:GITHUB_OUTPUT
-          echo $version_name-${versionOrdinalNumber}Level
-
-      - name: Create tag
-        if: ${{ !env.ACT }}
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.rest.git.createRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: 'refs/tags/${{ env.NEXT_VERSION }}',
-              sha: context.sha
-            })
-
-  dockerImage:
-    needs: [ tagAndVersion ]
+  dockerBuildAndPublish:
+    needs: generateVersion
     runs-on: ubuntu-latest
     steps:
       - name: Download a single artifact
@@ -83,5 +30,24 @@ jobs:
           name: ${{ env.ARTIFACT_NAME }}
 
       - name: Build Image
-        run: docker build . --file "dockerfile" --tag "3ncount3r-api:${{ needs.tagAndVersion.outputs.nextVersion }}"
+        run: docker build . --file "dockerfile" --tag "3ncount3r-api:${{ needs.generateVersion.outputs.nextVersion }}"
 
+      - name: Push Image
+        run: docker push ghcr.io/dragon-ion-za/3ncount3r-api:${{ needs.generateVersion.outputs.nextVersion }}
+
+  tag:
+    needs: [generateVersion, dockerBuildAndPublish]
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Create tag
+        if: ${{ !env.ACT }}
+        uses: actions/github-script@v5
+        with:
+          script: |
+            github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: 'refs/tags/${{ needs.generateVersion.outputs.nextVersion }}',
+              sha: context.sha
+            })
