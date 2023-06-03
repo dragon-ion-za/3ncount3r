@@ -63,3 +63,4 @@ jobs:
         name: ${{ inputs.artifactName }}
         path: |
           ${{ inputs.sourcePath }}/dist
+          ${{ inputs.sourcePath }}/dockerfile

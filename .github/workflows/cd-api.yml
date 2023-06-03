@@ -82,6 +82,11 @@ jobs:
         with:
           name: ${{ env.ARTIFACT_NAME }}
 
+      - name: Move Files To Dist
+        shell: pwsh
+        run: |
+          Move-Item . ./dist -Exclude "dockerfile"
+
       - name: Build Image
         run: docker build . --file "dockerfile" --tag "3ncount3r-api:${{ needs.tagAndVersion.outputs.nextVersion }}"
 
