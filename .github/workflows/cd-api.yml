@@ -40,11 +40,11 @@ jobs:
               Write-Output "$Num$Suffix"
           }
 
-          echo Variables
-          echo ${{ needs.build.outputs.lastTag }}
-          echo ${{ needs.build.outputs.versionName }}
+          echo Variables          
           $last_tag = "${{ needs.build.outputs.lastTag }}"
           $version_name = "${{ needs.build.outputs.versionName }}"
+          $last_tag
+          $version_name
 
           echo GenerateNextVersion
           if ($last_tag.IndexOf('-') -eq -1 -Or $last_tag.IndexOf($version_name) -eq -1) { 
@@ -52,7 +52,7 @@ jobs:
           }
 
           if ($last_tag.IndexOf($version_name) -ge 0) { 
-            $version_name -match '-(\d*)\w\wlevel'
+            $last_tag -match '-(\d*)\w\wlevel'
             $versionOrdinalNumber = Get-OrdinalNumber($matches[1])
           }
 
