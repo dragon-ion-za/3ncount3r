@@ -30,12 +30,10 @@ jobs:
           name: ${{ env.ARTIFACT_NAME }}
 
       - name: Build Image
-        run: docker build . --file "dockerfile" --tag "3ncount3r-api:${{ needs.generateVersion.outputs.nextVersion }}"
+        run: docker build . --file "dockerfile" --tag "ghcr.io/dragon-ion-za/3ncount3r-api:${{ needs.generateVersion.outputs.nextVersion }}"
 
       - name: Push Image
-        run: |
-          docker images
-          docker push ghcr.io/dragon-ion-za/3ncount3r-api:${{ needs.generateVersion.outputs.nextVersion }}
+        run: docker push ghcr.io/dragon-ion-za/3ncount3r-api:${{ needs.generateVersion.outputs.nextVersion }}
 
   tag:
     needs: [generateVersion, dockerBuildAndPublish]
