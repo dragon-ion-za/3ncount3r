@@ -53,7 +53,7 @@ jobs:
 
           if ($last_tag.IndexOf($version_name) -ge 0) { 
             $last_tag -match '-(\d*)\w\wlevel'
-            $versionOrdinalNumber = Get-OrdinalNumber($matches[1])
+            $versionOrdinalNumber = Get-OrdinalNumber([int]$matches[1] + 1)
           }
 
           echo "NEXT_VERSION=$version_name-${versionOrdinalNumber}Level" >> $env:GITHUB_ENV
