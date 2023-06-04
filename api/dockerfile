@@ -5,6 +5,4 @@ WORKDIR /api
 COPY dist/** ./
 COPY config/** ./config/
 
-EXPOSE 13130
-
 CMD ["node", "api.bundle.js"]

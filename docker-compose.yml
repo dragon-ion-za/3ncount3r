@@ -4,33 +4,24 @@ services:
     restart: always
     volumes:
       - 3ncount3rData:/data/db
-    networks:
-      - net-internal
+    expose:
+      - 27017
   5eapi:
     image: ghcr.io/dragon-ion-za/5eapi
     restart: always
-    networks:
-      - net-internal
+    expose:
+      - 5001
   api:
     image: ghcr.io/dragon-ion-za/3ncount3r-api:adamantinearmor-9thlevel
     restart: always
+    expose:
+      - 5002
     ports:
-      - '13130:13130'
-    networks:
-      - net-internal
-      - net-external
+      - '13130:5002'
   spa:
-    image: ghcr.io/dragon-ion-za/3ncount3r-api
+    image: ghcr.io/dragon-ion-za/3ncount3r-spa
     restart: always
     ports:
-      - '13131:13131'
-    networks:
-      - net-internal
-      - net-external
+      - '13131:3000'
 volumes:
   3ncount3rData:
-networks:
-  net-internal:
-    driver: bridge
-  net-external:
-    external: true
