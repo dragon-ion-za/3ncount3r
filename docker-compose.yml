@@ -21,10 +21,9 @@ services:
     ports:
       - '13130:5002'
   spa:
-    build:
-      context: .
-      dockerfile: api.dockerfile
-    image: ghcr.io/dragon-ion-za/3ncount3r-spa
+    image: ghcr.io/dragon-ion-za/3ncount3r-spa:acisdplash-1stlevel
+    environment:
+      - REACT_APP_API_BASE_URL=http://localhost:5002/v1/
     restart: always
     ports:
       - '13131:3000'
