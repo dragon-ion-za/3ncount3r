@@ -1,13 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require('cors');
+const config = require('config');
 import { router } from './router';
 
 const port: number = 5002;
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: config.get('corsAllowedHosts')
 }));
   
 app.use(express.json());

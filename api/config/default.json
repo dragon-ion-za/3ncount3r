@@ -10,5 +10,6 @@
     ],
     "characterApi": {
         "baseUrl": "http://localhost:5002/v1/"
-    }
+    },
+    "corsAllowedHosts": ["http://localhost:3000","http://localhost:13131"]
 }
