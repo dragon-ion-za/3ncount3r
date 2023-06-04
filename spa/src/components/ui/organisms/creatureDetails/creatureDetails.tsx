@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Avatar, Container, Divider, Stack, Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
-import { getCreatureToken} from "../../../services/creature.service";
 import { useEncounterContext } from '../../../contexts/encounter.context-provider';
 import { DamageConditionType } from "../../molecules/damageConditionType/damageConditionType";
 import { ActionDetails } from "../../molecules/actionDetails/actionDetails";

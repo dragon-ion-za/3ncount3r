@@ -3,7 +3,7 @@ import { Avatar, Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
 
-import { getCreatureToken, parseAlignment } from '../../../services/creature.service';
+import { parseAlignment } from '../../../services/creature.service';
 
 import { CreatureViewModel } from '../../../../view-models/creature.view-model';
 

@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Button, DialogContent, IconButton, Modal } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import { useNavigate } from "react-router";
-import { Download, FileOpen } from "@mui/icons-material";
+import { Download } from "@mui/icons-material";
 import { LoadEncounterModal } from "../modals/loadEncounter.modal";
-import { EncounterViewModel } from "../../../../view-models/encounter.view-model";
 
 interface EncountersMenuProps {
     isExpanded: boolean;

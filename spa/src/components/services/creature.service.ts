@@ -14,7 +14,7 @@ export function parseAlignment(alignment: string[]): string {
             case 'G': expandedAlignment += ' Good'; break;
             case 'C': expandedAlignment += ' Chaotic'; break;
             case 'L': expandedAlignment += ' Lawful'; break;
-            deafult: break;
+            default: break;
         }
     });
 
