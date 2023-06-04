@@ -1,0 +1,31 @@
+services:
+  mongo:
+    image: mongo:latest
+    restart: always
+    volumes:
+      - 3ncount3rData:/data/db
+    expose:
+      - 27017
+  5eapi:
+    image: ghcr.io/dragon-ion-za/5eapi
+    restart: always
+    expose:
+      - 5001
+  api:
+    build:
+      context: .
+      dockerfile: api.dockerfile
+    restart: always
+    expose:
+      - 5002
+    ports:
+      - '13130:5002'
+  spa:
+    image: ghcr.io/dragon-ion-za/3ncount3r-spa:acisdplash-1stlevel
+    environment:
+      - REACT_APP_API_BASE_URL=http://localhost:5002/v1/
+    restart: always
+    ports:
+      - '13131:3000'
+volumes:
+  3ncount3rData:

@@ -6,6 +6,9 @@ on:
       sourcePath:
         required: true
         type: string
+      artifactName:
+        required: true
+        type: string
     outputs:
       lastTag: 
         value: ${{ jobs.build.outputs.outTag }}
@@ -20,11 +23,14 @@ jobs:
       outVersionName: ${{ steps.getVersion.outputs.verName }}
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: Get last tag
       id: getTag
       shell: pwsh
       run: | 
+        git describe --tag --always
         echo "tag=$(git describe --tag --always)" >> $env:GITHUB_OUTPUT
 
     - name: Get current version name
@@ -49,11 +55,13 @@ jobs:
       shell: pwsh
       run: | 
         Write-Host ${{ steps.getTag.outputs.tag }}
-        Write-Host ${{ steps.getVersion.outputs.version }}
+        Write-Host ${{ steps.getVersion.outputs.verName }}
     
     - name: Publish Artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: publish-artifacts
+        name: ${{ inputs.artifactName }}
         path: |
-          dist
+          ${{ inputs.sourcePath }}/config
+          ${{ inputs.sourcePath }}/dist
+          ${{ inputs.sourcePath }}/dockerfile

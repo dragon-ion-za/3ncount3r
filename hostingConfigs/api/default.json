@@ -1,6 +1,6 @@
 {
     "connectionStrings": {
-        "3ncount3rContext": "mongodb://localhost:27017/3ncount3r"
+        "3ncount3rContext": "mongodb://mongo:27017/3ncount3r"
     },
     "byoapis": [
         {
@@ -11,5 +11,5 @@
     "characterApi": {
         "baseUrl": "http://localhost:5002/v1/"
     },
-    "corsAllowedHosts": ["http://localhost:3000"]
+    "corsAllowedHosts": ["http://localhost:13131"]
 }

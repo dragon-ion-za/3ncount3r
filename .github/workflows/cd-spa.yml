@@ -1,17 +1,17 @@
-name: API CD
+name: SPA CD
 
 on:
   workflow_dispatch:
 
 env:
-  ARTIFACT_NAME: 'api'
+  ARTIFACT_NAME: 'spa'
 
 jobs:
   build:
     uses: ./.github/workflows/step_build.yml
     with:
-      sourcePath: "api"
-      artifactName: "api"
+      sourcePath: "spa"
+      artifactName: "spa"
 
   generateVersion:
     needs: build
@@ -37,10 +37,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Image
-        run: docker build . --file "dockerfile" --tag "ghcr.io/dragon-ion-za/3ncount3r-api:${{ needs.generateVersion.outputs.nextVersion }}"
+        run: docker build . --file "dockerfile" --tag "ghcr.io/dragon-ion-za/3ncount3r-spa:${{ needs.generateVersion.outputs.nextVersion }}"
 
       - name: Push Image
-        run: docker push ghcr.io/dragon-ion-za/3ncount3r-api:${{ needs.generateVersion.outputs.nextVersion }}
+        run: docker push ghcr.io/dragon-ion-za/3ncount3r-spa:${{ needs.generateVersion.outputs.nextVersion }}
 
   tag:
     needs: [generateVersion, dockerBuildAndPublish]
