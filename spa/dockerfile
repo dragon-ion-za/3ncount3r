@@ -1,5 +1,7 @@
 FROM nginx:stable-alpine
 
-COPY dist/** /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
+
+COPY dist/ ./
 
 CMD ["nginx", "-g", "daemon off;"]
