@@ -1,7 +1,5 @@
-FROM node:16-alpine
+FROM nginx:stable-alpine
 
-WORKDIR /spa
+COPY dist/** /usr/share/nginx/html
 
-COPY dist/** ./
-
-CMD ["node", "api.bundle.js"]
+CMD ["nginx", "-g", "daemon off;"]

@@ -21,9 +21,9 @@ services:
     ports:
       - '13130:5002'
   spa:
-    image: ghcr.io/dragon-ion-za/3ncount3r-spa:acisdplash-1stlevel
+    image: ghcr.io/dragon-ion-za/3ncount3r-spa:acisdplash-2ndlevel
     environment:
-      - REACT_APP_API_BASE_URL=http://localhost:5002/v1/
+      - REACT_APP_API_BASE_URL=http://localhost:13130/v1/
     restart: always
     ports:
       - '13131:3000'
