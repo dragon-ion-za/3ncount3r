@@ -9,5 +9,8 @@ on:
       - api/**
 
 jobs:
-  call-workflow:
+  build:
     uses: ./.github/workflows/step_build.yml
+    with:
+      sourcePath: "api"
+      artifactName: "api"
