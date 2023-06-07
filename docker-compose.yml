@@ -19,13 +19,11 @@ services:
     expose:
       - 5002
     ports:
-      - '13130:5002'
+      - '5002:5002'
   spa:
-    image: ghcr.io/dragon-ion-za/3ncount3r-spa:acisdplash-2ndlevel
-    environment:
-      - REACT_APP_API_BASE_URL=http://localhost:13130/v1/
+    image: ghcr.io/dragon-ion-za/3ncount3r-spa:acidsplash-2ndlevel
     restart: always
     ports:
-      - '13131:3000'
+      - '13131:80'
 volumes:
   3ncount3rData:
