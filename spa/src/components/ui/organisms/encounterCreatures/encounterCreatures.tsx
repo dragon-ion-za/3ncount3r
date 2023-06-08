@@ -12,7 +12,7 @@ import { getEncounterById, getEncounterTemplateById } from "../../../services/en
 
 export const EncounterCreatures : React.FC = () => {
     const [open, setOpen] = useState(false);
-    const [isTemplate, setIsTemplate] = useState(false);
+    const [, setIsTemplate] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState<number>(-1);
     
     const encounterContext = useEncounterContext();
@@ -25,6 +25,7 @@ export const EncounterCreatures : React.FC = () => {
         encounterContext.setEncounterId('');
         encounterContext.setEncounterName('');
         encounterContext.setSelectedParty('');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -53,6 +54,7 @@ export const EncounterCreatures : React.FC = () => {
             encounterContext.setEncounterName('');
             encounterContext.setSelectedParty('');
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
     useEffect(() => {

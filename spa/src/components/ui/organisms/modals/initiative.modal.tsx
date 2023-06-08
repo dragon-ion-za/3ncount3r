@@ -4,7 +4,7 @@ import { Box, Grid, Typography, Button, Table, TableHead, TableRow, TableCell, T
 import { EncounterCreatureViewModel } from "../../../../view-models/encounter-creature.view-model";
 import { doDiceFormulaCalculation } from "../../../services/dice.service";
 import { calculateAbilityScoreModifier } from "../../../services/creature.service";
-import { getPartyList, getPartyMembers } from "../../../services/party.service";
+import { getPartyList } from "../../../services/party.service";
 
 import { PartyViewModel } from "../../../../view-models/party.view-model";
 import { CharacterViewModel } from "../../../../view-models/character.view-model";

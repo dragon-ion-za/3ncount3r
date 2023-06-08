@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Card, CardContent, Typography, Avatar, Stack, Chip, Container } from "@mui/material";
 import { LocalHospital, Shield } from "@mui/icons-material"
 import Grid from '@mui/material/Unstable_Grid2';
 
 import { EncounterCreatureViewModel } from "../../../../view-models/encounter-creature.view-model";
-import { getCreatureToken, parseAlignment } from "../../../services/creature.service";
+import { parseAlignment } from "../../../services/creature.service";
 import { useEncounterContext } from '../../../contexts/encounter.context-provider';
 import { InitiativeIcon } from "../../molecules/icons/initiativeOrder.icon";
 import { MovementSpeedIcon } from "../../molecules/icons/movementSpeed.icon";

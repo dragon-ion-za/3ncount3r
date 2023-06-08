@@ -54,6 +54,8 @@ export const RichTextEntry : React.FC<RichTextEntryProps> = ({key, entryIndex, e
                             }
 
                             return <Typography key={`${key}_${index}`} variant="body1" display='inline'><strong>{text}</strong></Typography>;
+                        } else {
+                            return <></>
                         }
                     } else {
                         return <Typography key={`${key}_${index}`} variant='body1' display='inline'>

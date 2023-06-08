@@ -1,7 +1,5 @@
-import { Box, Grid, Typography, FormControl, InputLabel, Select, SelectChangeEvent, MenuItem, Button, TextField } from "@mui/material";
+import { Box, Grid, Typography, Button, TextField } from "@mui/material";
 import React, { forwardRef, useState } from "react";
-
-import { EncounterCreatureViewModel } from "../../../../view-models/encounter-creature.view-model";
 
 import { modalButtonsContainer, modalContainerWide } from "../../../../styles/modals.styles";
 
