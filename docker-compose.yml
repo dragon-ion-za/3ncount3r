@@ -7,8 +7,12 @@ services:
     expose:
       - 27017
   5eapi:
-    image: ghcr.io/dragon-ion-za/5eapi
+    build:
+      context: .
+      dockerfile: 5eapi.dockerfile
     restart: always
+    volumes:
+      - 5eapiData:/data
     expose:
       - 5001
   api:
@@ -27,3 +31,4 @@ services:
       - '13131:80'
 volumes:
   3ncount3rData:
+  5eapiData: F:\Development\Git\5etools-api
