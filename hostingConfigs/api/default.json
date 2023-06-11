@@ -5,11 +5,11 @@
     "byoapis": [
         {
             "id": "5eapi",
-            "baseUrl": "http://localhost:5001/"
+            "baseUrl": "http://5eapi:5001/"
         }
     ],
     "characterApi": {
-        "baseUrl": "http://localhost:5002/v1/"
+        "baseUrl": "http://api:5002/v1/"
     },
     "corsAllowedHosts": ["http://localhost:13131"]
 }

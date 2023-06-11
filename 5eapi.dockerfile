@@ -1,7 +1,7 @@
-FROM ghcr.io/dragon-ion-za/3ncount3r-api:adamantinearmor-10thlevel
+FROM ghcr.io/dragon-ion-za/5eapi:aid-1stlevel
 
 WORKDIR /api
 
-COPY hostingConfigs/api/** ./config/
+COPY hostingConfigs/5eapi/** ./config/
 
 CMD ["node", "api.bundle.js"]
