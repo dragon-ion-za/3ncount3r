@@ -2,6 +2,11 @@ name: SPA CD
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - spa/**
 
 env:
   ARTIFACT_NAME: 'spa'

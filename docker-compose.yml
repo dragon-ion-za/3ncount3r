@@ -12,9 +12,12 @@ services:
       dockerfile: 5eapi.dockerfile
     restart: always
     volumes:
-      - 5eapiData:/data
+      - /mnt/f/Development/Git/5etools-api/data:/data
+      - /mnt/f/Development/Git/5etools-api/img:/img
     expose:
       - 5001
+    ports:
+      - '5001:5001'
   api:
     build:
       context: .
