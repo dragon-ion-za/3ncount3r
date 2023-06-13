@@ -1,0 +1,16 @@
+name: Shell CI
+
+on:
+  push:
+    branches:
+      - 'feat/*'
+      - '!main'
+    paths:
+      - shell/**
+
+jobs:
+  build:
+    uses: ./.github/workflows/step_build.yml
+    with:
+      sourcePath: "shell"
+      artifactName: "shell"
