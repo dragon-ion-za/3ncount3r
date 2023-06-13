@@ -363,3 +363,5 @@ FodyWeavers.xsd
 /api/dist
 /spa/dist
 /.vscode
+
+.angular
