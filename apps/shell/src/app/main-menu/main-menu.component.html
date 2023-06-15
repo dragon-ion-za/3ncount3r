@@ -1,4 +1,32 @@
-<mat-sidenav-container>
-    <mat-sidenav>Start</mat-sidenav>
-    <mat-sidenav-content>Main</mat-sidenav-content>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+
+    <mat-accordion multi="false">
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            ncntr
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          
+        </mat-nav-list>
+      </mat-expansion-panel>
+  
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            chrctr
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+  </mat-sidenav>
 </mat-sidenav-container>
