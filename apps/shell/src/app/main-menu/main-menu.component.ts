@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'nctr-main-menu',
@@ -16,4 +17,10 @@ export class MainMenuComponent {
       map(result => result.matches),
       shareReplay()
     );
+
+  constructor(private _router: Router) { }
+
+  ngOnInit() {
+    console.log(this._router.config);
+  }
 }
