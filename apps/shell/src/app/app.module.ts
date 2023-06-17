@@ -11,6 +11,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion'
 import { RouterService } from './services/router.service';
 import { LandingComponent } from './landing/landing.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [AppComponent, LandingComponent, MainMenuComponent],
@@ -22,6 +24,8 @@ import { LandingComponent } from './landing/landing.component';
     MatSidenavModule,
     MatListModule,
     MatExpansionModule,
+    MatGridListModule,
+    MatCardModule,
     RouterModule.forRoot(RouterService.getAppRoutes(), { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [],
