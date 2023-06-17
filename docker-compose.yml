@@ -34,4 +34,3 @@ services:
       - '13131:80'
 volumes:
   3ncount3rData:
-  5eapiData: F:\Development\Git\5etools-api
