@@ -4,14 +4,14 @@ import React, { useRef, useState } from 'react';
 
 import { useOnClickOutside } from '../../../hooks/useOnClickOutside.hook';
 import { doCreatureSearch } from '../../../services/search.service';
-import { useEncounterContext } from '../../../contexts/encounter.context-provider';
-import { ConfigureCreatureModal } from '../modals/configureCreature.modal';
+import { useEncounterContext } from '../../../providers/encounterContext/encounter.context-provider';
+import { ConfigureCreatureModal } from '../../modals/configure-creature/configureCreature.modal';
 import SearchCreatureListItem from '../searchCreatureListItem/searchCreatureListItem';
 
-import { CreatureViewModel } from '../../../../view-models/creature.view-model';
-import { EncounterCreatureViewModel } from '../../../../view-models/encounter-creature.view-model';
+import { CreatureViewModel } from '../../../view-models/creature.view-model';
+import { EncounterCreatureViewModel } from '../../../view-models/encounter-creature.view-model';
 
-import { searchContainerStyles, searchResultContainerStyle } from './searchCreatures.styles'
+import { searchContainerStyles, searchResultContainerStyle } from './search-creatures.styles'
 
 const SearchCreatures : React.FC = () => {
     const encounterContext = useEncounterContext();
