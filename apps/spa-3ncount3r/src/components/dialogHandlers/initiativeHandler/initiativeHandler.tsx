@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { Button, Modal, DialogContent } from "@mui/material";
 
-import { useEncounterContext } from "../../../contexts/encounter.context-provider";
-import { InitiativeModal } from "../modals/initiative.modal";
-import { EncounterCreatureViewModel } from "../../../../view-models/encounter-creature.view-model";
+import { useEncounterContext } from "../../../providers/encounterContext/encounter.context-provider";
+import { InitiativeModal } from "../../modals/initiative/initiative.modal";
+import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
 
 import { initiativeButtonStyles } from "./initiativeHandler.styles";
 import { saveEncounter, updateEncounter } from "../../../services/encounter.service";
