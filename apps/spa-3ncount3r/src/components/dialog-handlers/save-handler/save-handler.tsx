@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, DialogContent, Modal } from "@mui/material";
 
 import { useEncounterContext } from "../../../providers/encounterContext/encounter.context-provider";
-import { SaveEncounterModal } from "../../modals/save-encounter/saveEncounter.modal";
+import { SaveEncounterModal } from "../../modals/save-encounter/save-encounter.modal";
 
 import { initiativeButtonStyles } from "../initiative-handler/initiative-handler.styles";
 import { saveEncounter, saveEncounterTemplate, updateEncounter, updateEncounterTemplate } from "../../../services/encounter.service";

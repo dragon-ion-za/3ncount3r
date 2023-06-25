@@ -2,7 +2,7 @@ import { Box, Grid, Typography, Button, TextField } from "@mui/material";
 import React, { forwardRef, useEffect, useState } from "react";
 
 
-import { modalContainerWide } from "../../../../styles/modals.styles";
+import { modalContainerWide } from "../../../styles/modals.styles";
 
 export interface SaveEncounterModalProps {
     currentEncounterName: string;
