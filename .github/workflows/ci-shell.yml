@@ -10,7 +10,6 @@ on:
 
 jobs:
   build:
-    uses: ./.github/workflows/step_build.yml
+    uses: ./.github/workflows/step_build_nx.yml
     with:
-      sourcePath: "shell"
-      artifactName: "shell"
+      projectName: "shell"

@@ -1,0 +1,65 @@
+name: Build Step
+
+on:
+  workflow_call:
+    inputs:
+      projectName:
+        required: true
+        type: string
+      shouldPublish:
+        required: false
+        type: boolean
+        default: false
+    outputs:
+      lastTag: 
+        value: ${{ jobs.build.outputs.outTag }}
+      versionName: 
+        value: ${{ jobs.build.outputs.outVersionName }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      outTag: ${{ steps.getTag.outputs.tag }}
+      outVersionName: ${{ steps.getVersion.outputs.verName }}
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Get last tag
+      id: getTag
+      shell: pwsh
+      run: | 
+        git describe --tag --always
+        echo "tag=$(git describe --tag --always)" >> $env:GITHUB_OUTPUT
+
+    - name: Get current version name
+      id: getVersion
+      shell: pwsh
+      run: | 
+        $vName = (Get-Content ./package.json) -join "`n" | ConvertFrom-Json | Select -ExpandProperty "version"
+        echo "verName=$vName" >> $env:GITHUB_OUTPUT
+
+    - name: Display Version Detail
+      shell: pwsh
+      run: | 
+        Write-Host ${{ steps.getTag.outputs.tag }}
+        Write-Host ${{ steps.getVersion.outputs.verName }}
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+
+    - name: Build
+      run: |
+        npm install
+        npx nx run ${{ inputs.projectName }}:build
+    
+    - name: Publish Artifacts
+      if: ${{ inputs.shouldPublish }} == true
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ inputs.projectName }}
+        path: |
+          ./dist/apps/${{ inputs.projectName }}
+          ./apps/${{ inputs.projectName }}/dockerfile

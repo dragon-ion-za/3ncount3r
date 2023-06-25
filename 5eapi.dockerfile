@@ -1,4 +1,4 @@
-FROM ghcr.io/dragon-ion-za/5eapi:aid-1stlevel
+FROM ghcr.io/dragon-ion-za/5eapi:aid-3rdlevel
 
 WORKDIR /api
 
