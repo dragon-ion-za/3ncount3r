@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router";
 import { DialogContent, Modal, Stack } from "@mui/material";
 
-import { useEncounterContext } from "../../../contexts/encounter.context-provider";
+import { useEncounterContext } from "../../../providers/encounterContext/encounter.context-provider";
 import { EncounterCreatureListItem } from "../encounterCreatureListItem/encounterCreatureListItem";
 
-import { EncounterCreatureViewModel } from "../../../../view-models/encounter-creature.view-model";
-import { HitpointManagementModal } from "../modals/hitpointManagement.modal";
+import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
+import { HitpointManagementModal } from "../../modals/hitpoint-management/hitpointManagement.modal";
 
 import { getEncounterById, getEncounterTemplateById } from "../../../services/encounter.service";
 
