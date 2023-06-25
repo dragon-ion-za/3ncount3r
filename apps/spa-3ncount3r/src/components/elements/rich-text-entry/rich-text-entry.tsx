@@ -3,7 +3,7 @@ import { Container } from "@mui/system";
 import React from "react";
 import { actionItemContainerStyle, spellChipsStyle } from "../../../styles/details.styles";
 import { DamageConditionType } from "../damage-condition-type/damage-condition-type";
-import { DiceIcon } from "../diceIcon/diceIcon";
+import { DiceDisplay } from "../dice-display/dice-display";
 
 export interface RichTextEntryProps {
     key: string;
@@ -98,7 +98,7 @@ export const RichTextEntry : React.FC<RichTextEntryProps> = ({key, entryIndex, e
                 {forumlaParts !== null && (
                     <>
                         <Typography variant="body1" display='inline'><strong>{forumlaParts[1]}</strong></Typography>
-                        <DiceIcon dice={forumlaParts[2]} />
+                        <DiceDisplay dice={forumlaParts[2]} />
                         <Typography variant="body1" display='inline'><strong>{forumlaParts[3]}</strong></Typography>
                     </>
                 )}
