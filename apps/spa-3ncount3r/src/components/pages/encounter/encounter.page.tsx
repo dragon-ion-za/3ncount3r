@@ -1,10 +1,12 @@
 import React from "react";
 
-import SplitThreeLayout from '../../ui/organisms/splitThreeLayout/splitThreeLayout'
+import SplitThreeLayout from "../../layouts/splitThreeLayout/splitThreeLayout";
 import HeaderBar from '../../ui/organisms/headerBar/headerBar'
-import { EncounterCreatures } from "../../ui/organisms/encounterCreatures/encounterCreatures";
-import { EncounterContextProvider } from "../../contexts/encounter.context-provider";
-import { CreatureDetails } from "../../ui/organisms/creatureDetails/creatureDetails";
+
+import { EncounterCreatures } from "../../modules/encounterCreatures/encounterCreatures";
+import { CreatureDetails } from "../../modules/creatureDetails/creatureDetails";
+import { EncounterContextProvider } from "apps/spa-3ncount3r/src/providers/encounterContext/encounter.context-provider";
+
 
 export const EncounterPage : React.FC = () => {
 
