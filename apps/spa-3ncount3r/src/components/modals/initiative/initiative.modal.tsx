@@ -1,15 +1,15 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import { Box, Grid, Typography, Button, Table, TableHead, TableRow, TableCell, TableBody, TextField, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from "@mui/material";
 
-import { EncounterCreatureViewModel } from "../../../../view-models/encounter-creature.view-model";
+import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
 import { doDiceFormulaCalculation } from "../../../services/dice.service";
 import { calculateAbilityScoreModifier } from "../../../services/creature.service";
 import { getPartyList } from "../../../services/party.service";
 
-import { PartyViewModel } from "../../../../view-models/party.view-model";
-import { CharacterViewModel } from "../../../../view-models/character.view-model";
+import { PartyViewModel } from "../../../view-models/party.view-model";
+import { CharacterViewModel } from "../../../view-models/character.view-model";
 
-import { modalContainerWide } from "../../../../styles/modals.styles";
+import { modalContainerWide } from "../../../styles/modals.styles";
 import { convertCharacterToEncounterCreatureViewModel } from "../../../converters/characterToCreature.converter";
 
 export interface InitiativeModalProps {
