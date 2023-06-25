@@ -1,7 +1,7 @@
 import { Accordion, AccordionDetails, AccordionSummary, Container, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React, { SyntheticEvent, useEffect, useState } from "react";
 
-import { RichTextEntry } from "../richTextEntry/richTextEntry";
+import { RichTextEntry } from "../rich-text-entry/rich-text-entry";
 
 import { ActionGroupViewModel, SpecialActionViewModel } from "../../../view-models/shared.view-model";
 

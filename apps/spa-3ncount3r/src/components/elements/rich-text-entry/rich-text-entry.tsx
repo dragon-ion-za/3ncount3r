@@ -1,8 +1,8 @@
 import { Chip, Link, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
-import { actionItemContainerStyle, spellChipsStyle } from "../../../../styles/details.styles";
-import { DamageConditionType } from "../damageConditionType/damageConditionType";
+import { actionItemContainerStyle, spellChipsStyle } from "../../../styles/details.styles";
+import { DamageConditionType } from "../damage-condition-type/damage-condition-type";
 import { DiceIcon } from "../diceIcon/diceIcon";
 
 export interface RichTextEntryProps {

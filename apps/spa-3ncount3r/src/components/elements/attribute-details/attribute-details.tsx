@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Grid from '@mui/material/Unstable_Grid2';
-import { KeyValuePair } from "../../../../view-models/shared.view-model";
+import { KeyValuePair } from "../../../view-models/shared.view-model";
 import { Stack, Typography } from "@mui/material";
 import { calculateAbilityScoreModifier } from "../../../services/creature.service";
 
