@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
-import { EncounterCreatureViewModel } from "../../view-models/encounter-creature.view-model";
-import { EncounterViewModel } from "../../view-models/encounter.view-model";
+import { EncounterCreatureViewModel } from "../view-models/encounter-creature.view-model";
+import { EncounterViewModel } from "../view-models/encounter.view-model";
 
 const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 

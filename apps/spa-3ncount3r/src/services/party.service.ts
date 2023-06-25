@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-import { CharacterViewModel } from '../../view-models/character.view-model';
-import { ExpandedPartyViewModel } from '../../view-models/expandedParty.view-model';
-import { PartyViewModel } from '../../view-models/party.view-model';
+import { CharacterViewModel } from '../view-models/character.view-model';
+import { ExpandedPartyViewModel } from '../view-models/expandedParty.view-model';
+import { PartyViewModel } from '../view-models/party.view-model';
 
 const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
