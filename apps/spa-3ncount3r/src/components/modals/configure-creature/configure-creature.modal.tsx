@@ -5,10 +5,10 @@ import { v4 as uuid } from 'uuid';
 
 import { doDiceFormulaCalculation } from '../../../services/dice.service';
 
-import { CreatureViewModel } from '../../../../view-models/creature.view-model';
-import { EncounterCreatureViewModel } from '../../../../view-models/encounter-creature.view-model';
+import { CreatureViewModel } from '../../../view-models/creature.view-model';
+import { EncounterCreatureViewModel } from '../../../view-models/encounter-creature.view-model';
 
-import { modalContainer } from '../../../../styles/modals.styles';
+import { modalContainer } from '../../../styles/modals.styles';
 
 interface ConfigureCreatureModalProps {
     viewModel: CreatureViewModel;
