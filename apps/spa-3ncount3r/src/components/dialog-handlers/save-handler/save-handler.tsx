@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Button, DialogContent, Modal } from "@mui/material";
 
-import { useEncounterContext } from "../../../contexts/encounter.context-provider";
-import { SaveEncounterModal } from "../modals/saveEncounter.modal";
+import { useEncounterContext } from "../../../providers/encounterContext/encounter.context-provider";
+import { SaveEncounterModal } from "../../modals/save-encounter/saveEncounter.modal";
 
-import { initiativeButtonStyles } from "../initiativeHandler/initiativeHandler.styles";
+import { initiativeButtonStyles } from "../initiative-handler/initiative-handler.styles";
 import { saveEncounter, saveEncounterTemplate, updateEncounter, updateEncounterTemplate } from "../../../services/encounter.service";
 
 export const SaveHandler : React.FC = () => { 

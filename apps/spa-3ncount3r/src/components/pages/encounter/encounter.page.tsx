@@ -7,8 +7,8 @@ import { EncounterContextProvider } from "apps/spa-3ncount3r/src/providers/encou
 
 import { EncounterCreatures } from "../../modules/encounterCreatures/encounterCreatures";
 import { CreatureDetails } from "../../modules/creatureDetails/creatureDetails";
-import { InitiativeHandler } from "../../dialog-handlers/initiative-handler/initiativeHandler";
-import { SaveHandler } from "../../dialog-handlers/save-handler/saveHandler";
+import { InitiativeHandler } from "../../dialog-handlers/initiative-handler/initiative-handler";
+import { SaveHandler } from "../../dialog-handlers/save-handler/save-handler";
 import SearchCreatures from "../../modules/searchCreatures/searchCreatures";
 
 export const EncounterPage : React.FC = () => {

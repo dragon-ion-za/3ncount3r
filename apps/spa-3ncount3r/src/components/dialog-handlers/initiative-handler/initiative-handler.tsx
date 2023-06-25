@@ -6,7 +6,7 @@ import { useEncounterContext } from "../../../providers/encounterContext/encount
 import { InitiativeModal } from "../../modals/initiative/initiative.modal";
 import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
 
-import { initiativeButtonStyles } from "./initiativeHandler.styles";
+import { initiativeButtonStyles } from "./initiative-handler.styles";
 import { saveEncounter, updateEncounter } from "../../../services/encounter.service";
 
 export const InitiativeHandler : React.FC = () => { 
