@@ -5,9 +5,9 @@ import Grid from '@mui/material/Unstable_Grid2';
 
 import { parseAlignment } from '../../../services/creature.service';
 
-import { CreatureViewModel } from '../../../../view-models/creature.view-model';
+import { CreatureViewModel } from '../../../view-models/creature.view-model';
 
-import { searchResultPaperStyles, searchResultAvatarStyles } from './searchCreatureListItem.styles'
+import { searchResultPaperStyles, searchResultAvatarStyles } from './search-creature-list-item.styles'
 
 interface SearchCreatureListItemProps {
     viewModel: CreatureViewModel;

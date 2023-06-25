@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { CreatureViewModel } from "../../view-models/creature.view-model";
+import { CreatureViewModel } from "../view-models/creature.view-model";
 
 const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 

@@ -6,7 +6,7 @@ import { useOnClickOutside } from '../../../hooks/useOnClickOutside.hook';
 import { doCreatureSearch } from '../../../services/search.service';
 import { useEncounterContext } from '../../../providers/encounterContext/encounter.context-provider';
 import { ConfigureCreatureModal } from '../../modals/configure-creature/configureCreature.modal';
-import SearchCreatureListItem from '../searchCreatureListItem/searchCreatureListItem';
+import SearchCreatureListItem from '../search-creature-list-item/search-creature-list-item';
 
 import { CreatureViewModel } from '../../../view-models/creature.view-model';
 import { EncounterCreatureViewModel } from '../../../view-models/encounter-creature.view-model';
