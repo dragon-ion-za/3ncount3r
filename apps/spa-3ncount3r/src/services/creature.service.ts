@@ -1,4 +1,6 @@
-const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+import { environment } from "../environments/environment";
+
+const BASE_URL = environment.apiBaseUrl;
 const imagePath: string = `${BASE_URL}creatures/image/`;
 const imagePathCharacters: string = `${BASE_URL}parties/characterimage/`;
 

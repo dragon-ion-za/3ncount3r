@@ -1,8 +1,9 @@
 import axios from 'axios';
 
 import { CreatureViewModel } from "../view-models/creature.view-model";
+import { environment } from '../environments/environment';
 
-const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const BASE_URL = environment.apiBaseUrl;
 
 export async function doCreatureSearch(criteria: string) : Promise<CreatureViewModel[]> {
     let creatures: CreatureViewModel[] = [];
