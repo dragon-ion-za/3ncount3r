@@ -1,10 +1,10 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import { Box, Grid, Typography, FormControl, InputLabel, Select, SelectChangeEvent, MenuItem } from "@mui/material";
 
-import { EncounterViewModel } from "../../../../view-models/encounter.view-model";
+import { EncounterViewModel } from "../../../view-models/encounter.view-model";
 import { getEncounters } from "../../../services/encounter.service";
 
-import { modalContainerWide } from "../../../../styles/modals.styles";
+import { modalContainerWide } from "../../../styles/modals.styles";
 
 export interface LoadEncounterModalProps {
     handleAccept: (encounterId: string, isTemplate: boolean) => void;
