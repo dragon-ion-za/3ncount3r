@@ -3,11 +3,11 @@ import { Avatar, Container, Divider, Stack, Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
 import { useEncounterContext } from '../../../providers/encounterContext/encounter.context-provider';
-import { DamageConditionType } from "../../elements/damageConditionType/damageConditionType";
-import { ActionDetails } from "../../elements/actionDetails/actionDetails";
+import { DamageConditionType } from "../../elements/damage-condition-type/damage-condition-type";
+import { ActionDetails } from "../../elements/action-details/action-details";
 
 import { KeyValuePair, ResistanceViewModel } from "../../../view-models/shared.view-model";
-import { AttributeDetails } from "../../elements/attributeDetails/attributeDetails";
+import { AttributeDetails } from "../../elements/attribute-details/attribute-details";
 
 export const CreatureDetails : React.FC = () => { 
 

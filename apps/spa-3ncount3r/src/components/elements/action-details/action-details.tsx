@@ -3,9 +3,9 @@ import React, { SyntheticEvent, useEffect, useState } from "react";
 
 import { RichTextEntry } from "../richTextEntry/richTextEntry";
 
-import { ActionGroupViewModel, SpecialActionViewModel } from "../../../../view-models/shared.view-model";
+import { ActionGroupViewModel, SpecialActionViewModel } from "../../../view-models/shared.view-model";
 
-import { actionItemContainerStyle, h3Override } from "../../../../styles/details.styles";
+import { actionItemContainerStyle, h3Override } from "../../../styles/details.styles";
 
 interface ActionDetailsProps {
     actionGroups: ActionGroupViewModel[];
