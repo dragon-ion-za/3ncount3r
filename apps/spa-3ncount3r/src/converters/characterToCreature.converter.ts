@@ -1,7 +1,7 @@
-import { CharacterViewModel, ClassViewModel } from "../../view-models/character.view-model";
-import { EncounterCreatureViewModel } from "../../view-models/encounter-creature.view-model";
-import { ItemPropertyTypes, ItemTypes, ItemViewModel } from "../../view-models/item.view-model";
-import { ArmourClassViewModel, SkillModifierViewModel } from "../../view-models/shared.view-model";
+import { CharacterViewModel, ClassViewModel } from "../view-models/character.view-model";
+import { EncounterCreatureViewModel } from "../view-models/encounter-creature.view-model";
+import { ItemPropertyTypes, ItemTypes, ItemViewModel } from "../view-models/item.view-model";
+import { ArmourClassViewModel, SkillModifierViewModel } from "../view-models/shared.view-model";
 import { calculateAbilityScoreModifier } from "../services/creature.service";
 
 const buildArmourClass = (equipment: ItemViewModel[]) : ArmourClassViewModel => {
