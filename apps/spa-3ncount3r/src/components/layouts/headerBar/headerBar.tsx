@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import { Box } from '@mui/material';
 
-import SearchCreatures from '../searchCreatures/searchCreatures';
-import { InitiativeHandler } from '../initiativeHandler/initiativeHandler';
-import { SaveHandler } from '../saveHandler/saveHandler';
+export interface HeaderBarProps {
+    leftComponent: ReactNode;
+    middleShortComponent: ReactNode;
+    middleLongComponent: ReactNode;
+    rightComponent: ReactNode;
+};
 
-const HeaderBar : React.FC = () => {
+const HeaderBar : React.FC<HeaderBarProps> = ({leftComponent, middleShortComponent, middleLongComponent, rightComponent}) => {
     return (
         <>
             <Box sx={{
@@ -14,16 +17,16 @@ const HeaderBar : React.FC = () => {
             }}>
                 <Grid container direction='row' sx={{marginLeft: '64px', width: '95vw', height: '64px'}}>
                     <Grid xs={1}>
-                        <InitiativeHandler />
+                        { leftComponent }
                     </Grid>
                     <Grid xs={1}>
-                        <SaveHandler />
+                        { middleShortComponent }
                     </Grid>
                     <Grid xs={6}>
-
+                        { middleLongComponent }
                     </Grid>
                     <Grid xs={4}>
-                        <SearchCreatures />
+                        { rightComponent }
                     </Grid>
                 </Grid>
             </Box>
