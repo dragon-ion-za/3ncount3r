@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material";
 
-var backgroundImageGray = require('./assets/img/parchmentBackgroundGrayscale.jpg');
-var dividerImage = require('./assets/img/redTriangle.png');
+var backgroundImageGray = require('./assets/parchmentBackgroundGrayscale.jpg');
+var dividerImage = require('./assets/redTriangle.png');
 
 export const theme = createTheme({
     typography: {

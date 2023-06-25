@@ -9,7 +9,7 @@ import { EncounterCreatures } from "../../modules/encounterCreatures/encounterCr
 import { CreatureDetails } from "../../modules/creatureDetails/creatureDetails";
 import { InitiativeHandler } from "../../dialog-handlers/initiative-handler/initiative-handler";
 import { SaveHandler } from "../../dialog-handlers/save-handler/save-handler";
-import SearchCreatures from "../../modules/searchCreatures/searchCreatures";
+import SearchCreatures from "../../modules/search-creatures/search-creatures";
 
 export const EncounterPage : React.FC = () => {
 
