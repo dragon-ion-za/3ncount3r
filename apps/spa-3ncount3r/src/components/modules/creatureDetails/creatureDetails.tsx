@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Avatar, Container, Divider, Stack, Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
-import { useEncounterContext } from '../../../contexts/encounter.context-provider';
-import { DamageConditionType } from "../../molecules/damageConditionType/damageConditionType";
-import { ActionDetails } from "../../molecules/actionDetails/actionDetails";
+import { useEncounterContext } from '../../../providers/encounterContext/encounter.context-provider';
+import { DamageConditionType } from "../../elements/damageConditionType/damageConditionType";
+import { ActionDetails } from "../../elements/actionDetails/actionDetails";
 
-import { KeyValuePair, ResistanceViewModel } from "../../../../view-models/shared.view-model";
-import { AttributeDetails } from "../../molecules/attributeDetails/attributeDetails";
+import { KeyValuePair, ResistanceViewModel } from "../../../view-models/shared.view-model";
+import { AttributeDetails } from "../../elements/attributeDetails/attributeDetails";
 
 export const CreatureDetails : React.FC = () => { 
 
