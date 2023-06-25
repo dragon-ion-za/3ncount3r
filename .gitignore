@@ -362,3 +362,7 @@ MigrationBackup/
 FodyWeavers.xsd
 /api/dist
 /spa/dist
+/.vscode
+
+.angular
+/dist/apps/shell

@@ -1,0 +1,15 @@
+name: Shell CI
+
+on:
+  push:
+    branches:
+      - 'feat/*'
+      - '!main'
+    paths:
+      - shell/**
+
+jobs:
+  build:
+    uses: ./.github/workflows/step_build_nx.yml
+    with:
+      projectName: "shell"

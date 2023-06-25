@@ -1,0 +1,11 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport opened mode="side">
+        <nctr-main-menu></nctr-main-menu>
+    </mat-sidenav>
+    
+    <!-- This feels incredibly fu(n)cky -->
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-image: url('./assets/parchmentBackground.jpg');
+}
+
+.mat-drawer-container {
+    background: none;
+}
+
+.mat-drawer {
+    background-color: #F2E5B5;
+    background-image: url('./assets/parchmentBackgroundGrayscale.jpg');
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+}
+
+.mat-drawer .mat-expansion-panel {
+    background-color: #F2E5B5;
+}

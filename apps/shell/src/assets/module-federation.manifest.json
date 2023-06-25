@@ -1,0 +1,9 @@
+[
+    {
+        "baseUrl": "remote-b",
+        "moduleName": "FeatureBModule",
+        "remoteEntry": "http://localhost:4202/remoteEntry.js",
+        "remoteName": "remoteb",
+        "exposedModule": "./FeatureBModule"
+    }
+]
