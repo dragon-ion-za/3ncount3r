@@ -3,17 +3,17 @@ import { Card, CardContent, Typography, Avatar, Stack, Chip, Container } from "@
 import { LocalHospital, Shield } from "@mui/icons-material"
 import Grid from '@mui/material/Unstable_Grid2';
 
-import { EncounterCreatureViewModel } from "../../../../view-models/encounter-creature.view-model";
+import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
 import { parseAlignment } from "../../../services/creature.service";
-import { useEncounterContext } from '../../../contexts/encounter.context-provider';
-import { InitiativeIcon } from "../../molecules/icons/initiativeOrder.icon";
-import { MovementSpeedIcon } from "../../molecules/icons/movementSpeed.icon";
-import { FlyingSpeedIcon } from "../../molecules/icons/flyingSpeed.icon";
-import { SwimmingSpeedIcon } from "../../molecules/icons/swimmingSpeed.icon";
-import { ClimbingSpeedIcon } from "../../molecules/icons/climbingSpeed.icon";
-import { BurrowingSpeedIcon } from "../../molecules/icons/burrowingSpeed.icon";
+import { useEncounterContext } from '../../../providers/encounterContext/encounter.context-provider';
+import { InitiativeIcon } from "../../icons/initiative-order.icon";
+import { MovementSpeedIcon } from "../../icons/speed.movement.icon";
+import { FlyingSpeedIcon } from "../../icons/speed.flying.icon";
+import { SwimmingSpeedIcon } from "../../icons/speed.swimming.icon";
+import { ClimbingSpeedIcon } from "../../icons/speed.climbing.icon";
+import { BurrowingSpeedIcon } from "../../icons/speed.burrowing.icon";
 
-import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreatureChipContainer, creatureDeathStateStyle, creatureAvatarStyle } from './encounterCreatureListItem.styles';
+import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreatureChipContainer, creatureDeathStateStyle, creatureAvatarStyle } from './encounter-creature-list-item.styles';
 
 interface EncounterCreatureListItemProps {
     viewModel: EncounterCreatureViewModel;

@@ -1,7 +1,7 @@
 import { Box, Grid, Typography, Button, TextField } from "@mui/material";
 import React, { forwardRef, useState } from "react";
 
-import { modalButtonsContainer, modalContainerWide } from "../../../../styles/modals.styles";
+import { modalButtonsContainer, modalContainerWide } from "../../../styles/modals.styles";
 
 export interface HitpointManagementModalProps {
     maxHitpoints: number;

@@ -3,10 +3,10 @@ import { useLocation, useParams } from "react-router";
 import { DialogContent, Modal, Stack } from "@mui/material";
 
 import { useEncounterContext } from "../../../providers/encounterContext/encounter.context-provider";
-import { EncounterCreatureListItem } from "../encounterCreatureListItem/encounterCreatureListItem";
+import { EncounterCreatureListItem } from "../encounter-creature-list-item/encounter-creature-list-item";
 
 import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
-import { HitpointManagementModal } from "../../modals/hitpoint-management/hitpointManagement.modal";
+import { HitpointManagementModal } from "../../modals/hitpoint-management/hitpoint-management.modal";
 
 import { getEncounterById, getEncounterTemplateById } from "../../../services/encounter.service";
 
