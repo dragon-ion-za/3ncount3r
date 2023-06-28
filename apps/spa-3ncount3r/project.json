@@ -54,7 +54,7 @@
       "options": {
         "buildTarget": "spa-3ncount3r:build",
         "hmr": true,
-        "port": 4200
+        "port": 4201
       },
       "configurations": {
         "development": {
