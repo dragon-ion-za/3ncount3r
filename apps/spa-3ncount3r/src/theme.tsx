@@ -15,6 +15,18 @@ export const theme = createTheme({
             }
         }
     },
+    MuiDrawer: {
+        styleOverrides: {
+            root: {
+                marginTop: '64px', 
+                height: 'calc(100vh - 64px)'
+            },
+            paperAnchorDockedLeft: {
+                marginTop: '64px', 
+                height: 'calc(100vh - 64px)'
+            }
+        }
+    },
     MuiPaper: {
         styleOverrides: {
             root: {

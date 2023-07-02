@@ -18,3 +18,9 @@ body {
 .mat-drawer .mat-expansion-panel {
     background-color: #F2E5B5;
 }
+
+.shell-main-menu {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
