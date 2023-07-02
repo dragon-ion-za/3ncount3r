@@ -7,6 +7,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import router from '../Router';
 import { theme } from '../theme'
 
+
 class App extends React.Component {
   render() {
     return (

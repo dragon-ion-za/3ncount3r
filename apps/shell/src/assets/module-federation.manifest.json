@@ -1,9 +1,10 @@
 [
     {
         "baseUrl": "encounter",
-        "moduleName": "encounterModule",
+        "moduleName": "./spa-3ncount3r-app",
         "remoteEntry": "http://localhost:4201/remoteEntry.js",
         "remoteName": "encounter",
-        "exposedModule": "./encounterModule"
+        "exposedModule": "./spa-3ncount3r-app",
+        "elementName": "spa-3ncount3r-app"
     }
 ]

@@ -1,6 +1,8 @@
-import { Route } from "@angular/router";
-import { loadRemoteModule } from "@nx/angular/mf";
+import { Route } from "@angular/router";;
 import { LandingComponent } from "../landing/landing.component";
+import {
+    WebComponentWrapper, WebComponentWrapperOptions
+  } from '@angular-architects/module-federation-tools';
 
 export class RouterService {
 
@@ -14,7 +16,14 @@ export class RouterService {
             },
             ...microFrontends.map((mf: any) => ({
                 path: mf.baseUrl,
-                loadChildren: () => loadRemoteModule(mf.remoteName, mf.moduleName).then(m => m[mf.moduleName])
+                component: WebComponentWrapper,
+                data: {
+                    type: 'module',
+                    remoteEntry: mf.remoteEntry,
+                    remoteName: mf.remoteName,
+                    exposedModule: mf.exposedModule,
+                    elementName: mf.elementName,
+                } as WebComponentWrapperOptions
             }))
         ];
     }

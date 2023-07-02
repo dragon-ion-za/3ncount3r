@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/spa-3ncount3r/src",
   "projectType": "application",
+  "type": "module",
   "targets": {
     "build": {
       "executor": "@nx/webpack:webpack",

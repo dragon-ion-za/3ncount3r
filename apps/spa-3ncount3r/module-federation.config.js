@@ -1,7 +1,7 @@
 module.exports = {
   name: 'spa-3ncount3r',
   exposes: {
-    './Module': './src/remote-exports/entry.remote.ts',
-    './menu': './src/remote-exports/menu.remote.ts'
+    './spa-3ncount3r-app': './src/remote-exports/entry.remote.tsx',
+    './spa-3ncount3r-menu': './src/remote-exports/menu.remote.tsx'
   },
 };

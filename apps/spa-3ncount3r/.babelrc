@@ -3,6 +3,7 @@
     [
       "@nx/react/babel",
       {
+        "modules": false,
         "runtime": "automatic",
         "importSource": "@emotion/react"
       }
