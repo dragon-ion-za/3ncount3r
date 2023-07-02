@@ -5,15 +5,19 @@ import { EncounterPage } from "./components/pages/encounter/encounter.page";
 
 const router = createBrowserRouter([
     {
-        path: 'encounter',
+        path: '/',
         element: <EncounterPage />
     },
     {
-        path: 'encounter/:id',
+        path: '/encounter',
         element: <EncounterPage />
     },
     {
-        path: 'encounter/:id/template',
+        path: '/:id',
+        element: <EncounterPage />
+    },
+    {
+        path: '/:id/template',
         element: <EncounterPage />
     }
 ]);

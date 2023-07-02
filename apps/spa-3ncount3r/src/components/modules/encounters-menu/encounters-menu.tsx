@@ -25,14 +25,14 @@ const EncountersMenu : React.FC<EncountersMenuProps> = (props: EncountersMenuPro
 
     const handleAccept = (encounterId: string, isTemplate: boolean) => {
         toggleModal(false);
-        routeChange(`encounter/${encounterId}${isTemplate ? '/template' : ''}`);
+        routeChange(`/${encounterId}${isTemplate ? '/template' : ''}`);
     }
 
     return (
         <>
             {!props.isExpanded ? 
                 <>
-                    <IconButton aria-label="add" onClick={() => {routeChange('encounter'); return;}}>
+                    <IconButton aria-label="add" onClick={() => {routeChange(''); return;}}>
                         <AddIcon />
                     </IconButton>
                     <IconButton aria-label="add" onClick={() => {toggleModal(true)}}>
@@ -40,7 +40,7 @@ const EncountersMenu : React.FC<EncountersMenuProps> = (props: EncountersMenuPro
                     </IconButton>
                 </>
             : <>
-                <Button variant="outlined" startIcon={<AddIcon />} onClick={() => {routeChange('encounter'); return;}}>Add Encounter</Button>
+                <Button variant="outlined" startIcon={<AddIcon />} onClick={() => {routeChange(''); return;}}>Add Encounter</Button>
             </>}
 
             <Modal 
