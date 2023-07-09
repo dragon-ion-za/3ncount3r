@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material";
+import "./assets/fonts.css"
 
 var backgroundImageGray = require('./assets/parchmentBackgroundGrayscale.jpg');
 var dividerImage = require('./assets/redTriangle.png');
