@@ -12,5 +12,5 @@ jobs:
   build:
     uses: ./.github/workflows/step_build.yml
     with:
-      sourcePath: "api-3ncount3r"
+      sourcePath: "backends/api-3ncount3r"
       artifactName: "api-3ncount3r"
