@@ -18,7 +18,7 @@
         "assets": ["apps/shell/src/favicon.ico", "apps/shell/src/assets"],
         "styles": [
           "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-          "apps/shell/src/styles.css"],
+          "apps/shell/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/shell/webpack.config.js"
