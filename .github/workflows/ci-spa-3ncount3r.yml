@@ -1,4 +1,4 @@
-name: SPA CI
+name: SPA 3ncount3r CI
 
 on:
   push:

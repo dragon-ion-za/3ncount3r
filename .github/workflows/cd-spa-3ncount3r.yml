@@ -10,7 +10,7 @@ on:
 
 env:
   ARTIFACT_NAME: 'spa-3ncount3r'
-  CONTAINER_TAG: 'ghcr.io/dragon-ion-za/3ncount3r-spa-3ncount3r'
+  CONTAINER_TAG: 'ghcr.io/dragon-ion-za/3ncount3r-spa'
   DOCKER_FILE_PATH: 'apps/spa-3ncount3r/dockerfile'
 
 jobs:

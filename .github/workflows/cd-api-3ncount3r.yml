@@ -1,4 +1,4 @@
-name: API CD
+name: API 3ncount3r CD
 
 on:
   workflow_dispatch:
@@ -6,17 +6,17 @@ on:
     branches:
       - 'main'
     paths:
-      - api/**
+      - backends/api-3ncount3r/**
 
 env:
-  ARTIFACT_NAME: 'api'
+  ARTIFACT_NAME: 'api-3ncount3r'
 
 jobs:
   build:
     uses: ./.github/workflows/step_build.yml
     with:
-      sourcePath: "api"
-      artifactName: "api"
+      sourcePath: "api-3ncount3r"
+      artifactName: "api-3ncount3r"
 
   generateVersion:
     needs: build
