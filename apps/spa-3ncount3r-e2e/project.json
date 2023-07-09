@@ -1,0 +1,33 @@
+{
+  "name": "spa-3ncount3r-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/spa-3ncount3r-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/spa-3ncount3r-e2e/cypress.config.ts",
+        "devServerTarget": "spa-3ncount3r:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "spa-3ncount3r:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "spa-3ncount3r:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/spa-3ncount3r-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["spa-3ncount3r"]
+}

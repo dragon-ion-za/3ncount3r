@@ -4,7 +4,7 @@ const cors = require('cors');
 const config = require('config');
 import { router } from './router';
 
-const port: number = 5002;
+const port: number = config.get("port");
 const app = express();
 
 app.use(cors({

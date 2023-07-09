@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@font-face {
+    font-family: 'MrEavesRemake';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./assets/Mr Eaves Small Caps.woff2');
+  }
+
+@font-face {
+    font-family: 'ScalySansRemake';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./assets/Scaly Sans.woff2');
+}
+
+@font-face {
+    font-family: 'ScalySansRemake';
+    font-weight: bold;
+    font-style: normal;
+    src: url('./assets/Scaly Sans Bold.woff2');
+}
+
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$indigo-palette, 500);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$fonts: mat.define-typography-config(
+  $font-family: 'ScalySansRemake, MrEavesRemake, Arial'
+);
+
+$lightTheme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ ),
+  typography: $fonts,
+));
+
+body {
+    @include mat.all-component-typographies($fonts);
+    background-image: url('./assets/parchmentBackground.jpg');
+}
+
+.mat-drawer-container {
+    background: none;
+}
+
+.mat-drawer {
+    background-color: #F2E5B5;
+    background-image: url('./assets/parchmentBackgroundGrayscale.jpg');
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+}
+
+.mat-drawer .mat-expansion-panel {
+    background-color: #F2E5B5;
+}
+
+.shell-main-menu {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 100;
+}

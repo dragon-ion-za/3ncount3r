@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'MrEavesRemake';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./Mr Eaves Small Caps.woff2');
+  }
+
+@font-face {
+    font-family: 'ScalySansRemake';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./Scaly Sans.woff2');
+}
+
+@font-face {
+    font-family: 'ScalySansRemake';
+    font-weight: bold;
+    font-style: normal;
+    src: local('ScalySansRemake-bold'), url('./Scaly Sans Bold.woff2');
+}

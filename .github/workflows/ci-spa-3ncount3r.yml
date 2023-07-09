@@ -1,0 +1,15 @@
+name: SPA CI
+
+on:
+  push:
+    branches:
+      - 'feat/*'
+      - '!main'
+    paths:
+      - apps/spa-3ncount3r/**
+
+jobs:
+  build:
+    uses: ./.github/workflows/step_build_nx.yml
+    with:
+      projectName: "spa-3ncount3r"

@@ -13,6 +13,9 @@ import { RouterService } from './services/router.service';
 import { LandingComponent } from './landing/landing.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { ModuleFederationToolsModule } from '@angular-architects/module-federation-tools';
+import { MatButtonModule } from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [AppComponent, LandingComponent, MainMenuComponent],
@@ -26,6 +29,9 @@ import { MatCardModule } from '@angular/material/card';
     MatExpansionModule,
     MatGridListModule,
     MatCardModule,
+    MatButtonModule,
+    MatMenuModule,
+    ModuleFederationToolsModule,
     RouterModule.forRoot(RouterService.getAppRoutes(), { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [],

@@ -1,0 +1,109 @@
+{
+  "name": "spa-3ncount3r",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/spa-3ncount3r/src",
+  "projectType": "application",
+  "type": "module",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/spa-3ncount3r",
+        "index": "apps/spa-3ncount3r/src/index.html",
+        "baseHref": "/",
+        "main": "apps/spa-3ncount3r/src/main.ts",
+        "tsConfig": "apps/spa-3ncount3r/tsconfig.app.json",
+        "assets": [
+          "apps/spa-3ncount3r/src/favicon.ico",
+          "apps/spa-3ncount3r/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/spa-3ncount3r/webpack.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/spa-3ncount3r/src/environments/environment.ts",
+              "with": "apps/spa-3ncount3r/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "apps/spa-3ncount3r/webpack.config.prod.js"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "spa-3ncount3r:build",
+        "hmr": true,
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "spa-3ncount3r:build:development"
+        },
+        "production": {
+          "buildTarget": "spa-3ncount3r:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/spa-3ncount3r/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "spa-3ncount3r:build",
+        "port": 4200
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "spa-3ncount3r:build:development"
+        },
+        "production": {
+          "buildTarget": "spa-3ncount3r:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/spa-3ncount3r/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
