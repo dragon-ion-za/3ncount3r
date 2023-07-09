@@ -27,19 +27,27 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Get last tag
-      id: getTag
-      shell: pwsh
-      run: | 
-        git describe --tag --always
-        echo "tag=$(git describe --tag --always)" >> $env:GITHUB_OUTPUT
-
     - name: Get current version name
       id: getVersion
       shell: pwsh
       run: | 
         $vName = (Get-Content ./package.json) -join "`n" | ConvertFrom-Json | Select -ExpandProperty "version"
         echo "verName=$vName" >> $env:GITHUB_OUTPUT
+
+    - name: Get last tag
+      id: getTag
+      shell: pwsh
+      run: | 
+        $verList = git tag -l ${{ steps.getVersion.outputs.verName }}* --sort=-v:refname
+
+        if ($verList -ne $null)
+        {
+          echo "tag=$verList.Split([Environment]::NewLine) | Select -First 1" >> $env:GITHUB_OUTPUT
+        }
+        else
+        {
+          echo "tag=''" >> $env:GITHUB_OUTPUT
+        }
 
     - name: Display Version Detail
       shell: pwsh

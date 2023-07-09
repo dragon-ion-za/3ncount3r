@@ -1,0 +1,16 @@
+name: API 3ncount3r CI
+
+on:
+  push:
+    branches:
+      - 'feat/*'
+      - '!main'
+    paths:
+      - backends/api-3ncount3r/**
+
+jobs:
+  build:
+    uses: ./.github/workflows/step_build.yml
+    with:
+      sourcePath: "backends/api-3ncount3r"
+      artifactName: "api-3ncount3r"

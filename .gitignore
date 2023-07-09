@@ -365,5 +365,5 @@ FodyWeavers.xsd
 /.vscode
 
 .angular
-/dist/apps/shell
-/dist/apps/spa-3ncount3r
+**/dist
+/backends/api-cl3anslat3/config/local.json

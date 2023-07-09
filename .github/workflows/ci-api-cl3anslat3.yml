@@ -1,4 +1,4 @@
-name: API CI
+name: API cl3anslat3 CI
 
 on:
   push:
@@ -6,11 +6,11 @@ on:
       - 'feat/*'
       - '!main'
     paths:
-      - api/**
+      - backends/api-cl3anslat3/**
 
 jobs:
   build:
     uses: ./.github/workflows/step_build.yml
     with:
-      sourcePath: "api"
-      artifactName: "api"
+      sourcePath: "backends/api-cl3anslat3"
+      artifactName: "api-cl3anslat3"

@@ -1,4 +1,4 @@
-name: SPA 3ncount3r CD
+name: API cl3anslat3 CD
 
 on:
   workflow_dispatch:
@@ -6,18 +6,17 @@ on:
     branches:
       - 'main'
     paths:
-      - apps/spa-3ncount3r/**
+      - backends/api-cl3anslat3/**
 
 env:
-  ARTIFACT_NAME: 'spa-3ncount3r'
-  CONTAINER_TAG: 'ghcr.io/dragon-ion-za/3ncount3r-spa'
-  DOCKER_FILE_PATH: 'apps/spa-3ncount3r/dockerfile'
+  ARTIFACT_NAME: 'api-cl3anslat3'
 
 jobs:
   build:
-    uses: ./.github/workflows/step_build_nx.yml
+    uses: ./.github/workflows/step_build.yml
     with:
-      projectName: 'spa-3ncount3r'
+      sourcePath: "backends/api-cl3anslat3"
+      artifactName: "api-cl3anslat3"
 
   generateVersion:
     needs: build
@@ -43,10 +42,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Image
-        run: docker build . --file "${{ env.DOCKER_FILE_PATH }}" --tag "${{ env.CONTAINER_TAG }}:${{ needs.generateVersion.outputs.nextVersion }}"
+        run: docker build . --file "dockerfile" --tag "ghcr.io/dragon-ion-za/cl3anslat3-api:${{ needs.generateVersion.outputs.nextVersion }}"
 
       - name: Push Image
-        run: docker push ${{ env.CONTAINER_TAG }}:${{ needs.generateVersion.outputs.nextVersion }}
+        run: docker push ghcr.io/dragon-ion-za/cl3anslat3-api:${{ needs.generateVersion.outputs.nextVersion }}
 
   tag:
     needs: [generateVersion, dockerBuildAndPublish]
