@@ -1,0 +1,65 @@
+name: API cl3anslat3 CD
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - backends/api-cl3anslat3/**
+
+env:
+  ARTIFACT_NAME: 'api-cl3anslat3'
+
+jobs:
+  build:
+    uses: ./.github/workflows/step_build.yml
+    with:
+      sourcePath: "api-cl3anslat3"
+      artifactName: "api-cl3anslat3"
+
+  generateVersion:
+    needs: build
+    uses: ./.github/workflows/generate_version.yml
+    with:
+      lastTag: ${{ needs.build.outputs.lastTag }}
+      versionName: ${{ needs.build.outputs.versionName }}
+
+  dockerBuildAndPublish:
+    needs: generateVersion
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+
+      - name: GitHubCR Login
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Image
+        run: docker build . --file "dockerfile" --tag "ghcr.io/dragon-ion-za/cl3anslat3-api:${{ needs.generateVersion.outputs.nextVersion }}"
+
+      - name: Push Image
+        run: docker push ghcr.io/dragon-ion-za/cl3anslat3-api:${{ needs.generateVersion.outputs.nextVersion }}
+
+  tag:
+    needs: [generateVersion, dockerBuildAndPublish]
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Create tag
+        if: ${{ !env.ACT }}
+        uses: actions/github-script@v5
+        with:
+          script: |
+            github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: 'refs/tags/${{ needs.generateVersion.outputs.nextVersion }}',
+              sha: context.sha
+            })
