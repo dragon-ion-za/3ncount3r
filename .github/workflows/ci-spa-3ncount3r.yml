@@ -6,11 +6,10 @@ on:
       - 'feat/*'
       - '!main'
     paths:
-      - spa/**
+      - apps/spa-3ncount3r/**
 
 jobs:
   build:
-    uses: ./.github/workflows/step_build.yml
+    uses: ./.github/workflows/step_build_nx.yml
     with:
-      sourcePath: "spa"
-      artifactName: "spa"
+      projectName: "spa-3ncount3r"
