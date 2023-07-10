@@ -61,6 +61,6 @@ jobs:
             github.rest.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              ref: 'refs/tags/${{ needs.generateVersion.outputs.nextVersion }}',
+              ref: 'refs/tags/3ncount3r-shell-${{ needs.generateVersion.outputs.nextVersion }}',
               sha: context.sha
             })
