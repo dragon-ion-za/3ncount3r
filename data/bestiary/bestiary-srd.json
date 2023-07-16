@@ -55,7 +55,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Aboleth",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Aboleth",
 		  "passive": 20,
@@ -247,7 +247,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Black Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Adult Black Dragon",
 		  "passive": 21,
@@ -361,7 +361,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Blue Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Adult Blue Dragon",
 		  "passive": 22,
@@ -485,7 +485,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Brass Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Adult Brass Dragon",
 		  "passive": 21,
@@ -618,7 +618,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Bronze Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Adult Bronze Dragon",
 		  "passive": 22,
@@ -749,7 +749,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Copper Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Adult Copper Dragon",
 		  "passive": 22,
@@ -881,7 +881,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Gold Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Adult Gold Dragon",
 		  "passive": 24,
@@ -1000,7 +1000,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Green Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Adult Green Dragon",
 		  "passive": 22,
@@ -1117,7 +1117,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Red Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Adult Red Dragon",
 		  "passive": 23,
@@ -1248,7 +1248,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Silver Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Adult Silver Dragon",
 		  "passive": 21,
@@ -1357,7 +1357,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "White Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Adult White Dragon",
 		  "passive": 21,
@@ -1566,7 +1566,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Black Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Ancient Black Dragon",
 		  "passive": 26,
@@ -1680,7 +1680,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Blue Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Ancient Blue Dragon",
 		  "passive": 27,
@@ -1811,7 +1811,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Brass Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Ancient Brass Dragon",
 		  "passive": 24,
@@ -1944,7 +1944,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Bronze Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Ancient Bronze Dragon",
 		  "passive": 27,
@@ -2082,7 +2082,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Copper Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Ancient Copper Dragon",
 		  "passive": 27,
@@ -2214,7 +2214,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Gold Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Ancient Gold Dragon",
 		  "passive": 27,
@@ -2333,7 +2333,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Green Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Ancient Green Dragon",
 		  "passive": 27,
@@ -2450,7 +2450,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Red Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Ancient Red Dragon",
 		  "passive": 26,
@@ -2581,7 +2581,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Silver Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Ancient Silver Dragon",
 		  "passive": 26,
@@ -2690,7 +2690,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "White Dragon",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Ancient White Dragon",
 		  "passive": 23,
@@ -2821,7 +2821,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Sphinx",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Androsphinx",
 		  "passive": 20,
@@ -12327,7 +12327,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Green Hag",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Green Hag",
 		  "passive": 14,
@@ -12838,7 +12838,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Sphinx",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Gynosphinx",
 		  "passive": 18,
@@ -14885,7 +14885,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Kraken",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Kraken",
 		  "passive": 14,
@@ -15167,7 +15167,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Lich",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Lich",
 		  "passive": 19,
@@ -16772,7 +16772,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Mummy Lord",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Mummy Lord",
 		  "passive": 14,
@@ -17053,7 +17053,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Night Hag",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Night Hag",
 		  "passive": 16,
@@ -20277,7 +20277,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Sea Hag",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Sea Hag",
 		  "passive": 11,
@@ -23372,7 +23372,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Unicorn",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Unicorn",
 		  "passive": 13,
@@ -23491,7 +23491,7 @@
 		  ],
 		  "legendaryGroup": {
 			"name": "Vampire",
-			"source": "MM"
+			"source": "SRD"
 		  },
 		  "name": "Vampire",
 		  "passive": 17,
