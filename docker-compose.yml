@@ -12,8 +12,7 @@ services:
       dockerfile: cl3anslat3-api.dockerfile
     restart: always
     volumes:
-      - /mnt/f/Development/Git/5etools-api/data:/data
-      - /mnt/f/Development/Git/5etools-api/img:/img
+      - ./data:/data
     ports:
       - '5001:5001'
   3ncount3r-api:
