@@ -1,41 +1,43 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# 3ncount3r 
+3ncount3r is a Dungeon/Game Master's tool to assist with planning and running combat encounters for TTRPGs. It is not meant to be a full fledged VTT but instead aims to augment more traditional setups (like how I run my games).
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+The tool has evolved, though, and a tool for players is in the works (for players to manage their characters).
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+There is also the matter of copyright (and at the time of starting with the project some fu(n)ckyness from WotC around OGL) so 3ncount3r is built with the idea of Bring-Your-Own-API. It is a backendless frontend that expects data in a specific way in order to show you what you need for running encounters, on a single pane of glass. cl3anslat3, the "built-in" BYOAPI, is half an answer to the data problem and provides SRD content under the Creative Commons licence.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+# Yes, it is a Microfrontend
+Currently 3ncount3r consists of a shell and one remote (3ncount3r itself). The plan is to add charact3r as a second remote. Please keep this in mind since it does mean:
+- There are more moving parts
+- There are more CORS issues
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+# Word of Warning
+This project is a work in progress. Like, really WIP. Shit will break. It is not built with great exception handling (partially because I couldn't be assed but mostly because I haven't looked into how to do it cleanly in Node.JS) and probably not half as defensive as it should be.
 
-# Running the damn thing
+This is something I wanted to build and something I entered for the Entelect Tech Accelerator 2023 (a great company initiative for employees) so it's function over form.
 
-There's a docker image somewhere (local only which is the issue).
-To start it do:
-wsl
-docker start 0d847a6338972bea3a6f74d2cb849796b87fa0315584c6a8207fb783c4af0b3d
+It also has many different technologies because I'm experimenting. I have an idea of what I want to do (and I'll document it on my blog in the, hopefully, near future) and it's likely to be needlessly complex but that's what I want to do.
 
-To wipe the DB:
-docker exec -it 5etools-api-3ncount3r bash
-mongosh
-use 3ncount3r_data
-db.dropDatabase()
+# Making it Work on my Machine
+There's a docker compose file that 'should' just work if you've cloned the repo (and you're not using any of the ports). I've been using it in Docker on WSL (can't be assed to use Docker Desktop after the license change) and it's been working for me, but I'm also the one building it so...
 
-To set it up do:
-docker run -d -p 27017:27017 --name 5etools-api-3ncount3r -v data-vol:/data/db mongo:latest
+If you need to change the ports because you don't like the numbers I chose (or you do and they're already being used) then there are config files you can modify in the hostingConfigs folder. There's one for each API, a nginx config to enable CORS on the 3ncount3r remote and a Module Federation manifest for the 3ncount3r shell.
+
+# Don't want to use the docker compose?
+Urg, okay there are images for each of the subsystems which you can run individually. You'll need to add a config for the APIs because the built in config is meant for DEV. You'll also need to setup CORS if the shell and remotes do not live on the same server/container/host. The dockerfiles should give you a rough idea of what I did and what is required to get things to "just work".
+
+# Why are you not helpful
+Sorry, this is a very light readme and I'll document things better in the future (at least that's the plan).
+
+# Contributing
+Since this is a project for a "competition" of sorts at Entelect (my employer) I cannot accept any contributed code. Feel free to fork the project and go nuts if you want I just can't accept any code from outside of my team.
+
+# Attribution
+As mentioned, I do use some Dungeons and Dragons System Reference Document stuff and as is required by the license:
 
 This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of
 the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The
 SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at
 https://creativecommons.org/licenses/by/4.0/legalcode.
+
+# License
+This software is licensed under GNU 3 (minus the SRD stuff which is CC4 and not mine).
