@@ -5,12 +5,12 @@
     },
     "byoapis": [
         {
-            "id": "5eapi",
-            "baseUrl": "http://localhost:5001/"
+            "id": "cl3anslat3",
+            "baseUrl": "http://localhost:5005/"
         }
     ],
     "characterApi": {
         "baseUrl": "http://localhost:5002/v1/"
     },
-    "corsAllowedHosts": ["http://localhost:4200"]
+    "corsAllowedHosts": ["http://localhost:4201"]
 }

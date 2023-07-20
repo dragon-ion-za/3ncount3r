@@ -1,0 +1,5 @@
+{
+    "manifestVersion": 1,
+    "name": "3ncount3r",
+    "entryPoint": "http://localhost:13131/"
+}

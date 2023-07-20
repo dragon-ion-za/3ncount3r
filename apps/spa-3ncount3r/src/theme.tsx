@@ -18,13 +18,12 @@ export const theme = createTheme({
     },
     MuiDrawer: {
         styleOverrides: {
-            root: {
-                marginTop: '64px', 
-                height: 'calc(100vh - 64px)'
+            root: { 
+                width: '64px'
             },
             paperAnchorDockedLeft: {
-                marginTop: '64px', 
-                height: 'calc(100vh - 64px)'
+                width: '64px',
+                paddingTop: '64px'
             }
         }
     },
