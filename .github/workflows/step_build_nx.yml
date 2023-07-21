@@ -41,7 +41,7 @@ jobs:
       id: getTag
       shell: pwsh
       run: | 
-        $verList = git tag -l ${{ steps.getVersion.outputs.tagName }}-${{ steps.getVersion.outputs.verName }}* --sort=-v:refname
+        $verList = git tag -l ${{ inputs.tagName }}-${{ steps.getVersion.outputs.verName }}* --sort=-v:refname
 
         if ($verList -ne $null)
         {
