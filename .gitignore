@@ -369,3 +369,4 @@ FodyWeavers.xsd
 /backends/api-cl3anslat3/config/local.json
 /localDocker
 /deployments/mine
+/.github/workflows/notes.txt
