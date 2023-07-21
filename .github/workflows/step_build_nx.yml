@@ -6,6 +6,9 @@ on:
       projectName:
         required: true
         type: string
+      tagName:
+        required: true
+        type: string
       shouldPublish:
         required: false
         type: boolean
@@ -38,11 +41,18 @@ jobs:
       id: getTag
       shell: pwsh
       run: | 
-        $verList = git tag -l ${{ steps.getVersion.outputs.verName }}* --sort=-v:refname
+        $verList = git tag -l ${{ inputs.tagName }}-${{ steps.getVersion.outputs.verName }}* --sort=-v:refname
 
         if ($verList -ne $null)
         {
-          echo "tag=$verList.Split([Environment]::NewLine) | Select -First 1" >> $env:GITHUB_OUTPUT
+          if ($verList.Contains([Environment]::NewLine))
+          {
+            echo "tag=$verList.Split([Environment]::NewLine) | Select -First 1" >> $env:GITHUB_OUTPUT
+          }
+          else
+          {
+            echo "tag=$verList" >> $env:GITHUB_OUTPUT
+          }
         }
         else
         {
