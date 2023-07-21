@@ -1,4 +1,4 @@
-FROM ghcr.io/dragon-ion-za/3ncount3r-api:bagofbeans-1stlevel
+FROM ghcr.io/dragon-ion-za/3ncount3r-api:bagofbeans-2ndlevel
 
 WORKDIR /api
 

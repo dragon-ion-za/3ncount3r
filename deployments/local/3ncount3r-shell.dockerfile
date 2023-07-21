@@ -1,4 +1,4 @@
-FROM ghcr.io/dragon-ion-za/3ncount3r-shell:bane-1stlevel
+FROM ghcr.io/dragon-ion-za/3ncount3r-shell:bane-2ndlevel
 
 WORKDIR /usr/share/nginx/html
 
