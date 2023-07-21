@@ -59,8 +59,8 @@ body {
 }
 
 .shell-main-menu {
-    position: absolute;
+    position: fixed;
     top: 5px;
     left: 5px;
-    z-index: 100;
+    z-index: 10000;
 }

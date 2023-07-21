@@ -1,15 +1,16 @@
 {
+    "port": 5002,
     "connectionStrings": {
         "3ncount3rContext": "mongodb://mongo:27017/3ncount3r"
     },
     "byoapis": [
         {
-            "id": "5eapi",
-            "baseUrl": "http://5eapi:5001/"
+            "id": "cl3anslat3",
+            "baseUrl": "http://cl3anslat3-api:5001/"
         }
     ],
     "characterApi": {
-        "baseUrl": "http://api:5002/v1/"
+        "baseUrl": "http://3ncount3r-api:5002/v1/"
     },
     "corsAllowedHosts": ["http://localhost:13131"]
 }

@@ -6,29 +6,33 @@ services:
       - 3ncount3rData:/data/db
     expose:
       - 27017
-  5eapi:
+  cl3anslat3-api:
     build:
       context: .
-      dockerfile: 5eapi.dockerfile
+      dockerfile: cl3anslat3-api.dockerfile
     restart: always
     volumes:
-      - /mnt/f/Development/Git/5etools-api/data:/data
-      - /mnt/f/Development/Git/5etools-api/img:/img
-    expose:
-      - 5001
+      - ./data:/data
     ports:
       - '5001:5001'
-  api:
+  3ncount3r-api:
     build:
       context: .
-      dockerfile: api.dockerfile
+      dockerfile: 3ncount3r-api.dockerfile
     restart: always
-    expose:
-      - 5002
     ports:
       - '5002:5002'
-  spa:
-    image: ghcr.io/dragon-ion-za/3ncount3r-spa:acidsplash-2ndlevel
+  3ncount3r-spa:
+    build:
+      context: .
+      dockerfile: 3ncount3r-spa.dockerfile
+    restart: always
+    ports:
+      - '13132:80'
+  shell:
+    build:
+      context: .
+      dockerfile: 3ncount3r-shell.dockerfile
     restart: always
     ports:
       - '13131:80'
