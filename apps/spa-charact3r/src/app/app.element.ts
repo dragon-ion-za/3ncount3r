@@ -370,5 +370,4 @@ nx affected:e2e</pre>
       `;
   }
 }
-customElements.define('app-root', AppElement);
 customElements.define('spa-charact3r-app', AppElement);
