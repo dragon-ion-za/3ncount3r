@@ -70,6 +70,12 @@
         "style": "@emotion/styled",
         "linter": "eslint"
       }
+    },
+    "@nx/web:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
     }
   }
 }
