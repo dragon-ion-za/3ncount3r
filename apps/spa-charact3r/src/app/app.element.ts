@@ -24,9 +24,8 @@ export class AppElement extends HTMLElement {
               script.innerHTML = scriptContent;
         
               document.head.appendChild(script);
-            });
-    
-          
+            }
+          );
         }
       }
     );

@@ -7,6 +7,26 @@
   "tags": [],
   "targets": {
     "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run shell:buildBlazor",
+            "forwardAllArgs": false
+          },
+          {
+              "command": "nx run shell:trueBuild",
+              "forwardAllArgs": false
+          },
+          {
+              "command": "exit",
+              "forwardAllArgs": false
+          }
+        ]
+      },
+      "parallel": false
+    },
+    "trueBuild": {
       "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
@@ -55,6 +75,22 @@
       "defaultConfiguration": "production"
     },
     "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run shell:buildBlazor",
+            "forwardAllArgs": false
+          },
+          {
+              "command": "nx run shell:trueServe",
+              "forwardAllArgs": false
+          }
+        ]
+      },
+      "parallel": false
+    },
+    "trueServe": {
       "executor": "@nx/angular:module-federation-dev-server",
       "options": {
         "port": 4200,
@@ -103,6 +139,22 @@
         "buildTarget": "shell:build",
         "port": 4200
       }
+    },
+    "buildBlazor": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run doner-lib:publish",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "xcopy /E /I \".\\dist\\libs\\doner-lib\\net7.0\\publish\\wwwroot\\_content\\\" \".\\apps\\shell\\src\\_content\\\"",
+            "forwardAllArgs": false
+          }
+        ]
+      },
+      "parallel": false
     }
   }
 }

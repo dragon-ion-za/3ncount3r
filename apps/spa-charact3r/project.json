@@ -5,6 +5,26 @@
   "sourceRoot": "apps/spa-charact3r/src",
   "tags": [],
   "targets": {
+    "buildMfe": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run spa-charact3r:buildBlazor",
+            "forwardAllArgs": false
+          },
+          {
+              "command": "nx run spa-charact3r:build",
+              "forwardAllArgs": false
+          },
+          {
+              "command": "exit",
+              "forwardAllArgs": false
+          }
+        ]
+      },
+      "parallel": false
+    },
     "build": {
       "executor": "@nx/webpack:webpack",
       "outputs": ["{options.outputPath}"],
@@ -43,6 +63,22 @@
         }
       }
     },
+    "serveMfe": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run spa-charact3r:buildBlazor",
+            "forwardAllArgs": false
+          },
+          {
+              "command": "nx run spa-charact3r:serve",
+              "forwardAllArgs": false
+          }
+        ]
+      },
+      "parallel": false
+    },
     "serve": {
       "executor": "@nx/webpack:dev-server",
       "options": {
@@ -75,6 +111,26 @@
           "codeCoverage": true
         }
       }
+    },
+    "buildBlazor": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run doner-lib:publish",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "xcopy /E /I \".\\dist\\libs\\doner-lib\\net7.0\\publish\\wwwroot\\_framework\\\" \".\\apps\\spa-charact3r\\src\\_framework\\\"",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "xcopy /E /I \".\\dist\\libs\\doner-lib\\net7.0\\publish\\wwwroot\\_content\\\" \".\\apps\\spa-charact3r\\src\\_content\\\"",
+            "forwardAllArgs": false
+          }
+        ]
+      },
+      "parallel": false
     }
   }
 }
