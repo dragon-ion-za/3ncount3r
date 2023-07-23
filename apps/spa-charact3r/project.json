@@ -17,7 +17,9 @@
         "webpackConfig": "apps/spa-charact3r/webpack.config.js",
         "assets": [
           "apps/spa-charact3r/src/favicon.ico",
-          "apps/spa-charact3r/src/assets"
+          "apps/spa-charact3r/src/assets",
+          "apps/spa-charact3r/src/_framework",
+          "apps/spa-charact3r/src/_content"
         ],
         "index": "apps/spa-charact3r/src/index.html",
         "baseHref": "/",

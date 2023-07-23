@@ -370,3 +370,6 @@ FodyWeavers.xsd
 /localDocker
 /deployments/mine
 /.github/workflows/notes.txt
+/apps/spa-charact3r/src/_content/Microsoft.AspNetCore.Components.CustomElements
+/apps/spa-charact3r/src/_framework
+/apps/shell/src/_content/Microsoft.AspNetCore.Components.CustomElements

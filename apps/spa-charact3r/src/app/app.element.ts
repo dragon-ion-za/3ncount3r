@@ -4,8 +4,36 @@ export class AppElement extends HTMLElement {
   public static observedAttributes = [];
 
   connectedCallback() {
+
+    fetch("http://localhost:4202/_framework/blazor.webassembly.js").then(
+      (response) => {
+        if (response.ok) {
+          response.text().then(
+            (text) => {
+              var scriptContent = text;
+              scriptContent = scriptContent.replaceAll("_framework/",
+              "http://localhost:4202/_framework/");
+
+              scriptContent = scriptContent.replaceAll("_content/",
+              "http://localhost:4202/_content/");
+      
+              scriptContent = scriptContent.replaceAll("credentials:\"include\",", "");
+        
+              var script = document.createElement('script');
+              script.type = 'text/javascript';
+              script.innerHTML = scriptContent;
+        
+              document.head.appendChild(script);
+            });
+    
+          
+        }
+      }
+    );
+
     const title = 'spa-charact3r';
     this.innerHTML = `
+    <my-counter></my-counter>
     <div class="wrapper">
       <div class="container">
         <!--  WELCOME  -->
