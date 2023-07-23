@@ -19,12 +19,12 @@
               "forwardAllArgs": false
           },
           {
-              "command": "exit",
+              "command": "echo READY",
               "forwardAllArgs": false
           }
-        ]
-      },
-      "parallel": false
+        ],
+        "parallel": false
+      }
     },
     "trueBuild": {
       "executor": "@nx/angular:webpack-browser",
@@ -85,10 +85,14 @@
           {
               "command": "nx run shell:trueServe",
               "forwardAllArgs": false
+          },
+          {
+              "command": "echo READY",
+              "forwardAllArgs": false
           }
-        ]
-      },
-      "parallel": false
+        ],
+        "parallel": false
+      }      
     },
     "trueServe": {
       "executor": "@nx/angular:module-federation-dev-server",
@@ -152,9 +156,9 @@
             "command": "xcopy /E /I \".\\dist\\libs\\doner-lib\\net7.0\\publish\\wwwroot\\_content\\\" \".\\apps\\shell\\src\\_content\\\"",
             "forwardAllArgs": false
           }
-        ]
-      },
-      "parallel": false
+        ],
+        "parallel": false
+      }
     }
   }
 }
