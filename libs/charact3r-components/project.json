@@ -1,0 +1,44 @@
+{
+  "name": "charact3r-components",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/charact3r-components",
+  "targets": {
+    "build": {
+      "executor": "@nx-dotnet/core:build",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/charact3r-components",
+        "{workspaceRoot}/dist/intermediates/libs/charact3r-components"
+      ],
+      "options": {
+        "configuration": "Debug",
+        "noDependencies": true
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      }
+    },
+    "publish": {
+      "executor": "@nx-dotnet/core:publish",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/charact3r-components",
+        "{workspaceRoot}/dist/intermediates/libs/charact3r-components"
+      ],
+      "options": {
+        "configuration": "Debug",
+        "noDependencies": true
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx-dotnet/core:format"
+    }
+  },
+  "tags": []
+}
