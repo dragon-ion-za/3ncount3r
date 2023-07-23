@@ -117,11 +117,11 @@
             "forwardAllArgs": false
           },
           {
-            "command": "xcopy /y /i \"dist\\libs\\charact3r-components\\net7.0\\publish\\wwwroot\\_framework\\\" \".\\apps\\spa-charact3r\\src\\_framework\\\"",
+            "command": "xcopy /e /y /i \"dist\\libs\\charact3r-components\\net7.0\\publish\\wwwroot\\_framework\\\" \".\\apps\\spa-charact3r\\src\\_framework\\\"",
             "forwardAllArgs": false
           },
           {
-            "command": "xcopy /y /i \"dist\\libs\\charact3r-components\\net7.0\\publish\\wwwroot\\_content\\\" \".\\apps\\spa-charact3r\\src\\_content\\\"",
+            "command": "xcopy /e /y /i \"dist\\libs\\charact3r-components\\net7.0\\publish\\wwwroot\\_content\\\" \".\\apps\\spa-charact3r\\src\\_content\\\"",
             "forwardAllArgs": false
           }
         ],

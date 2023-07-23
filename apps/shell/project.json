@@ -153,7 +153,7 @@
             "forwardAllArgs": false
           },
           {
-            "command": "xcopy /y /i \"dist\\libs\\charact3r-components\\net7.0\\publish\\wwwroot\\_content\\\" \".\\apps\\shell\\src\\_content\\\"",
+            "command": "xcopy /e /y /i \"dist\\libs\\charact3r-components\\net7.0\\publish\\wwwroot\\_content\\\" \".\\apps\\shell\\src\\_content\\\"",
             "forwardAllArgs": false
           }
         ],
