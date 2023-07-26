@@ -1,0 +1,122 @@
+{
+  "name": "spa-charact3r",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "nctr",
+  "sourceRoot": "apps/spa-charact3r/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/spa-charact3r",
+        "index": "apps/spa-charact3r/src/index.html",
+        "main": "apps/spa-charact3r/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/spa-charact3r/tsconfig.app.json",
+        "assets": [
+          "apps/spa-charact3r/src/favicon.ico",
+          "apps/spa-charact3r/src/assets"
+        ],
+        "styles": ["apps/spa-charact3r/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/spa-charact3r/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/spa-charact3r/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:webpack-dev-server",
+      "options": {
+        "port": 4202,
+        "publicHost": "http://localhost:4202"
+      },
+      "configurations": {
+        "production": {
+          "browserTarget": "spa-charact3r:build:production"
+        },
+        "development": {
+          "browserTarget": "spa-charact3r:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "spa-charact3r:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/spa-charact3r/**/*.ts",
+          "apps/spa-charact3r/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/spa-charact3r/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "spa-charact3r:build",
+        "port": 4202,
+        "watch": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "spa-charact3r:build:development"
+        },
+        "production": {
+          "buildTarget": "spa-charact3r:build:production"
+        }
+      }
+    }
+  }
+}

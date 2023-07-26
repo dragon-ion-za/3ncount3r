@@ -1,10 +1,18 @@
 [
-    {
-        "baseUrl": "encounter",
-        "moduleName": "./spa-3ncount3r-app",
-        "remoteEntry": "http://localhost:4201/remoteEntry.js",
-        "remoteName": "",
-        "exposedModule": "./spa-3ncount3r-app",
-        "elementName": "spa-3ncount3r-app"
-    }
+  {
+    "baseUrl": "encounter",
+    "moduleName": "./spa-3ncount3r-app",
+    "remoteEntry": "http://localhost:4201/remoteEntry.js",
+    "remoteName": "",
+    "exposedModule": "./spa-3ncount3r-app",
+    "elementName": "spa-3ncount3r-app"
+  },
+  {
+    "baseUrl": "character",
+    "moduleName": "./spa-charact3r-app",
+    "remoteEntry": "http://localhost:4202/remoteEntry.js",
+    "remoteName": "",
+    "exposedModule": "./spa-charact3r-app",
+    "elementName": "spa-charact3r-app"
+  }
 ]
