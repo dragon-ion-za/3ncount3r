@@ -1,0 +1,16 @@
+{
+    "port": 80,
+    "connectionStrings": {
+        "3ncount3rContext": "mongodb://mongo:27017/3ncount3r"
+    },
+    "byoapis": [
+        {
+            "id": "cl3anslat3",
+            "baseUrl": "http://cl3anslat3-api:80/"
+        }
+    ],
+    "characterApi": {
+        "baseUrl": "http://3ncount3r-api:80/v1/"
+    },
+    "corsAllowedHosts": ["http://localhost:13131"]
+}

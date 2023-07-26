@@ -1,0 +1,47 @@
+services:
+  mongo:
+    image: mongo:latest
+    restart: always
+    volumes:
+      - 3ncount3rData:/data/db
+    expose:
+      - 27017
+  cl3anslat3-api:
+    build:
+      context: .
+      dockerfile: cl3anslat3-api.dockerfile
+    restart: always
+    volumes:
+      - ./data:/data
+    expose:
+      - 80
+  3ncount3r-api:
+    build:
+      context: .
+      dockerfile: 3ncount3r-api.dockerfile
+    restart: always
+    expose:
+      - 80
+  3ncount3r-spa:
+    build:
+      context: .
+      dockerfile: 3ncount3r-spa.dockerfile
+    restart: always
+    expose:
+      - 80
+  shell:
+    build:
+      context: .
+      dockerfile: 3ncount3r-shell.dockerfile
+    restart: always
+    expose:
+      - 80
+  reverse-proxy:
+    build:
+      context: .
+      dockerfile: reverse-proxy.dockerfile
+    restart: always
+    ports:
+      - '13131:80'
+volumes:
+  3ncount3rData:

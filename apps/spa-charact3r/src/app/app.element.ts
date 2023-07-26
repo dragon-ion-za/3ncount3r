@@ -14,8 +14,6 @@ export class AppElement extends HTMLElement {
               scriptContent = scriptContent.replaceAll("_framework/",
               "http://localhost:4202/_framework/");
 
-              scriptContent = scriptContent.replaceAll("_content/",
-              "http://localhost:4202/_content/");
       
               scriptContent = scriptContent.replaceAll("credentials:\"include\",", "");
         
