@@ -24,19 +24,54 @@
 
 @include mat.core();
 
-$my-primary: mat.define-palette(mat.$indigo-palette, 500);
-$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$pallet: (
+    50 : #f3f0ea,
+    100 : #e0dacb,
+    200 : #ccc1a8,
+    300 : #b8a885,
+    400 : #a8956a,
+    500 : #998250,
+    600 : #917a49,
+    700 : #866f40,
+    800 : #7c6537,
+    900 : #6b5227,
+    A100 : #ffe1af,
+    A200 : #ffcd7c,
+    A400 : #ffba49,
+    A700 : #ffb030,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$prime: mat.define-palette($pallet, 500);
+$accent: mat.define-palette($pallet, A200, A100, A400);
 $fonts: mat.define-typography-config(
   $font-family: 'ScalySansRemake, MrEavesRemake, Arial'
 );
 
 $lightTheme: mat.define-light-theme((
  color: (
-   primary: $my-primary,
-   accent: $my-accent,
+   primary: $prime,
+   accent: $accent,
  ),
   typography: $fonts,
 ));
+
+@include mat.all-component-themes($lightTheme);
 
 body {
     @include mat.all-component-typographies($fonts);
@@ -56,6 +91,11 @@ body {
 
 .mat-drawer .mat-expansion-panel {
     background-color: #F2E5B5;
+}
+
+.mat-mdc-fab.mat-primary {
+    --mdc-fab-container-color: none !important;
+    background-image: linear-gradient(-45deg, #322814, #998250, #322814);
 }
 
 .shell-main-menu {

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Observable, map } from 'rxjs';
 
 @Component({
   selector: 'nctr-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shell';
+  currentAppRoot = '';
+
+  constructor (private router: Router) {
+    router.events.subscribe((val) => {
+      if (val instanceof NavigationEnd) {
+        this.currentAppRoot = val.url;
+      }
+  });
+  }
 }
