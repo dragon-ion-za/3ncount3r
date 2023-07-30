@@ -72,9 +72,9 @@ $lightTheme: mat.define-light-theme((
 ));
 
 @include mat.all-component-themes($lightTheme);
+@include mat.all-component-typographies($fonts);
 
 body {
-    @include mat.all-component-typographies($fonts);
     background-image: url('./assets/parchmentBackground.jpg');
 }
 
@@ -96,6 +96,15 @@ body {
 .mat-mdc-fab.mat-primary {
     --mdc-fab-container-color: none !important;
     background-image: linear-gradient(-45deg, #322814, #998250, #322814);
+}
+
+.mat-mdc-card-content {
+    font-family: MrEavesRemake, Arial;
+}
+
+.landingPageTile > div > mat-card {
+    width: 550px;
+    height: 670px;
 }
 
 .shell-main-menu {
