@@ -12,4 +12,5 @@ jobs:
   build:
     uses: ./.github/workflows/step_build_nx.yml
     with:
-      projectName: "shell"
+      projectName: 'shell'
+      tagName: '3ncount3r-shell'

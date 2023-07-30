@@ -12,4 +12,5 @@ jobs:
   build:
     uses: ./.github/workflows/step_build_nx.yml
     with:
-      projectName: "spa-3ncount3r"
+      projectName: 'spa-3ncount3r'
+      tagName: '3ncount3r-spa'
