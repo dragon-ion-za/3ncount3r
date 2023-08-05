@@ -1,7 +1,7 @@
 {
     "port": 5005,
-    "dataFileRoot": "../../",
+    "dataFileRoot": "../../deployments/local/",
     "bestiaries": [
-        "bestiary-srd.json"
+        "srd.json"
     ]
 }

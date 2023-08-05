@@ -12,5 +12,5 @@
     "characterApi": {
         "baseUrl": "http://localhost:5002/v1/"
     },
-    "corsAllowedHosts": ["http://localhost:4201"]
+    "corsAllowedHosts": ["http://localhost:4200"]
 }
