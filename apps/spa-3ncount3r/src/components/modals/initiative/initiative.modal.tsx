@@ -30,13 +30,13 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
         setCreatures(state);
     }
 
-    const manualyUpdateInitiative = (event: any, index: number) => {
+    const manuallyUpdateInitiative = (event: any, index: number) => {
         let state = [...creatures];
         state[index].initiative = parseInt(event.target.value);
         setCreatures(state);
     }
 
-    const hanldePartySelection = (partyName: string) => {
+    const handlePartySelection = (partyName: string) => {
         setSelectedPary(partyName);
         let selectedParty = parties.find(x => x.name === partyName ?? '');
         let partyMembers: CharacterViewModel[] = selectedParty!.characters;
@@ -72,7 +72,7 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
                                 labelId="party_label"
                                 disabled={selectedParty !== ''}
                                 value={selectedParty}
-                                onChange={(event: SelectChangeEvent) => {hanldePartySelection(event.target.value)}}>
+                                onChange={(event: SelectChangeEvent) => {handlePartySelection(event.target.value)}}>
                                 {parties && parties.map(x => (<MenuItem key={x.name} value={x.name}>{x.name}</MenuItem>))}
                             </Select>
                         </FormControl>
@@ -99,7 +99,7 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
                                                 type="number"
                                                 variant="standard"
                                                 value={creature.initiative}
-                                                onChange={(e) => { manualyUpdateInitiative(e, index) }} />                                            
+                                                onChange={(e) => { manuallyUpdateInitiative(e, index) }} />                                            
                                         </TableCell>
                                         <TableCell>
                                         <Button variant="outlined" onClick={() => rollInitiativeForCreature(index)}>Roll</Button>
