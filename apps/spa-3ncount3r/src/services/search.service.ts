@@ -1,7 +1,7 @@
 import axios from 'axios';
+import { environment } from '../environments/environment';
 
 import { CreatureViewModel } from "../view-models/creature.view-model";
-import { environment } from '../environments/environment';
 
 const BASE_URL = environment.apiBaseUrl;
 

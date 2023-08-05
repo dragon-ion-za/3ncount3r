@@ -1,9 +1,10 @@
 import axios, { AxiosResponse } from "axios";
+import { environment } from "../environments/environment";
 
 import { EncounterCreatureViewModel } from "../view-models/encounter-creature.view-model";
 import { EncounterViewModel } from "../view-models/encounter.view-model";
 
-const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const BASE_URL = environment.apiBaseUrl;
 
 export async function saveEncounter(encounterName: string, encounterCreatures: EncounterCreatureViewModel[], encounterParty: string): Promise<string> {
     const response = await axios.post(`${BASE_URL}encounters`, { 
