@@ -1,7 +1,7 @@
 {
     "port": 4211,
     "connectionStrings": {
-        "3ncount3rContext": "mongodb://localhost:27017/3ncount3r"
+        "3ncount3rContext": "mongodb://localhost:27017/"
     },
     "byoapis": [
         {
@@ -10,7 +10,7 @@
         }
     ],
     "characterApi": {
-        "baseUrl": "http://localhost:5002/v1/"
+        "baseUrl": "http://localhost:4211/v1/"
     },
     "corsAllowedHosts": ["http://localhost:4200"]
 }
