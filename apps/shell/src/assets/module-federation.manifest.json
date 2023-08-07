@@ -1,6 +1,6 @@
 [
     {
-        "baseUrl": "encounter",
+        "baseUrl": "3ncount3r",
         "moduleName": "./spa-3ncount3r-app",
         "remoteEntry": "http://localhost:4201/remoteEntry.js",
         "remoteName": "",
