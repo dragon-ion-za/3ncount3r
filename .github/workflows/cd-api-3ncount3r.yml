@@ -17,6 +17,7 @@ jobs:
     with:
       sourcePath: "backends/api-3ncount3r"
       artifactName: "api-3ncount3r"
+      tagName: '3ncount3r-api'
 
   generateVersion:
     needs: build
