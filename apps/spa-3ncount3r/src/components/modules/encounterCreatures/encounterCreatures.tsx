@@ -32,7 +32,7 @@ export const EncounterCreatures : React.FC = () => {
         if (id) {
             let segments = location.pathname.split('/');
             
-            if (segments[3] === 'template') {
+            if (segments[segments.length-1] === 'template') {
                 setIsTemplate(true);
                 getEncounterTemplateById(id).then(x => {
                     encounterContext.setCreatures(x.creatures);
