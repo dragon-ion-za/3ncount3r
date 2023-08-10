@@ -37,7 +37,7 @@ export const InitiativeHandler : React.FC = () => {
             }
         }
 
-        navigate(`/encounter/${encounterId}`);
+        navigate(`/${encounterId}`);
         toggleModal(false);
     };
 
