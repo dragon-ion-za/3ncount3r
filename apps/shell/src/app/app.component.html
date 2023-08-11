@@ -1,12 +1,13 @@
 <div class="shell-main-menu">
     <button mat-fab color="primary" [matMenuTriggerFor]="menu" >
         <img *ngIf="currentAppRoot == '/' || currentAppRoot == ''" src="../assets/logo-shell-nb.png" style="width: 48px;" />
-        <img *ngIf="currentAppRoot.startsWith('/encounter')" src="../assets/logo-3ncount3r-nb.png" style="width: 48px;" />
-        <img *ngIf="currentAppRoot.startsWith('/character')" src="../assets/logo-charact3r-nb.png" style="width: 48px;" />
-        <img *ngIf="currentAppRoot.startsWith('/cleanslate')" src="../assets/logo-cl3anslat3-nb.png" style="width: 48px;" />
+        <img *ngIf="currentAppRoot.startsWith('/3ncount3r')" src="../assets/logo-3ncount3r-nb.png" style="width: 48px;" />
+        <img *ngIf="currentAppRoot.startsWith('/charact3r')" src="../assets/logo-charact3r-nb.png" style="width: 48px;" />
+        <img *ngIf="currentAppRoot.startsWith('/cl3anslat3')" src="../assets/logo-cl3anslat3-nb.png" style="width: 48px;" />
     </button>
     <mat-menu #menu="matMenu">
         <button mat-menu-item [routerLink]="'/3ncount3r'">3ncount3r</button>
+        <button mat-menu-item (click)="openDialog()">Help</button>
     </mat-menu>
 </div>
 

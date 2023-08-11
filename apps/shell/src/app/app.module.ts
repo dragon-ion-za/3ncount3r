@@ -15,7 +15,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { ModuleFederationToolsModule } from '@angular-architects/module-federation-tools';
 import { MatButtonModule } from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog'
 
 @NgModule({
   declarations: [AppComponent, LandingComponent, MainMenuComponent],
@@ -32,6 +33,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatButtonModule,
     MatMenuModule,
     ModuleFederationToolsModule,
+    MatDialogModule,
     RouterModule.forRoot(RouterService.getAppRoutes(), { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [],

@@ -1,4 +1,4 @@
-FROM ghcr.io/dragon-ion-za/3ncount3r-spa:bane-5thlevel
+FROM ghcr.io/dragon-ion-za/3ncount3r-spa:bane-6thlevel
 
 COPY config/nginx-cors/default.conf /etc/nginx/conf.d/default.conf
 
