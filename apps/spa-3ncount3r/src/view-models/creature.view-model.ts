@@ -1,4 +1,4 @@
-import { ActionGroupViewModel, ArmourClassViewModel, CreatureSizes, ResistanceViewModel, SkillModifierViewModel } from "./shared.view-model";
+import { ActionGroupViewModel, ArmourClassViewModel, ChallengeViewModel, CreatureSizes, ResistanceViewModel, SkillModifierViewModel } from "./shared.view-model";
 
 export class CreatureViewModel {
     name: string = '';
@@ -29,7 +29,7 @@ export class CreatureViewModel {
     resistances: ResistanceViewModel[] = [];
     immunities: ResistanceViewModel[] = [];
     languages: string[] = [];
-    challengeRating: number = 0;
+    challengeRating: ChallengeViewModel | null = null;
     legendaryCount: number = 3;
     senses: string[] = [];
     savingThrows: SkillModifierViewModel[] = [];

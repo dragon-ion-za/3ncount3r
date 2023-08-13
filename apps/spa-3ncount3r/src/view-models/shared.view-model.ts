@@ -47,3 +47,8 @@ export interface ActionGroupViewModel {
     name: string;
     items: SpecialActionViewModel[];
 }
+
+export interface ChallengeViewModel {
+    rating: number;
+    experience: number;
+}

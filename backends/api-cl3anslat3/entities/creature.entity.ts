@@ -1,4 +1,4 @@
-import { Copy, OtherSource, Type, Ac, Hp, Speed, Trait, SoundClip, Spellcasting, LegendaryGroup, Save } from "./sharedEntities";
+import { Copy, OtherSource, Type, Ac, Hp, Speed, Trait, SoundClip, Spellcasting, LegendaryGroup, Save, ChallengeRating } from "./sharedEntities";
 
 export interface CreatureEntity {
     name: string;
@@ -22,7 +22,7 @@ export interface CreatureEntity {
     skill: object;
     passive: number;
     languages: string[];
-    cr: string;
+    cr: ChallengeRating | string;
     trait: Trait[];
     action: Trait[];
     reaction: Trait[];

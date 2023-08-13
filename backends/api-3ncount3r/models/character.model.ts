@@ -1,4 +1,4 @@
-import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, ActionGroupModel } from "./sharedModels";
+import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, ActionGroupModel, ChallengeModel } from "./sharedModels";
 
 export class ClassModel {
     name: string = '';
@@ -58,7 +58,7 @@ export class CharacterModel {
     actionGroups: ActionGroupModel[] = [];
     initiative: number = 0;
 
-    challengeRating: number = 0;
+    challengeRating: ChallengeModel | null = null;
     imageUrl: string = '';
 
     constructor (name: string) {

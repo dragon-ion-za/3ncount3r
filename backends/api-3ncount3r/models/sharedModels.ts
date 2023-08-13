@@ -58,3 +58,8 @@ export class ActionGroupModel {
     name: string = '';
     items: SpecialActionModel[] = [];
 }
+
+export class ChallengeModel {
+    rating: number = 0;
+    experience: number = 0;
+}

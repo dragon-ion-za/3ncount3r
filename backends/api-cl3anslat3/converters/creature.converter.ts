@@ -3,9 +3,10 @@ import { LegendaryGroupEntity } from "../entities/legendary-group.entity";
 import { Spellcasting, Type } from "../entities/sharedEntities";
 import { CreatureModel } from "../models/creature.model";
 import { convertSizeToEnum, convertToArmourClassModel, convertToFlyingSpeed, buildSpeedConditions, buildSkillModifiers, 
-    buildResistances, buildImmunities, buildLairActions, builsSavingThrows, buildActionGroupActionsFromTraits, 
+    buildResistances, buildImmunities, buildLairActions, buildSavingThrows, buildActionGroupActionsFromTraits, 
     buildActionGroupActionsFromSpellcasting, 
-    buildActionGroupActionsFromLegendaryGroupActions} from "./sharedConverters";
+    buildActionGroupActionsFromLegendaryGroupActions,
+    convertChallengeRating} from "./sharedConverters";
 
 export function creatureEntityToModelConverter(host: string, entity: CreatureEntity, legendaryGroups: LegendaryGroupEntity[]): CreatureModel {
     let model: CreatureModel = new CreatureModel(entity.name);
@@ -36,10 +37,10 @@ export function creatureEntityToModelConverter(host: string, entity: CreatureEnt
     model.resistances = buildResistances(entity.resist);
     model.immunities = buildImmunities(entity.immune, entity.conditionImmune);
     model.languages = entity.languages ?? [];
-    model.challengeRating = Number.parseInt(entity.cr);
+    model.challengeRating = convertChallengeRating(entity.cr);
     model.legendaryCount = entity.legendaryActions ?? 3;
     model.senses = entity.senses ?? [];
-    model.savingThrows = builsSavingThrows(entity.save);
+    model.savingThrows = buildSavingThrows(entity.save);
 
     model.actionGroups.push(buildActionGroupActionsFromTraits('Traits', entity.trait ?? []));
     model.actionGroups.push(buildActionGroupActionsFromTraits('Actions', entity.action ?? []));

@@ -1,6 +1,6 @@
 import { ComplexLegendaryGroupItem } from "../entities/legendary-group.entity";
-import { Ac, ComplexSpeed, Speed, ComplexResist, ComplexImmunity, Trait, Spellcasting, Save, ComplexTrait } from "../entities/sharedEntities";
-import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, CreatureTraitModel, SpellcastingModel, KnownSpellsModel, SpellTypes, SpecialActionModel, ActionGroupModel } from "../models/sharedModels";
+import { Ac, ComplexSpeed, Speed, ComplexResist, ComplexImmunity, Trait, Spellcasting, Save, ComplexTrait, ChallengeRating } from "../entities/sharedEntities";
+import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, CreatureTraitModel, SpellcastingModel, KnownSpellsModel, SpellTypes, SpecialActionModel, ActionGroupModel, ChallengeModel } from "../models/sharedModels";
 
 export function convertSizeToEnum(entitySize: string[]) : CreatureSizes {
     switch (entitySize[0].toLowerCase()) {
@@ -253,7 +253,7 @@ export function buildLairActions(lairActions: (string | ComplexLegendaryGroupIte
     return specialActions;
 }
 
-export function builsSavingThrows(saves: Save | null): SkillModifierModel[] {
+export function buildSavingThrows(saves: Save | null): SkillModifierModel[] {
     let model: SkillModifierModel[] = [];
 
     if (saves) {
@@ -420,4 +420,58 @@ export function buildActionsFromLegendaryGroupAction(legendaryAction: (string | 
     }
 
     return specialActions;
+}
+
+export function convertChallengeRating(challengeRating: ChallengeRating| string) : ChallengeModel {
+    let challenge: ChallengeModel = new ChallengeModel();
+
+    if (typeof challengeRating === 'string') { 
+        challenge.rating = parseInt(challengeRating as string);
+        challenge.experience = getExperienceFromChallengeRating(challenge.rating);
+    } else {
+        let parsedChallenge = challengeRating as ChallengeRating;
+        challenge.rating = parseInt(parsedChallenge.cr);
+        challenge.experience = parseInt(parsedChallenge.xp);
+    }
+
+    return challenge;
+}
+
+export function getExperienceFromChallengeRating(challengeRating: number): number {
+    switch(challengeRating) {
+        case .125: return 25;
+        case .25: return 50;
+        case .50: return 100;
+        case 1: return 200;
+        case 2: return 450;
+        case 3: return 700;
+        case 4: return 1100;
+        case 5: return 1800;
+        case 6: return 2300;
+        case 7: return 2900;
+        case 8: return 3900;
+        case 9: return 5000;
+        case 10: return 5900;
+        case 11: return 7200;
+        case 12: return 8400;
+        case 13: return 10000;
+        case 14: return 11500;
+        case 15: return 13000;
+        case 16: return 15000;
+        case 17: return 18000;
+        case 18: return 20000;
+        case 19: return 22000;
+        case 20: return 25000;
+        case 21: return 33000;
+        case 22: return 41000;
+        case 23: return 50000;
+        case 24: return 62000;
+        case 25: return 75000;
+        case 26: return 90000;
+        case 27: return 105000;
+        case 28: return 120000;
+        case 29: return 135000;
+        case 30: return 155000;
+        default: return 0;
+    }
 }
