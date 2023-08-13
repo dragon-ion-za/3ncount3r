@@ -12,6 +12,7 @@ import { SaveHandler } from "../../dialog-handlers/save-handler/save-handler";
 import SearchCreatures from "../../modules/search-creatures/search-creatures";
 import { Drawer } from "@mui/material";
 import EncountersMenu from "../../modules/encounters-menu/encounters-menu";
+import EncounterActions from "../../modules/encounter-actions/encounter-actions";
 
 export const EncounterPage : React.FC = () => {
 
@@ -22,6 +23,7 @@ export const EncounterPage : React.FC = () => {
                 <EncountersMenu isExpanded={false} />
             </Drawer>
             <SplitThreeLayout longBarComponent={<EncounterCreatures />} topRightComponent={<CreatureDetails />} />
+            <EncounterActions />            
         </EncounterContextProvider>
     </>);
 }
