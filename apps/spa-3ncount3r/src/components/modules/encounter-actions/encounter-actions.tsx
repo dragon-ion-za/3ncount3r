@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Avatar, Paper } from "@mui/material";
+import { Avatar, Paper, Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
 import { useEncounterContext } from "apps/spa-3ncount3r/src/providers/encounterContext/encounter.context-provider";
+import { roundCounterAvatarStyles, roundCounterCellStyles } from "./encounter-actions.styles";
 
 const EncounterActions : React.FC = () => {
     const [totalXp, setTotalXp] = useState(0);
@@ -15,17 +16,17 @@ const EncounterActions : React.FC = () => {
 
     useEffect(() => {
         let xp: number = 0;
-        encounterContext.creatures.filter(x => !x.isPlayerCharacter).reduce((sum, x) => sum += x.challengeRating?.experience ?? 0, 0);
+        xp = encounterContext.creatures.filter(x => !x.isPlayerCharacter).reduce((sum, x) => sum += x.challengeRating?.experience ?? 0, 0);
         setTotalXp(xp);
-        setPartyXp(xp / Math.max(encounterContext.creatures.filter(x => !x.isPlayerCharacter).length, 1));
+        setPartyXp(xp / Math.max(encounterContext.creatures.filter(x => x.isPlayerCharacter).length, 1));
         setTurnMax(encounterContext.creatures.length);
     }, [encounterContext.creatures])
     
     return (<> 
-        <Paper sx={{ position: 'fixed', bottom: 16, left: "calc(50vw - 300px)", width: "600px", margin: "auto", height: "64px", padding: "16px"}} elevation={3}>
+        <Paper sx={{ position: 'fixed', bottom: 16, left: "calc(50vw - 300px)", width: "600px", margin: "auto", height: "64px"}} elevation={3}>
             <Grid container>
                 <Grid xs={3}>
-                    <Grid container direction="column">
+                    <Grid container direction="column" sx={roundCounterCellStyles}>
                         <Grid>
                             Total XP: {totalXp}
                         </Grid>
@@ -36,11 +37,13 @@ const EncounterActions : React.FC = () => {
                 </Grid>
                 <Grid xs={6}>
                     <Grid container>
-                        <Grid>Next Round</Grid>
+                        <Grid sx={roundCounterCellStyles}>Next Round</Grid>
                         <Grid>
-                            <Avatar>{roundCount}<br />{turnCount} of {turnMax}</Avatar>
+                            <Avatar sx={roundCounterAvatarStyles}>
+                                <Typography variant='body1' sx={{fontSize: '20px'}}>{roundCount}<br /><Typography variant='body1'>{turnCount} of {turnMax}</Typography></Typography>
+                            </Avatar>
                         </Grid>
-                        <Grid>Next Turn</Grid>
+                        <Grid sx={roundCounterCellStyles}>Next Turn</Grid>
                     </Grid>
                 </Grid>
                 <Grid xs={3}></Grid>
