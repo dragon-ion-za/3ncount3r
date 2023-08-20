@@ -45,3 +45,12 @@ export const creatureDeathStateStyle = {
         transform: 'rotate(45deg)'
     }
 }
+
+export const selectedCreatureStyles = {
+    border: 'initial',
+    borderStyle: 'solid',
+    borderImageRepeat: 'stretch',
+    borderImageSlice: '200',
+    borderImageSource: 'url(./assets/frame-border.png)',
+    borderImageWidth: '47px'
+};

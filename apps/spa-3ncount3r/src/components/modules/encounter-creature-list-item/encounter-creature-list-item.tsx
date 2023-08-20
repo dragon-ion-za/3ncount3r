@@ -5,7 +5,6 @@ import Grid from '@mui/material/Unstable_Grid2';
 
 import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
 import { parseAlignment } from "../../../services/creature.service";
-import { useEncounterContext } from '../../../providers/encounterContext/encounter.context-provider';
 import { InitiativeIcon } from "../../icons/initiative-order.icon";
 import { MovementSpeedIcon } from "../../icons/speed.movement.icon";
 import { FlyingSpeedIcon } from "../../icons/speed.flying.icon";
@@ -13,7 +12,7 @@ import { SwimmingSpeedIcon } from "../../icons/speed.swimming.icon";
 import { ClimbingSpeedIcon } from "../../icons/speed.climbing.icon";
 import { BurrowingSpeedIcon } from "../../icons/speed.burrowing.icon";
 
-import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreatureChipContainer, creatureDeathStateStyle, creatureAvatarStyle } from './encounter-creature-list-item.styles';
+import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreatureChipContainer, creatureDeathStateStyle, creatureAvatarStyle, selectedCreatureStyles } from './encounter-creature-list-item.styles';
 
 interface EncounterCreatureListItemProps {
     viewModel: EncounterCreatureViewModel;
@@ -24,11 +23,9 @@ interface EncounterCreatureListItemProps {
 }
 
 export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps> = ({viewModel, index, isSelected, handleSelection, manageHitpoints}) => {
-    const encounterContext = useEncounterContext();
-
     return (
         <> 
-            <Card sx={encounterCreatureCardStyles} onClick={() => { handleSelection(index) }} className={isSelected ? 'selectedBorder' : ''}>
+            <Card sx={{...encounterCreatureCardStyles, ...(isSelected ? selectedCreatureStyles : {}) }} onClick={() => { handleSelection(index) }} >
                 <CardContent> 
                     <Grid container>
                         <Grid xs={2}> 
