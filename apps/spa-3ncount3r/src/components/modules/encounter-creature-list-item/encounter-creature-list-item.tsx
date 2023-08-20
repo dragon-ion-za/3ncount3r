@@ -18,19 +18,17 @@ import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreat
 interface EncounterCreatureListItemProps {
     viewModel: EncounterCreatureViewModel;
     index: number;
-    manageHitpoints: (index: number) => void;
+    isSelected: boolean;
+    handleSelection: (index: number) => void;
+    manageHitpoints: () => void;
 }
 
-export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps> = ({viewModel, index, manageHitpoints}) => {
+export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps> = ({viewModel, index, isSelected, handleSelection, manageHitpoints}) => {
     const encounterContext = useEncounterContext();
-    
-    const handleCreatureSelection = () => {
-        encounterContext.setSelectedCreature(viewModel);
-    };
 
     return (
         <> 
-            <Card sx={encounterCreatureCardStyles} onClick={() => { handleCreatureSelection() }}>
+            <Card sx={encounterCreatureCardStyles} onClick={() => { handleSelection(index) }} className={isSelected ? 'selectedBorder' : ''}>
                 <CardContent> 
                     <Grid container>
                         <Grid xs={2}> 
@@ -52,7 +50,7 @@ export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps
                         </Grid>
                         <Grid xs={2}>
                             <Stack>
-                                <Chip sx={encounterCreatureChipStyle} icon={<LocalHospital />} label={viewModel.currentHitpoints} onClick={() => {manageHitpoints(index)}} />
+                                <Chip sx={encounterCreatureChipStyle} icon={<LocalHospital />} label={viewModel.currentHitpoints} onClick={() => {manageHitpoints()}} />
                                 <Chip sx={encounterCreatureChipStyle} icon={<Shield />} label={viewModel.armourClass?.armourClass ?? '-'} />
                                 <Chip sx={encounterCreatureChipStyle} icon={<InitiativeIcon />} label={viewModel.initiative ?? '-'} />
                             </Stack>

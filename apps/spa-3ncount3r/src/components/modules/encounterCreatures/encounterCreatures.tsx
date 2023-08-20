@@ -60,24 +60,26 @@ export const EncounterCreatures : React.FC = () => {
     useEffect(() => {
     }, [encounterContext.creatures])
 
-    const doHitpointManagement = (index: number) => {
-        setSelectedIndex(index);
+    const doHitpointManagement = () => {
         setOpen(true);
-    }
+    };
 
     const updateHitpoints = (newHitpoints: number) => {
-        let creatures: EncounterCreatureViewModel[] = [...encounterContext.creatures];
-        creatures[selectedIndex].currentHitpoints = newHitpoints;
-        encounterContext.setCreatures(creatures);
+        encounterContext.selectedCreature!.currentHitpoints = newHitpoints;
         setOpen(false);
-        setSelectedIndex(-1);
-    }
+    };
+
+    const handleCreatureSelection = (index: number) => {
+        setSelectedIndex(index);
+        encounterContext.setSelectedCreatureIndex(index);
+    };
 
     return (
         <>
             <Stack>
                 {encounterContext.creatures?.map((creature: EncounterCreatureViewModel, index: number) => (
-                    <EncounterCreatureListItem key={creature.id} viewModel={creature} index={index} manageHitpoints={doHitpointManagement} />
+                    <EncounterCreatureListItem key={creature.id} viewModel={creature} index={index}
+                     handleSelection={handleCreatureSelection} manageHitpoints={doHitpointManagement} isSelected={selectedIndex === index} />
                 ))}
             </Stack>
             

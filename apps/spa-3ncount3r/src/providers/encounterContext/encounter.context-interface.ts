@@ -12,5 +12,5 @@ export interface IEncounterContext {
     setEncounterId: (id: string) => void;
     addCreature: (creature: EncounterCreatureViewModel) => void;
     removeCreature: (creature: EncounterCreatureViewModel) => void;
-    setSelectedCreature: (selectedCreature: EncounterCreatureViewModel) => void;
+    setSelectedCreatureIndex: (index: number) => void;
 }

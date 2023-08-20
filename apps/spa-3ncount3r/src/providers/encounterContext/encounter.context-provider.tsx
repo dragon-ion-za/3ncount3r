@@ -21,7 +21,7 @@ const EncounterContext = createContext<IEncounterContext>({
     setEncounterId: () => { throw new Error('Encounter State is uninitialised.')},
     addCreature: () => { throw new Error('Encounter State is uninitialised.')},
     removeCreature: () => { throw new Error('Encounter State is uninitialised.')},
-    setSelectedCreature: () => {throw new Error('Encounter State is uninitialised.')}
+    setSelectedCreatureIndex: () => {throw new Error('Encounter State is uninitialised.')}
 });
 
 export const useEncounterContext = () => useContext(EncounterContext);
@@ -54,8 +54,8 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
         throw new Error('Method not implemented');
     };
 
-    const setSelectedCreature = (selectedCreature: EncounterCreatureViewModel) => {
-        setSelectedCreatureInternal(selectedCreature);
+    const setSelectedCreatureIndex = (index: number) => {
+        setSelectedCreatureInternal(creatures[index]);
     };
 
     const setSelectedParty = (partyName: string) => {
@@ -83,7 +83,7 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
             setEncounterId,
             addCreature,
             removeCreature,
-            setSelectedCreature
+            setSelectedCreatureIndex
         }}>
             {children}
         </EncounterContext.Provider>        
