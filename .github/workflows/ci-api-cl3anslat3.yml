@@ -14,3 +14,4 @@ jobs:
     with:
       sourcePath: "backends/api-cl3anslat3"
       artifactName: "api-cl3anslat3"
+      tagName: 'cl3anslat3-api'

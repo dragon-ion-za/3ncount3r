@@ -73,6 +73,10 @@ export const CreatureDetails : React.FC = () => {
                                 </Typography>
                             )}
 
+                            <Typography variant="body1">
+                                <strong>Challenge Rating:</strong> {encounterContext.selectedCreature.challengeRating?.rating ?? 0} ({encounterContext.selectedCreature.challengeRating?.experience ?? 0} XP)
+                            </Typography>
+
                             <Divider />
 
                             {encounterContext.selectedCreature.resistances?.length > 0 && 

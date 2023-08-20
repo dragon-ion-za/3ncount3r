@@ -66,7 +66,7 @@ export class EncountersController extends BaseController<EncounterModel, Encount
                 ...await CharacterService.getCharacterById(creature.id),
                 id: creature.id,
                 initiative: creature.initiative,
-                isPlayerCharacter: false };
+                isPlayerCharacter: true };
         } else {
             foundCreature = { 
                 id: creature.id,

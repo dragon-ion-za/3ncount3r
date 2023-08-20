@@ -1,4 +1,4 @@
-import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, ActionGroupModel } from "./sharedModels";
+import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, ActionGroupModel, ChallengeModel } from "./sharedModels";
 
 export class CreatureModel {
     name: string;
@@ -28,7 +28,7 @@ export class CreatureModel {
     resistances: ResistanceModel[] = [];
     immunities: ResistanceModel[] = [];
     languages: string[] = [];
-    challengeRating: number = 0;
+    challengeRating: ChallengeModel | null = null;
     legendaryCount: number = 3;
     senses: string[] = [];
     savingThrows: SkillModifierModel[] = [];

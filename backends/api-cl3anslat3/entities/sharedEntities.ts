@@ -103,3 +103,8 @@ export interface Save {
     int: string;
     cha: string;
 }
+
+export interface ChallengeRating {
+    cr: string;
+    xp: string;
+}

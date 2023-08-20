@@ -37,7 +37,7 @@ const SearchCreatureListItem : React.FC<SearchCreatureListItemProps> = ({viewMod
                         <Typography variant='subtitle1'>{viewModel.byoapiId}</Typography>
                     </Grid>
                     <Grid xs={2}>
-                        <Avatar sx={searchResultAvatarStyles}>{viewModel.challengeRating}</Avatar>                        
+                        <Avatar sx={searchResultAvatarStyles}>{viewModel.challengeRating?.rating ?? 0}</Avatar>                        
                     </Grid>
                 </Grid>
             </Paper>
