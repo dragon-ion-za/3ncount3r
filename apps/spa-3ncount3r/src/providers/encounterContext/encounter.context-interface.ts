@@ -2,7 +2,7 @@ import { EncounterCreatureViewModel } from "../../view-models/encounter-creature
 
 export interface IEncounterContext {
     creatures: EncounterCreatureViewModel[];
-    selectedCreature: EncounterCreatureViewModel | null;
+    selectedCreatureIndex: number;
     selectedParty: string;
     encounterName: string;
     encounterId: string;
@@ -13,4 +13,5 @@ export interface IEncounterContext {
     addCreature: (creature: EncounterCreatureViewModel) => void;
     removeCreature: (creature: EncounterCreatureViewModel) => void;
     setSelectedCreatureIndex: (index: number) => void;
+    getSelectedCreature: () => EncounterCreatureViewModel;
 }

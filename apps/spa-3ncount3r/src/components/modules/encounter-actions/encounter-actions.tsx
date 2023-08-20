@@ -20,7 +20,11 @@ const EncounterActions : React.FC = () => {
         setTotalXp(xp);
         setPartyXp(xp / Math.max(encounterContext.creatures.filter(x => x.isPlayerCharacter).length, 1));
         setTurnMax(encounterContext.creatures.length);
-    }, [encounterContext.creatures])
+    }, [encounterContext.creatures]);
+
+    useEffect(() => {
+        setTurnCount(encounterContext.selectedCreatureIndex + 1);
+    }, [encounterContext.selectedCreatureIndex])
     
     return (<> 
         <Paper sx={{ position: 'fixed', bottom: 16, left: "calc(50vw - 300px)", width: "600px", margin: "auto", height: "64px"}} elevation={3}>

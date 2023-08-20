@@ -65,7 +65,7 @@ export const EncounterCreatures : React.FC = () => {
     };
 
     const updateHitpoints = (newHitpoints: number) => {
-        encounterContext.selectedCreature!.currentHitpoints = newHitpoints;
+        encounterContext.getSelectedCreature().currentHitpoints = newHitpoints;
         setOpen(false);
     };
 

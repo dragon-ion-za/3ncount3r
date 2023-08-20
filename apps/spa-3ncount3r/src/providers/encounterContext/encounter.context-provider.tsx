@@ -11,7 +11,7 @@ interface EncounterContextProviderProps {
 
 const EncounterContext = createContext<IEncounterContext>({ 
     creatures: [], 
-    selectedCreature: null,
+    selectedCreatureIndex: 0,
     selectedParty: '',
     encounterName: '',
     encounterId: '',
@@ -21,14 +21,15 @@ const EncounterContext = createContext<IEncounterContext>({
     setEncounterId: () => { throw new Error('Encounter State is uninitialised.')},
     addCreature: () => { throw new Error('Encounter State is uninitialised.')},
     removeCreature: () => { throw new Error('Encounter State is uninitialised.')},
-    setSelectedCreatureIndex: () => {throw new Error('Encounter State is uninitialised.')}
+    setSelectedCreatureIndex: () => {throw new Error('Encounter State is uninitialised.')},
+    getSelectedCreature: () => {throw new Error('Encounter State is uninitialised.')}
 });
 
 export const useEncounterContext = () => useContext(EncounterContext);
 
 export const EncounterContextProvider : React.FC<EncounterContextProviderProps> = ({children}) => {
     const [creatures, setCreaturesInternal] = useState<EncounterCreatureViewModel[]>([]);
-    const [selectedCreature, setSelectedCreatureInternal] = useState<EncounterCreatureViewModel | null>(null);
+    const [selectedCreatureIndex, setSelectedCreatureIndexInternal] = useState<number>(0);
     const [selectedParty, setSelectedPartyInternal] = useState<string>('');
     const [encounterName, setEncounterNameInternal] = useState<string>('');
     const [encounterId, setEncounterIdInternal] = useState<string>('');
@@ -55,7 +56,7 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
     };
 
     const setSelectedCreatureIndex = (index: number) => {
-        setSelectedCreatureInternal(creatures[index]);
+        setSelectedCreatureIndexInternal(index);
     };
 
     const setSelectedParty = (partyName: string) => {
@@ -70,10 +71,14 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
         setEncounterIdInternal(id);
     }
 
+    const getSelectedCreature = () => {
+        return creatures[selectedCreatureIndex];
+    }
+
     return (<>
         <EncounterContext.Provider value={{
             creatures,
-            selectedCreature,
+            selectedCreatureIndex,
             selectedParty,
             encounterName,
             encounterId,
@@ -83,7 +88,8 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
             setEncounterId,
             addCreature,
             removeCreature,
-            setSelectedCreatureIndex
+            setSelectedCreatureIndex,
+            getSelectedCreature
         }}>
             {children}
         </EncounterContext.Provider>        
