@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, Typography, Avatar, Stack, Chip, Container } from "@mui/material";
+import { Card, CardContent, Typography, Avatar, Stack, Chip, Container, Badge } from "@mui/material";
 import { LocalHospital, Shield } from "@mui/icons-material"
 import Grid from '@mui/material/Unstable_Grid2';
 
@@ -24,37 +24,39 @@ interface EncounterCreatureListItemProps {
 
 export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps> = ({viewModel, index, isSelected, handleSelection, manageHitpoints}) => {
     return (
-        <> 
-            <Card sx={{...encounterCreatureCardStyles, ...(isSelected ? selectedCreatureStyles : {}) }} onClick={() => { handleSelection(index) }} >
-                <CardContent> 
-                    <Grid container>
-                        <Grid xs={2}> 
-                            <Avatar sx={viewModel.currentHitpoints <= 0 ? creatureDeathStateStyle : creatureAvatarStyle} 
-                                src={viewModel.imageUrl} />
+        <>
+            <Badge color="secondary" variant='dot' invisible={false} component={"div"}>
+                <Card sx={{...encounterCreatureCardStyles, ...(isSelected ? selectedCreatureStyles : {}) }} onClick={() => { handleSelection(index) }} >
+                    <CardContent>                     
+                        <Grid container>
+                            <Grid xs={2}>                                 
+                                <Avatar sx={viewModel.currentHitpoints <= 0 ? creatureDeathStateStyle : creatureAvatarStyle} 
+                                    src={viewModel.imageUrl} />
+                            </Grid>
+                            <Grid xs={8}>
+                                <Stack>
+                                    <Typography variant='subtitle1'>{viewModel.type} {parseAlignment(viewModel.alignment)}</Typography>
+                                    <Typography variant="h2">{viewModel.name}</Typography>
+                                    <Container sx={encounterCreatureChipContainer}>
+                                        {(viewModel.walkingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<MovementSpeedIcon />} label={viewModel.walkingSpeed} />)}
+                                        {(viewModel.flyingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<FlyingSpeedIcon />} label={viewModel.flyingSpeed} />)}
+                                        {(viewModel.swimmingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<SwimmingSpeedIcon />} label={viewModel.swimmingSpeed} />)}
+                                        {(viewModel.climbingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<ClimbingSpeedIcon />} label={viewModel.climbingSpeed} />)}
+                                        {(viewModel.burrowingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<BurrowingSpeedIcon />} label={viewModel.burrowingSpeed} />)}
+                                    </Container>
+                                </Stack>
+                            </Grid>
+                            <Grid xs={2}>
+                                <Stack>
+                                    <Chip sx={encounterCreatureChipStyle} icon={<LocalHospital />} label={viewModel.currentHitpoints} onClick={() => {manageHitpoints()}} />
+                                    <Chip sx={encounterCreatureChipStyle} icon={<Shield />} label={viewModel.armourClass?.armourClass ?? '-'} />
+                                    <Chip sx={encounterCreatureChipStyle} icon={<InitiativeIcon />} label={viewModel.initiative ?? '-'} />
+                                </Stack>
+                            </Grid>
                         </Grid>
-                        <Grid xs={8}>
-                            <Stack>
-                                <Typography variant='subtitle1'>{viewModel.type} {parseAlignment(viewModel.alignment)}</Typography>
-                                <Typography variant="h2">{viewModel.name}</Typography>
-                                <Container sx={encounterCreatureChipContainer}>
-                                    {(viewModel.walkingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<MovementSpeedIcon />} label={viewModel.walkingSpeed} />)}
-                                    {(viewModel.flyingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<FlyingSpeedIcon />} label={viewModel.flyingSpeed} />)}
-                                    {(viewModel.swimmingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<SwimmingSpeedIcon />} label={viewModel.swimmingSpeed} />)}
-                                    {(viewModel.climbingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<ClimbingSpeedIcon />} label={viewModel.climbingSpeed} />)}
-                                    {(viewModel.burrowingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<BurrowingSpeedIcon />} label={viewModel.burrowingSpeed} />)}
-                                </Container>
-                            </Stack>
-                        </Grid>
-                        <Grid xs={2}>
-                            <Stack>
-                                <Chip sx={encounterCreatureChipStyle} icon={<LocalHospital />} label={viewModel.currentHitpoints} onClick={() => {manageHitpoints()}} />
-                                <Chip sx={encounterCreatureChipStyle} icon={<Shield />} label={viewModel.armourClass?.armourClass ?? '-'} />
-                                <Chip sx={encounterCreatureChipStyle} icon={<InitiativeIcon />} label={viewModel.initiative ?? '-'} />
-                            </Stack>
-                        </Grid>
-                    </Grid>
-                </CardContent>
-            </Card>
+                    </CardContent>
+                </Card>
+            </Badge>
         </>
     );
 }

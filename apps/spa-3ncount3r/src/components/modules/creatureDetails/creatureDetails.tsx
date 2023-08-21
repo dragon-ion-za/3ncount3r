@@ -17,15 +17,16 @@ export const CreatureDetails : React.FC = () => {
 
     useEffect(() => {        
         setModel(encounterContext.getSelectedCreature());
-        let attr: KeyValuePair<string,number>[] = [];
-        attr.push({ key: 'STR', value: model.attributeStr ?? 0 })
-        attr.push({ key: 'DEX', value: model.attributeDex ?? 0 })
-        attr.push({ key: 'CON', value: model.attributeCon ?? 0 })
-        attr.push({ key: 'INT', value: model.attributeInt ?? 0 })
-        attr.push({ key: 'WIS', value: model.attributeWis ?? 0 })
-        attr.push({ key: 'CHA', value: model.attributeCha ?? 0 })
-        setAttributeList(attr);
-
+        if (model !== null) {
+            let attr: KeyValuePair<string,number>[] = [];
+            attr.push({ key: 'STR', value: model.attributeStr ?? 0 })
+            attr.push({ key: 'DEX', value: model.attributeDex ?? 0 })
+            attr.push({ key: 'CON', value: model.attributeCon ?? 0 })
+            attr.push({ key: 'INT', value: model.attributeInt ?? 0 })
+            attr.push({ key: 'WIS', value: model.attributeWis ?? 0 })
+            attr.push({ key: 'CHA', value: model.attributeCha ?? 0 })
+            setAttributeList(attr);
+        }
     }, [encounterContext.getSelectedCreature])
 
     return (

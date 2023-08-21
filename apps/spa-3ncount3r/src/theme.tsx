@@ -133,6 +133,13 @@ export const theme = createTheme({
                 margin: '0px'
             }
         }
+    },
+    MuiBadge: {
+        styleOverrides: {
+            root: {
+                display: 'block'
+            }
+        }
     }
    }
 });
