@@ -6,6 +6,8 @@ export interface IEncounterContext {
     selectedParty: string;
     encounterName: string;
     encounterId: string;
+    roundCounter: number;
+    turnCounter: number;
     setSelectedParty: (partyName: string) => void;
     setCreatures: (creatures: EncounterCreatureViewModel[]) => void;
     setEncounterName: (name: string) => void;
@@ -14,4 +16,6 @@ export interface IEncounterContext {
     removeCreature: (creature: EncounterCreatureViewModel) => void;
     setSelectedCreatureIndex: (index: number) => void;
     getSelectedCreature: () => EncounterCreatureViewModel;
+    setRoundCounter: (round: number) => void;
+    setTurnCounter: (turn: number) => void;
 }

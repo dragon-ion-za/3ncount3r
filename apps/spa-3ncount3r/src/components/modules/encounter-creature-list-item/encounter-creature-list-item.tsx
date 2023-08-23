@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, CardContent, Typography, Avatar, Stack, Chip, Container, Badge } from "@mui/material";
 import { LocalHospital, Shield } from "@mui/icons-material"
 import Grid from '@mui/material/Unstable_Grid2';
@@ -13,6 +13,7 @@ import { ClimbingSpeedIcon } from "../../icons/speed.climbing.icon";
 import { BurrowingSpeedIcon } from "../../icons/speed.burrowing.icon";
 
 import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreatureChipContainer, creatureDeathStateStyle, creatureAvatarStyle, selectedCreatureStyles } from './encounter-creature-list-item.styles';
+import { useEncounterContext } from "apps/spa-3ncount3r/src/providers/encounterContext/encounter.context-provider";
 
 interface EncounterCreatureListItemProps {
     viewModel: EncounterCreatureViewModel;
@@ -23,9 +24,13 @@ interface EncounterCreatureListItemProps {
 }
 
 export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps> = ({viewModel, index, isSelected, handleSelection, manageHitpoints}) => {
+    const encounterContext = useEncounterContext();
+
+    useEffect(() => {}, [encounterContext.turnCounter]);
+
     return (
         <>
-            <Badge color="secondary" variant='dot' invisible={false} component={"div"}>
+            <Badge color="secondary" variant='dot' invisible={index === (encounterContext.turnCounter - 1) ? false : true} component={"div"}>
                 <Card sx={{...encounterCreatureCardStyles, ...(isSelected ? selectedCreatureStyles : {}) }} onClick={() => { handleSelection(index) }} >
                     <CardContent>                     
                         <Grid container>

@@ -17,7 +17,7 @@ export const CreatureDetails : React.FC = () => {
 
     useEffect(() => {        
         setModel(encounterContext.getSelectedCreature());
-        if (model !== null) {
+        if (model !== undefined) {
             let attr: KeyValuePair<string,number>[] = [];
             attr.push({ key: 'STR', value: model.attributeStr ?? 0 })
             attr.push({ key: 'DEX', value: model.attributeDex ?? 0 })
