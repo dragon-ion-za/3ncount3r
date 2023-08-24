@@ -8,8 +8,6 @@ import { roundCounterAvatarStyles, roundCounterCellStyles } from "./encounter-ac
 const EncounterActions : React.FC = () => {
     const [totalXp, setTotalXp] = useState(0);
     const [partyXp, setPartyXp] = useState(0);
-    const [roundCount, setRoundCount] = useState(0);
-    const [turnCount, setTurnCount] = useState(0);
     const [turnMax, setTurnMax] = useState(0);
 
     const encounterContext = useEncounterContext();
@@ -22,9 +20,25 @@ const EncounterActions : React.FC = () => {
         setTurnMax(encounterContext.creatures.length);
     }, [encounterContext.creatures]);
 
-    useEffect(() => {
-        setTurnCount(encounterContext.selectedCreatureIndex + 1);
-    }, [encounterContext.selectedCreatureIndex])
+    useEffect(() => {}, [encounterContext.turnCounter, encounterContext.roundCounter])
+
+    const handleNextTurn = () => {
+        let nextTurnCount = encounterContext.turnCounter + 1;
+
+        if (nextTurnCount > turnMax) {
+            nextTurnCount = 1;
+            let nextRoundCount = encounterContext.roundCounter + 1;
+            encounterContext.setRoundCounter(nextRoundCount);
+        }
+
+        encounterContext.setTurnCounter(nextTurnCount);
+    };
+
+    const handleNextRound = () => {
+        let nextRoundCount = encounterContext.roundCounter + 1;
+        encounterContext.setRoundCounter(nextRoundCount);
+        encounterContext.setTurnCounter(1);
+    };
     
     return (<> 
         <Paper sx={{ position: 'fixed', bottom: 16, left: "calc(50vw - 300px)", width: "600px", margin: "auto", height: "64px"}} elevation={3}>
@@ -41,13 +55,13 @@ const EncounterActions : React.FC = () => {
                 </Grid>
                 <Grid xs={6}>
                     <Grid container>
-                        <Grid sx={roundCounterCellStyles}>Next Round</Grid>
+                        <Grid sx={roundCounterCellStyles} onClick={() => { handleNextRound() }}>Next Round</Grid>
                         <Grid>
                             <Avatar sx={roundCounterAvatarStyles}>
-                                <Typography variant='body1' sx={{fontSize: '20px'}}>{roundCount}<br /><Typography variant='body1'>{turnCount} of {turnMax}</Typography></Typography>
+                                <Typography variant='body1' sx={{fontSize: '20px'}}>{encounterContext.roundCounter}<br /><Typography variant='body1'>{encounterContext.turnCounter} of {turnMax}</Typography></Typography>
                             </Avatar>
                         </Grid>
-                        <Grid sx={roundCounterCellStyles}>Next Turn</Grid>
+                        <Grid sx={roundCounterCellStyles} onClick={() => { handleNextTurn() }}>Next Turn</Grid>
                     </Grid>
                 </Grid>
                 <Grid xs={3}></Grid>
