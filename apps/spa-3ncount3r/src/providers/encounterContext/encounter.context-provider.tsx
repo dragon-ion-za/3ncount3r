@@ -24,6 +24,7 @@ const EncounterContext = createContext<IEncounterContext>({
     addCreature: () => { throw new Error('Encounter State is uninitialised.')},
     removeCreature: () => { throw new Error('Encounter State is uninitialised.')},
     setSelectedCreatureIndex: () => {throw new Error('Encounter State is uninitialised.')},
+    getSelectedCreatureIndex: () => {throw new Error('Encounter State is uninitialised.')},
     getSelectedCreature: () => {throw new Error('Encounter State is uninitialised.')},
     setRoundCounter: () => {throw new Error('Encounter State is uninitialised.')},
     setTurnCounter: () => {throw new Error('Encounter State is uninitialised.')},
@@ -64,6 +65,10 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
     const setSelectedCreatureIndex = (index: number) => {
         setSelectedCreatureIndexInternal(index);
     };
+    
+    const getSelectedCreatureIndex = () => {
+        return selectedCreatureIndex;
+    }
 
     const setSelectedParty = (partyName: string) => {
         setSelectedPartyInternal(partyName);
@@ -105,6 +110,7 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
             addCreature,
             removeCreature,
             setSelectedCreatureIndex,
+            getSelectedCreatureIndex,
             getSelectedCreature,
             setRoundCounter,
             setTurnCounter

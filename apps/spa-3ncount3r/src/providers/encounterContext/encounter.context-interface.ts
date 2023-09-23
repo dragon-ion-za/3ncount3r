@@ -15,6 +15,7 @@ export interface IEncounterContext {
     addCreature: (creature: EncounterCreatureViewModel) => void;
     removeCreature: (creature: EncounterCreatureViewModel) => void;
     setSelectedCreatureIndex: (index: number) => void;
+    getSelectedCreatureIndex: () => number;
     getSelectedCreature: () => EncounterCreatureViewModel;
     setRoundCounter: (round: number) => void;
     setTurnCounter: (turn: number) => void;

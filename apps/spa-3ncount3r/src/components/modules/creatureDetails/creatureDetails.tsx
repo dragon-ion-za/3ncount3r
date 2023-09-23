@@ -27,7 +27,7 @@ export const CreatureDetails : React.FC = () => {
             attr.push({ key: 'CHA', value: model.attributeCha ?? 0 })
             setAttributeList(attr);
         }
-    }, [encounterContext.getSelectedCreature])
+    }, [encounterContext.getSelectedCreatureIndex])
 
     return (
         <>

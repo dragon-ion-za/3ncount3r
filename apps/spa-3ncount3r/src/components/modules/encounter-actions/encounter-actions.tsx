@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Avatar, Paper, Typography } from "@mui/material";
+import { Avatar, Button, Paper, Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
 import { useEncounterContext } from "apps/spa-3ncount3r/src/providers/encounterContext/encounter.context-provider";
@@ -53,18 +53,22 @@ const EncounterActions : React.FC = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid xs={6}>
+                <Grid xs={7}>
                     <Grid container>
-                        <Grid sx={roundCounterCellStyles} onClick={() => { handleNextRound() }}>Next Round</Grid>
+                        <Grid sx={roundCounterCellStyles}>
+                            <Button variant="contained" size="small" onClick={() => { handleNextRound() }}>Next Round</Button>
+                        </Grid>
                         <Grid>
                             <Avatar sx={roundCounterAvatarStyles}>
                                 <Typography variant='body1' sx={{fontSize: '20px'}}>{encounterContext.roundCounter}<br /><Typography variant='body1'>{encounterContext.turnCounter} of {turnMax}</Typography></Typography>
                             </Avatar>
                         </Grid>
-                        <Grid sx={roundCounterCellStyles} onClick={() => { handleNextTurn() }}>Next Turn</Grid>
+                        <Grid sx={roundCounterCellStyles}>
+                            <Button variant="contained" size="small" onClick={() => { handleNextTurn() }}>Next Turn</Button>
+                        </Grid>
                     </Grid>
                 </Grid>
-                <Grid xs={3}></Grid>
+                <Grid xs={2}></Grid>
             </Grid>            
         </Paper>
     </>);
