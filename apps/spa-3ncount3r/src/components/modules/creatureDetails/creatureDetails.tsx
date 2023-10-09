@@ -15,16 +15,17 @@ export const CreatureDetails : React.FC = () => {
     const [attributeList, setAttributeList] = useState<KeyValuePair<string,number>[]>([]);
     const [model, setModel] = useState<EncounterCreatureViewModel>(encounterContext.getSelectedCreature());
 
-    useEffect(() => {        
-        setModel(encounterContext.getSelectedCreature());
-        if (model !== undefined) {
+    useEffect(() => {
+        const selectedCreature = encounterContext.getSelectedCreature();
+        setModel(selectedCreature);
+        if (selectedCreature !== undefined) {
             let attr: KeyValuePair<string,number>[] = [];
-            attr.push({ key: 'STR', value: model.attributeStr ?? 0 })
-            attr.push({ key: 'DEX', value: model.attributeDex ?? 0 })
-            attr.push({ key: 'CON', value: model.attributeCon ?? 0 })
-            attr.push({ key: 'INT', value: model.attributeInt ?? 0 })
-            attr.push({ key: 'WIS', value: model.attributeWis ?? 0 })
-            attr.push({ key: 'CHA', value: model.attributeCha ?? 0 })
+            attr.push({ key: 'STR', value: selectedCreature.attributeStr ?? 0 })
+            attr.push({ key: 'DEX', value: selectedCreature.attributeDex ?? 0 })
+            attr.push({ key: 'CON', value: selectedCreature.attributeCon ?? 0 })
+            attr.push({ key: 'INT', value: selectedCreature.attributeInt ?? 0 })
+            attr.push({ key: 'WIS', value: selectedCreature.attributeWis ?? 0 })
+            attr.push({ key: 'CHA', value: selectedCreature.attributeCha ?? 0 })
             setAttributeList(attr);
         }
     }, [encounterContext.getSelectedCreatureIndex])
