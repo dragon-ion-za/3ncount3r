@@ -8,37 +8,41 @@ import { ActionDetails } from "../../elements/action-details/action-details";
 
 import { KeyValuePair, ResistanceViewModel } from "../../../view-models/shared.view-model";
 import { AttributeDetails } from "../../elements/attribute-details/attribute-details";
+import { EncounterCreatureViewModel } from "apps/spa-3ncount3r/src/view-models/encounter-creature.view-model";
 
-export const CreatureDetails : React.FC = () => { 
-
+export const CreatureDetails : React.FC = () => {
     const encounterContext = useEncounterContext();
     const [attributeList, setAttributeList] = useState<KeyValuePair<string,number>[]>([]);
+    const [model, setModel] = useState<EncounterCreatureViewModel>(encounterContext.getSelectedCreature());
 
-    useEffect(() => {        
-        let attr: KeyValuePair<string,number>[] = [];
-        attr.push({ key: 'STR', value: encounterContext.selectedCreature?.attributeStr ?? 0 })
-        attr.push({ key: 'DEX', value: encounterContext.selectedCreature?.attributeDex ?? 0 })
-        attr.push({ key: 'CON', value: encounterContext.selectedCreature?.attributeCon ?? 0 })
-        attr.push({ key: 'INT', value: encounterContext.selectedCreature?.attributeInt ?? 0 })
-        attr.push({ key: 'WIS', value: encounterContext.selectedCreature?.attributeWis ?? 0 })
-        attr.push({ key: 'CHA', value: encounterContext.selectedCreature?.attributeCha ?? 0 })
-        setAttributeList(attr);
-
-    }, [encounterContext.selectedCreature])
+    useEffect(() => {
+        const selectedCreature = encounterContext.getSelectedCreature();
+        setModel(selectedCreature);
+        if (selectedCreature !== undefined) {
+            let attr: KeyValuePair<string,number>[] = [];
+            attr.push({ key: 'STR', value: selectedCreature.attributeStr ?? 0 })
+            attr.push({ key: 'DEX', value: selectedCreature.attributeDex ?? 0 })
+            attr.push({ key: 'CON', value: selectedCreature.attributeCon ?? 0 })
+            attr.push({ key: 'INT', value: selectedCreature.attributeInt ?? 0 })
+            attr.push({ key: 'WIS', value: selectedCreature.attributeWis ?? 0 })
+            attr.push({ key: 'CHA', value: selectedCreature.attributeCha ?? 0 })
+            setAttributeList(attr);
+        }
+    }, [encounterContext.getSelectedCreatureIndex])
 
     return (
         <>
-            {encounterContext.selectedCreature &&
+            {model &&
             (
                 <Grid container direction='row' sx={{height: '100%'}}>
                     <Grid xs={2}>
                         <Avatar 
-                            src={encounterContext.selectedCreature.imageUrl} 
+                            src={model.imageUrl} 
                             sx={{width: 128, height: 128, margin: 'auto', top: 'calc(50% - 64px)'}} />
                     </Grid>
                     <Grid xs={5}>
                         <Stack>
-                            <Typography variant="h1">{encounterContext.selectedCreature.name}</Typography>
+                            <Typography variant="h1">{model.name}</Typography>
                             
                             <Divider />
 
@@ -47,44 +51,44 @@ export const CreatureDetails : React.FC = () => {
                             <Divider />
 
                             <Typography variant="body1">
-                                <strong>Passive Perception:</strong> {encounterContext.selectedCreature.passivePerception}
+                                <strong>Passive Perception:</strong> {model.passivePerception}
                             </Typography>
 
-                            {encounterContext.selectedCreature.languages?.length > 0 &&
+                            {model.languages?.length > 0 &&
                             (
                                 <Typography variant="body1">
-                                    <strong>Languages:</strong> {encounterContext.selectedCreature.languages.join(', ')}
+                                    <strong>Languages:</strong> {model.languages.join(', ')}
                                 </Typography>
                             )}
 
-                            {encounterContext.selectedCreature.senses?.length > 0 &&
+                            {model.senses?.length > 0 &&
                             (
                                 <Typography variant="body1">
-                                    <strong>Senses:</strong> {encounterContext.selectedCreature.senses.join(', ')}
+                                    <strong>Senses:</strong> {model.senses.join(', ')}
                                 </Typography>
                             )}
 
-                            {encounterContext.selectedCreature.savingThrows?.length > 0 &&
+                            {model.savingThrows?.length > 0 &&
                             (
                                 <Typography variant="body1">
-                                    <strong>Saving Throws:</strong> {encounterContext.selectedCreature.savingThrows
+                                    <strong>Saving Throws:</strong> {model.savingThrows
                                                                         .map(x => `${x.skillName} ${x.modifier > 0 ? '+' : ''}${x.modifier}`)
                                                                         .join(', ')}
                                 </Typography>
                             )}
 
                             <Typography variant="body1">
-                                <strong>Challenge Rating:</strong> {encounterContext.selectedCreature.challengeRating?.rating ?? 0} ({encounterContext.selectedCreature.challengeRating?.experience ?? 0} XP)
+                                <strong>Challenge Rating:</strong> {model.challengeRating?.rating ?? 0} ({model.challengeRating?.experience ?? 0} XP)
                             </Typography>
 
                             <Divider />
 
-                            {encounterContext.selectedCreature.resistances?.length > 0 && 
+                            {model.resistances?.length > 0 && 
                             (
                                 <>
                                     <Typography variant="h3">Resistances</Typography>
                                     <Container>
-                                        {encounterContext.selectedCreature.resistances.map((resistance: ResistanceViewModel) => 
+                                        {model.resistances.map((resistance: ResistanceViewModel) => 
                                             (<DamageConditionType key={`res_${resistance.resistantTo}`} type={resistance.resistantTo} condition={resistance.condition} />)
                                         )}
                                     </Container>
@@ -92,12 +96,12 @@ export const CreatureDetails : React.FC = () => {
                                 
                             )}
 
-                            {encounterContext.selectedCreature.immunities?.length > 0 && 
+                            {model.immunities?.length > 0 && 
                             (
                                 <>
                                     <Typography variant="h3">Immunities</Typography>
                                     <Container>
-                                        {encounterContext.selectedCreature.immunities.map((immunity: ResistanceViewModel) => 
+                                        {model.immunities.map((immunity: ResistanceViewModel) => 
                                             (<DamageConditionType key={`imm_${immunity.resistantTo}`} type={immunity.resistantTo} condition={immunity.condition} />)
                                         )}
                                     </Container>
@@ -108,7 +112,7 @@ export const CreatureDetails : React.FC = () => {
                         </Stack>
                     </Grid>
                     <Grid xs={5}>
-                        <ActionDetails actionGroups={encounterContext.selectedCreature.actionGroups} />
+                        <ActionDetails actionGroups={model.actionGroups} />
                     </Grid>
                 </Grid>
             )}

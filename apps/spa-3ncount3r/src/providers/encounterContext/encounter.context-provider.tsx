@@ -11,27 +11,35 @@ interface EncounterContextProviderProps {
 
 const EncounterContext = createContext<IEncounterContext>({ 
     creatures: [], 
-    selectedCreature: null,
+    selectedCreatureIndex: 0,
     selectedParty: '',
     encounterName: '',
     encounterId: '',
+    roundCounter: 0,
+    turnCounter: 0,
     setSelectedParty: () => { throw new Error('Encounter State is uninitialised.')},
     setCreatures: () => { throw new Error('Encounter State is uninitialised.')},
     setEncounterName: () => { throw new Error('Encounter State is uninitialised.')},
     setEncounterId: () => { throw new Error('Encounter State is uninitialised.')},
     addCreature: () => { throw new Error('Encounter State is uninitialised.')},
     removeCreature: () => { throw new Error('Encounter State is uninitialised.')},
-    setSelectedCreature: () => {throw new Error('Encounter State is uninitialised.')}
+    setSelectedCreatureIndex: () => {throw new Error('Encounter State is uninitialised.')},
+    getSelectedCreatureIndex: () => {throw new Error('Encounter State is uninitialised.')},
+    getSelectedCreature: () => {throw new Error('Encounter State is uninitialised.')},
+    setRoundCounter: () => {throw new Error('Encounter State is uninitialised.')},
+    setTurnCounter: () => {throw new Error('Encounter State is uninitialised.')},
 });
 
 export const useEncounterContext = () => useContext(EncounterContext);
 
 export const EncounterContextProvider : React.FC<EncounterContextProviderProps> = ({children}) => {
     const [creatures, setCreaturesInternal] = useState<EncounterCreatureViewModel[]>([]);
-    const [selectedCreature, setSelectedCreatureInternal] = useState<EncounterCreatureViewModel | null>(null);
+    const [selectedCreatureIndex, setSelectedCreatureIndexInternal] = useState<number>(0);
     const [selectedParty, setSelectedPartyInternal] = useState<string>('');
     const [encounterName, setEncounterNameInternal] = useState<string>('');
     const [encounterId, setEncounterIdInternal] = useState<string>('');
+    const [roundCounter, setRoundCounterInternal] = useState<number>(1);
+    const [turnCounter, setTurnCounterInternal] = useState<number>(1);
 
     const creatureInitiativeEqualityComparer = (x: EncounterCreatureViewModel, y: EncounterCreatureViewModel) => {
         if (x?.initiative > y?.initiative) return -1;
@@ -54,9 +62,13 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
         throw new Error('Method not implemented');
     };
 
-    const setSelectedCreature = (selectedCreature: EncounterCreatureViewModel) => {
-        setSelectedCreatureInternal(selectedCreature);
+    const setSelectedCreatureIndex = (index: number) => {
+        setSelectedCreatureIndexInternal(index);
     };
+    
+    const getSelectedCreatureIndex = () => {
+        return selectedCreatureIndex;
+    }
 
     const setSelectedParty = (partyName: string) => {
         setSelectedPartyInternal(partyName);
@@ -70,20 +82,38 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
         setEncounterIdInternal(id);
     }
 
+    const getSelectedCreature = () => {
+        return creatures[selectedCreatureIndex];
+    }
+
+    const setRoundCounter = (round: number) => {
+        setRoundCounterInternal(round);
+    }
+
+    const setTurnCounter = (turn: number) => {
+        setTurnCounterInternal(turn);
+    }
+
     return (<>
         <EncounterContext.Provider value={{
             creatures,
-            selectedCreature,
+            selectedCreatureIndex,
             selectedParty,
             encounterName,
             encounterId,
+            roundCounter,
+            turnCounter,
             setSelectedParty,
             setCreatures,
             setEncounterName,
             setEncounterId,
             addCreature,
             removeCreature,
-            setSelectedCreature
+            setSelectedCreatureIndex,
+            getSelectedCreatureIndex,
+            getSelectedCreature,
+            setRoundCounter,
+            setTurnCounter
         }}>
             {children}
         </EncounterContext.Provider>        

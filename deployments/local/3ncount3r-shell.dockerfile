@@ -1,4 +1,4 @@
-FROM ghcr.io/dragon-ion-za/3ncount3r-shell:bane-4thlevel
+FROM ghcr.io/dragon-ion-za/3ncount3r-shell:bane-5thlevel
 
 COPY config/shell/nginx/default.conf /etc/nginx/conf.d/default.conf
 
