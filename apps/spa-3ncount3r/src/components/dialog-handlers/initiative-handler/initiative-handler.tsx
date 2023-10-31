@@ -30,7 +30,8 @@ export const InitiativeHandler : React.FC = () => {
                 console.log('save failed!!!');
             }
         } else {
-            encounterId = await updateEncounter(encounterContext.encounterName, encounterContext.encounterId, creatures, partyName);
+            encounterId = await updateEncounter(encounterContext.encounterName, encounterContext.encounterId, creatures, partyName, 
+                encounterContext.roundCounter, encounterContext.turnCounter);
 
             if (encounterId === '') {
                 console.log('save failed!!!');

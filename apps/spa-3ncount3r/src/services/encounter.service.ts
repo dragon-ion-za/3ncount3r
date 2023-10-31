@@ -25,12 +25,15 @@ export async function saveEncounterTemplate(encounterName: string, encounterCrea
      return response.data as string;
 }
 
-export async function updateEncounter(encounterName: string, encounterId: string, encounterCreatures: EncounterCreatureViewModel[], encounterParty: string): Promise<string> {
+export async function updateEncounter(encounterName: string, encounterId: string, encounterCreatures: EncounterCreatureViewModel[], 
+    encounterParty: string, roundNumber: number, turnNumber: number): Promise<string> {
     const response = await axios.put(`${BASE_URL}encounters`, { 
         name: encounterName,
         id: encounterId,
         creatures: encounterCreatures,
-        selectedParty: encounterParty
+        selectedParty: encounterParty,
+        roundCount: roundNumber,
+        currentTurn: turnNumber
      });
 
      return response.data as string;
