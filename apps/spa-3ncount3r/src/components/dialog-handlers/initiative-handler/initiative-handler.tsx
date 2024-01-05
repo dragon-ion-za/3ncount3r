@@ -22,7 +22,8 @@ export const InitiativeHandler : React.FC = () => {
 
         let encounterId: string = '';
         if (isNew) {
-            encounterId = await saveEncounter(encounterContext.encounterName, creatures, partyName);
+            encounterId = await saveEncounter(encounterContext.encounterName, creatures, partyName, 
+                encounterContext.roundCounter, encounterContext.turnCounter);
 
             if (encounterId !== '') {
                 encounterContext.setEncounterId(encounterId);

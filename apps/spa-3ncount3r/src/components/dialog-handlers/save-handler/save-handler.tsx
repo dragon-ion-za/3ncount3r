@@ -22,7 +22,8 @@ export const SaveHandler : React.FC = () => {
             if (encounterContext.selectedParty === undefined || encounterContext.selectedParty === '') {
                 await saveEncounterTemplate(encounterName, encounterContext.creatures);
             } else {
-                await saveEncounter(encounterName, encounterContext.creatures, encounterContext.selectedParty);
+                await saveEncounter(encounterName, encounterContext.creatures, 
+                    encounterContext.selectedParty, encounterContext.roundCounter, encounterContext.turnCounter);
             }
 
             if (encounterId !== '') {

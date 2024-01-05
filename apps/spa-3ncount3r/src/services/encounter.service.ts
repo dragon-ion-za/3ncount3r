@@ -6,11 +6,14 @@ import { EncounterViewModel } from "../view-models/encounter.view-model";
 
 const BASE_URL = environment.apiBaseUrl;
 
-export async function saveEncounter(encounterName: string, encounterCreatures: EncounterCreatureViewModel[], encounterParty: string): Promise<string> {
+export async function saveEncounter(encounterName: string, encounterCreatures: EncounterCreatureViewModel[], 
+    encounterParty: string, roundNumber: number, turnNumber: number): Promise<string> {
     const response = await axios.post(`${BASE_URL}encounters`, { 
         name: encounterName,
         creatures: encounterCreatures,
-        selectedParty: encounterParty
+        selectedParty: encounterParty,
+        roundCount: roundNumber,
+        currentTurn: turnNumber
      });
 
      return response.data as string;
@@ -19,7 +22,9 @@ export async function saveEncounter(encounterName: string, encounterCreatures: E
 export async function saveEncounterTemplate(encounterName: string, encounterCreatures: EncounterCreatureViewModel[]): Promise<string> {
     const response = await axios.post(`${BASE_URL}encountertemplates`, { 
         name: encounterName,
-        creatures: encounterCreatures
+        creatures: encounterCreatures,
+        roundCount: 1,
+        currentTurn: 1
      });
 
      return response.data as string;
@@ -43,7 +48,9 @@ export async function updateEncounterTemplate(encounterName: string, encounterId
     const response = await axios.put(`${BASE_URL}encountertemplates`, { 
         name: encounterName,
         id: encounterId,
-        creatures: encounterCreatures
+        creatures: encounterCreatures,
+        roundCount: 1,
+        currentTurn: 1
      });
 
      return response.data as string;
