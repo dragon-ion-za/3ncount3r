@@ -18,11 +18,12 @@ export const InitiativeHandler : React.FC = () => {
     const handleAccept = async (creatures: EncounterCreatureViewModel[], partyName: string) => {
         // Store an 'is new' value before setting anything so that we know if this needs to be a new encounter
         // from a template or an update to an existing encounter
-        let isNew: boolean = encounterContext.selectedParty !== undefined || encounterContext.selectedParty !== '';
+        let isNew: boolean = !encounterContext.selectedParty;
 
         let encounterId: string = '';
         if (isNew) {
-            encounterId = await saveEncounter(encounterContext.encounterName, creatures, partyName);
+            encounterId = await saveEncounter(encounterContext.encounterName, creatures, partyName, 
+                encounterContext.roundCounter, encounterContext.turnCounter);
 
             if (encounterId !== '') {
                 encounterContext.setEncounterId(encounterId);
@@ -30,7 +31,8 @@ export const InitiativeHandler : React.FC = () => {
                 console.log('save failed!!!');
             }
         } else {
-            encounterId = await updateEncounter(encounterContext.encounterName, encounterContext.encounterId, creatures, partyName);
+            encounterId = await updateEncounter(encounterContext.encounterName, encounterContext.encounterId, creatures, partyName, 
+                encounterContext.roundCounter, encounterContext.turnCounter);
 
             if (encounterId === '') {
                 console.log('save failed!!!');

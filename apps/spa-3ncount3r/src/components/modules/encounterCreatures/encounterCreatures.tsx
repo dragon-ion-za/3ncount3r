@@ -39,6 +39,8 @@ export const EncounterCreatures : React.FC = () => {
                     encounterContext.setEncounterId(x.id);
                     encounterContext.setEncounterName(x.name);
                     encounterContext.setSelectedParty('');
+                    encounterContext.setRoundCounter(0);
+                    encounterContext.setTurnCounter(0);
                 });
             } else {
                 getEncounterById(id).then(x => {
@@ -46,6 +48,8 @@ export const EncounterCreatures : React.FC = () => {
                     encounterContext.setEncounterId(x.id);
                     encounterContext.setEncounterName(x.name);
                     encounterContext.setSelectedParty(x.selectedParty);
+                    encounterContext.setRoundCounter(x.roundCount);
+                    encounterContext.setTurnCounter(x.currentTurn);
                 });
             }
         } else {
@@ -53,6 +57,8 @@ export const EncounterCreatures : React.FC = () => {
             encounterContext.setEncounterId('');
             encounterContext.setEncounterName('');
             encounterContext.setSelectedParty('');
+            encounterContext.setRoundCounter(0);
+            encounterContext.setTurnCounter(0);
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);

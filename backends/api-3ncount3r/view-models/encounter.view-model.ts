@@ -6,5 +6,5 @@ export class EncounterViewModel {
     creatures: EncounterCreatureViewModel[] = [];
     selectedParty: string = '';
     roundCount: number = 0;
-    currentTurn: string = '';
+    currentTurn: number = 0;
 }

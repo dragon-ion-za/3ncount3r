@@ -43,11 +43,13 @@ export class DataService {
 
     public static async updateEncounter(encounter: EncounterModel) : Promise<string> {
         await this.connectToDb();
-        console.log(encounter);
+        
         let result = await this.collections.encounters?.updateOne({id: encounter.id}, { $set: { 
             name: encounter.name,
             creatures: encounter.creatures,
-            selectedParty: encounter.selectedParty
+            selectedParty: encounter.selectedParty,
+            currentTurn: encounter.currentTurn,
+            roundCount: encounter.roundCount
          } });
 
         if (result?.acknowledged) {
