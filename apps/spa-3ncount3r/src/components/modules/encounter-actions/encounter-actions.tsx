@@ -4,13 +4,25 @@ import Grid from '@mui/material/Unstable_Grid2';
 
 import { useEncounterContext } from "apps/spa-3ncount3r/src/providers/encounterContext/encounter.context-provider";
 import { roundCounterAvatarStyles, roundCounterCellStyles } from "./encounter-actions.styles";
+import { ExpandedPartyViewModel } from "apps/spa-3ncount3r/src/view-models/expanded-party.view-model";
+import { getParty } from "apps/spa-3ncount3r/src/services/party.service";
 
 const EncounterActions : React.FC = () => {
     const [totalXp, setTotalXp] = useState(0);
     const [partyXp, setPartyXp] = useState(0);
     const [turnMax, setTurnMax] = useState(0);
+    const [currentXp, setCurrentXp] = useState(0);
 
     const encounterContext = useEncounterContext();
+
+    useEffect(() => {
+        const fetchData = async () => {
+            let party: ExpandedPartyViewModel = await getParty(encounterContext.selectedParty);
+            setCurrentXp(party.currentXp ?? 0);
+        };
+
+        fetchData();
+    }, [encounterContext.selectedParty]);
 
     useEffect(() => {
         let xp: number = 0;
@@ -68,7 +80,13 @@ const EncounterActions : React.FC = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid xs={2}></Grid>
+                <Grid xs={2}>
+                    <Grid container direction="column" sx={roundCounterCellStyles}>
+                        <Grid>
+                            Current XP: {currentXp}
+                        </Grid>
+                    </Grid>
+                </Grid>
             </Grid>            
         </Paper>
     </>);

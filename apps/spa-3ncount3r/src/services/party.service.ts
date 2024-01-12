@@ -18,14 +18,7 @@ export async function getPartyList() : Promise<PartyViewModel[]> {
     return creatures;
 }
 
-export async function getPartyMembers(partyName: string) : Promise<CharacterViewModel[]> {
-    let creatures: CharacterViewModel[] = [];
-
+export async function getParty(partyName: string) : Promise<ExpandedPartyViewModel> {
     const response = await axios.get(`${BASE_URL}parties/${partyName}`);
-
-    (response.data as ExpandedPartyViewModel)?.characters.forEach((character: CharacterViewModel) => {
-        creatures.push(character);
-    });
-
-    return creatures;
+    return response.data as ExpandedPartyViewModel;
 }
