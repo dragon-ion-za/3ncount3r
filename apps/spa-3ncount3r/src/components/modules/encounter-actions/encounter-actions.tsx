@@ -17,7 +17,7 @@ const EncounterActions : React.FC = () => {
         xp = encounterContext.creatures.filter(x => !x.isPlayerCharacter).reduce((sum, x) => sum += x.challengeRating?.experience ?? 0, 0);
         setTotalXp(xp);
         setPartyXp(xp / Math.max(encounterContext.creatures.filter(x => x.isPlayerCharacter).length, 1));
-        setTurnMax(encounterContext.creatures.length);
+        setTurnMax(encounterContext.creatures.filter(x => x.isActive).length);
     }, [encounterContext.creatures]);
 
     useEffect(() => {}, [encounterContext.turnCounter, encounterContext.roundCounter])
