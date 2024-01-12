@@ -8,4 +8,5 @@ export class EncounterCreatureModel {
     temporaryHitpoints: number = 0;
     initiative: number = 0;
     isPlayerCharacter: boolean = false;
+    isActive: boolean = true;
 }

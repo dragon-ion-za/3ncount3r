@@ -7,4 +7,5 @@ export class EncounterCreatureViewModel extends CreatureViewModel {
     currentHitpoints: number = 0;
     initiative: number = 0;
     isPlayerCharacter: boolean = false;
+    isActive: boolean = true;
 }
