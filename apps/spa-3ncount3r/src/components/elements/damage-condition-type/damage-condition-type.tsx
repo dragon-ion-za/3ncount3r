@@ -1,5 +1,5 @@
 import React from "react";
-import { Chip, SvgIcon } from "@mui/material";
+import { Chip, SvgIcon, Tooltip } from "@mui/material";
 
 import { NecroticDamageIcon } from "../../icons/damage-type.necrotic.icon";
 import { ColdDamageIcon } from "../../icons/damage-type.cold.icon";
@@ -60,7 +60,7 @@ export const DamageConditionType : React.FC<DamageConditionTypeProps> = ({key, t
             case 'slashing': return isMagical ? (<MagicalSlashingDamageIcon />) : (<SlashingDamageIcon />);
             case 'stunned': return (<StunnedDamageIcon />);
 
-            default: console.log(`unknown damage/condition type: ${damageType}`); return (<SvgIcon />);
+            default: console.log(`unknown damage/condition type: ${damageType}`); return (<Tooltip title={type}><SvgIcon /></Tooltip>);
         }
     };
 
