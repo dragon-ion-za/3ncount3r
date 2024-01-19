@@ -39,6 +39,8 @@ export const InitiativeHandler : React.FC = () => {
             }
         }
 
+        encounterContext.setCreatures(creatures);
+
         navigate(`/${encounterId}`);
         toggleModal(false);
     };
