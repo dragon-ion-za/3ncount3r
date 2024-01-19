@@ -32,7 +32,7 @@ const EncountersMenu : React.FC<EncountersMenuProps> = (props: EncountersMenuPro
         <>
             {!props.isExpanded ? 
                 <>
-                    <IconButton aria-label="add" onClick={() => {routeChange(''); return;}}>
+                    <IconButton aria-label="add" onClick={() => {routeChange('/'); return;}}>
                         <AddIcon />
                     </IconButton>
                     <IconButton aria-label="add" onClick={() => {toggleModal(true)}}>
