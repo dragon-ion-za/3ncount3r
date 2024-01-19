@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router";
-import { DialogContent, Modal, Stack } from "@mui/material";
+import { Badge, DialogContent, Divider, Modal, Stack } from "@mui/material";
 
 import { useEncounterContext } from "../../../providers/encounterContext/encounter.context-provider";
 import { EncounterCreatureListItem } from "../encounter-creature-list-item/encounter-creature-list-item";
@@ -83,10 +83,16 @@ export const EncounterCreatures : React.FC = () => {
     return (
         <>
             <Stack>
-                {encounterContext.creatures?.map((creature: EncounterCreatureViewModel, index: number) => (
-                    <EncounterCreatureListItem key={creature.id} viewModel={creature} index={index}
-                     handleSelection={handleCreatureSelection} manageHitpoints={doHitpointManagement} isSelected={selectedIndex === index} />
+                {encounterContext.creatures?.filter(x => x.isActive).map((creature: EncounterCreatureViewModel, index: number) => (
+                    <Badge color="secondary" variant='dot' invisible={index === (encounterContext.turnCounter - 1) ? false : true} component={"div"}>
+                        <EncounterCreatureListItem key={creature.id} viewModel={creature} index={index}
+                            handleSelection={handleCreatureSelection} manageHitpoints={doHitpointManagement} isSelected={selectedIndex === index} />
+                    </Badge>
                 ))}
+            </Stack>
+            
+            <Stack>
+                
             </Stack>
             
             <Modal 

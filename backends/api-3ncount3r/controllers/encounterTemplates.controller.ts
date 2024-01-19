@@ -61,7 +61,8 @@ export class EncounterTemplatesController extends BaseController<EncounterModel,
                 ...await CharacterService.getCharacterById(creature.id),
                 id: creature.id,
                 initiative: creature.initiative,
-                isPlayerCharacter: false };
+                isPlayerCharacter: false,
+                isActive: true };
         } else {
             foundCreature = { 
                 id: creature.id,
@@ -69,6 +70,7 @@ export class EncounterTemplatesController extends BaseController<EncounterModel,
                 currentHitpoints: creature.currentHitpoints,
                 initiative: creature.initiative,
                 isPlayerCharacter: false,
+                isActive: true,
                 ...await ByoApiService.getCreatureByName(creature.name, creature.byoapiId) 
             }
         }

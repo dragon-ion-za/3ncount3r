@@ -30,38 +30,36 @@ export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps
 
     return (
         <>
-            <Badge color="secondary" variant='dot' invisible={index === (encounterContext.turnCounter - 1) ? false : true} component={"div"}>
-                <Card sx={{...encounterCreatureCardStyles, ...(isSelected ? selectedCreatureStyles : {}) }} onClick={() => { handleSelection(index) }} >
-                    <CardContent>                     
-                        <Grid container>
-                            <Grid xs={2}>                                 
-                                <Avatar sx={viewModel.currentHitpoints <= 0 ? creatureDeathStateStyle : creatureAvatarStyle} 
-                                    src={viewModel.imageUrl} />
-                            </Grid>
-                            <Grid xs={8}>
-                                <Stack>
-                                    <Typography variant='subtitle1'>{viewModel.type} {parseAlignment(viewModel.alignment)}</Typography>
-                                    <Typography variant="h2">{viewModel.name}</Typography>
-                                    <Container sx={encounterCreatureChipContainer}>
-                                        {(viewModel.walkingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<MovementSpeedIcon />} label={viewModel.walkingSpeed} />)}
-                                        {(viewModel.flyingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<FlyingSpeedIcon />} label={viewModel.flyingSpeed} />)}
-                                        {(viewModel.swimmingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<SwimmingSpeedIcon />} label={viewModel.swimmingSpeed} />)}
-                                        {(viewModel.climbingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<ClimbingSpeedIcon />} label={viewModel.climbingSpeed} />)}
-                                        {(viewModel.burrowingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<BurrowingSpeedIcon />} label={viewModel.burrowingSpeed} />)}
-                                    </Container>
-                                </Stack>
-                            </Grid>
-                            <Grid xs={2}>
-                                <Stack>
-                                    <Chip sx={encounterCreatureChipStyle} icon={<LocalHospital />} label={viewModel.currentHitpoints} onClick={() => {manageHitpoints()}} />
-                                    <Chip sx={encounterCreatureChipStyle} icon={<Shield />} label={viewModel.armourClass?.armourClass ?? '-'} />
-                                    <Chip sx={encounterCreatureChipStyle} icon={<InitiativeIcon />} label={viewModel.initiative ?? '-'} />
-                                </Stack>
-                            </Grid>
+            <Card sx={{...encounterCreatureCardStyles, ...(isSelected ? selectedCreatureStyles : {}) }} onClick={() => { handleSelection(index) }} >
+                <CardContent>                     
+                    <Grid container>
+                        <Grid xs={2}>                                 
+                            <Avatar sx={viewModel.currentHitpoints <= 0 ? creatureDeathStateStyle : creatureAvatarStyle} 
+                                src={viewModel.imageUrl} />
                         </Grid>
-                    </CardContent>
-                </Card>
-            </Badge>
+                        <Grid xs={8}>
+                            <Stack>
+                                <Typography variant='subtitle1'>{viewModel.type} {parseAlignment(viewModel.alignment)}</Typography>
+                                <Typography variant="h2">{viewModel.name}</Typography>
+                                <Container sx={encounterCreatureChipContainer}>
+                                    {(viewModel.walkingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<MovementSpeedIcon />} label={viewModel.walkingSpeed} />)}
+                                    {(viewModel.flyingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<FlyingSpeedIcon />} label={viewModel.flyingSpeed} />)}
+                                    {(viewModel.swimmingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<SwimmingSpeedIcon />} label={viewModel.swimmingSpeed} />)}
+                                    {(viewModel.climbingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<ClimbingSpeedIcon />} label={viewModel.climbingSpeed} />)}
+                                    {(viewModel.burrowingSpeed > 0 && <Chip sx={encounterCreatureChipStyle} icon={<BurrowingSpeedIcon />} label={viewModel.burrowingSpeed} />)}
+                                </Container>
+                            </Stack>
+                        </Grid>
+                        <Grid xs={2}>
+                            <Stack>
+                                <Chip sx={encounterCreatureChipStyle} icon={<LocalHospital />} label={viewModel.currentHitpoints} onClick={() => {manageHitpoints()}} />
+                                <Chip sx={encounterCreatureChipStyle} icon={<Shield />} label={viewModel.armourClass?.armourClass ?? '-'} />
+                                <Chip sx={encounterCreatureChipStyle} icon={<InitiativeIcon />} label={viewModel.initiative ?? '-'} />
+                            </Stack>
+                        </Grid>
+                    </Grid>
+                </CardContent>
+            </Card>
         </>
     );
 }

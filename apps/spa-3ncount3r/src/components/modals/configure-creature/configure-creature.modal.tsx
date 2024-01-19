@@ -47,6 +47,8 @@ export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = fo
         let encounterCreature: EncounterCreatureViewModel = {...viewModel} as EncounterCreatureViewModel;
         encounterCreature.hitpointMax = encounterCreature.currentHitpoints = rolledHitpoints;
         encounterCreature.id = uuid();
+        encounterCreature.isActive = true;
+        encounterCreature.initiative = 0;
         return encounterCreature;
     }
 

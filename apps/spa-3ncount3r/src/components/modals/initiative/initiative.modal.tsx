@@ -1,5 +1,5 @@
 import React, { forwardRef, useEffect, useState } from "react";
-import { Box, Grid, Typography, Button, Table, TableHead, TableRow, TableCell, TableBody, TextField, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from "@mui/material";
+import { Box, Grid, Typography, Button, Table, TableHead, TableRow, TableCell, TableBody, TextField, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, Checkbox } from "@mui/material";
 
 import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
 import { doDiceFormulaCalculation } from "../../../services/dice.service";
@@ -33,6 +33,12 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
     const manuallyUpdateInitiative = (event: any, index: number) => {
         let state = [...creatures];
         state[index].initiative = parseInt(event.target.value);
+        setCreatures(state);
+    }
+
+    const toggleIsActive = (index: number, checked: boolean) => {
+        let state = [...creatures];
+        state[index].isActive = checked;
         setCreatures(state);
     }
 
@@ -81,6 +87,7 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
                         <Table>
                             <TableHead>
                                 <TableRow>
+                                    <TableCell>Active</TableCell>
                                     <TableCell>Creature</TableCell>
                                     <TableCell>Modifier</TableCell>
                                     <TableCell>Rolled</TableCell>
@@ -91,6 +98,9 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
                             <TableBody>
                                 {creatures.map((creature, index) => (
                                     <TableRow key={`creature_${index}`}>
+                                        <TableCell>
+                                            <Checkbox checked={creature.isActive} onChange={(e, checked) => toggleIsActive(index, checked)} />
+                                        </TableCell>
                                         <TableCell>{creature.name}</TableCell>
                                         <TableCell>{calculateAbilityScoreModifier(creature.attributeDex)}</TableCell>
                                         <TableCell>{creature.initiative - calculateAbilityScoreModifier(creature.attributeDex)}</TableCell>
@@ -99,10 +109,10 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
                                                 type="number"
                                                 variant="standard"
                                                 value={creature.initiative}
-                                                onChange={(e) => { manuallyUpdateInitiative(e, index) }} />                                            
+                                                onChange={(e) => { manuallyUpdateInitiative(e, index) }} disabled={!creature.isActive} />                                            
                                         </TableCell>
                                         <TableCell>
-                                        <Button variant="outlined" onClick={() => rollInitiativeForCreature(index)}>Roll</Button>
+                                            <Button variant="outlined" onClick={() => rollInitiativeForCreature(index)} disabled={!creature.isActive}>Roll</Button>
                                         </TableCell>
                                     </TableRow>
                                 ))}
