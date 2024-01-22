@@ -1,7 +1,6 @@
 name: Shell CI
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - 'feat/*'
