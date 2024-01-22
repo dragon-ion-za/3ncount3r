@@ -56,5 +56,5 @@ jobs:
           }
 
           echo ::NextVersionNumber::
-          echo "nextVersion=$version_name-${versionOrdinalNumber}Level-${github.run_attempt}" >> $env:GITHUB_OUTPUT
-          echo $version_name-${versionOrdinalNumber}Level-${github.run_attempt}
+          echo "nextVersion=$version_name-${versionOrdinalNumber}Level" >> $env:GITHUB_OUTPUT
+          echo $version_name-${versionOrdinalNumber}Level
