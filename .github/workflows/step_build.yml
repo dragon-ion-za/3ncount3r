@@ -29,6 +29,35 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Get current version name
+      id: getVersion
+      shell: pwsh
+      run: | 
+        $vName = (Get-Content ${{ inputs.sourcePath }}/package.json) -join "`n" | ConvertFrom-Json | Select -ExpandProperty "version"
+        echo "verName=$vName" >> $env:GITHUB_OUTPUT
+
+    - name: Get last tag
+      id: getTag
+      shell: pwsh
+      run: | 
+        $verList = git tag -l ${{ inputs.tagName }}-${{ steps.getVersion.outputs.verName }}* --sort=-v:refname
+
+        if ($verList -ne $null)
+        {
+          if ($verList.Contains([Environment]::NewLine))
+          {
+            echo "tag=$verList.Split([Environment]::NewLine) | Select -First 1" >> $env:GITHUB_OUTPUT
+          }
+          else
+          {
+            echo "tag=$verList" >> $env:GITHUB_OUTPUT
+          }
+        }
+        else
+        {
+          echo "tag=''" >> $env:GITHUB_OUTPUT
+        }
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -39,6 +68,12 @@ jobs:
         cd ${{ inputs.sourcePath }}
         npm install
         npm run build
+
+    - name: Display Version Detail
+      shell: pwsh
+      run: | 
+        Write-Host ${{ steps.getTag.outputs.tag }}
+        Write-Host ${{ steps.getVersion.outputs.verName }}
     
     - name: Publish Artifacts
       uses: actions/upload-artifact@v3
