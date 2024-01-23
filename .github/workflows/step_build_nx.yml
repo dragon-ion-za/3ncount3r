@@ -30,15 +30,6 @@ jobs:
       with:
         fetch-depth: 0
 
-    - uses: ./.github/workflows/generate_version.yml
-      id: generateVersion
-
-    - name: Display Version Detail
-      shell: pwsh
-      run: | 
-        Write-Host ${{ steps.generateVersion.outputs.lastTag }}
-        Write-Host ${{ steps.generateVersion.outputs.versionName }}
-
     - name: Use Node.js
       uses: actions/setup-node@v3
 
