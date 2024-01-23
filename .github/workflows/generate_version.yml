@@ -12,12 +12,15 @@ on:
     outputs:
       nextVersion: 
         value: ${{ jobs.createVersion.outputs.nextVersion }}
+      buildVersion:
+        value: ${{ jobs.createVersion.outputs.buildVersion }}
 
 jobs:
   createVersion:
     runs-on: ubuntu-latest
     outputs:
       nextVersion: ${{ steps.createTagName.outputs.nextVersion }}
+      buildVersion: ${{ steps.createTagName.outputs.buildVersion }}
     steps:
       - name: Create Tag Name
         id: createTagName
@@ -56,5 +59,9 @@ jobs:
           }
 
           echo ::NextVersionNumber::
-          echo "nextVersion=$version_name-${versionOrdinalNumber}Level" >> $env:GITHUB_OUTPUT
-          echo $version_name-${versionOrdinalNumber}Level
+          echo "nextVersion=$version_name-${versionOrdinalNumber}Level-${{ github.run_id }}.${{ github.run_attempt }}" >> $env:GITHUB_OUTPUT
+          echo $version_name-${versionOrdinalNumber}Level-${{ github.run_id }}.${{ github.run_attempt }}
+
+          echo ::BuildVersionNumber::
+          echo "nextVersion=$version_name-${{ github.run_id }}${{ github.run_attempt }}" >> $env:GITHUB_OUTPUT
+          echo $version_name-${{ github.run_id }}.${{ github.run_attempt }}

@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "BagOfBeans",
+  "version": "CallLightning",
   "description": "",
   "main": "server.ts",
   "scripts": {
