@@ -61,6 +61,6 @@ jobs:
             github.rest.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              ref: 'refs/tags/cl3anslat3-api-${{ github.run_attempt }}',
+              ref: 'refs/tags/cl3anslat3-api-${{ needs.generateVersion.outputs.buildVersion }}',
               sha: context.sha
             })
