@@ -14,6 +14,7 @@ export const EncounterCreatures : React.FC = () => {
     const [open, setOpen] = useState(false);
     const [, setIsTemplate] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState<number>(-1);
+    const [activeCreatures, setActiveCreatures] = useState<EncounterCreatureViewModel[]>([]);
     
     const encounterContext = useEncounterContext();
 
@@ -64,6 +65,7 @@ export const EncounterCreatures : React.FC = () => {
     }, [id]);
 
     useEffect(() => {
+        setActiveCreatures(encounterContext.creatures?.filter(x => x.isActive));
     }, [encounterContext.creatures])
 
     const doHitpointManagement = () => {
@@ -83,9 +85,9 @@ export const EncounterCreatures : React.FC = () => {
     return (
         <>
             <Stack>
-                {encounterContext.creatures?.filter(x => x.isActive).map((creature: EncounterCreatureViewModel, index: number) => (
+                {activeCreatures?.filter(x => x.isActive).map((creature: EncounterCreatureViewModel, index: number) => (
                     <Badge color="secondary" variant='dot' invisible={index === (encounterContext.turnCounter - 1) ? false : true} component={"div"}>
-                        <EncounterCreatureListItem key={creature.id} viewModel={creature} index={index}
+                        <EncounterCreatureListItem key={creature.id} viewModel={creature} index={encounterContext.creatures.indexOf(activeCreatures[index])}
                             handleSelection={handleCreatureSelection} manageHitpoints={doHitpointManagement} isSelected={selectedIndex === index} />
                     </Badge>
                 ))}
