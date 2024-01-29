@@ -9,11 +9,13 @@ import { EncounterCreatureViewModel } from "../../../view-models/encounter-creat
 import { HitpointManagementModal } from "../../modals/hitpoint-management/hitpoint-management.modal";
 
 import { getEncounterById, getEncounterTemplateById } from "../../../services/encounter.service";
+import { EncounterViewModel } from "apps/spa-3ncount3r/src/view-models/encounter.view-model";
 
 export const EncounterCreatures : React.FC = () => {
     const [open, setOpen] = useState(false);
     const [, setIsTemplate] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState<number>(-1);
+    const [activeCreatures, setActiveCreatures] = useState<EncounterCreatureViewModel[]>([]);
     
     const encounterContext = useEncounterContext();
 
@@ -34,7 +36,7 @@ export const EncounterCreatures : React.FC = () => {
             
             if (segments[segments.length-1] === 'template') {
                 setIsTemplate(true);
-                getEncounterTemplateById(id).then(x => {
+                getEncounterTemplateById(id).then((x: EncounterViewModel) => {
                     encounterContext.setCreatures(x.creatures);
                     encounterContext.setEncounterId(x.id);
                     encounterContext.setEncounterName(x.name);
@@ -43,13 +45,13 @@ export const EncounterCreatures : React.FC = () => {
                     encounterContext.setTurnCounter(0);
                 });
             } else {
-                getEncounterById(id).then(x => {
+                getEncounterById(id).then((x: EncounterViewModel) => {
                     encounterContext.setCreatures(x.creatures);
                     encounterContext.setEncounterId(x.id);
                     encounterContext.setEncounterName(x.name);
                     encounterContext.setSelectedParty(x.selectedParty);
-                    encounterContext.setRoundCounter(x.roundCount);
-                    encounterContext.setTurnCounter(x.currentTurn);
+                    encounterContext.setRoundCounter(Math.max(x.roundCount, 1));
+                    encounterContext.setTurnCounter(Math.max(x.currentTurn, 1));
                 });
             }
         } else {
@@ -60,10 +62,13 @@ export const EncounterCreatures : React.FC = () => {
             encounterContext.setRoundCounter(0);
             encounterContext.setTurnCounter(0);
         }
+
+        encounterContext.setSelectedCreatureIndex(encounterContext.creatures ? 1 : 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
     useEffect(() => {
+        setActiveCreatures(encounterContext.creatures?.filter(x => x.isActive));
     }, [encounterContext.creatures])
 
     const doHitpointManagement = () => {
@@ -76,17 +81,19 @@ export const EncounterCreatures : React.FC = () => {
     };
 
     const handleCreatureSelection = (index: number) => {
-        setSelectedIndex(index);
-        encounterContext.setSelectedCreatureIndex(index);
+        let contextIndex = encounterContext.creatures.indexOf(activeCreatures[index]);
+        setSelectedIndex(contextIndex);
+        encounterContext.setSelectedCreatureIndex(contextIndex);
     };
 
     return (
         <>
             <Stack>
-                {encounterContext.creatures?.filter(x => x.isActive).map((creature: EncounterCreatureViewModel, index: number) => (
+                {activeCreatures.map((creature: EncounterCreatureViewModel, index: number) => (
                     <Badge color="secondary" variant='dot' invisible={index === (encounterContext.turnCounter - 1) ? false : true} component={"div"}>
                         <EncounterCreatureListItem key={creature.id} viewModel={creature} index={index}
-                            handleSelection={handleCreatureSelection} manageHitpoints={doHitpointManagement} isSelected={selectedIndex === index} />
+                            handleSelection={handleCreatureSelection} manageHitpoints={doHitpointManagement} 
+                            isSelected={activeCreatures.indexOf(encounterContext.creatures[selectedIndex]) === index} />
                     </Badge>
                 ))}
             </Stack>
@@ -99,10 +106,12 @@ export const EncounterCreatures : React.FC = () => {
               open={open}
               disablePortal>
                 <DialogContent>
-                    <HitpointManagementModal 
-                        maxHitpoints={selectedIndex > -1 ? encounterContext.creatures[selectedIndex].hitpointMax : 0} 
-                        currentHitpoints={selectedIndex > -1 ? encounterContext.creatures[selectedIndex].currentHitpoints : 0} 
-                        handleAccept={updateHitpoints} handleCancel={() => { setOpen(false); }} />
+                    {selectedIndex > -1 && 
+                        <HitpointManagementModal 
+                            maxHitpoints={encounterContext.creatures[selectedIndex]?.hitpointMax ?? 0} 
+                            currentHitpoints={encounterContext.creatures[selectedIndex]?.currentHitpoints ?? 0} 
+                            handleAccept={updateHitpoints} handleCancel={() => { setOpen(false); }} />
+                    }
                 </DialogContent>
             </Modal>
         </>
