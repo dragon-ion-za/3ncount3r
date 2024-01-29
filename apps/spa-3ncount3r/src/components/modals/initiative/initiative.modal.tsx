@@ -1,5 +1,5 @@
 import React, { forwardRef, useEffect, useState } from "react";
-import { Box, Grid, Typography, Button, Table, TableHead, TableRow, TableCell, TableBody, TextField, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, Checkbox } from "@mui/material";
+import { Box, Grid, Typography, Button, Table, TableHead, TableRow, TableCell, TableBody, TextField, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, Checkbox, TableContainer } from "@mui/material";
 
 import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
 import { doDiceFormulaCalculation } from "../../../services/dice.service";
@@ -90,46 +90,48 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
                         </FormControl>
                     </Grid>
                     <Grid xs={12}>
-                        <Table>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>Active</TableCell>
-                                    <TableCell>Creature</TableCell>
-                                    <TableCell>Modifier</TableCell>
-                                    <TableCell>Rolled</TableCell>
-                                    <TableCell>Initiative</TableCell>
-                                    <TableCell>Actions</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {creatures.map((creature, index) => (
-                                    <TableRow key={`creature_${index}`}>
-                                        <TableCell>
-                                            <Checkbox checked={creature.isActive} onChange={(e, checked) => toggleIsActive(index, checked)} />
-                                        </TableCell>
-                                        <TableCell>{creature.name}</TableCell>
-                                        <TableCell>{calculateAbilityScoreModifier(creature.attributeDex)}</TableCell>
-                                        <TableCell>
-                                            <TextField
-                                                type="number"
-                                                variant="standard"
-                                                value={creature.initiative - calculateAbilityScoreModifier(creature.attributeDex)}
-                                                onChange={(e) => { manuallyUpdateRolledInitiative(e, index) }} disabled={!creature.isActive} />
-                                        </TableCell>
-                                        <TableCell>
-                                            <TextField
-                                                type="number"
-                                                variant="standard"
-                                                value={creature.initiative}
-                                                onChange={(e) => { manuallyUpdateInitiative(e, index) }} disabled={!creature.isActive} />                                            
-                                        </TableCell>
-                                        <TableCell>
-                                            <Button variant="outlined" onClick={() => rollInitiativeForCreature(index)} disabled={!creature.isActive}>Roll</Button>
-                                        </TableCell>
+                        <TableContainer sx={{ maxHeight: "70vh"}}>
+                            <Table stickyHeader>
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>Active</TableCell>
+                                        <TableCell>Creature</TableCell>
+                                        <TableCell>Modifier</TableCell>
+                                        <TableCell>Rolled</TableCell>
+                                        <TableCell>Initiative</TableCell>
+                                        <TableCell>Actions</TableCell>
                                     </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
+                                </TableHead>
+                                <TableBody>
+                                    {creatures.map((creature, index) => (
+                                        <TableRow key={`creature_${index}`}>
+                                            <TableCell>
+                                                <Checkbox checked={creature.isActive} onChange={(e, checked) => toggleIsActive(index, checked)} />
+                                            </TableCell>
+                                            <TableCell>{creature.name}</TableCell>
+                                            <TableCell>{calculateAbilityScoreModifier(creature.attributeDex)}</TableCell>
+                                            <TableCell>
+                                                <TextField
+                                                    type="number"
+                                                    variant="standard"
+                                                    value={creature.initiative - calculateAbilityScoreModifier(creature.attributeDex)}
+                                                    onChange={(e) => { manuallyUpdateRolledInitiative(e, index) }} disabled={!creature.isActive} />
+                                            </TableCell>
+                                            <TableCell>
+                                                <TextField
+                                                    type="number"
+                                                    variant="standard"
+                                                    value={creature.initiative}
+                                                    onChange={(e) => { manuallyUpdateInitiative(e, index) }} disabled={!creature.isActive} />                                            
+                                            </TableCell>
+                                            <TableCell>
+                                                <Button variant="outlined" onClick={() => rollInitiativeForCreature(index)} disabled={!creature.isActive}>Roll</Button>
+                                            </TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
                     </Grid>
                     <Grid xs={12}>
                         <Button variant="outlined" onClick={() => handleAccept(creatures, selectedParty)}>Accept</Button>
