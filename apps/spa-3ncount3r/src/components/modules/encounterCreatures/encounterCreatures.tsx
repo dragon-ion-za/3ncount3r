@@ -9,6 +9,7 @@ import { EncounterCreatureViewModel } from "../../../view-models/encounter-creat
 import { HitpointManagementModal } from "../../modals/hitpoint-management/hitpoint-management.modal";
 
 import { getEncounterById, getEncounterTemplateById } from "../../../services/encounter.service";
+import { EncounterViewModel } from "apps/spa-3ncount3r/src/view-models/encounter.view-model";
 
 export const EncounterCreatures : React.FC = () => {
     const [open, setOpen] = useState(false);
@@ -35,7 +36,7 @@ export const EncounterCreatures : React.FC = () => {
             
             if (segments[segments.length-1] === 'template') {
                 setIsTemplate(true);
-                getEncounterTemplateById(id).then(x => {
+                getEncounterTemplateById(id).then((x: EncounterViewModel) => {
                     encounterContext.setCreatures(x.creatures);
                     encounterContext.setEncounterId(x.id);
                     encounterContext.setEncounterName(x.name);
@@ -44,13 +45,13 @@ export const EncounterCreatures : React.FC = () => {
                     encounterContext.setTurnCounter(0);
                 });
             } else {
-                getEncounterById(id).then(x => {
+                getEncounterById(id).then((x: EncounterViewModel) => {
                     encounterContext.setCreatures(x.creatures);
                     encounterContext.setEncounterId(x.id);
                     encounterContext.setEncounterName(x.name);
                     encounterContext.setSelectedParty(x.selectedParty);
-                    encounterContext.setRoundCounter(x.roundCount);
-                    encounterContext.setTurnCounter(x.currentTurn);
+                    encounterContext.setRoundCounter(Math.max(x.roundCount, 1));
+                    encounterContext.setTurnCounter(Math.max(x.currentTurn, 1));
                 });
             }
         } else {
