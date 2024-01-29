@@ -23,7 +23,7 @@ export const SaveHandler : React.FC = () => {
                 await saveEncounterTemplate(encounterName, encounterContext.creatures);
             } else {
                 await saveEncounter(encounterName, encounterContext.creatures, 
-                    encounterContext.selectedParty, encounterContext.roundCounter, encounterContext.turnCounter);
+                    encounterContext.selectedParty, Math.max(encounterContext.roundCounter, 1), Math.max(encounterContext.turnCounter, 1));
             }
 
             if (encounterId !== '') {
