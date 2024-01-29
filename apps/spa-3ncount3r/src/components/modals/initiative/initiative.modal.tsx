@@ -36,6 +36,12 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
         setCreatures(state);
     }
 
+    const manuallyUpdateRolledInitiative = (event: any, index: number) => {
+        let state = [...creatures];
+        state[index].initiative = parseInt(event.target.value) + calculateAbilityScoreModifier(state[index].attributeDex);
+        setCreatures(state);
+    }
+
     const toggleIsActive = (index: number, checked: boolean) => {
         let state = [...creatures];
         state[index].isActive = checked;
@@ -103,7 +109,13 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
                                         </TableCell>
                                         <TableCell>{creature.name}</TableCell>
                                         <TableCell>{calculateAbilityScoreModifier(creature.attributeDex)}</TableCell>
-                                        <TableCell>{creature.initiative - calculateAbilityScoreModifier(creature.attributeDex)}</TableCell>
+                                        <TableCell>
+                                            <TextField
+                                                type="number"
+                                                variant="standard"
+                                                value={creature.initiative - calculateAbilityScoreModifier(creature.attributeDex)}
+                                                onChange={(e) => { manuallyUpdateRolledInitiative(e, index) }} disabled={!creature.isActive} />
+                                        </TableCell>
                                         <TableCell>
                                             <TextField
                                                 type="number"
