@@ -62,6 +62,8 @@ export const EncounterCreatures : React.FC = () => {
             encounterContext.setRoundCounter(0);
             encounterContext.setTurnCounter(0);
         }
+
+        encounterContext.setSelectedCreatureIndex(encounterContext.creatures ? 1 : 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
@@ -79,17 +81,19 @@ export const EncounterCreatures : React.FC = () => {
     };
 
     const handleCreatureSelection = (index: number) => {
-        setSelectedIndex(index);
-        encounterContext.setSelectedCreatureIndex(index);
+        let contextIndex = encounterContext.creatures.indexOf(activeCreatures[index]);
+        setSelectedIndex(contextIndex);
+        encounterContext.setSelectedCreatureIndex(contextIndex);
     };
 
     return (
         <>
             <Stack>
-                {activeCreatures?.filter(x => x.isActive).map((creature: EncounterCreatureViewModel, index: number) => (
+                {activeCreatures.map((creature: EncounterCreatureViewModel, index: number) => (
                     <Badge color="secondary" variant='dot' invisible={index === (encounterContext.turnCounter - 1) ? false : true} component={"div"}>
-                        <EncounterCreatureListItem key={creature.id} viewModel={creature} index={encounterContext.creatures.indexOf(activeCreatures[index])}
-                            handleSelection={handleCreatureSelection} manageHitpoints={doHitpointManagement} isSelected={selectedIndex === index} />
+                        <EncounterCreatureListItem key={creature.id} viewModel={creature} index={index}
+                            handleSelection={handleCreatureSelection} manageHitpoints={doHitpointManagement} 
+                            isSelected={activeCreatures.indexOf(encounterContext.creatures[selectedIndex]) === index} />
                     </Badge>
                 ))}
             </Stack>
@@ -102,10 +106,12 @@ export const EncounterCreatures : React.FC = () => {
               open={open}
               disablePortal>
                 <DialogContent>
-                    <HitpointManagementModal 
-                        maxHitpoints={selectedIndex > -1 ? encounterContext.creatures[selectedIndex].hitpointMax : 0} 
-                        currentHitpoints={selectedIndex > -1 ? encounterContext.creatures[selectedIndex].currentHitpoints : 0} 
-                        handleAccept={updateHitpoints} handleCancel={() => { setOpen(false); }} />
+                    {selectedIndex > -1 && 
+                        <HitpointManagementModal 
+                            maxHitpoints={encounterContext.creatures[selectedIndex]?.hitpointMax ?? 0} 
+                            currentHitpoints={encounterContext.creatures[selectedIndex]?.currentHitpoints ?? 0} 
+                            handleAccept={updateHitpoints} handleCancel={() => { setOpen(false); }} />
+                    }
                 </DialogContent>
             </Modal>
         </>
