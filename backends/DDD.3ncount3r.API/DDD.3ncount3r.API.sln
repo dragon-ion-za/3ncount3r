@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.3ncount3r.API", "DDD.3ncount3r.API.csproj", "{EA31C0BE-CF30-4D6C-B9FB-D602D11BE188}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA31C0BE-CF30-4D6C-B9FB-D602D11BE188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA31C0BE-CF30-4D6C-B9FB-D602D11BE188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA31C0BE-CF30-4D6C-B9FB-D602D11BE188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA31C0BE-CF30-4D6C-B9FB-D602D11BE188}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91171979-1BB8-49C0-8EE1-C324571D17B3}
+	EndGlobalSection
+EndGlobal
