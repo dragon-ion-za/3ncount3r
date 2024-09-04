@@ -1,6 +1,6 @@
 using DDD._3ncount3r.API.Models;
 using DDD._3ncount3r.API.Services;
-using DDD._3ncount3r.API.ViewModel;
+using DDD._3ncount3r.API.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
