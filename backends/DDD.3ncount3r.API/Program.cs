@@ -49,6 +49,7 @@ builder.Services.AddSwaggerGen(option =>
 });
 
 builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("3ncount3rContext"));
+builder.Services.Configure<IEnumerable<ByoapiConfig>>(builder.Configuration.GetSection("Byoapis"));
 builder.Services.AddScoped<IDataService<EncounterModel>, EncountersService>();
 
 builder.Services.AddAutoMapper(typeof(EncounterMapperProfile));
