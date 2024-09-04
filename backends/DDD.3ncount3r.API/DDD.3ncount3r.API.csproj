@@ -8,6 +8,7 @@
     <UserSecretsId>2f23cc82-a189-41fc-9e74-26f3aef80fb2</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
   </PropertyGroup>
 
   <ItemGroup>
