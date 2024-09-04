@@ -1,3 +1,4 @@
+using AutoMapper;
 using DDD._3ncount3r.API.Models;
 using DDD._3ncount3r.API.Services;
 using DDD._3ncount3r.API.ViewModels;
@@ -12,17 +13,19 @@ namespace DDD._3ncount3r.API.Controllers
   public class EncountersController : ControllerBase
   {
     private readonly IDataService<EncounterModel> _dataService;
+    private readonly IMapper _mapper;
 
-    public EncountersController(IDataService<EncounterModel> dataService)
+    public EncountersController(IDataService<EncounterModel> dataService, IMapper mapper)
     {
-        _dataService = dataService;
+      _dataService = dataService;
+      _mapper = mapper;
     }
 
     [HttpGet]
     public async Task<IEnumerable<EncounterViewModel>> Get()
     {
       IEnumerable<EncounterModel> models = await _dataService.Get();
-      return models.Select((model) => new EncounterViewModel() { Id = model.Id.ToString(), Name = model.Name } );
+      return _mapper.Map<IEnumerable<EncounterViewModel>>(models);
     }
   }
 }
