@@ -10,6 +10,9 @@ namespace DDD._3ncount3r.API.ViewModels
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
+    [JsonPropertyName("sourceId")]
+    public string SourceId { get; set; }
+
     [JsonPropertyName("byoapiId")]
     public string ByoapiId { get; set; }
 

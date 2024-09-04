@@ -11,6 +11,9 @@ namespace DDD._3ncount3r.API.Models
     [BsonElement("name")]
     public string Name { get; set; }
 
+    [BsonElement("sourceId")]
+    public string SourceId { get; set; }
+
     [BsonElement("byoapiId")]
     public string ByoapiId { get; set; }
 
