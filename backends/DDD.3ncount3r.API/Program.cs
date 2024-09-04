@@ -1,3 +1,6 @@
+using DDD._3ncount3r.API.Configurations;
+using DDD._3ncount3r.API.Models;
+using DDD._3ncount3r.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 
@@ -43,6 +46,9 @@ builder.Services.AddSwaggerGen(option =>
     }
   });
 });
+
+builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("3ncount3rContext"));
+builder.Services.AddScoped<IDataService<EncounterModel>, EncountersService>();
 
 var app = builder.Build();
 
