@@ -1,4 +1,5 @@
 using AutoMapper;
+using DDD._3ncount3r.API.Extensions;
 using DDD._3ncount3r.API.Models;
 using DDD._3ncount3r.API.Services;
 using DDD._3ncount3r.API.ViewModels;
@@ -22,8 +23,20 @@ namespace DDD._3ncount3r.API.Controllers
     [HttpGet]
     public async Task<IEnumerable<EncounterViewModel>> Get()
     {
-      IEnumerable<EncounterModel> models = await _dataService.Get();
+      IEnumerable<EncounterModel> models = await _dataService.Get(User.SubjectId());
       return _mapper.Map<IEnumerable<EncounterViewModel>>(models);
+    }
+
+    [HttpPost]
+    public async Task<string> Post(EncounterViewModel model)
+    {
+      return await _dataService.Insert(User.SubjectId(), _mapper.Map<EncounterModel>(model));
+    }
+
+    [HttpPut]
+    public async Task<string> Put(EncounterViewModel model)
+    {
+      return await _dataService.Update(User.SubjectId(), _mapper.Map<EncounterModel>(model));
     }
   }
 }

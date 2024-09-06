@@ -1,11 +1,12 @@
 using DDD._3ncount3r.API.Configurations;
+using DDD._3ncount3r.API.Models;
 using Microsoft.Extensions.Options;
+using MongoDB.Bson;
 using MongoDB.Driver;
-using System.Reflection.Metadata;
 
 namespace DDD._3ncount3r.API.Services
 {
-  public abstract class DataService<TCollectionModel>: IDataService<TCollectionModel> where TCollectionModel : class, new()
+  public abstract class DataService<TCollectionModel> : IDataService<TCollectionModel> where TCollectionModel : BaseEntityModel, new()
   {
     private readonly MongoDbConfig _config;
     private bool _isInitialised = false;
@@ -18,10 +19,29 @@ namespace DDD._3ncount3r.API.Services
       _config = config.Value;
     }
 
-    public async Task<IEnumerable<TCollectionModel>> Get()
+    public async Task<IEnumerable<TCollectionModel>> Get(string userId)
     {
       InitDb();
-      return await _collection.Find(_ => true).ToListAsync();
+      return await _collection.Find(entity => entity.UserId == userId).ToListAsync();
+    }
+
+    public async Task<string> Insert(string userId, TCollectionModel model)
+    {
+      InitDb();
+      model.Id = ObjectId.GenerateNewId();
+      model.UserId = userId;
+      await _collection.InsertOneAsync(model);
+
+      return model.Id.ToString();
+    }
+
+    public async Task<string> Update(string userId, TCollectionModel model)
+    {
+      InitDb();
+      model.UserId = userId;
+      await _collection.ReplaceOneAsync(entity => entity.Id == model.Id && entity.UserId == userId, model);
+
+      return model.Id.ToString();
     }
 
     private void InitDb()

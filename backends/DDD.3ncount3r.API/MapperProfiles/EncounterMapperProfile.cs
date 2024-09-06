@@ -8,8 +8,8 @@ namespace DDD._3ncount3r.API.MapperProfiles
   {
     public EncounterMapperProfile()
     {
-      CreateMap<EncounterModel, EncounterViewModel>();
-      CreateMap<EncounterCreatureModel, EncounterCreatureViewModel>();
+      CreateMap<EncounterModel, EncounterViewModel>().ReverseMap();
+      CreateMap<EncounterCreatureModel, EncounterCreatureViewModel>().ReverseMap();
     }
   }
 }

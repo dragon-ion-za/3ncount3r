@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>DDD._3ncount3r.API</RootNamespace>
     <UserSecretsId>2f23cc82-a189-41fc-9e74-26f3aef80fb2</UserSecretsId>

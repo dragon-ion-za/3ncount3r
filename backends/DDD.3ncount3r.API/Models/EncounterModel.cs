@@ -4,11 +4,8 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace DDD._3ncount3r.API.Models
 {
   [BsonIgnoreExtraElements]
-  public class EncounterModel
+  public class EncounterModel : BaseEntityModel
   {
-    [BsonElement("id")]
-    public ObjectId Id { get; set; }
-
     [BsonElement("name")]
     public string Name { get; set; }
 

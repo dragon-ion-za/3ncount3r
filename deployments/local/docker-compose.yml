@@ -6,6 +6,8 @@ services:
       - 3ncount3rData:/data/db
     expose:
       - 27017
+    ports:
+      - '27017:27017'
   cl3anslat3-api:
     build:
       context: .
