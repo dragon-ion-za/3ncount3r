@@ -2,7 +2,6 @@ using AutoMapper;
 using DDD._3ncount3r.API.Models;
 using DDD._3ncount3r.API.Services;
 using DDD._3ncount3r.API.ViewModels;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDD._3ncount3r.API.Controllers

@@ -2,14 +2,12 @@ using AutoMapper;
 using DDD._3ncount3r.API.Models;
 using DDD._3ncount3r.API.Services;
 using DDD._3ncount3r.API.ViewModels;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDD._3ncount3r.API.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  [Authorize]
   public class EncountersController : ControllerBase
   {
     private readonly IDataService<EncounterModel> _dataService;
