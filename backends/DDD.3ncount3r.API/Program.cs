@@ -3,6 +3,7 @@ using DDD._3ncount3r.API.MapperProfiles;
 using DDD._3ncount3r.API.Models;
 using DDD._3ncount3r.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -49,10 +50,13 @@ builder.Services.AddSwaggerGen(option =>
 });
 
 builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("3ncount3rContext"));
-builder.Services.Configure<IEnumerable<ByoapiConfig>>(builder.Configuration.GetSection("Byoapis"));
+builder.Services.Configure<List<ByoapiConfig>>(builder.Configuration.GetSection("Byoapis"));
+
 builder.Services.AddScoped<IDataService<EncounterModel>, EncountersService>();
+builder.Services.AddScoped<IByoapiService, ByoapiService>();
 
 builder.Services.AddAutoMapper(typeof(EncounterMapperProfile));
+builder.Services.AddAutoMapper(typeof(CreatureMapperProfile));
 
 var app = builder.Build();
 

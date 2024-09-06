@@ -4,11 +4,11 @@ using Microsoft.Extensions.Options;
 
 namespace DDD._3ncount3r.API.Services
 {
-  public class ByoapiService
+  public class ByoapiService: IByoapiService
   {
     private readonly IEnumerable<ByoapiConfig> _config;
 
-    public ByoapiService(IOptions<IEnumerable<ByoapiConfig>> options)
+    public ByoapiService(IOptions<List<ByoapiConfig>> options)
     {
       _config = options.Value;
     }
@@ -19,10 +19,10 @@ namespace DDD._3ncount3r.API.Services
 
       Dictionary<string, Task<HttpResponseMessage>> calls = new Dictionary<string, Task<HttpResponseMessage>>();
 
+      HttpClient client = new HttpClient();
       foreach (var byoapi in _config)
-      {
-        HttpClient client = new HttpClient();
-        calls.Add(byoapi.Id, client.GetAsync($"{byoapi}creatures?{queryString}"));
+      {        
+        calls.Add(byoapi.Id, client.GetAsync($"{byoapi.BaseUrl}creatures{queryString}"));
       }
 
       await Task.WhenAll(calls.Values);

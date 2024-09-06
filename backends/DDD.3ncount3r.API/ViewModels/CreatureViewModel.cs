@@ -1,10 +1,10 @@
 using System.Text.Json.Serialization;
 
-namespace DDD._3ncount3r.API.Models
+namespace DDD._3ncount3r.API.ViewModels
 {
-  public class CreatureModel
+  public class CreatureViewModel
   {
-    [JsonIgnore]
+    [JsonPropertyName("byoapiId")]
     public string ByoapiId { get; set; }
 
     [JsonPropertyName("sourceId")]
@@ -20,7 +20,7 @@ namespace DDD._3ncount3r.API.Models
     public string[] Alignment { get; set; }
 
     [JsonPropertyName("armourClass")]
-    public ArmourClassModel ArmourClass { get; set; }
+    public ArmourClassViewModel ArmourClass { get; set; }
 
     [JsonPropertyName("hitpointAverage")]
     public int HitpointAverage { get; set; }
@@ -71,7 +71,7 @@ namespace DDD._3ncount3r.API.Models
     public object[] Languages { get; set; }
 
     [JsonPropertyName("challengeRating")]
-    public ChallengeRatingModel ChallengeRating { get; set; }
+    public ChallengeRatingViewModel ChallengeRating { get; set; }
 
     [JsonPropertyName("traits")]
     public object[] Traits { get; set; }
@@ -107,7 +107,7 @@ namespace DDD._3ncount3r.API.Models
     public object[] SavingThrows { get; set; }
 
     [JsonPropertyName("actionGroups")]
-    public ActionGroupModel[] ActionGroups { get; set; }
+    public ActionGroupViewModel[] ActionGroups { get; set; }
 
     [JsonPropertyName("imageUrl")]
     public string ImageUrl { get; set; }
@@ -116,7 +116,7 @@ namespace DDD._3ncount3r.API.Models
     public string Name { get; set; }
   }
 
-  public class ArmourClassModel
+  public class ArmourClassViewModel
   {
     [JsonPropertyName("condition")]
     public string Condition { get; set; }
@@ -131,7 +131,7 @@ namespace DDD._3ncount3r.API.Models
     public string AppliedFrom { get; set; }
   }
 
-  public class ChallengeRatingModel
+  public class ChallengeRatingViewModel
   {
     [JsonPropertyName("rating")]
     public int Rating { get; set; }
@@ -140,16 +140,16 @@ namespace DDD._3ncount3r.API.Models
     public int Experience { get; set; }
   }
 
-  public class ActionGroupModel
+  public class ActionGroupViewModel
   {
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
     [JsonPropertyName("items")]
-    public ItemModel[] Items { get; set; }
+    public ItemViewModel[] Items { get; set; }
   }
 
-  public class ItemModel
+  public class ItemViewModel
   {
     [JsonPropertyName("type")]
     public string Type { get; set; }
