@@ -1,8 +1,8 @@
 using AutoMapper;
 using DDD._3ncount3r.API.Extensions;
 using DDD._3ncount3r.API.Models;
-using DDD._3ncount3r.API.Services;
 using DDD._3ncount3r.API.ViewModels;
+using DDD.Common.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDD._3ncount3r.API.Controllers

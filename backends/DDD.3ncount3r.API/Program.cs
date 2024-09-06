@@ -2,8 +2,9 @@ using DDD._3ncount3r.API.Configurations;
 using DDD._3ncount3r.API.MapperProfiles;
 using DDD._3ncount3r.API.Models;
 using DDD._3ncount3r.API.Services;
+using DDD.Common.Configurations;
+using DDD.Common.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);

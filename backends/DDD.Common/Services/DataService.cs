@@ -1,10 +1,10 @@
-using DDD._3ncount3r.API.Configurations;
-using DDD._3ncount3r.API.Models;
+using DDD.Common.Configurations;
+using DDD.Common.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace DDD._3ncount3r.API.Services
+namespace DDD.Common.Services
 {
   public abstract class DataService<TCollectionModel> : IDataService<TCollectionModel> where TCollectionModel : BaseEntityModel, new()
   {
@@ -12,7 +12,7 @@ namespace DDD._3ncount3r.API.Services
     private bool _isInitialised = false;
     private IMongoCollection<TCollectionModel> _collection;
 
-    internal abstract string CollectionName { get; }
+    public abstract string CollectionName { get; }
 
     public DataService(IOptions<MongoDbConfig> config)
     {

@@ -1,4 +1,4 @@
-namespace DDD._3ncount3r.API.Services
+namespace DDD.Common.Services
 {
   public interface IDataService<TCollectionModel>
   {
