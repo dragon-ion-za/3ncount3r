@@ -41,7 +41,7 @@ namespace DDD.charact3r.API.ViewModels
     public string Race { get; set; }
 
     [JsonPropertyName("classes")]
-    public CharacterClass[] Classes { get; set; }
+    public CharacterClassViewModel[] Classes { get; set; }
 
     [JsonPropertyName("hitpointMax")]
     public int HitpointMax { get; set; }
@@ -92,7 +92,7 @@ namespace DDD.charact3r.API.ViewModels
     public object[] Action { get; set; }
 
     [JsonPropertyName("equipment")]
-    public Equipment[] Equipment { get; set; }
+    public EquipmentViewModel[] Equipment { get; set; }
 
     [JsonPropertyName("inventory")]
     public object[] Inventory { get; set; }
@@ -113,7 +113,7 @@ namespace DDD.charact3r.API.ViewModels
     public object[] SavingThrows { get; set; }
   }
 
-  public class CharacterClass
+  public class CharacterClassViewModel
   {
     [JsonPropertyName("name")]
     public string Name { get; set; }
@@ -122,7 +122,7 @@ namespace DDD.charact3r.API.ViewModels
     public int Level { get; set; }
   }
 
-  public class Equipment
+  public class EquipmentViewModel
   {
     [JsonPropertyName("name")]
     public string Name { get; set; }

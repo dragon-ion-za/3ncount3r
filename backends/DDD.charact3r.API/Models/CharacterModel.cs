@@ -39,7 +39,7 @@ namespace DDD.charact3r.API.Models
     public string Race { get; set; }
 
     [BsonElement("classes")]
-    public CharacterClass[] Classes { get; set; }
+    public CharacterClassModel[] Classes { get; set; }
 
     [BsonElement("hitpointMax")]
     public int HitpointMax { get; set; }
@@ -90,7 +90,7 @@ namespace DDD.charact3r.API.Models
     public object[] Action { get; set; }
 
     [BsonElement("equipment")]
-    public Equipment[] Equipment { get; set; }
+    public EquipmentModel[] Equipment { get; set; }
 
     [BsonElement("inventory")]
     public object[] Inventory { get; set; }
@@ -111,7 +111,7 @@ namespace DDD.charact3r.API.Models
     public object[] SavingThrows { get; set; }
   }
 
-  public class CharacterClass
+  public class CharacterClassModel
   {
     [BsonElement("name")]
     public string Name { get; set; }
@@ -120,7 +120,7 @@ namespace DDD.charact3r.API.Models
     public int Level { get; set; }
   }
 
-  public class Equipment
+  public class EquipmentModel
   {
     [BsonElement("name")]
     public string Name { get; set; }

@@ -1,4 +1,8 @@
+using DDD.charact3r.API.MapperProfiles;
+using DDD.charact3r.API.Models;
+using DDD.charact3r.API.Services;
 using DDD.Common.Configurations;
+using DDD.Common.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 
@@ -45,7 +49,11 @@ builder.Services.AddSwaggerGen(option =>
   });
 });
 
-builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("3ncount3rContext"));
+builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("charact3rContext"));
+
+builder.Services.AddScoped<IDataService<CharacterModel>, CharactersService>();
+
+builder.Services.AddAutoMapper(typeof(CharacterMapperProfile));
 
 var app = builder.Build();
 
