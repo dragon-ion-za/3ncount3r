@@ -11,6 +11,21 @@ namespace DDD.charact3r.API.MapperProfiles
       CreateMap<CharacterModel, CharacterViewModel>();
       CreateMap<CharacterClassModel, CharacterClassViewModel>();
       CreateMap<EquipmentModel, EquipmentViewModel>();
+
+      CreateMap<CharacterViewModel, CharacterModel>()
+        .ForMember(x => x.Attributes, y => y.MapFrom(z => TranslateAttributesToKeyValuePair(z)));
+    }
+
+    private Dictionary<string, int> TranslateAttributesToKeyValuePair(CharacterViewModel viewModel)
+    {
+      return new Dictionary<string, int>() {
+        { "STR", viewModel.AttributeStr },
+        { "DEX", viewModel.AttributeDex },
+        { "CON", viewModel.AttributeCon },
+        { "WIS", viewModel.AttributeWis },
+        { "INT", viewModel.AttributeInt },
+        { "CHA", viewModel.AttributeCha }
+      };
     }
   }
 }

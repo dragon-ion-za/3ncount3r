@@ -5,27 +5,6 @@ namespace DDD.charact3r.API.Models
 {
   public class CharacterModel : BaseEntityModel
   {
-    [BsonElement("sourceId")]
-    public string SourceId { get; set; }
-
-    [BsonElement("byoapiId")]
-    public string ByoapiId { get; set; }
-
-    [BsonElement("hitpointSpecial")]
-    public string HitpointSpecial { get; set; }
-
-    [BsonElement("hitpointFormula")]
-    public string HitpointFormula { get; set; }
-
-    [BsonElement("armourClass")]
-    public object ArmourClass { get; set; }
-
-    [BsonElement("legendaryCount")]
-    public int LegendaryCount { get; set; }
-
-    [BsonElement("isPlayerCharacter")]
-    public bool IsPlayerCharacter { get; set; }
-
     [BsonElement("name")]
     public string Name { get; set; }
 
@@ -38,38 +17,19 @@ namespace DDD.charact3r.API.Models
     [BsonElement("race")]
     public string Race { get; set; }
 
+    [BsonElement("armourClass")]
+    public int ArmourClass { get; set; }
+
     [BsonElement("classes")]
     public CharacterClassModel[] Classes { get; set; }
 
     [BsonElement("hitpointMax")]
     public int HitpointMax { get; set; }
 
-    [BsonElement("hitpointCurrent")]
-    public int HitpointCurrent { get; set; }
-
-    [BsonElement("hitpointTemporary")]
-    public int HitpointTemporary { get; set; }
-
     [BsonElement("walkingSpeed")]
     public int WalkingSpeed { get; set; }
 
-    [BsonElement("attributeStr")]
-    public int AttributeStr { get; set; }
-
-    [BsonElement("attributeDex")]
-    public int AttributeDex { get; set; }
-
-    [BsonElement("attributeCon")]
-    public int AttributeCon { get; set; }
-
-    [BsonElement("attributeInt")]
-    public int AttributeInt { get; set; }
-
-    [BsonElement("attributeWis")]
-    public int AttributeWis { get; set; }
-
-    [BsonElement("attributeCha")]
-    public int AttributeCha { get; set; }
+    public Dictionary<string, int> Attributes { get; set; }
 
     [BsonElement("skillProficiencies")]
     public string[] SkillProficiencies { get; set; }
@@ -83,32 +43,14 @@ namespace DDD.charact3r.API.Models
     [BsonElement("languages")]
     public string[] Languages { get; set; }
 
-    [BsonElement("trait")]
-    public object[] Trait { get; set; }
-
-    [BsonElement("action")]
-    public object[] Action { get; set; }
+    [BsonElement("feats")]
+    public string[] Feats { get; set; }
 
     [BsonElement("equipment")]
     public EquipmentModel[] Equipment { get; set; }
 
     [BsonElement("inventory")]
-    public object[] Inventory { get; set; }
-
-    [BsonElement("hitpointAverage")]
-    public int HitpointAverage { get; set; }
-
-    [BsonElement("currentHitpoints")]
-    public int CurrentHitpoints { get; set; }
-
-    [BsonElement("type")]
-    public string Type { get; set; }
-
-    [BsonElement("skillModifiers")]
-    public object[] SkillModifiers { get; set; }
-
-    [BsonElement("savingThrows")]
-    public object[] SavingThrows { get; set; }
+    public EquipmentModel[] Inventory { get; set; }
   }
 
   public class CharacterClassModel
