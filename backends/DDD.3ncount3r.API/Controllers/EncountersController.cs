@@ -1,7 +1,7 @@
 using AutoMapper;
-using DDD._3ncount3r.API.Extensions;
 using DDD._3ncount3r.API.Models;
 using DDD._3ncount3r.API.ViewModels;
+using DDD.Common.Extensions;
 using DDD.Common.Services;
 using Microsoft.AspNetCore.Mvc;
 

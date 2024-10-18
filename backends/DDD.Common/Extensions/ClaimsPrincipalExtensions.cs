@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace DDD._3ncount3r.API.Extensions
+namespace DDD.Common.Extensions
 {
   public static class ClaimsPrincipalExtensions
   {
