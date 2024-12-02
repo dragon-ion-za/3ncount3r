@@ -18,8 +18,4 @@
     <ProjectReference Include="..\DDD.Common\DDD.Common.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Converters\" />
-  </ItemGroup>
-
 </Project>

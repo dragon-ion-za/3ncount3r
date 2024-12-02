@@ -1,4 +1,4 @@
-using DDD.charact3r.API.MapperProfiles;
+using DDD.charact3r.API.Converters;
 using DDD.charact3r.API.Models;
 using DDD.charact3r.API.Services;
 using DDD.Common.Configurations;
@@ -53,7 +53,8 @@ builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("char
 
 builder.Services.AddScoped<IDataService<CharacterModel>, CharactersService>();
 
-builder.Services.AddAutoMapper(typeof(CharacterMapperProfile));
+builder.Services.AddScoped<IModelConverterFactory, ModelConverterFactory>();
+builder.Services.AddKeyedScoped<IConverter, DnD5eModelConverter>("dnd5e");
 
 var app = builder.Build();
 

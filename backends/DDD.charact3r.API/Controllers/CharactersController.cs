@@ -1,4 +1,4 @@
-using AutoMapper;
+using DDD.charact3r.API.Converters;
 using DDD.charact3r.API.Models;
 using DDD.charact3r.API.ViewModels;
 using DDD.Common.Extensions;
@@ -7,36 +7,41 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DDD.charact3r.API.Controllers
 {
-  [Route("api/[controller]/{ruleSystem:string}")]
+  [Route("api/[controller]/{ruleSystem}")]
   [ApiController]
   public class CharactersController : ControllerBase
   {
     private readonly IDataService<CharacterModel> _dataService;
-    private readonly IMapper _mapper;
+    private readonly IModelConverterFactory _modelConverterFactory;
 
-    public CharactersController(IDataService<CharacterModel> dataService, IMapper mapper)
+    public CharactersController(IDataService<CharacterModel> dataService, IModelConverterFactory modelConverterFactory)
     {
       _dataService = dataService;
-      _mapper = mapper;
+      _modelConverterFactory = modelConverterFactory;
     }
 
     [HttpGet]
-    public async Task<IEnumerable<CharacterViewModel>> Get()
+    public async Task<IEnumerable<IViewModel>> Get([FromRoute]string ruleSystem)
     {
       IEnumerable<CharacterModel> models = await _dataService.Get(User.SubjectId());
-      return _mapper.Map<IEnumerable<CharacterViewModel>>(models);
+
+      IConverter modelConverter = _modelConverterFactory.Create(ruleSystem);
+
+      return modelConverter.Map(models);
     }
 
     [HttpPost]
-    public async Task<string> Post(CharacterViewModel model)
+    public async Task<string> Post([FromRoute] string ruleSystem, IViewModel model)
     {
-      return await _dataService.Insert(User.SubjectId(), _mapper.Map<CharacterModel>(model));
+      IConverter modelConverter = _modelConverterFactory.Create(ruleSystem);
+      return await _dataService.Insert(User.SubjectId(), modelConverter.ConvertReverse(model));
     }
 
     [HttpPut]
-    public async Task<string> Put(CharacterViewModel model)
+    public async Task<string> Put([FromRoute] string ruleSystem, IViewModel model)
     {
-      return await _dataService.Update(User.SubjectId(), _mapper.Map<CharacterModel>(model));
+      IConverter modelConverter = _modelConverterFactory.Create(ruleSystem);
+      return await _dataService.Update(User.SubjectId(), modelConverter.ConvertReverse(model));
     }
   }
 }
