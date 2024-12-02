@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DDD.charact3r.API.Controllers
 {
-  [Route("api/[controller]")]
+  [Route("api/[controller]/{ruleSystem:string}")]
   [ApiController]
   public class CharactersController : ControllerBase
   {
