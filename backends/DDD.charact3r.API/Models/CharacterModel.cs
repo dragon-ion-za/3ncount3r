@@ -15,7 +15,7 @@ namespace DDD.charact3r.API.Models
     public string[] Size { get; set; }
 
     [BsonElement("race")]
-    public string Race { get; set; }
+    public RaceModel Race { get; set; }
 
     [BsonElement("classes")]
     public CharacterClassModel[] Classes { get; set; }
@@ -102,6 +102,15 @@ namespace DDD.charact3r.API.Models
   }
 
   public class FeatModel
+  {
+    [BsonElement("id")]
+    public string Id { get; set; }
+
+    [BsonElement("byoapiId")]
+    public string ByoapiId { get; set; }
+  }
+
+  public class RaceModel
   {
     [BsonElement("id")]
     public string Id { get; set; }
