@@ -133,8 +133,8 @@
                     "text": [
                         {"header": "",  "entries": [ "Your Speed increases by 10 feet while you aren't wearing Heavy armor. You also have a Climb Speed and a Swim Speed equal to your Speed."]}
                     ],
-                    "effects": [ { "type": "increment", "target": "spd_mvmt", "value": 10 }, { "type": "addition", "target": "spd_climb", "valueFrom": "spd_mvmt" }
-                    , { "type": "addition", "target": "spd_swim", "valueFrom": "spd_mvmt" } ]
+                    "effects": [ { "type": "increment", "target": "spd_walk", "value": 10 }, { "type": "addition", "target": "spd_climb", "valueFrom": "spd_walk" }
+                    , { "type": "addition", "target": "spd_swim", "valueFrom": "spd_walk" } ]
                 },
                 {
                     "name": "Ability Score Improvement",
