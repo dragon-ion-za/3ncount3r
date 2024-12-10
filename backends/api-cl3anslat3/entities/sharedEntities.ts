@@ -108,3 +108,74 @@ export interface ChallengeRating {
     cr: string;
     xp: string;
 }
+
+export interface Armour {
+    source: string;
+    value: number;
+}
+
+export interface ActionGroup {
+    type: string;
+    items: ActionGroupBaseItem[];
+}
+
+export abstract class ActionGroupBaseItem
+{
+    type: string = this.getType();
+    abstract getType(): string;
+}
+
+export class ActionGroupEntryItem extends ActionGroupBaseItem {
+    name: string = '';
+    entries: string[] = [];
+
+    getType(): string {
+        return 'entry';
+    }
+}
+
+export class ActionGroupLegendaryGroupItem extends ActionGroupBaseItem {
+    id: string = '';
+    source: string = '';
+
+    getType(): string {
+        return 'legendaryGroupActions';
+    }
+}
+
+export class ActionGroupSpellcastingItem extends ActionGroupBaseItem {
+    ability: string = '';
+    headerEntries: string[] = [];
+    spells: SpellItem[] = [];
+
+    getType(): string {
+        return 'spellList';
+    }
+}
+
+export interface SpellItem {
+    resource: string;
+    uses: number;
+    list: string[];
+}
+
+export interface Hitpoint {
+    type: string;
+    value: string;
+}
+
+export interface Movement {
+    type: string;
+    value: number;
+}
+
+export interface Resistance {
+    type: string;
+    value: string[];
+}
+
+export interface Proficiency {
+    type: string;
+    target: string;
+    value: number;
+}
