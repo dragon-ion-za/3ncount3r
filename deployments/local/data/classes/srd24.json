@@ -1,5 +1,6 @@
 {
 	"_license": "This work includes material taken from the System Reference Document 5.1 ('SRD 5.1') by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+	"ruleSystem": "dnd5e",
 	"classes": [
         {
             "name": "Ranger",
@@ -79,7 +80,7 @@
                         {"header": "",  "entries": [ "Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longbows and Shortswords."]},
                         {"header": "",  "entries": [ "Whenever you finish a Long Rest, you can change the kinds of weapons you chose. For example, you could switch to using the mastery properties of Scimitars and Longswords."]}
                     ],
-                    "options": [ { "title": "Mastery", "maxSelection": 2, "items": [ { "id": "__profWeapons" } ] } ] 
+                    "options": [ { "title": "Mastery", "maxSelection": 2, "items": [ { "id": "__profWeapons" } ] } ]
                 },
                 {
                     "name": "Deft Explorer",
