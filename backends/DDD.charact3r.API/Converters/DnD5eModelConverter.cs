@@ -29,7 +29,7 @@ namespace DDD.charact3r.API.Converters
       // Get Class Details
       foreach (var characterClass in model.Classes)
       {
-        ClassDetailsModel classDetails = _service.GetClass(characterClass.Id, characterClass.ByoapiId);
+        ClassDetailsModel classDetails = _service.GetClass("", characterClass.Id, characterClass.ByoapiId);
 
       }
 

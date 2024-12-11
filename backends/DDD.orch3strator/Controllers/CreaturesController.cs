@@ -22,7 +22,7 @@ namespace DDD.orch3strator.Controllers
     [HttpGet]
     public async Task<IEnumerable<IViewModel>> Get([FromRoute] string ruleSystem)
     {
-      IEnumerable<CreatureModel> models = await _dataService.SearchForCreatures(Request.QueryString.Value ?? "");
+      IEnumerable<CreatureModel> models = await _dataService.SearchForCreatures(ruleSystem, Request.QueryString.Value ?? "");
 
       IModelConverter<CreatureModel> modelConverter = _modelConverterFactory.Create<CreatureModel>(ruleSystem);
 

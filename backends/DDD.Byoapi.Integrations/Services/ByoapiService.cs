@@ -14,7 +14,7 @@ namespace DDD.Byoapi.Integrations.Services
       _config = options.Value;
     }
 
-    public async Task<IEnumerable<CreatureModel>> SearchForCreatures(string queryString)
+    public async Task<IEnumerable<CreatureModel>> SearchForCreatures(string ruleSystem, string queryString)
     {
       List<CreatureModel> allCreatures = new List<CreatureModel>();
 
@@ -23,7 +23,7 @@ namespace DDD.Byoapi.Integrations.Services
       HttpClient client = new HttpClient();
       foreach (var byoapi in _config)
       {
-        calls.Add(byoapi.Id, client.GetAsync($"{byoapi.BaseUrl}creatures{queryString}"));
+        calls.Add(byoapi.Id, client.GetAsync($"{byoapi.BaseUrl}{ruleSystem}/creatures{queryString}"));
       }
 
       await Task.WhenAll(calls.Values);
@@ -45,21 +45,21 @@ namespace DDD.Byoapi.Integrations.Services
       return allCreatures;
     }
 
-    public async Task<CreatureModel> GetCreatureByName(string byoapiId, string name)
+    public async Task<CreatureModel> GetCreatureByName(string ruleSystem, string byoapiId, string name)
     {
       ByoapiConfig endpoint = _config.FirstOrDefault(x => x.Id == byoapiId);
 
       if (endpoint == null) return new CreatureModel();
 
       HttpClient client = new HttpClient();
-      HttpResponseMessage response = await client.GetAsync($"{endpoint.BaseUrl}creatures/{name}");
+      HttpResponseMessage response = await client.GetAsync($"{endpoint.BaseUrl}{ruleSystem}/creatures/{name}");
 
       response.EnsureSuccessStatusCode();
 
       return await response.Content.ReadFromJsonAsync<CreatureModel>();
     }
 
-    public ClassDetailsModel GetClass(string id, string byoapiId)
+    public ClassDetailsModel GetClass(string ruleSystem, string id, string byoapiId)
     {
       throw new NotImplementedException();
     }
