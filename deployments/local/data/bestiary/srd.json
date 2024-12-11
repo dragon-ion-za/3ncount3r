@@ -104,8 +104,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -290,15 +296,13 @@
 				]
 			  ]
 			},
-			{},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -488,8 +492,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -705,8 +715,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -938,8 +954,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -1194,8 +1216,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -1432,8 +1460,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -1683,8 +1717,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -1916,8 +1956,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -2149,8 +2195,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -2389,8 +2441,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -2622,8 +2680,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -2802,16 +2866,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -3024,8 +3089,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -3241,8 +3312,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -3481,8 +3558,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -3737,8 +3820,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -3982,8 +4071,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -4233,8 +4328,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -4466,8 +4567,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -4699,8 +4806,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -4939,8 +5052,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -5172,8 +5291,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -5466,7 +5591,10 @@
 				]
 			  ]
 			},
-			{},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -5659,16 +5787,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -5803,16 +5932,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -5939,16 +6069,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -6185,15 +6316,13 @@
 				]
 			  ]
 			},
-			{},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -6387,16 +6516,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -6557,16 +6687,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -6696,16 +6827,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -6834,16 +6966,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -6977,16 +7110,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -7119,16 +7253,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -7249,16 +7384,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -7421,16 +7557,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -7608,16 +7745,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -7761,16 +7899,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -7955,16 +8094,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -8145,16 +8285,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -8281,16 +8422,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -8441,16 +8583,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -8628,16 +8771,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -8781,16 +8925,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -8925,16 +9070,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -9068,16 +9214,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -9253,16 +9400,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -9401,16 +9549,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -9551,16 +9700,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -9687,16 +9837,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -9859,16 +10010,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -10013,16 +10165,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -10207,16 +10360,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -10396,16 +10550,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -10574,16 +10729,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -10728,16 +10884,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -10878,16 +11035,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -11008,16 +11166,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -11138,16 +11297,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -11298,16 +11458,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -11479,16 +11640,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -11665,16 +11827,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -11822,16 +11985,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -11999,16 +12163,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -12189,16 +12354,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -12353,7 +12519,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -12391,12 +12560,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -12539,16 +12703,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -12667,16 +12832,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -12798,16 +12964,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -12944,16 +13111,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -13130,7 +13298,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -13172,12 +13343,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -13335,16 +13501,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -13471,16 +13638,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -13659,15 +13827,13 @@
 				]
 			  ]
 			},
-			{},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -13815,16 +13981,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -13972,16 +14139,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -14115,16 +14283,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -14274,7 +14443,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "int",
@@ -14302,12 +14474,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -14441,16 +14608,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -14597,7 +14765,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -14624,12 +14795,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -14799,16 +14965,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -14954,7 +15121,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -14995,12 +15165,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -15171,16 +15336,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -15309,16 +15475,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -15463,16 +15630,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -15636,16 +15804,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -15828,7 +15997,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "wis",
@@ -15855,12 +16027,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -16013,7 +16180,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -16040,12 +16210,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -16220,15 +16385,13 @@
 				]
 			  ]
 			},
-			{},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -16391,7 +16554,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -16426,12 +16592,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -16596,16 +16757,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -16743,7 +16905,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -16762,12 +16927,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -16905,16 +17065,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -17053,16 +17214,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -17215,7 +17377,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -17253,12 +17418,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -17405,16 +17565,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -17541,16 +17702,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -17702,16 +17864,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -17906,16 +18069,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -18071,16 +18235,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -18228,16 +18393,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -18386,16 +18552,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -18583,16 +18750,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -18733,16 +18901,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -18869,16 +19038,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -19020,16 +19190,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -19167,16 +19338,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -19340,16 +19512,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -19504,16 +19677,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -19654,16 +19828,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -19823,16 +19998,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -20004,16 +20180,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -20146,16 +20323,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -20299,16 +20477,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -20435,16 +20614,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -20571,16 +20751,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -20694,16 +20875,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -20823,16 +21005,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -20959,16 +21142,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -21107,16 +21291,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -21256,16 +21441,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -21401,16 +21587,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -21540,16 +21727,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -21682,16 +21870,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -21829,16 +22018,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -21959,16 +22149,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -22088,16 +22279,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -22236,16 +22428,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -22383,16 +22576,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -22520,16 +22714,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -22662,16 +22857,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -22797,16 +22993,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -22933,16 +23130,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -23069,16 +23267,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -23223,16 +23422,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -23373,16 +23573,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -23522,16 +23723,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -23653,16 +23855,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -23783,16 +23986,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -23936,16 +24140,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -24096,16 +24301,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -24246,7 +24452,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "int",
@@ -24276,12 +24485,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -24486,16 +24690,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -24662,16 +24867,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -24800,16 +25006,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -24942,16 +25149,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -25104,16 +25312,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -25282,16 +25491,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -25433,16 +25643,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -25602,16 +25813,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -25792,7 +26004,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -25976,16 +26191,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -26127,16 +26343,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -26281,16 +26498,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -26429,16 +26647,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -26642,15 +26861,13 @@
 				]
 			  ]
 			},
-			{},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -26898,7 +27115,10 @@
 				]
 			  ]
 			},
-			{},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -27086,16 +27306,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -27252,16 +27473,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -27384,16 +27606,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -27533,16 +27756,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -27697,16 +27921,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -27882,16 +28107,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -28032,16 +28258,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -28180,16 +28407,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -28313,16 +28541,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -28479,16 +28708,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -28658,16 +28888,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -28820,16 +29051,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -28956,16 +29188,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -29130,16 +29363,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -29312,7 +29546,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -29331,12 +29568,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -29499,16 +29731,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -29703,16 +29936,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -29909,16 +30143,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -30111,16 +30346,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -30268,16 +30504,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -30416,16 +30653,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -30582,16 +30820,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -30743,16 +30982,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -30937,8 +31177,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -31124,7 +31370,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -31160,12 +31409,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -31317,16 +31561,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -31602,7 +31847,10 @@
 				]
 			  ]
 			},
-			{},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -31828,16 +32076,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -31962,16 +32211,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -32121,16 +32371,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -32334,15 +32585,13 @@
 				]
 			  ]
 			},
-			{},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -32499,7 +32748,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -32518,12 +32770,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -32664,16 +32911,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -32813,16 +33061,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -32962,16 +33211,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -33137,16 +33387,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -33321,16 +33572,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -33478,16 +33730,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -33636,16 +33889,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -33794,16 +34048,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -33956,16 +34211,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -34114,16 +34370,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -34259,16 +34516,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -34401,16 +34659,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -34537,16 +34796,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -34813,7 +35073,10 @@
 				]
 			  ]
 			},
-			{},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -35022,16 +35285,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -35236,7 +35500,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -35453,16 +35720,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -35592,16 +35860,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -35753,16 +36022,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -35917,16 +36187,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -36058,16 +36329,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -36192,16 +36464,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -36358,7 +36631,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -36388,12 +36664,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -36565,16 +36836,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -36722,16 +36994,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -36866,16 +37139,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -37019,16 +37293,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -37167,16 +37442,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -37302,16 +37578,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -37470,16 +37747,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -37648,7 +37926,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -37676,12 +37957,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -37865,7 +38141,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -37903,12 +38182,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -38072,16 +38346,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -38206,16 +38481,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -38348,16 +38624,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -38477,16 +38754,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -38657,15 +38935,13 @@
 				]
 			  ]
 			},
-			{},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -38823,16 +39099,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -38980,16 +39257,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -39146,16 +39424,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -39321,16 +39600,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -39458,7 +39738,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -39500,12 +39783,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -39650,16 +39928,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -39780,16 +40059,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -39916,16 +40196,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -40088,16 +40369,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -40231,16 +40513,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -40365,16 +40648,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -40488,16 +40772,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -40630,16 +40915,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -40817,16 +41103,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -40970,16 +41257,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -41123,16 +41411,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -41265,16 +41554,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -41442,16 +41732,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -41599,16 +41890,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -41755,16 +42047,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -41898,16 +42191,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -42045,16 +42339,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -42222,8 +42517,14 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -42352,16 +42653,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -42496,16 +42798,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -42694,16 +42997,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -42873,16 +43177,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -43013,16 +43318,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -43163,16 +43469,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -43329,16 +43636,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -43521,7 +43829,10 @@
 				}
 			  ]
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -43557,12 +43868,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -43736,16 +44042,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -43934,16 +44241,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -44131,15 +44439,13 @@
 				]
 			  ]
 			},
-			{},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -44300,16 +44606,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -44468,16 +44775,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -44643,7 +44951,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -44662,12 +44973,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -44789,16 +45095,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -44938,16 +45245,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -45120,16 +45428,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -45289,7 +45598,10 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -45319,12 +45631,7 @@
 			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -45530,16 +45837,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -45739,16 +46047,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -45900,16 +46209,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -46062,16 +46372,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -46223,16 +46534,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -46384,16 +46696,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -46557,16 +46870,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -46724,16 +47038,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -46885,16 +47200,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -47070,16 +47386,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -47231,16 +47548,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -47468,16 +47786,17 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -47651,16 +47970,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -47801,16 +48121,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -47967,16 +48288,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -48120,16 +48442,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -48258,16 +48581,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -48407,16 +48731,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -48550,16 +48875,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -48742,7 +49068,10 @@
 				}
 			  ]
 			},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
@@ -48995,8 +49324,14 @@
 				}
 			  ]
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
@@ -49197,16 +49532,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -49381,16 +49717,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -49530,16 +49867,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -49694,16 +50032,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -49879,16 +50218,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -50015,16 +50355,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -50139,16 +50480,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -50292,16 +50634,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -50449,16 +50792,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -50625,16 +50969,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -50811,16 +51156,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -50993,16 +51339,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -51188,16 +51535,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -51379,16 +51727,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -51535,16 +51884,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -51721,16 +52071,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -51908,16 +52259,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -52111,16 +52463,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -52264,16 +52617,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -52406,16 +52760,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -52558,16 +52913,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -52754,16 +53110,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -52914,16 +53271,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -53085,16 +53443,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -53264,16 +53623,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -53459,16 +53819,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -53666,16 +54027,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -53866,16 +54228,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -54073,16 +54436,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -54269,16 +54633,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -54454,16 +54819,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -54649,16 +55015,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -54845,16 +55212,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
@@ -55013,16 +55381,17 @@
 			  "type": "legendary",
 			  "items": null
 			},
-			{},
-			{},
+			{
+			  "type": "spellcasting",
+			  "items": null
+			},
+			{
+			  "type": "innateSpellcasting",
+			  "items": null
+			},
 			{
 			  "type": "lair_region_mythic",
-			  "items": [
-				{
-				  "id": null,
-				  "source": null
-				}
-			  ]
+			  "items": null
 			}
 		  ],
 		  "attributes": [
