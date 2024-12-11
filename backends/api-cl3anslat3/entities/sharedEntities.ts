@@ -116,57 +116,18 @@ export interface Armour {
 
 export interface ActionGroup {
     type: string;
-    items: ActionGroupBaseItem[];
+    items: ActionGroupItem[];
 }
 
-export abstract class ActionGroupBaseItem
-{
-    type: string = this.getType();
-    abstract getType(): string;
+export interface ActionGroupItem {
+    name: string;
+    entries: string[];
+    items: ActionGroupEntryItem[];
 }
 
-export class ActionGroupEntryItem extends ActionGroupBaseItem {
-    name: string = '';
-    entries: string[] = [];
-
-    getType(): string {
-        return 'entry';
-    }
-}
-
-export class ActionGroupListItem extends ActionGroupBaseItem {
-    name: string = '';
-    headerEntries: string[] = [];
-    entries: ActionGroupEntryItem[] = [];
-
-    getType(): string {
-        return 'list';
-    }
-}
-
-export class ActionGroupLegendaryGroupItem extends ActionGroupBaseItem {
-    id: string = '';
-    source: string = '';
-
-    getType(): string {
-        return 'legendaryGroupActions';
-    }
-}
-
-export class ActionGroupSpellcastingItem extends ActionGroupBaseItem {
-    ability: string = '';
-    headerEntries: string[] = [];
-    spells: SpellItem[] = [];
-
-    getType(): string {
-        return 'spellList';
-    }
-}
-
-export interface SpellItem {
-    resource: string;
-    uses: number;
-    list: string[];
+export interface ActionGroupEntryItem {
+    name: string ;
+    entries: string[];
 }
 
 export interface Hitpoint {

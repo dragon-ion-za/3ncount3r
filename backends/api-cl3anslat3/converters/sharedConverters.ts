@@ -1,6 +1,6 @@
 import { ComplexLegendaryGroupItem } from "../entities/legendary-group.entity";
-import { Ac, ComplexSpeed, Speed, Trait, Spellcasting, Save, ComplexTrait, ChallengeRating } from "../entities/sharedEntities";
-import { CreatureSizes, SpellTypes, ActionGroupModel, ActionGroupBaseItemModel, ActionGroupEntryItemModel, ActionGroupListItemModel } from "../models/sharedModels";
+import { Ac, ComplexSpeed, Speed } from "../entities/sharedEntities";
+import { CreatureSizes, ActionGroupModel, ActionGroupEntryItemModel, ActionGroupItemModel } from "../models/sharedModels";
 
 export function convertSizeToEnum(entitySize: string[]) : CreatureSizes {
     switch (entitySize[0].toLowerCase()) {
@@ -49,23 +49,23 @@ export function buildActionGroupActionsFromLegendaryGroupActions(groupName: stri
     return model;
 }
 
-export function buildActionsFromLegendaryGroupAction(legendaryAction: (string | ComplexLegendaryGroupItem)): ActionGroupBaseItemModel[] {
-    let specialActions: ActionGroupBaseItemModel[] = [];
+export function buildActionsFromLegendaryGroupAction(legendaryAction: (string | ComplexLegendaryGroupItem)): ActionGroupItemModel[] {
+    let specialActions: ActionGroupItemModel[] = [];
 
     if (typeof legendaryAction === 'string') {
-        specialActions.push({entries: [legendaryAction as string]} as ActionGroupEntryItemModel);
+        specialActions.push({entries: [legendaryAction as string]} as ActionGroupItemModel);
     } else {
         let castLairActions = legendaryAction as ComplexLegendaryGroupItem;
 
         if (castLairActions.type === 'list') {
-            let specialAction = new ActionGroupListItemModel();
+            let specialAction = new ActionGroupItemModel();
 
             Object.keys(castLairActions.items ?? []).forEach((actionKey, actionIndex) => {
                 if (typeof castLairActions.items[actionIndex] === 'string') {
-                    specialAction.headerEntries.push(castLairActions.items[actionIndex] as string)
+                    specialAction.entries.push(castLairActions.items[actionIndex] as string)
                 } else {
                     let innerLairAction = castLairActions.items[actionIndex] as ComplexLegendaryGroupItem;
-                    specialAction.entries.push({
+                    specialAction.items.push({
                         name: innerLairAction.name,
                         entries: [innerLairAction.entry]
                     } as ActionGroupEntryItemModel);

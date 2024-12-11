@@ -116,8 +116,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Aboleth",
-				  "source": "MM"
+				  "name": "Aboleth"
 				}
 			  ]
 			}
@@ -270,24 +269,22 @@
 			{
 			  "type": "spellcasting",
 			  "ability": "wis",
-			  "headerEntries": [
+			  "entries": [
 				"The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 12}, {@hit 4} to hit with spell attacks). The acolyte has following cleric spells prepared:"
 			  ],
-			  "spells": [
+			  "items": [
 				[
 				  {
-					"resource": "slot_lvl0",
-					"uses": null,
-					"list": [
+					"name": "{@slot 0|atwill}",
+					"entries": [
 					  "{@spell light}",
 					  "{@spell sacred flame}",
 					  "{@spell thaumaturgy}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl1",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 1|3}",
+					"entries": [
 					  "{@spell bless}",
 					  "{@spell cure wounds}",
 					  "{@spell sanctuary}"
@@ -296,10 +293,7 @@
 				]
 			  ]
 			},
-			{
-			  "type": "innateSpellcasting",
-			  "items": null
-			},
+			{},
 			{
 			  "type": "lair_region_mythic",
 			  "items": null
@@ -504,8 +498,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Black Dragon",
-				  "source": "MM"
+				  "name": "Black Dragon"
 				}
 			  ]
 			}
@@ -727,8 +720,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Blue Dragon",
-				  "source": "MM"
+				  "name": "Blue Dragon"
 				}
 			  ]
 			}
@@ -966,8 +958,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Brass Dragon",
-				  "source": "MM"
+				  "name": "Brass Dragon"
 				}
 			  ]
 			}
@@ -1228,8 +1219,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Bronze Dragon",
-				  "source": "MM"
+				  "name": "Bronze Dragon"
 				}
 			  ]
 			}
@@ -1472,8 +1462,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Copper Dragon",
-				  "source": "MM"
+				  "name": "Copper Dragon"
 				}
 			  ]
 			}
@@ -1729,8 +1718,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Gold Dragon",
-				  "source": "MM"
+				  "name": "Gold Dragon"
 				}
 			  ]
 			}
@@ -1968,8 +1956,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Green Dragon",
-				  "source": "MM"
+				  "name": "Green Dragon"
 				}
 			  ]
 			}
@@ -2207,8 +2194,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Red Dragon",
-				  "source": "MM"
+				  "name": "Red Dragon"
 				}
 			  ]
 			}
@@ -2453,8 +2439,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Silver Dragon",
-				  "source": "MM"
+				  "name": "Silver Dragon"
 				}
 			  ]
 			}
@@ -2692,8 +2677,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "White Dragon",
-				  "source": "MM"
+				  "name": "White Dragon"
 				}
 			  ]
 			}
@@ -3101,8 +3085,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Black Dragon",
-				  "source": "MM"
+				  "name": "Black Dragon"
 				}
 			  ]
 			}
@@ -3324,8 +3307,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Blue Dragon",
-				  "source": "MM"
+				  "name": "Blue Dragon"
 				}
 			  ]
 			}
@@ -3570,8 +3552,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Brass Dragon",
-				  "source": "MM"
+				  "name": "Brass Dragon"
 				}
 			  ]
 			}
@@ -3832,8 +3813,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Bronze Dragon",
-				  "source": "MM"
+				  "name": "Bronze Dragon"
 				}
 			  ]
 			}
@@ -4083,8 +4063,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Copper Dragon",
-				  "source": "MM"
+				  "name": "Copper Dragon"
 				}
 			  ]
 			}
@@ -4340,8 +4319,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Gold Dragon",
-				  "source": "MM"
+				  "name": "Gold Dragon"
 				}
 			  ]
 			}
@@ -4579,8 +4557,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Green Dragon",
-				  "source": "MM"
+				  "name": "Green Dragon"
 				}
 			  ]
 			}
@@ -4818,8 +4795,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Red Dragon",
-				  "source": "MM"
+				  "name": "Red Dragon"
 				}
 			  ]
 			}
@@ -5064,8 +5040,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Silver Dragon",
-				  "source": "MM"
+				  "name": "Silver Dragon"
 				}
 			  ]
 			}
@@ -5303,8 +5278,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "White Dragon",
-				  "source": "MM"
+				  "name": "White Dragon"
 				}
 			  ]
 			}
@@ -5526,81 +5500,70 @@
 			{
 			  "type": "spellcasting",
 			  "ability": "wis",
-			  "headerEntries": [
+			  "entries": [
 				"The sphinx is a 12th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 18}, {@hit 10} to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following cleric spells prepared:"
 			  ],
-			  "spells": [
+			  "items": [
 				[
 				  {
-					"resource": "slot_lvl0",
-					"uses": null,
-					"list": [
+					"name": "{@slot 0|atwill}",
+					"entries": [
 					  "{@spell sacred flame}",
 					  "{@spell spare the dying}",
 					  "{@spell thaumaturgy}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl1",
-					"uses": 4,
-					"list": [
+					"name": "{@slot 1|4}",
+					"entries": [
 					  "{@spell command}",
 					  "{@spell detect evil and good}",
 					  "{@spell detect magic}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl2",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 2|3}",
+					"entries": [
 					  "{@spell lesser restoration}",
 					  "{@spell zone of truth}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl3",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 3|3}",
+					"entries": [
 					  "{@spell dispel magic}",
 					  "{@spell tongues}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl4",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 4|3}",
+					"entries": [
 					  "{@spell banishment}",
 					  "{@spell freedom of movement}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl5",
-					"uses": 2,
-					"list": [
+					"name": "{@slot 5|2}",
+					"entries": [
 					  "{@spell flame strike}",
 					  "{@spell greater restoration}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl6",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 6|1}",
+					"entries": [
 					  "{@spell heroes' feast}"
 					]
 				  }
 				]
 			  ]
 			},
-			{
-			  "type": "innateSpellcasting",
-			  "items": null
-			},
+			{},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Sphinx",
-				  "source": "MM"
+				  "name": "Sphinx"
 				}
 			  ]
 			}
@@ -6223,15 +6186,14 @@
 			{
 			  "type": "spellcasting",
 			  "ability": "int",
-			  "headerEntries": [
+			  "entries": [
 				"The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 17}, {@hit 9} to hit with spell attacks). The archmage can cast {@spell disguise self} and {@spell invisibility} at will and has the following wizard spells prepared:"
 			  ],
-			  "spells": [
+			  "items": [
 				[
 				  {
-					"resource": "slot_lvl0",
-					"uses": null,
-					"list": [
+					"name": "{@slot 0|atwill}",
+					"entries": [
 					  "{@spell fire bolt}",
 					  "{@spell light}",
 					  "{@spell mage hand}",
@@ -6240,9 +6202,8 @@
 					]
 				  },
 				  {
-					"resource": "slot_lvl1",
-					"uses": 4,
-					"list": [
+					"name": "{@slot 1|4}",
+					"entries": [
 					  "{@spell detect magic}",
 					  "{@spell identify}",
 					  "{@spell mage armor}*",
@@ -6250,76 +6211,65 @@
 					]
 				  },
 				  {
-					"resource": "slot_lvl2",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 2|3}",
+					"entries": [
 					  "{@spell detect thoughts}",
 					  "{@spell mirror image}",
 					  "{@spell misty step}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl3",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 3|3}",
+					"entries": [
 					  "{@spell counterspell}",
 					  "{@spell fly}",
 					  "{@spell lightning bolt}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl4",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 4|3}",
+					"entries": [
 					  "{@spell banishment}",
 					  "{@spell fire shield}",
 					  "{@spell stoneskin}*"
 					]
 				  },
 				  {
-					"resource": "slot_lvl5",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 5|3}",
+					"entries": [
 					  "{@spell cone of cold}",
 					  "{@spell scrying}",
 					  "{@spell wall of force}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl6",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 6|1}",
+					"entries": [
 					  "{@spell globe of invulnerability}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl7",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 7|1}",
+					"entries": [
 					  "{@spell teleport}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl8",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 8|1}",
+					"entries": [
 					  "{@spell mind blank}*"
 					]
 				  },
 				  {
-					"resource": "slot_lvl9",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 9|1}",
+					"entries": [
 					  "{@spell time stop}"
 					]
 				  }
 				]
 			  ]
 			},
-			{
-			  "type": "innateSpellcasting",
-			  "items": null
-			},
+			{},
 			{
 			  "type": "lair_region_mythic",
 			  "items": null
@@ -12526,13 +12476,13 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The giant's innate spellcasting ability is Charisma. It can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell detect magic}",
 					"{@spell fog cloud}",
 					"{@spell light}"
@@ -12540,8 +12490,8 @@
 				},
 				[
 				  {
-					"resource": "3e",
-					"list": [
+					"name": "{@limit 3e}",
+					"entries": [
 					  "{@spell feather fall}",
 					  "{@spell fly}",
 					  "{@spell misty step}",
@@ -12549,8 +12499,8 @@
 					]
 				  },
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell control weather}",
 					  "{@spell gaseous form}"
 					]
@@ -13305,13 +13255,13 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The couatl's spellcasting ability is Charisma (spell save {@dc 14}). It can innately cast the following spells, requiring only verbal components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell detect evil and good}",
 					"{@spell detect magic}",
 					"{@spell detect thoughts}"
@@ -13319,8 +13269,8 @@
 				},
 				[
 				  {
-					"resource": "3e",
-					"list": [
+					"name": "{@limit 3e}",
+					"entries": [
 					  "{@spell bless}",
 					  "{@spell create food and water}",
 					  "{@spell cure wounds}",
@@ -13331,8 +13281,8 @@
 					]
 				  },
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell dream}",
 					  "{@spell greater restoration}",
 					  "{@spell scrying}"
@@ -13793,33 +13743,30 @@
 			{
 			  "type": "spellcasting",
 			  "ability": "wis",
-			  "headerEntries": [
+			  "entries": [
 				"The fanatic is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 11}, {@hit 3} to hit with spell attacks). The fanatic has the following cleric spells prepared:"
 			  ],
-			  "spells": [
+			  "items": [
 				[
 				  {
-					"resource": "slot_lvl0",
-					"uses": null,
-					"list": [
+					"name": "{@slot 0|atwill}",
+					"entries": [
 					  "{@spell light}",
 					  "{@spell sacred flame}",
 					  "{@spell thaumaturgy}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl1",
-					"uses": 4,
-					"list": [
+					"name": "{@slot 1|4}",
+					"entries": [
 					  "{@spell command}",
 					  "{@spell inflict wounds}",
 					  "{@spell shield of faith}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl2",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 2|3}",
+					"entries": [
 					  "{@spell hold person}",
 					  "{@spell spiritual weapon}"
 					]
@@ -13827,10 +13774,7 @@
 				]
 			  ]
 			},
-			{
-			  "type": "innateSpellcasting",
-			  "items": null
-			},
+			{},
 			{
 			  "type": "lair_region_mythic",
 			  "items": null
@@ -14450,20 +14394,20 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "int",
-			  "headerEntries": [
+			  "entries": [
 				"The gnome's innate spellcasting ability is Intelligence (spell save {@dc 11}). It can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell nondetection} (self only)"
 				  ]
 				},
 				[
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell blindness/deafness}",
 					  "{@spell blur}",
 					  "{@spell disguise self}"
@@ -14772,20 +14716,20 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The deva's spellcasting ability is Charisma (spell save {@dc 17}). The deva can innately cast the following spells, requiring only verbal components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell detect evil and good}"
 				  ]
 				},
 				[
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell commune}",
 					  "{@spell raise dead}"
 					]
@@ -15128,13 +15072,13 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The djinni's innate spellcasting ability is Charisma (spell save {@dc 17}, {@hit 9} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell detect evil and good}",
 					"{@spell detect magic}",
 					"{@spell thunderwave}"
@@ -15142,16 +15086,16 @@
 				},
 				[
 				  {
-					"resource": "3e",
-					"list": [
+					"name": "{@limit 3e}",
+					"entries": [
 					  "{@spell create food and water} (can create wine instead of water)",
 					  "{@spell tongues}",
 					  "{@spell wind walk}"
 					]
 				  },
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell conjure elemental} ({@creature air elemental} only)",
 					  "{@spell creation}",
 					  "{@spell gaseous form}",
@@ -16004,20 +15948,20 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "wis",
-			  "headerEntries": [
+			  "entries": [
 				"The drider's innate spellcasting ability is Wisdom (spell save {@dc 13}). The drider can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell dancing lights}"
 				  ]
 				},
 				[
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell darkness}",
 					  "{@spell faerie fire}"
 					]
@@ -16187,20 +16131,20 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The drow's spellcasting ability is Charisma (spell save {@dc 11}). It can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell dancing lights}"
 				  ]
 				},
 				[
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell darkness}",
 					  "{@spell faerie fire}"
 					]
@@ -16350,24 +16294,22 @@
 			{
 			  "type": "spellcasting",
 			  "ability": "wis",
-			  "headerEntries": [
+			  "entries": [
 				"The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 12}, {@hit 4} to hit with spell attacks). It has the following druid spells prepared:"
 			  ],
-			  "spells": [
+			  "items": [
 				[
 				  {
-					"resource": "slot_lvl0",
-					"uses": null,
-					"list": [
+					"name": "{@slot 0|atwill}",
+					"entries": [
 					  "{@spell druidcraft}",
 					  "{@spell produce flame}",
 					  "{@spell shillelagh}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl1",
-					"uses": 4,
-					"list": [
+					"name": "{@slot 1|4}",
+					"entries": [
 					  "{@spell entangle}",
 					  "{@spell longstrider}",
 					  "{@spell speak with animals}",
@@ -16375,9 +16317,8 @@
 					]
 				  },
 				  {
-					"resource": "slot_lvl2",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 2|3}",
+					"entries": [
 					  "{@spell animal messenger}",
 					  "{@spell barkskin}"
 					]
@@ -16385,10 +16326,7 @@
 				]
 			  ]
 			},
-			{
-			  "type": "innateSpellcasting",
-			  "items": null
-			},
+			{},
 			{
 			  "type": "lair_region_mythic",
 			  "items": null
@@ -16561,27 +16499,27 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The dryad's innate spellcasting ability is Charisma (spell save {@dc 14}). The dryad can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell druidcraft}"
 				  ]
 				},
 				[
 				  {
-					"resource": "3e",
-					"list": [
+					"name": "{@limit 3e}",
+					"entries": [
 					  "{@spell entangle}",
 					  "{@spell goodberry}"
 					]
 				  },
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell barkskin}",
 					  "{@spell pass without trace}",
 					  "{@spell shillelagh}"
@@ -16912,13 +16850,13 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The mephit can innately cast {@spell sleep}, requiring no material components. Its innate spellcasting ability is Charisma."
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell sleep}"
 				  ]
 				},
@@ -17384,27 +17322,27 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The efreeti's innate spellcasting ability is Charisma (spell save {@dc 15}, {@hit 7} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell detect magic}"
 				  ]
 				},
 				[
 				  {
-					"resource": "3e",
-					"list": [
+					"name": "{@limit 3e}",
+					"entries": [
 					  "{@spell enlarge/reduce}",
 					  "{@spell tongues}"
 					]
 				  },
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell conjure elemental} ({@creature fire elemental} only)",
 					  "{@spell gaseous form}",
 					  "{@spell invisibility}",
@@ -24459,13 +24397,13 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "int",
-			  "headerEntries": [
+			  "entries": [
 				"The glabrezu's spellcasting ability is Intelligence (spell save {@dc 16}). The glabrezu can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell darkness}",
 					"{@spell detect magic}",
 					"{@spell dispel magic}"
@@ -24473,8 +24411,8 @@
 				},
 				[
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell confusion}",
 					  "{@spell fly}",
 					  "{@spell power word stun}"
@@ -26011,13 +25949,13 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The hag's innate spellcasting ability is Charisma (spell save {@dc 12}). She can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell dancing lights}",
 					"{@spell minor illusion}",
 					"{@spell vicious mockery}"
@@ -26030,8 +25968,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Green Hag",
-				  "source": "MM"
+				  "name": "Green Hag"
 				}
 			  ]
 			}
@@ -26796,75 +26733,65 @@
 			{
 			  "type": "spellcasting",
 			  "ability": "wis",
-			  "headerEntries": [
+			  "entries": [
 				"The naga is an 11th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 16}, {@hit 8} to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following cleric spells prepared:"
 			  ],
-			  "spells": [
+			  "items": [
 				[
 				  {
-					"resource": "slot_lvl0",
-					"uses": null,
-					"list": [
+					"name": "{@slot 0|atwill}",
+					"entries": [
 					  "{@spell mending}",
 					  "{@spell sacred flame}",
 					  "{@spell thaumaturgy}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl1",
-					"uses": 4,
-					"list": [
+					"name": "{@slot 1|4}",
+					"entries": [
 					  "{@spell command}",
 					  "{@spell cure wounds}",
 					  "{@spell shield of faith}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl2",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 2|3}",
+					"entries": [
 					  "{@spell calm emotions}",
 					  "{@spell hold person}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl3",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 3|3}",
+					"entries": [
 					  "{@spell bestow curse}",
 					  "{@spell clairvoyance}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl4",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 4|3}",
+					"entries": [
 					  "{@spell banishment}",
 					  "{@spell freedom of movement}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl5",
-					"uses": 2,
-					"list": [
+					"name": "{@slot 5|2}",
+					"entries": [
 					  "{@spell flame strike}",
 					  "{@spell geas}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl6",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 6|1}",
+					"entries": [
 					  "{@spell true seeing}"
 					]
 				  }
 				]
 			  ]
 			},
-			{
-			  "type": "innateSpellcasting",
-			  "items": null
-			},
+			{},
 			{
 			  "type": "lair_region_mythic",
 			  "items": null
@@ -27056,75 +26983,65 @@
 			{
 			  "type": "spellcasting",
 			  "ability": "int",
-			  "headerEntries": [
+			  "entries": [
 				"The sphinx is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 16}, {@hit 8} to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following wizard spells prepared:"
 			  ],
-			  "spells": [
+			  "items": [
 				[
 				  {
-					"resource": "slot_lvl0",
-					"uses": null,
-					"list": [
+					"name": "{@slot 0|atwill}",
+					"entries": [
 					  "{@spell mage hand}",
 					  "{@spell minor illusion}",
 					  "{@spell prestidigitation}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl1",
-					"uses": 4,
-					"list": [
+					"name": "{@slot 1|4}",
+					"entries": [
 					  "{@spell detect magic}",
 					  "{@spell identify}",
 					  "{@spell shield}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl2",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 2|3}",
+					"entries": [
 					  "{@spell darkness}",
 					  "{@spell locate object}",
 					  "{@spell suggestion}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl3",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 3|3}",
+					"entries": [
 					  "{@spell dispel magic}",
 					  "{@spell remove curse}",
 					  "{@spell tongues}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl4",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 4|3}",
+					"entries": [
 					  "{@spell banishment}",
 					  "{@spell greater invisibility}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl5",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 5|1}",
+					"entries": [
 					  "{@spell legend lore}"
 					]
 				  }
 				]
 			  ]
 			},
-			{
-			  "type": "innateSpellcasting",
-			  "items": null
-			},
+			{},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Sphinx",
-				  "source": "MM"
+				  "name": "Sphinx"
 				}
 			  ]
 			}
@@ -29553,13 +29470,13 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The mephit can innately cast {@spell fog cloud}, requiring no material components. Its innate spellcasting ability is Charisma."
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell fog cloud}"
 				  ]
 				},
@@ -31189,8 +31106,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Kraken",
-				  "source": "MM"
+				  "name": "Kraken"
 				}
 			  ]
 			}
@@ -31377,27 +31293,27 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The lamia's innate spellcasting ability is Charisma (spell save {@dc 13}). It can innately cast the following spells, requiring no material components."
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell disguise self} (any humanoid form)",
 					"{@spell major image}"
 				  ]
 				},
 				[
 				  {
-					"resource": "1",
-					"list": [
+					"name": "{@limit 1}",
+					"entries": [
 					  "{@spell geas}"
 					]
 				  },
 				  {
-					"resource": "3e",
-					"list": [
+					"name": "{@limit 3e}",
+					"entries": [
 					  "{@spell charm person}",
 					  "{@spell mirror image}",
 					  "{@spell scrying}",
@@ -31753,24 +31669,22 @@
 			{
 			  "type": "spellcasting",
 			  "ability": "int",
-			  "headerEntries": [
+			  "entries": [
 				"The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 20}, {@hit 12} to hit with spell attacks). The lich has the following wizard spells prepared:"
 			  ],
-			  "spells": [
+			  "items": [
 				[
 				  {
-					"resource": "slot_lvl0",
-					"uses": null,
-					"list": [
+					"name": "{@slot 0|atwill}",
+					"entries": [
 					  "{@spell mage hand}",
 					  "{@spell prestidigitation}",
 					  "{@spell ray of frost}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl1",
-					"uses": 4,
-					"list": [
+					"name": "{@slot 1|4}",
+					"entries": [
 					  "{@spell detect magic}",
 					  "{@spell magic missile}",
 					  "{@spell shield}",
@@ -31778,9 +31692,8 @@
 					]
 				  },
 				  {
-					"resource": "slot_lvl2",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 2|3}",
+					"entries": [
 					  "{@spell detect thoughts}",
 					  "{@spell invisibility}",
 					  "{@spell Melf's acid arrow}",
@@ -31788,9 +31701,8 @@
 					]
 				  },
 				  {
-					"resource": "slot_lvl3",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 3|3}",
+					"entries": [
 					  "{@spell animate dead}",
 					  "{@spell counterspell}",
 					  "{@spell dispel magic}",
@@ -31798,65 +31710,55 @@
 					]
 				  },
 				  {
-					"resource": "slot_lvl4",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 4|3}",
+					"entries": [
 					  "{@spell blight}",
 					  "{@spell dimension door}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl5",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 5|3}",
+					"entries": [
 					  "{@spell cloudkill}",
 					  "{@spell scrying}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl6",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 6|1}",
+					"entries": [
 					  "{@spell disintegrate}",
 					  "{@spell globe of invulnerability}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl7",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 7|1}",
+					"entries": [
 					  "{@spell finger of death}",
 					  "{@spell plane shift}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl8",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 8|1}",
+					"entries": [
 					  "{@spell dominate monster}",
 					  "{@spell power word stun}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl9",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 9|1}",
+					"entries": [
 					  "{@spell power word kill}"
 					]
 				  }
 				]
 			  ]
 			},
-			{
-			  "type": "innateSpellcasting",
-			  "items": null
-			},
+			{},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Lich",
-				  "source": "MM"
+				  "name": "Lich"
 				}
 			  ]
 			}
@@ -32525,15 +32427,14 @@
 			{
 			  "type": "spellcasting",
 			  "ability": "int",
-			  "headerEntries": [
+			  "entries": [
 				"The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). The mage has the following wizard spells prepared:"
 			  ],
-			  "spells": [
+			  "items": [
 				[
 				  {
-					"resource": "slot_lvl0",
-					"uses": null,
-					"list": [
+					"name": "{@slot 0|atwill}",
+					"entries": [
 					  "{@spell fire bolt}",
 					  "{@spell light}",
 					  "{@spell mage hand}",
@@ -32541,9 +32442,8 @@
 					]
 				  },
 				  {
-					"resource": "slot_lvl1",
-					"uses": 4,
-					"list": [
+					"name": "{@slot 1|4}",
+					"entries": [
 					  "{@spell detect magic}",
 					  "{@spell mage armor}",
 					  "{@spell magic missile}",
@@ -32551,44 +32451,37 @@
 					]
 				  },
 				  {
-					"resource": "slot_lvl2",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 2|3}",
+					"entries": [
 					  "{@spell misty step}",
 					  "{@spell suggestion}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl3",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 3|3}",
+					"entries": [
 					  "{@spell counterspell}",
 					  "{@spell fireball}",
 					  "{@spell fly}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl4",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 4|3}",
+					"entries": [
 					  "{@spell greater invisibility}",
 					  "{@spell ice storm}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl5",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 5|1}",
+					"entries": [
 					  "{@spell cone of cold}"
 					]
 				  }
 				]
 			  ]
 			},
-			{
-			  "type": "innateSpellcasting",
-			  "items": null
-			},
+			{},
 			{
 			  "type": "lair_region_mythic",
 			  "items": null
@@ -32755,13 +32648,13 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The mephit can innately cast {@spell heat metal} (spell save {@dc 10}), requiring no material components. Its innate spellcasting ability is Charisma."
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell heat metal}"
 				  ]
 				},
@@ -35008,81 +34901,70 @@
 			{
 			  "type": "spellcasting",
 			  "ability": "wis",
-			  "headerEntries": [
+			  "entries": [
 				"The mummy lord is a 10th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 17}, {@hit 9} to hit with spell attacks). The mummy lord has the following cleric spells prepared:"
 			  ],
-			  "spells": [
+			  "items": [
 				[
 				  {
-					"resource": "slot_lvl0",
-					"uses": null,
-					"list": [
+					"name": "{@slot 0|atwill}",
+					"entries": [
 					  "{@spell sacred flame}",
 					  "{@spell thaumaturgy}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl1",
-					"uses": 4,
-					"list": [
+					"name": "{@slot 1|4}",
+					"entries": [
 					  "{@spell command}",
 					  "{@spell guiding bolt}",
 					  "{@spell shield of faith}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl2",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 2|3}",
+					"entries": [
 					  "{@spell hold person}",
 					  "{@spell silence}",
 					  "{@spell spiritual weapon}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl3",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 3|3}",
+					"entries": [
 					  "{@spell animate dead}",
 					  "{@spell dispel magic}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl4",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 4|3}",
+					"entries": [
 					  "{@spell divination}",
 					  "{@spell guardian of faith}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl5",
-					"uses": 2,
-					"list": [
+					"name": "{@slot 5|2}",
+					"entries": [
 					  "{@spell contagion}",
 					  "{@spell insect plague}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl6",
-					"uses": 1,
-					"list": [
+					"name": "{@slot 6|1}",
+					"entries": [
 					  "{@spell harm}"
 					]
 				  }
 				]
 			  ]
 			},
-			{
-			  "type": "innateSpellcasting",
-			  "items": null
-			},
+			{},
 			{
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Mummy Lord",
-				  "source": "MM"
+				  "name": "Mummy Lord"
 				}
 			  ]
 			}
@@ -35507,21 +35389,21 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The hag's innate spellcasting ability is Charisma (spell save {@dc 14}, {@hit 6} to hit with spell attacks). She can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell detect magic}",
 					"{@spell magic missile}"
 				  ]
 				},
 				[
 				  {
-					"resource": "2e",
-					"list": [
+					"name": "{@limit 2e}",
+					"entries": [
 					  "{@spell plane shift} (self only)",
 					  "{@spell ray of enfeeblement}",
 					  "{@spell sleep}"
@@ -35534,8 +35416,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Night Hag",
-				  "source": "MM"
+				  "name": "Night Hag"
 				}
 			  ]
 			}
@@ -36638,21 +36519,21 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The oni's innate spellcasting ability is Charisma (spell save {@dc 13}). The oni can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell darkness}",
 					"{@spell invisibility}"
 				  ]
 				},
 				[
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell charm person}",
 					  "{@spell cone of cold}",
 					  "{@spell gaseous form}",
@@ -37933,21 +37814,21 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The pit fiend's spellcasting ability is Charisma (spell save {@dc 21}). The pit fiend can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell detect magic}",
 					"{@spell fireball}"
 				  ]
 				},
 				[
 				  {
-					"resource": "3e",
-					"list": [
+					"name": "{@limit 3e}",
+					"entries": [
 					  "{@spell hold monster}",
 					  "{@spell wall of fire}"
 					]
@@ -38148,21 +38029,21 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The planetar's spellcasting ability is Charisma (spell save {@dc 20}). The planetar can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell detect evil and good}",
 					"{@spell invisibility} (self only)"
 				  ]
 				},
 				[
 				  {
-					"resource": "3e",
-					"list": [
+					"name": "{@limit 3e}",
+					"entries": [
 					  "{@spell blade barrier}",
 					  "{@spell dispel evil and good}",
 					  "{@spell flame strike}",
@@ -38170,8 +38051,8 @@
 					]
 				  },
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell commune}",
 					  "{@spell control weather}",
 					  "{@spell insect plague}"
@@ -38893,41 +38774,37 @@
 			{
 			  "type": "spellcasting",
 			  "ability": "wis",
-			  "headerEntries": [
+			  "entries": [
 				"The priest is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 13}, {@hit 5} to hit with spell attacks). The priest has the following cleric spells prepared:"
 			  ],
-			  "spells": [
+			  "items": [
 				[
 				  {
-					"resource": "slot_lvl0",
-					"uses": null,
-					"list": [
+					"name": "{@slot 0|atwill}",
+					"entries": [
 					  "{@spell light}",
 					  "{@spell sacred flame}",
 					  "{@spell thaumaturgy}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl1",
-					"uses": 4,
-					"list": [
+					"name": "{@slot 1|4}",
+					"entries": [
 					  "{@spell cure wounds}",
 					  "{@spell guiding bolt}",
 					  "{@spell sanctuary}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl2",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 2|3}",
+					"entries": [
 					  "{@spell lesser restoration}",
 					  "{@spell spiritual weapon}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl3",
-					"uses": 2,
-					"list": [
+					"name": "{@slot 3|2}",
+					"entries": [
 					  "{@spell dispel magic}",
 					  "{@spell spirit guardians}"
 					]
@@ -38935,10 +38812,7 @@
 				]
 			  ]
 			},
-			{
-			  "type": "innateSpellcasting",
-			  "items": null
-			},
+			{},
 			{
 			  "type": "lair_region_mythic",
 			  "items": null
@@ -39745,13 +39619,13 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The rakshasa's innate spellcasting ability is Charisma (spell save {@dc 18}, {@hit 10} to hit with spell attacks). The rakshasa can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell detect thoughts}",
 					"{@spell disguise self}",
 					"{@spell mage hand}",
@@ -39760,8 +39634,8 @@
 				},
 				[
 				  {
-					"resource": "3e",
-					"list": [
+					"name": "{@limit 3e}",
+					"entries": [
 					  "{@spell charm person}",
 					  "{@spell detect magic}",
 					  "{@spell invisibility}",
@@ -39770,8 +39644,8 @@
 					]
 				  },
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell dominate person}",
 					  "{@spell fly}",
 					  "{@spell plane shift}",
@@ -42529,8 +42403,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Sea Hag",
-				  "source": "MM"
+				  "name": "Sea Hag"
 				}
 			  ]
 			}
@@ -43836,29 +43709,29 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The solar's spellcasting ability is Charisma (spell save {@dc 25}). It can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell detect evil and good}",
 					"{@spell invisibility} (self only)"
 				  ]
 				},
 				[
 				  {
-					"resource": "3e",
-					"list": [
+					"name": "{@limit 3e}",
+					"entries": [
 					  "{@spell blade barrier}",
 					  "{@spell dispel evil and good}",
 					  "{@spell resurrection}"
 					]
 				  },
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell commune}",
 					  "{@spell control weather}"
 					]
@@ -44382,67 +44255,58 @@
 			{
 			  "type": "spellcasting",
 			  "ability": "int",
-			  "headerEntries": [
+			  "entries": [
 				"The naga is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following wizard spells prepared:"
 			  ],
-			  "spells": [
+			  "items": [
 				[
 				  {
-					"resource": "slot_lvl0",
-					"uses": null,
-					"list": [
+					"name": "{@slot 0|atwill}",
+					"entries": [
 					  "{@spell mage hand}",
 					  "{@spell minor illusion}",
 					  "{@spell ray of frost}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl1",
-					"uses": 4,
-					"list": [
+					"name": "{@slot 1|4}",
+					"entries": [
 					  "{@spell charm person}",
 					  "{@spell detect magic}",
 					  "{@spell sleep}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl2",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 2|3}",
+					"entries": [
 					  "{@spell detect thoughts}",
 					  "{@spell hold person}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl3",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 3|3}",
+					"entries": [
 					  "{@spell lightning bolt}",
 					  "{@spell water breathing}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl4",
-					"uses": 3,
-					"list": [
+					"name": "{@slot 4|3}",
+					"entries": [
 					  "{@spell blight}",
 					  "{@spell dimension door}"
 					]
 				  },
 				  {
-					"resource": "slot_lvl5",
-					"uses": 2,
-					"list": [
+					"name": "{@slot 5|2}",
+					"entries": [
 					  "{@spell dominate person}"
 					]
 				  }
 				]
 			  ]
 			},
-			{
-			  "type": "innateSpellcasting",
-			  "items": null
-			},
+			{},
 			{
 			  "type": "lair_region_mythic",
 			  "items": null
@@ -44958,13 +44822,13 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The mephit can innately cast {@spell blur}, requiring no material components. Its innate spellcasting ability is Charisma."
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell blur}"
 				  ]
 				},
@@ -45605,13 +45469,13 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The giant's innate spellcasting ability is Charisma (spell save {@dc 17}). It can innately cast the following spells, requiring no material components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell detect magic}",
 					"{@spell feather fall}",
 					"{@spell levitate}",
@@ -45620,8 +45484,8 @@
 				},
 				[
 				  {
-					"resource": "3e",
-					"list": [
+					"name": "{@limit 3e}",
+					"entries": [
 					  "{@spell control weather}",
 					  "{@spell water breathing}"
 					]
@@ -49075,13 +48939,13 @@
 			{
 			  "type": "innateSpellcasting",
 			  "ability": "cha",
-			  "headerEntries": [
+			  "entries": [
 				"The unicorn's innate spellcasting ability is Charisma (spell save {@dc 14}). The unicorn can innately cast the following spells, requiring no components:"
 			  ],
-			  "spells": [
+			  "items": [
 				{
-				  "resource": "atWill",
-				  "list": [
+				  "name": "{@limit atWill}",
+				  "entries": [
 					"{@spell detect evil and good}",
 					"{@spell druidcraft}",
 					"{@spell pass without trace}"
@@ -49089,8 +48953,8 @@
 				},
 				[
 				  {
-					"resource": "1e",
-					"list": [
+					"name": "{@limit 1e}",
+					"entries": [
 					  "{@spell calm emotions}",
 					  "{@spell dispel evil and good}",
 					  "{@spell entangle}"
@@ -49103,8 +48967,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Unicorn",
-				  "source": "MM"
+				  "name": "Unicorn"
 				}
 			  ]
 			}
@@ -49336,8 +49199,7 @@
 			  "type": "lair_region_mythic",
 			  "items": [
 				{
-				  "id": "Vampire",
-				  "source": "MM"
+				  "name": "Vampire"
 				}
 			  ]
 			}

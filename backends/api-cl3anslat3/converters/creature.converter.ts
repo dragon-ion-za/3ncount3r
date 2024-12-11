@@ -1,7 +1,6 @@
 import { CreatureEntity } from "../entities/creature.entity";
 import { ComplexLegendaryGroupItem, LegendaryGroupEntity } from "../entities/legendary-group.entity";
 import { CreatureModel } from "../models/creature.model";
-import { ActionGroupLegendaryGroupItemModel } from "../models/sharedModels";
 import { buildActionGroupActionsFromLegendaryGroupActions } from "./sharedConverters";
 
 export function creatureEntityToModelConverter(host: string, entity: CreatureEntity, legendaryGroups: LegendaryGroupEntity[]): CreatureModel {
@@ -11,7 +10,7 @@ export function creatureEntityToModelConverter(host: string, entity: CreatureEnt
         let legendaryGroupDetails = entity.actionGroups.find(x => x.type === 'lair_region_mythic');
 
         legendaryGroupDetails?.items?.forEach(x => {
-            let legendaryGroup = legendaryGroups.filter(y => y.name === (x as ActionGroupLegendaryGroupItemModel).id)[0];
+            let legendaryGroup = legendaryGroups.filter(y => y.name === x.name)[0];
             if (legendaryGroup !== null) {
                 addOrUpdateActionGroup(model, 'Lair Actions', legendaryGroup.lairActions);
                 addOrUpdateActionGroup(model, 'Regional Effects', legendaryGroup.regionalEffects);

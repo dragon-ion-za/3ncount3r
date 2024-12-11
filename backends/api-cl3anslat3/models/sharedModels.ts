@@ -22,57 +22,18 @@ export class ArmourModel {
 
 export class ActionGroupModel {
     type: string = '';
-    items: ActionGroupBaseItemModel[] = [];
+    items: ActionGroupItemModel[] = [];
 }
 
-export abstract class ActionGroupBaseItemModel
-{
-    type: string = this.getType();
-    abstract getType(): string;
-}
-
-export class ActionGroupEntryItemModel extends ActionGroupBaseItemModel {
+export class ActionGroupItemModel {
     name: string = '';
     entries: string[] = [];
-
-    getType(): string {
-        return 'entry';
-    }
+    items: ActionGroupEntryItemModel[] = [];
 }
 
-export class ActionGroupListItemModel extends ActionGroupBaseItemModel {
+export class ActionGroupEntryItemModel {
     name: string = '';
-    headerEntries: string[] = [];
-    entries: ActionGroupEntryItemModel[] = [];
-
-    getType(): string {
-        return 'list';
-    }
-}
-
-export class ActionGroupLegendaryGroupItemModel extends ActionGroupBaseItemModel {
-    id: string = '';
-    source: string = '';
-
-    getType(): string {
-        return 'legendaryGroupActions';
-    }
-}
-
-export class ActionGroupSpellcastingItemModel extends ActionGroupBaseItemModel {
-    ability: string = '';
-    headerEntries: string[] = [];
-    spells: SpellItemModel[] = [];
-
-    getType(): string {
-        return 'spellList';
-    }
-}
-
-export class SpellItemModel {
-    resource: string = '';
-    uses: number = 0;
-    list: string[] = [];
+    entries: string[] = [];
 }
 
 export class HitpointModel {
