@@ -1,6 +1,6 @@
 import { ComplexLegendaryGroupItem } from "../entities/legendary-group.entity";
 import { Ac, ComplexSpeed, Speed, ComplexResist, ComplexImmunity, Trait, Spellcasting, Save, ComplexTrait, ChallengeRating } from "../entities/sharedEntities";
-import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, CreatureTraitModel, SpellcastingModel, KnownSpellsModel, SpellTypes, SpecialActionModel, ActionGroupModel, ChallengeModel } from "../models/sharedModels";
+import { CreatureSizes, ArmourClassModel, SkillModifierModel, ResistanceModel, CreatureTraitModel, SpellcastingModel, KnownSpellsModel, SpellTypes, SpecialActionModel, ActionGroupModel, ChallengeModel, ActionGroupBaseItemModel, ActionGroupEntryItemModel, ActionGroupListItemModel } from "../models/sharedModels";
 
 export function convertSizeToEnum(entitySize: string[]) : CreatureSizes {
     switch (entitySize[0].toLowerCase()) {
@@ -375,7 +375,7 @@ export function buildActionGroupActionsFromSpellcasting(groupName: string, spell
 
 export function buildActionGroupActionsFromLegendaryGroupActions(groupName: string, legendaryActions: (string | ComplexLegendaryGroupItem)[]) : ActionGroupModel {
     let model: ActionGroupModel = new ActionGroupModel();
-    model.name = groupName;
+    model.type = groupName;
 
     Object.keys(legendaryActions ?? []).forEach((key, index) => {
         model.items.push(...buildActionsFromLegendaryGroupAction(legendaryActions[index]));
@@ -384,30 +384,28 @@ export function buildActionGroupActionsFromLegendaryGroupActions(groupName: stri
     return model;
 }
 
-export function buildActionsFromLegendaryGroupAction(legendaryAction: (string | ComplexLegendaryGroupItem)): SpecialActionModel[] {
-    let specialActions: SpecialActionModel[] = [];
+export function buildActionsFromLegendaryGroupAction(legendaryAction: (string | ComplexLegendaryGroupItem)): ActionGroupBaseItemModel[] {
+    let specialActions: ActionGroupBaseItemModel[] = [];
 
-    let specialAction: SpecialActionModel = new SpecialActionModel();
-    if (typeof legendaryAction === 'string') {            
-        specialAction.type = 'entry';
-        specialAction.items = [legendaryAction as string];
-        specialActions.push(specialAction);
+    if (typeof legendaryAction === 'string') {
+        let specialAction = new ActionGroupEntryItemModel();
+        specialAction.entries = [legendaryAction as string];
+        specialActions.push({entries: [legendaryAction as string]} as ActionGroupEntryItemModel);
     } else {
         let castLairActions = legendaryAction as ComplexLegendaryGroupItem;
 
         if (castLairActions.type === 'list') {
-            specialAction.type = 'list';
+            let specialAction = new ActionGroupListItemModel();
 
             Object.keys(castLairActions.items ?? []).forEach((actionKey, actionIndex) => {
                 if (typeof castLairActions.items[actionIndex] === 'string') {
-                    specialAction.items.push(castLairActions.items[actionIndex])
+                    specialAction.headerEntries.push(castLairActions.items[actionIndex])
                 } else {
                     let innerLairAction = castLairActions.items[actionIndex] as ComplexLegendaryGroupItem;
-                    specialAction.items.push({
+                    specialAction.entries.push({
                         name: innerLairAction.name,
-                        type: 'list-entry',
-                        items: [innerLairAction.entry]
-                    });
+                        entries: [innerLairAction.entry]
+                    } as ActionGroupEntryItemModel);
                 }
             });
 

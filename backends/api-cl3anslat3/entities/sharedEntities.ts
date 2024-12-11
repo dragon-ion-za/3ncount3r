@@ -134,6 +134,16 @@ export class ActionGroupEntryItem extends ActionGroupBaseItem {
     }
 }
 
+export class ActionGroupListItem extends ActionGroupBaseItem {
+    name: string = '';
+    headerEntries: string[] = [];
+    entries: ActionGroupEntryItem[] = [];
+
+    getType(): string {
+        return 'list';
+    }
+}
+
 export class ActionGroupLegendaryGroupItem extends ActionGroupBaseItem {
     id: string = '';
     source: string = '';

@@ -15,76 +15,83 @@ export enum SpellTypes {
     Each
 }
 
-export class ArmourClassModel {
-    armourClass: number;
-    appliedFrom: string;
-    condition: string = '';
-    alternateForms: ArmourClassModel[] = [];
-
-    constructor(ac: number, appliedFrom: string, condition: string = '') {
-        this.armourClass = ac;
-        this.appliedFrom = appliedFrom;
-        this.condition = condition;
-    }
-}
-
-export class SkillModifierModel {
-    skillName: string;
-    modifier: number;
-
-    constructor(name: string, modifier: number) {
-        this.modifier = modifier;
-        this.skillName = name;
-    }
-}
-
-export class CreatureTraitModel {
-    name: string;
-    entries: string[];
-
-    constructor(name: string, entries: string[]) {
-        this.name = name;
-        this.entries = entries;
-    }
-}
-
-export class ResistanceModel {
-    resistantTo: string;
-    condition: string;
-
-    constructor(resistantTo: string, condition: string) {
-        this.resistantTo = resistantTo;
-        this.condition = condition;
-    }
-}
-
-export class SpellcastingModel {
-    name: string = '';
-    entries: string[] = [];
-    atWill: string[] = [];
-    withResources: KnownSpellsModel[] = [];
-    ability: string = '';
-}
-
-export class KnownSpellsModel {
-    type: SpellTypes = SpellTypes.Unknown;
-    resource: string = '';
-    level: string = '';
-    spells: string[] = [];
-}
-
-export class SpecialActionModel {
-    type: string = '';
-    name: string = '';
-    items: (string | SpecialActionModel)[] = [];
+export class ArmourModel {
+    source: string = '';
+    value: number = 0;
 }
 
 export class ActionGroupModel {
-    name: string = '';
-    items: SpecialActionModel[] = [];
+    type: string = '';
+    items: ActionGroupBaseItemModel[] = [];
 }
 
-export class ChallengeModel {
-    rating: number = 0;
-    experience: number = 0;
+export abstract class ActionGroupBaseItemModel
+{
+    type: string = this.getType();
+    abstract getType(): string;
+}
+
+export class ActionGroupEntryItemModel extends ActionGroupBaseItemModel {
+    name: string = '';
+    entries: string[] = [];
+
+    getType(): string {
+        return 'entry';
+    }
+}
+
+export class ActionGroupListItemModel extends ActionGroupBaseItemModel {
+    name: string = '';
+    headerEntries: string[] = [];
+    entries: ActionGroupEntryItemModel[] = [];
+
+    getType(): string {
+        return 'list';
+    }
+}
+
+export class ActionGroupLegendaryGroupItemModel extends ActionGroupBaseItemModel {
+    id: string = '';
+    source: string = '';
+
+    getType(): string {
+        return 'legendaryGroupActions';
+    }
+}
+
+export class ActionGroupSpellcastingItemModel extends ActionGroupBaseItemModel {
+    ability: string = '';
+    headerEntries: string[] = [];
+    spells: SpellItemModel[] = [];
+
+    getType(): string {
+        return 'spellList';
+    }
+}
+
+export class SpellItemModel {
+    resource: string = '';
+    uses: number = 0;
+    list: string[] = [];
+}
+
+export class HitpointModel {
+    type: string = '';
+    value: string = '';
+}
+
+export class MovementModel {
+    type: string = '';
+    value: number = 0;
+}
+
+export class ResistanceModel {
+    type: string = '';
+    value: string[] = [];
+}
+
+export class ProficiencyModel {
+    type: string = '';
+    target: string = '';
+    value: number = 0;
 }
