@@ -1,5 +1,5 @@
 import { CreatureEntity } from "../entities/creature.entity";
-import { LegendaryGroupEntity } from "../entities/legendary-group.entity";
+import { ComplexLegendaryGroupItem, LegendaryGroupEntity } from "../entities/legendary-group.entity";
 import { CreatureModel } from "../models/creature.model";
 import { ActionGroupLegendaryGroupItemModel } from "../models/sharedModels";
 import { buildActionGroupActionsFromLegendaryGroupActions } from "./sharedConverters";
@@ -10,13 +10,12 @@ export function creatureEntityToModelConverter(host: string, entity: CreatureEnt
     if (entity.actionGroups.some(x => x.type === 'lair_region_mythic')) {
         let legendaryGroupDetails = entity.actionGroups.find(x => x.type === 'lair_region_mythic');
 
-        legendaryGroupDetails?.items.forEach(x => {
+        legendaryGroupDetails?.items?.forEach(x => {
             let legendaryGroup = legendaryGroups.filter(y => y.name === (x as ActionGroupLegendaryGroupItemModel).id)[0];
             if (legendaryGroup !== null) {
-
-                addOrUpdateActionGroup(model, 'Lair Actions', legendaryGroup);
-                addOrUpdateActionGroup(model, 'Regional Effects', legendaryGroup);
-                addOrUpdateActionGroup(model, 'Mythic Encounter', legendaryGroup);
+                addOrUpdateActionGroup(model, 'Lair Actions', legendaryGroup.lairActions);
+                addOrUpdateActionGroup(model, 'Regional Effects', legendaryGroup.regionalEffects);
+                addOrUpdateActionGroup(model, 'Mythic Encounter', legendaryGroup.mythicEncounter);
             }
         });
 
@@ -27,11 +26,12 @@ export function creatureEntityToModelConverter(host: string, entity: CreatureEnt
     return model;
 };
 
-function addOrUpdateActionGroup(model: CreatureModel, actionGroupType: string, legendaryGroup: LegendaryGroupEntity) {
-    let lairActions = buildActionGroupActionsFromLegendaryGroupActions(actionGroupType, legendaryGroup.lairActions);
-                if (model.actionGroups.some(x => x.type === actionGroupType)) {
-                    model.actionGroups.find(x => x.type === actionGroupType)?.items.push(...lairActions.items);
-                } else {
-                    model.actionGroups.push(lairActions);
-                }
+function addOrUpdateActionGroup(model: CreatureModel, actionGroupType: string, legendaryGroup: (string | ComplexLegendaryGroupItem)[]) {
+    let lairActions = buildActionGroupActionsFromLegendaryGroupActions(actionGroupType, legendaryGroup);
+    console.log(lairActions);
+    if (model.actionGroups.some(x => x.type === actionGroupType)) {
+        model.actionGroups.find(x => x.type === actionGroupType)?.items.push(...lairActions.items);
+    } else {
+        model.actionGroups.push(lairActions);
+    }
 }

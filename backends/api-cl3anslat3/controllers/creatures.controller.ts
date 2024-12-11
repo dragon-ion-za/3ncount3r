@@ -37,7 +37,7 @@ export class CreaturesController {
         let legendaryGroups = readFile(`${config.get("dataFileRoot")}data/bestiary/${legendaryFile?.fileName}`);
     
         files.filter(x => x.ruleSystem === ruleSystem).forEach(file => {
-            let jsonCreatures = readFile(`${config.get("dataFileRoot")}data/bestiary/${file}`);
+            let jsonCreatures = readFile(`${config.get("dataFileRoot")}data/bestiary/${file.fileName}`);
             jsonCreatures.monster
                 .filter((x: CreatureEntity) => x.copyFrom == null)
                 .filter((x: CreatureEntity) => dataFilter(x))
