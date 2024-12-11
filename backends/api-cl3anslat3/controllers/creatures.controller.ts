@@ -3,17 +3,18 @@ const config = require('config');
 
 import { creatureEntityToModelConverter } from "../converters/creature.converter";
 import { CreatureEntity } from "../entities/creature.entity";
+import { SourceConfigModel } from "../entities/source-config.model";
 import { CreatureModel } from "../models/creature.model";
 import { readFile } from "../services/readFile.service";
 
 export class CreaturesController {
 
     public static getCreatures = (req: any, res: any) => {    
-        res.send(this.doCreatureSearch(req.query.$filter ?? '', req.protocol + '://' + req.get('host')));
+        res.send(this.doCreatureSearch(req.params.ruleSystem, req.query.$filter ?? '', req.protocol + '://' + req.get('host')));
     }
 
     public static getCreature = (req: any, res: any) => {
-        let creatures: CreatureModel[] = this.doCreatureSearch(`name eq ${req.params.name}`, req.protocol + '://' + req.get('host'));
+        let creatures: CreatureModel[] = this.doCreatureSearch(req.params.ruleSystem, `name eq ${req.params.name}`, req.protocol + '://' + req.get('host'));
         if (creatures.length > 0) {
             res.send(creatures[0]);
         } else {
@@ -25,15 +26,17 @@ export class CreaturesController {
         res.sendFile(`img/${req.params.sourceId}/${req.params.name}.png`, { root: config.get("dataFileRoot") });
     };
 
-    private static doCreatureSearch = (query: string, hostString: string): CreatureModel[] => {
-        const files = config.get("bestiaries") as string[];
+    private static doCreatureSearch = (ruleSystem: string, query: string, hostString: string): CreatureModel[] => {
+        const files = config.get("bestiaries") as SourceConfigModel[];
+        const legendaryDataFiles = config.get("legendary") as SourceConfigModel[];
         
         let creatures: CreatureModel[] = [];
         let dataFilter = this.buildOdataCreatureFilter(query);
         
-        let legendaryGroups = readFile(`${config.get("dataFileRoot")}data/bestiary/legendarygroups.json`);
+        let legendaryFile = legendaryDataFiles.find(x => x.ruleSystem === ruleSystem);
+        let legendaryGroups = readFile(`${config.get("dataFileRoot")}data/bestiary/${legendaryFile?.fileName}`);
     
-        files.forEach(file => {
+        files.filter(x => x.ruleSystem === ruleSystem).forEach(file => {
             let jsonCreatures = readFile(`${config.get("dataFileRoot")}data/bestiary/${file}`);
             jsonCreatures.monster
                 .filter((x: CreatureEntity) => x.copyFrom == null)
