@@ -21,9 +21,9 @@ namespace DDD.Byoapi.Integrations.Services
       Dictionary<string, Task<HttpResponseMessage>> calls = new Dictionary<string, Task<HttpResponseMessage>>();
 
       HttpClient client = new HttpClient();
-      foreach (var byoapi in _config)
+      foreach (var byoapi in _config.Where(x => x.RuleSystem == ruleSystem))
       {
-        calls.Add(byoapi.Id, client.GetAsync($"{byoapi.BaseUrl}{ruleSystem}/creatures{queryString}"));
+        calls.Add(byoapi.Id, client.GetAsync($"{byoapi.BaseUrl}creatures{queryString}"));
       }
 
       await Task.WhenAll(calls.Values);
@@ -47,12 +47,12 @@ namespace DDD.Byoapi.Integrations.Services
 
     public async Task<CreatureModel> GetCreatureByName(string ruleSystem, string byoapiId, string name)
     {
-      ByoapiConfig endpoint = _config.FirstOrDefault(x => x.Id == byoapiId);
+      ByoapiConfig endpoint = _config.FirstOrDefault(x => x.Id == byoapiId && x.RuleSystem == ruleSystem);
 
       if (endpoint == null) return new CreatureModel();
 
       HttpClient client = new HttpClient();
-      HttpResponseMessage response = await client.GetAsync($"{endpoint.BaseUrl}{ruleSystem}/creatures/{name}");
+      HttpResponseMessage response = await client.GetAsync($"{endpoint.BaseUrl}creatures/{name}");
 
       response.EnsureSuccessStatusCode();
 
