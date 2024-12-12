@@ -10,8 +10,8 @@ export function creatureEntityToModelConverter(host: string, entity: CreatureEnt
         let legendaryGroupDetails = entity.actionGroups.find(x => x.type === 'lair_region_mythic');
 
         legendaryGroupDetails?.items?.forEach(x => {
-            let legendaryGroup = legendaryGroups.filter(y => y.name === x.name)[0];
-            if (legendaryGroup !== null) {
+            let legendaryGroup = legendaryGroups.find(y => y.name === x.name);
+            if (legendaryGroup !== undefined) {
                 addOrUpdateActionGroup(model, 'Lair Actions', legendaryGroup.lairActions);
                 addOrUpdateActionGroup(model, 'Regional Effects', legendaryGroup.regionalEffects);
                 addOrUpdateActionGroup(model, 'Mythic Encounter', legendaryGroup.mythicEncounter);

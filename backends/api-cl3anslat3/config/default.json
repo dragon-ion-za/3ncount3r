@@ -2,9 +2,9 @@
     "port": 5005,
     "dataFileRoot": "../../deployments/local/",
     "bestiaries": [
-        { "fileName": "srd.json", "ruleSystem": "dnd5e" }
+        "srd.json"
     ],
     "legendary": [
-        { "fileName": "legendarygroups.json", "ruleSystem": "dnd5e" }
+        "legendarygroups.json"
     ]
 }
