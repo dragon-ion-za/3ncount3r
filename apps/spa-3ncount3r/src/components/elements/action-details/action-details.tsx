@@ -26,63 +26,61 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
                         detailsNodes.push(
                             <Container sx={actionItemContainerStyle}>
                                 <RichTextEntry key={`${specialAction.name}_heading`} isHeading={true} entryIndex={0} entryText={`${specialAction.name}: `} />
-                                {specialAction.items.map(
-                                    (x, entryIndex) => {
-                                        if (typeof x === 'string') {
-                                            return (<RichTextEntry key={`${specialAction.name}_body_${entryIndex}`} entryIndex={entryIndex} entryText={x as string} />);
-                                        }
-                                        else {
-                                            let castAction: SpecialActionViewModel = x;
+                                {specialAction.entries.map((x, entryIndex) => {
+                                    return <RichTextEntry key={`${specialAction.name}_body_${entryIndex}`} entryIndex={entryIndex} entryText={x} />
+                                    }
+                                )}
+                                {specialAction.items.map((x) => {
+                                        let castAction: SpecialActionViewModel = x;
                                             return (renderDetails([castAction]));
-                                        }
                                     }
                                 )}
                             </Container>
                         );
                     } else {
-                        specialAction.items.forEach((x, entryIndex) => detailsNodes.push(<RichTextEntry key={`${index}_no-name_${entryIndex}`} entryIndex={entryIndex} entryText={x as string} />))
+                        specialAction.entries.forEach((x, entryIndex) => detailsNodes.push(<RichTextEntry key={`${index}_no-name_${entryIndex}`} entryIndex={entryIndex} entryText={x} />))
                     }
                 break;
 
                 case 'list': 
                     detailsNodes.push(
                         <List dense={true} sx={{zIndex: -1}}>
-                            {specialAction.items.map((x, entryIndex) => {
-                                if (typeof x === 'string') {
+                            {specialAction.entries.map((x, entryIndex) => {
                                     return (
                                         <ListItem key={`${index}_list-item_${entryIndex}`}>
                                             <ListItemText>
                                                 <RichTextEntry key='' entryIndex={entryIndex} entryText={`- ${x}`} />
                                             </ListItemText>
                                         </ListItem>
-                                    )                                            
-                                } else {
-                                    let castAction: SpecialActionViewModel = x;
-                                    return (
-                                        <ListItem key={`${castAction.name}_container_${entryIndex}`}>
-                                            <ListItemText>
-                                                <Container sx={actionItemContainerStyle}>
-                                                    <RichTextEntry key={`${castAction.name}_heading_${entryIndex}`} isHeading={true} entryIndex={1} entryText={`${castAction.name}: `} />
-                                                    {castAction.items.map(
-                                                        (innerEntry, innerEntryIndex) => {
-                                                            let display: number = 1;
+                                        )
+                                    }
+                                )}
+                            {specialAction.items.map((x, entryIndex) => {
+                                let castAction: SpecialActionViewModel = x;
+                                return (
+                                    <ListItem key={`${castAction.name}_container_${entryIndex}`}>
+                                        <ListItemText>
+                                            <Container sx={actionItemContainerStyle}>
+                                                <RichTextEntry key={`${castAction.name}_heading_${entryIndex}`} isHeading={true} entryIndex={1} entryText={`${castAction.name}: `} />
+                                                {castAction.entries.map(
+                                                    (innerEntry, innerEntryIndex) => {
+                                                        let display: number = 1;
 
-                                                            if (castAction.type === 'list-entry') {
-                                                                display = innerEntryIndex;
-                                                            } else if (castAction.type === 'list-item-inline') {
-                                                                display = 0;
-                                                            }
-
-                                                            return (
-                                                                <RichTextEntry key={`${castAction.name}_body_${innerEntryIndex}`} entryIndex={display} entryText={innerEntry as string} />
-                                                            );
+                                                        if (castAction.type === 'list-entry') {
+                                                            display = innerEntryIndex;
+                                                        } else if (castAction.type === 'list-item-inline') {
+                                                            display = 0;
                                                         }
-                                                    )}
-                                                </Container>
-                                            </ListItemText>
-                                        </ListItem>
-                                    );
-                                }
+
+                                                        return (
+                                                            <RichTextEntry key={`${castAction.name}_body_${innerEntryIndex}`} entryIndex={display} entryText={innerEntry} />
+                                                        );
+                                                    }
+                                                )}
+                                            </Container>
+                                        </ListItemText>
+                                    </ListItem>
+                                );
                             })}
                         </List>
                     );
