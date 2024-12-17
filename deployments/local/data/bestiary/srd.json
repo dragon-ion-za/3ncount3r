@@ -150,7 +150,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 135
+			  "value": "135"
 			},
 			{
 			  "type": "formula",
@@ -328,7 +328,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 9
+			  "value": "9"
 			},
 			{
 			  "type": "formula",
@@ -532,7 +532,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 195
+			  "value": "195"
 			},
 			{
 			  "type": "formula",
@@ -562,7 +562,12 @@
 			}
 		  ],
 		  "immunities": [
-			"acid"
+			{
+			  "type": "normal",
+			  "values": [
+				"acid"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -754,7 +759,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 225
+			  "value": "225"
 			},
 			{
 			  "type": "formula",
@@ -784,7 +789,12 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -992,7 +1002,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 172
+			  "value": "172"
 			},
 			{
 			  "type": "formula",
@@ -1022,7 +1032,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -1253,7 +1268,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 212
+			  "value": "212"
 			},
 			{
 			  "type": "formula",
@@ -1283,7 +1298,12 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -1496,7 +1516,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 184
+			  "value": "184"
 			},
 			{
 			  "type": "formula",
@@ -1526,7 +1546,12 @@
 			}
 		  ],
 		  "immunities": [
-			"acid"
+			{
+			  "type": "normal",
+			  "values": [
+				"acid"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -1752,7 +1777,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 256
+			  "value": "256"
 			},
 			{
 			  "type": "formula",
@@ -1782,7 +1807,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -1990,7 +2020,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 207
+			  "value": "207"
 			},
 			{
 			  "type": "formula",
@@ -2020,8 +2050,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -2228,7 +2263,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 256
+			  "value": "256"
 			},
 			{
 			  "type": "formula",
@@ -2258,7 +2293,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -2473,7 +2513,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 243
+			  "value": "243"
 			},
 			{
 			  "type": "formula",
@@ -2503,7 +2543,12 @@
 			}
 		  ],
 		  "immunities": [
-			"cold"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -2711,7 +2756,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 200
+			  "value": "200"
 			},
 			{
 			  "type": "formula",
@@ -2741,7 +2786,12 @@
 			}
 		  ],
 		  "immunities": [
-			"cold"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -2892,7 +2942,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 90
+			  "value": "90"
 			},
 			{
 			  "type": "formula",
@@ -2925,15 +2975,20 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"exhaustion",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"poisoned",
-			"prone",
-			"restrained",
-			"unconscious"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -3119,7 +3174,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 367
+			  "value": "367"
 			},
 			{
 			  "type": "formula",
@@ -3149,7 +3204,12 @@
 			}
 		  ],
 		  "immunities": [
-			"acid"
+			{
+			  "type": "normal",
+			  "values": [
+				"acid"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -3341,7 +3401,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 481
+			  "value": "481"
 			},
 			{
 			  "type": "formula",
@@ -3371,7 +3431,12 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -3586,7 +3651,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 297
+			  "value": "297"
 			},
 			{
 			  "type": "formula",
@@ -3616,7 +3681,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -3847,7 +3917,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 444
+			  "value": "444"
 			},
 			{
 			  "type": "formula",
@@ -3877,7 +3947,12 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -4097,7 +4172,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 350
+			  "value": "350"
 			},
 			{
 			  "type": "formula",
@@ -4127,7 +4202,12 @@
 			}
 		  ],
 		  "immunities": [
-			"acid"
+			{
+			  "type": "normal",
+			  "values": [
+				"acid"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -4353,7 +4433,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 546
+			  "value": "546"
 			},
 			{
 			  "type": "formula",
@@ -4383,7 +4463,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -4591,7 +4676,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 385
+			  "value": "385"
 			},
 			{
 			  "type": "formula",
@@ -4621,8 +4706,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -4829,7 +4919,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 546
+			  "value": "546"
 			},
 			{
 			  "type": "formula",
@@ -4859,7 +4949,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -5074,7 +5169,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 487
+			  "value": "487"
 			},
 			{
 			  "type": "formula",
@@ -5104,7 +5199,12 @@
 			}
 		  ],
 		  "immunities": [
-			"cold"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -5312,7 +5412,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 333
+			  "value": "333"
 			},
 			{
 			  "type": "formula",
@@ -5342,7 +5442,12 @@
 			}
 		  ],
 		  "immunities": [
-			"cold"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -5597,7 +5702,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 199
+			  "value": "199"
 			},
 			{
 			  "type": "formula",
@@ -5627,18 +5732,22 @@
 			}
 		  ],
 		  "immunities": [
-			"psychic",
 			{
-			  "immune": [
+			  "type": "normal",
+			  "values": [
+				"psychic",
+				"charmed",
+				"frightened"
+			  ]
+			},
+			{
+			  "type": "from nonmagical attacks",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks",
-			  "cond": true
-			},
-			"charmed",
-			"frightened"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -5792,7 +5901,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 33
+			  "value": "33"
 			},
 			{
 			  "type": "formula",
@@ -5822,16 +5931,21 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"psychic",
-			"blinded",
-			"charmed",
-			"deafened",
-			"exhaustion",
-			"frightened",
-			"paralyzed",
-			"petrified",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"psychic",
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -5937,7 +6051,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 39
+			  "value": "39"
 			},
 			{
 			  "type": "formula",
@@ -6074,7 +6188,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 19
+			  "value": "19"
 			},
 			{
 			  "type": "formula",
@@ -6304,7 +6418,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 99
+			  "value": "99"
 			},
 			{
 			  "type": "formula",
@@ -6508,7 +6622,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 78
+			  "value": "78"
 			},
 			{
 			  "type": "formula",
@@ -6679,7 +6793,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 10
+			  "value": "10"
 			},
 			{
 			  "type": "formula",
@@ -6819,7 +6933,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 59
+			  "value": "59"
 			},
 			{
 			  "type": "formula",
@@ -6958,7 +7072,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 19
+			  "value": "19"
 			},
 			{
 			  "type": "formula",
@@ -7102,7 +7216,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 39
+			  "value": "39"
 			},
 			{
 			  "type": "formula",
@@ -7132,9 +7246,14 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -7245,7 +7364,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 3
+			  "value": "3"
 			},
 			{
 			  "type": "formula",
@@ -7376,7 +7495,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 3
+			  "value": "3"
 			},
 			{
 			  "type": "formula",
@@ -7549,7 +7668,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 262
+			  "value": "262"
 			},
 			{
 			  "type": "formula",
@@ -7579,9 +7698,14 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -7737,7 +7861,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 11
+			  "value": "11"
 			},
 			{
 			  "type": "formula",
@@ -7891,7 +8015,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 65
+			  "value": "65"
 			},
 			{
 			  "type": "formula",
@@ -8086,7 +8210,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 110
+			  "value": "110"
 			},
 			{
 			  "type": "formula",
@@ -8116,9 +8240,14 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -8277,7 +8406,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 52
+			  "value": "52"
 			},
 			{
 			  "type": "formula",
@@ -8414,7 +8543,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 1
+			  "value": "1"
 			},
 			{
 			  "type": "formula",
@@ -8575,7 +8704,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 52
+			  "value": "52"
 			},
 			{
 			  "type": "formula",
@@ -8605,9 +8734,14 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -8763,7 +8897,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 168
+			  "value": "168"
 			},
 			{
 			  "type": "formula",
@@ -8793,7 +8927,12 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -8917,7 +9056,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 67
+			  "value": "67"
 			},
 			{
 			  "type": "formula",
@@ -9062,7 +9201,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 19
+			  "value": "19"
 			},
 			{
 			  "type": "formula",
@@ -9206,7 +9345,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 33
+			  "value": "33"
 			},
 			{
 			  "type": "formula",
@@ -9236,7 +9375,12 @@
 			}
 		  ],
 		  "immunities": [
-			"acid"
+			{
+			  "type": "normal",
+			  "values": [
+				"acid"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -9392,7 +9536,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 85
+			  "value": "85"
 			},
 			{
 			  "type": "formula",
@@ -9422,16 +9566,21 @@
 			}
 		  ],
 		  "immunities": [
-			"acid",
-			"cold",
-			"lightning",
-			"slashing",
-			"blinded",
-			"charmed",
-			"deafened",
-			"exhaustion",
-			"frightened",
-			"prone"
+			{
+			  "type": "normal",
+			  "values": [
+				"acid",
+				"cold",
+				"lightning",
+				"slashing",
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"prone"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -9541,7 +9690,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -9692,7 +9841,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 7
+			  "value": "7"
 			},
 			{
 			  "type": "formula",
@@ -9829,7 +9978,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 52
+			  "value": "52"
 			},
 			{
 			  "type": "formula",
@@ -9859,7 +10008,12 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -10002,7 +10156,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 11
+			  "value": "11"
 			},
 			{
 			  "type": "formula",
@@ -10157,7 +10311,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 142
+			  "value": "142"
 			},
 			{
 			  "type": "formula",
@@ -10187,9 +10341,14 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -10352,7 +10511,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 16
+			  "value": "16"
 			},
 			{
 			  "type": "formula",
@@ -10382,7 +10541,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -10542,7 +10706,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 32
+			  "value": "32"
 			},
 			{
 			  "type": "formula",
@@ -10572,7 +10736,12 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -10721,7 +10890,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 34
+			  "value": "34"
 			},
 			{
 			  "type": "formula",
@@ -10876,7 +11045,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 27
+			  "value": "27"
 			},
 			{
 			  "type": "formula",
@@ -11027,7 +11196,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 94
+			  "value": "94"
 			},
 			{
 			  "type": "formula",
@@ -11158,7 +11327,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 15
+			  "value": "15"
 			},
 			{
 			  "type": "formula",
@@ -11289,7 +11458,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 2
+			  "value": "2"
 			},
 			{
 			  "type": "formula",
@@ -11450,7 +11619,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 45
+			  "value": "45"
 			},
 			{
 			  "type": "formula",
@@ -11632,7 +11801,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 85
+			  "value": "85"
 			},
 			{
 			  "type": "formula",
@@ -11662,9 +11831,14 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -11819,7 +11993,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 114
+			  "value": "114"
 			},
 			{
 			  "type": "formula",
@@ -11977,7 +12151,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 93
+			  "value": "93"
 			},
 			{
 			  "type": "formula",
@@ -12007,8 +12181,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -12155,7 +12334,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 133
+			  "value": "133"
 			},
 			{
 			  "type": "formula",
@@ -12185,24 +12364,28 @@
 			}
 		  ],
 		  "immunities": [
-			"acid",
-			"poison",
-			"psychic",
 			{
-			  "immune": [
+			  "type": "normal",
+			  "values": [
+				"acid",
+				"poison",
+				"psychic",
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			  ]
+			},
+			{
+			  "type": "from nonmagical attacks that aren't adamantine",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks that aren't adamantine",
-			  "cond": true
-			},
-			"charmed",
-			"exhaustion",
-			"frightened",
-			"paralyzed",
-			"petrified",
-			"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -12346,7 +12529,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 78
+			  "value": "78"
 			},
 			{
 			  "type": "formula",
@@ -12542,7 +12725,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 200
+			  "value": "200"
 			},
 			{
 			  "type": "formula",
@@ -12695,7 +12878,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 27
+			  "value": "27"
 			},
 			{
 			  "type": "formula",
@@ -12824,7 +13007,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 4
+			  "value": "4"
 			},
 			{
 			  "type": "formula",
@@ -12956,7 +13139,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 13
+			  "value": "13"
 			},
 			{
 			  "type": "formula",
@@ -13103,7 +13286,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -13133,7 +13316,12 @@
 			}
 		  ],
 		  "immunities": [
-			"acid"
+			{
+			  "type": "normal",
+			  "values": [
+				"acid"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -13325,7 +13513,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 97
+			  "value": "97"
 			},
 			{
 			  "type": "formula",
@@ -13355,15 +13543,19 @@
 			}
 		  ],
 		  "immunities": [
-			"psychic",
 			{
-			  "immune": [
+			  "type": "normal",
+			  "values": [
+				"psychic"
+			  ]
+			},
+			{
+			  "type": "from nonmagical attacks",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks",
-			  "cond": true
+			  ]
 			}
 		  ],
 		  "resistances": [
@@ -13493,7 +13685,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 2
+			  "value": "2"
 			},
 			{
 			  "type": "formula",
@@ -13630,7 +13822,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 19
+			  "value": "19"
 			},
 			{
 			  "type": "formula",
@@ -13809,7 +14001,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 33
+			  "value": "33"
 			},
 			{
 			  "type": "formula",
@@ -13967,7 +14159,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 9
+			  "value": "9"
 			},
 			{
 			  "type": "formula",
@@ -14125,7 +14317,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -14269,7 +14461,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 39
+			  "value": "39"
 			},
 			{
 			  "type": "formula",
@@ -14450,7 +14642,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 16
+			  "value": "16"
 			},
 			{
 			  "type": "formula",
@@ -14594,7 +14786,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 4
+			  "value": "4"
 			},
 			{
 			  "type": "formula",
@@ -14771,7 +14963,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 136
+			  "value": "136"
 			},
 			{
 			  "type": "formula",
@@ -14801,9 +14993,14 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed",
-			"exhaustion",
-			"frightened"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed",
+				"exhaustion",
+				"frightened"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -14951,7 +15148,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 37
+			  "value": "37"
 			},
 			{
 			  "type": "formula",
@@ -15141,7 +15338,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 161
+			  "value": "161"
 			},
 			{
 			  "type": "formula",
@@ -15171,8 +15368,13 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning",
-			"thunder"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning",
+				"thunder"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -15322,7 +15524,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 52
+			  "value": "52"
 			},
 			{
 			  "type": "formula",
@@ -15352,7 +15554,12 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -15461,7 +15668,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 19
+			  "value": "19"
 			},
 			{
 			  "type": "formula",
@@ -15616,7 +15823,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 341
+			  "value": "341"
 			},
 			{
 			  "type": "formula",
@@ -15790,7 +15997,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 18
+			  "value": "18"
 			},
 			{
 			  "type": "formula",
@@ -15820,8 +16027,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -16003,7 +16215,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 123
+			  "value": "123"
 			},
 			{
 			  "type": "formula",
@@ -16186,7 +16398,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 13
+			  "value": "13"
 			},
 			{
 			  "type": "formula",
@@ -16361,7 +16573,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 27
+			  "value": "27"
 			},
 			{
 			  "type": "formula",
@@ -16562,7 +16774,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -16737,7 +16949,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 26
+			  "value": "26"
 			},
 			{
 			  "type": "formula",
@@ -16897,7 +17109,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 17
+			  "value": "17"
 			},
 			{
 			  "type": "formula",
@@ -16927,8 +17139,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -17045,7 +17262,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 3
+			  "value": "3"
 			},
 			{
 			  "type": "formula",
@@ -17194,7 +17411,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 126
+			  "value": "126"
 			},
 			{
 			  "type": "formula",
@@ -17224,12 +17441,17 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"exhaustion",
-			"paralyzed",
-			"petrified",
-			"poisoned",
-			"unconscious"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -17388,7 +17610,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 200
+			  "value": "200"
 			},
 			{
 			  "type": "formula",
@@ -17418,7 +17640,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -17545,7 +17772,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 76
+			  "value": "76"
 			},
 			{
 			  "type": "formula",
@@ -17682,7 +17909,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 13
+			  "value": "13"
 			},
 			{
 			  "type": "formula",
@@ -17844,7 +18071,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 153
+			  "value": "153"
 			},
 			{
 			  "type": "formula",
@@ -17874,9 +18101,14 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -18049,7 +18281,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 44
+			  "value": "44"
 			},
 			{
 			  "type": "formula",
@@ -18215,7 +18447,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 85
+			  "value": "85"
 			},
 			{
 			  "type": "formula",
@@ -18373,7 +18605,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 102
+			  "value": "102"
 			},
 			{
 			  "type": "formula",
@@ -18403,16 +18635,21 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"exhaustion",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"poisoned",
-			"prone",
-			"restrained",
-			"unconscious"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -18532,7 +18769,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 162
+			  "value": "162"
 			},
 			{
 			  "type": "formula",
@@ -18562,7 +18799,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -18730,7 +18972,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 93
+			  "value": "93"
 			},
 			{
 			  "type": "formula",
@@ -18760,23 +19002,27 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning",
-			"poison",
 			{
-			  "immune": [
+			  "type": "normal",
+			  "values": [
+				"lightning",
+				"poison",
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			  ]
+			},
+			{
+			  "type": "from nonmagical attacks that aren't adamantine",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks that aren't adamantine",
-			  "cond": true
-			},
-			"charmed",
-			"exhaustion",
-			"frightened",
-			"paralyzed",
-			"petrified",
-			"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -18881,7 +19127,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 5
+			  "value": "5"
 			},
 			{
 			  "type": "formula",
@@ -19018,7 +19264,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 17
+			  "value": "17"
 			},
 			{
 			  "type": "formula",
@@ -19051,15 +19297,20 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"psychic",
-			"blinded",
-			"charmed",
-			"deafened",
-			"frightened",
-			"paralyzed",
-			"petrified",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"psychic",
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -19170,7 +19421,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 1
+			  "value": "1"
 			},
 			{
 			  "type": "formula",
@@ -19318,7 +19569,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 138
+			  "value": "138"
 			},
 			{
 			  "type": "formula",
@@ -19348,7 +19599,12 @@
 			}
 		  ],
 		  "immunities": [
-			"cold"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -19492,7 +19748,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 52
+			  "value": "52"
 			},
 			{
 			  "type": "formula",
@@ -19522,10 +19778,15 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"exhaustion",
-			"petrified",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"exhaustion",
+				"petrified",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -19657,7 +19918,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 84
+			  "value": "84"
 			},
 			{
 			  "type": "formula",
@@ -19687,12 +19948,17 @@
 			}
 		  ],
 		  "immunities": [
-			"blinded",
-			"charmed",
-			"deafened",
-			"exhaustion",
-			"frightened",
-			"prone"
+			{
+			  "type": "normal",
+			  "values": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"prone"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -19808,7 +20074,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 36
+			  "value": "36"
 			},
 			{
 			  "type": "formula",
@@ -19838,10 +20104,15 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"charmed",
-			"exhaustion",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"charmed",
+				"exhaustion",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -19978,7 +20249,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 45
+			  "value": "45"
 			},
 			{
 			  "type": "formula",
@@ -20011,18 +20282,23 @@
 			}
 		  ],
 		  "immunities": [
-			"cold",
-			"necrotic",
-			"poison",
-			"charmed",
-			"exhaustion",
-			"frightened",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"poisoned",
-			"prone",
-			"restrained"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold",
+				"necrotic",
+				"poison",
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -20160,7 +20436,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -20190,10 +20466,15 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"charmed",
-			"exhaustion",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"charmed",
+				"exhaustion",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -20303,7 +20584,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 157
+			  "value": "157"
 			},
 			{
 			  "type": "formula",
@@ -20457,7 +20738,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 13
+			  "value": "13"
 			},
 			{
 			  "type": "formula",
@@ -20594,7 +20875,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -20731,7 +21012,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 42
+			  "value": "42"
 			},
 			{
 			  "type": "formula",
@@ -20855,7 +21136,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 4
+			  "value": "4"
 			},
 			{
 			  "type": "formula",
@@ -20985,7 +21266,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 60
+			  "value": "60"
 			},
 			{
 			  "type": "formula",
@@ -21122,7 +21403,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 13
+			  "value": "13"
 			},
 			{
 			  "type": "formula",
@@ -21271,7 +21552,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 85
+			  "value": "85"
 			},
 			{
 			  "type": "formula",
@@ -21421,7 +21702,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 26
+			  "value": "26"
 			},
 			{
 			  "type": "formula",
@@ -21567,7 +21848,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 42
+			  "value": "42"
 			},
 			{
 			  "type": "formula",
@@ -21707,7 +21988,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 4
+			  "value": "4"
 			},
 			{
 			  "type": "formula",
@@ -21850,7 +22131,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 18
+			  "value": "18"
 			},
 			{
 			  "type": "formula",
@@ -21998,7 +22279,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 19
+			  "value": "19"
 			},
 			{
 			  "type": "formula",
@@ -22129,7 +22410,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 45
+			  "value": "45"
 			},
 			{
 			  "type": "formula",
@@ -22259,7 +22540,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 19
+			  "value": "19"
 			},
 			{
 			  "type": "formula",
@@ -22408,7 +22689,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 52
+			  "value": "52"
 			},
 			{
 			  "type": "formula",
@@ -22556,7 +22837,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 19
+			  "value": "19"
 			},
 			{
 			  "type": "formula",
@@ -22694,7 +22975,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 11
+			  "value": "11"
 			},
 			{
 			  "type": "formula",
@@ -22837,7 +23118,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 7
+			  "value": "7"
 			},
 			{
 			  "type": "formula",
@@ -22973,7 +23254,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 52
+			  "value": "52"
 			},
 			{
 			  "type": "formula",
@@ -23110,7 +23391,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 16
+			  "value": "16"
 			},
 			{
 			  "type": "formula",
@@ -23247,7 +23528,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 126
+			  "value": "126"
 			},
 			{
 			  "type": "formula",
@@ -23402,7 +23683,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 26
+			  "value": "26"
 			},
 			{
 			  "type": "formula",
@@ -23553,7 +23834,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 39
+			  "value": "39"
 			},
 			{
 			  "type": "formula",
@@ -23703,7 +23984,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -23835,7 +24116,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 13
+			  "value": "13"
 			},
 			{
 			  "type": "formula",
@@ -23966,7 +24247,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 9
+			  "value": "9"
 			},
 			{
 			  "type": "formula",
@@ -24120,7 +24401,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 11
+			  "value": "11"
 			},
 			{
 			  "type": "formula",
@@ -24281,7 +24562,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 67
+			  "value": "67"
 			},
 			{
 			  "type": "formula",
@@ -24311,7 +24592,12 @@
 			}
 		  ],
 		  "immunities": [
-			"prone"
+			{
+			  "type": "normal",
+			  "values": [
+				"prone"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -24455,7 +24741,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 157
+			  "value": "157"
 			},
 			{
 			  "type": "formula",
@@ -24485,8 +24771,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -24670,7 +24961,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 112
+			  "value": "112"
 			},
 			{
 			  "type": "formula",
@@ -24847,7 +25138,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -24986,7 +25277,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 4
+			  "value": "4"
 			},
 			{
 			  "type": "formula",
@@ -25129,7 +25420,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 7
+			  "value": "7"
 			},
 			{
 			  "type": "formula",
@@ -25292,7 +25583,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 60
+			  "value": "60"
 			},
 			{
 			  "type": "formula",
@@ -25322,7 +25613,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -25471,7 +25767,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 114
+			  "value": "114"
 			},
 			{
 			  "type": "formula",
@@ -25501,7 +25797,12 @@
 			}
 		  ],
 		  "immunities": [
-			"petrified"
+			{
+			  "type": "normal",
+			  "values": [
+				"petrified"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -25623,7 +25924,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -25653,12 +25954,17 @@
 			}
 		  ],
 		  "immunities": [
-			"blinded",
-			"charmed",
-			"deafened",
-			"exhaustion",
-			"frightened",
-			"prone"
+			{
+			  "type": "normal",
+			  "values": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"prone"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -25793,7 +26099,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 38
+			  "value": "38"
 			},
 			{
 			  "type": "formula",
@@ -25823,8 +26129,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -26002,7 +26313,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 82
+			  "value": "82"
 			},
 			{
 			  "type": "formula",
@@ -26170,7 +26481,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 27
+			  "value": "27"
 			},
 			{
 			  "type": "formula",
@@ -26322,7 +26633,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 59
+			  "value": "59"
 			},
 			{
 			  "type": "formula",
@@ -26477,7 +26788,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 11
+			  "value": "11"
 			},
 			{
 			  "type": "formula",
@@ -26507,7 +26818,12 @@
 			}
 		  ],
 		  "immunities": [
-			"blinded"
+			{
+			  "type": "normal",
+			  "values": [
+				"blinded"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -26626,7 +26942,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 11
+			  "value": "11"
 			},
 			{
 			  "type": "formula",
@@ -26826,7 +27142,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 127
+			  "value": "127"
 			},
 			{
 			  "type": "formula",
@@ -26856,9 +27172,14 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"charmed",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"charmed",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -27075,7 +27396,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 136
+			  "value": "136"
 			},
 			{
 			  "type": "formula",
@@ -27105,9 +27426,14 @@
 			}
 		  ],
 		  "immunities": [
-			"psychic",
-			"charmed",
-			"frightened"
+			{
+			  "type": "normal",
+			  "values": [
+				"psychic",
+				"charmed",
+				"frightened"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -27265,7 +27591,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 65
+			  "value": "65"
 			},
 			{
 			  "type": "formula",
@@ -27432,7 +27758,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 38
+			  "value": "38"
 			},
 			{
 			  "type": "formula",
@@ -27565,7 +27891,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 1
+			  "value": "1"
 			},
 			{
 			  "type": "formula",
@@ -27715,7 +28041,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 45
+			  "value": "45"
 			},
 			{
 			  "type": "formula",
@@ -27745,7 +28071,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -27880,7 +28211,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 136
+			  "value": "136"
 			},
 			{
 			  "type": "formula",
@@ -27910,8 +28241,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -28066,7 +28402,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 105
+			  "value": "105"
 			},
 			{
 			  "type": "formula",
@@ -28217,7 +28553,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 19
+			  "value": "19"
 			},
 			{
 			  "type": "formula",
@@ -28366,7 +28702,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 11
+			  "value": "11"
 			},
 			{
 			  "type": "formula",
@@ -28500,7 +28836,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 5
+			  "value": "5"
 			},
 			{
 			  "type": "formula",
@@ -28530,9 +28866,14 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"charmed",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"charmed",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -28667,7 +29008,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 178
+			  "value": "178"
 			},
 			{
 			  "type": "formula",
@@ -28697,9 +29038,14 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -28847,7 +29193,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 45
+			  "value": "45"
 			},
 			{
 			  "type": "formula",
@@ -29010,7 +29356,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 172
+			  "value": "172"
 			},
 			{
 			  "type": "formula",
@@ -29147,7 +29493,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 5
+			  "value": "5"
 			},
 			{
 			  "type": "formula",
@@ -29322,7 +29668,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 180
+			  "value": "180"
 			},
 			{
 			  "type": "formula",
@@ -29352,10 +29698,15 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"cold",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"cold",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -29517,7 +29868,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 21
+			  "value": "21"
 			},
 			{
 			  "type": "formula",
@@ -29547,9 +29898,14 @@
 			}
 		  ],
 		  "immunities": [
-			"cold",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -29690,7 +30046,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 10
+			  "value": "10"
 			},
 			{
 			  "type": "formula",
@@ -29720,9 +30076,14 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -29895,7 +30256,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 66
+			  "value": "66"
 			},
 			{
 			  "type": "formula",
@@ -30102,7 +30463,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 104
+			  "value": "104"
 			},
 			{
 			  "type": "formula",
@@ -30135,15 +30496,20 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"exhaustion",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"poisoned",
-			"prone",
-			"restrained",
-			"unconscious"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -30305,7 +30671,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 210
+			  "value": "210"
 			},
 			{
 			  "type": "formula",
@@ -30335,24 +30701,28 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"psychic",
 			{
-			  "immune": [
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"psychic",
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			  ]
+			},
+			{
+			  "type": "from nonmagical attacks that aren't adamantine",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks that aren't adamantine",
-			  "cond": true
-			},
-			"charmed",
-			"exhaustion",
-			"frightened",
-			"paralyzed",
-			"petrified",
-			"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -30463,7 +30833,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 3
+			  "value": "3"
 			},
 			{
 			  "type": "formula",
@@ -30612,7 +30982,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 90
+			  "value": "90"
 			},
 			{
 			  "type": "formula",
@@ -30779,7 +31149,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 52
+			  "value": "52"
 			},
 			{
 			  "type": "formula",
@@ -30941,7 +31311,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 5
+			  "value": "5"
 			},
 			{
 			  "type": "formula",
@@ -31140,7 +31510,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 472
+			  "value": "472"
 			},
 			{
 			  "type": "formula",
@@ -31170,18 +31540,22 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning",
 			{
-			  "immune": [
+			  "type": "normal",
+			  "values": [
+				"lightning",
+				"frightened",
+				"paralyzed"
+			  ]
+			},
+			{
+			  "type": "from nonmagical attacks",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks",
-			  "cond": true
-			},
-			"frightened",
-			"paralyzed"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -31357,7 +31731,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 97
+			  "value": "97"
 			},
 			{
 			  "type": "formula",
@@ -31519,7 +31893,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 13
+			  "value": "13"
 			},
 			{
 			  "type": "formula",
@@ -31549,11 +31923,16 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"charmed",
-			"frightened",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"charmed",
+				"frightened",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -31792,7 +32171,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 135
+			  "value": "135"
 			},
 			{
 			  "type": "formula",
@@ -31822,21 +32201,25 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
 			{
-			  "immune": [
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			  ]
+			},
+			{
+			  "type": "from nonmagical attacks",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks",
-			  "cond": true
-			},
-			"charmed",
-			"exhaustion",
-			"frightened",
-			"paralyzed",
-			"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -32020,7 +32403,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 26
+			  "value": "26"
 			},
 			{
 			  "type": "formula",
@@ -32155,7 +32538,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 2
+			  "value": "2"
 			},
 			{
 			  "type": "formula",
@@ -32315,7 +32698,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -32516,7 +32899,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 40
+			  "value": "40"
 			},
 			{
 			  "type": "formula",
@@ -32695,7 +33078,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -32725,9 +33108,14 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -32846,7 +33234,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 9
+			  "value": "9"
 			},
 			{
 			  "type": "formula",
@@ -32876,7 +33264,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -32996,7 +33389,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 126
+			  "value": "126"
 			},
 			{
 			  "type": "formula",
@@ -33146,7 +33539,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 68
+			  "value": "68"
 			},
 			{
 			  "type": "formula",
@@ -33322,7 +33715,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 189
+			  "value": "189"
 			},
 			{
 			  "type": "formula",
@@ -33352,8 +33745,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -33507,7 +33905,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 5
+			  "value": "5"
 			},
 			{
 			  "type": "formula",
@@ -33665,7 +34063,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 127
+			  "value": "127"
 			},
 			{
 			  "type": "formula",
@@ -33824,7 +34222,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 11
+			  "value": "11"
 			},
 			{
 			  "type": "formula",
@@ -33983,7 +34381,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 45
+			  "value": "45"
 			},
 			{
 			  "type": "formula",
@@ -34146,7 +34544,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 58
+			  "value": "58"
 			},
 			{
 			  "type": "formula",
@@ -34176,8 +34574,13 @@
 			}
 		  ],
 		  "immunities": [
-			"acid",
-			"prone"
+			{
+			  "type": "normal",
+			  "values": [
+				"acid",
+				"prone"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -34305,7 +34708,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 76
+			  "value": "76"
 			},
 			{
 			  "type": "formula",
@@ -34451,7 +34854,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 67
+			  "value": "67"
 			},
 			{
 			  "type": "formula",
@@ -34481,9 +34884,14 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"exhaustion",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"exhaustion",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -34594,7 +35002,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 11
+			  "value": "11"
 			},
 			{
 			  "type": "formula",
@@ -34731,7 +35139,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 58
+			  "value": "58"
 			},
 			{
 			  "type": "formula",
@@ -34761,13 +35169,18 @@
 			}
 		  ],
 		  "immunities": [
-			"necrotic",
-			"poison",
-			"charmed",
-			"exhaustion",
-			"frightened",
-			"paralyzed",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"necrotic",
+				"poison",
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -34998,7 +35411,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 97
+			  "value": "97"
 			},
 			{
 			  "type": "formula",
@@ -35028,22 +35441,26 @@
 			}
 		  ],
 		  "immunities": [
-			"necrotic",
-			"poison",
 			{
-			  "immune": [
+			  "type": "normal",
+			  "values": [
+				"necrotic",
+				"poison",
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			  ]
+			},
+			{
+			  "type": "from nonmagical attacks",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks",
-			  "cond": true
-			},
-			"charmed",
-			"exhaustion",
-			"frightened",
-			"paralyzed",
-			"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -35209,7 +35626,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 184
+			  "value": "184"
 			},
 			{
 			  "type": "formula",
@@ -35239,8 +35656,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -35450,7 +35872,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 112
+			  "value": "112"
 			},
 			{
 			  "type": "formula",
@@ -35480,7 +35902,12 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -35643,7 +36070,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 68
+			  "value": "68"
 			},
 			{
 			  "type": "formula",
@@ -35673,7 +36100,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -35783,7 +36215,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 9
+			  "value": "9"
 			},
 			{
 			  "type": "formula",
@@ -35945,7 +36377,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 45
+			  "value": "45"
 			},
 			{
 			  "type": "formula",
@@ -35975,14 +36407,19 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning",
-			"slashing",
-			"blinded",
-			"charmed",
-			"deafened",
-			"exhaustion",
-			"frightened",
-			"prone"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning",
+				"slashing",
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"prone"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -36110,7 +36547,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 3
+			  "value": "3"
 			},
 			{
 			  "type": "formula",
@@ -36252,7 +36689,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 59
+			  "value": "59"
 			},
 			{
 			  "type": "formula",
@@ -36387,7 +36824,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 85
+			  "value": "85"
 			},
 			{
 			  "type": "formula",
@@ -36417,8 +36854,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -36577,7 +37019,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 110
+			  "value": "110"
 			},
 			{
 			  "type": "formula",
@@ -36759,7 +37201,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 15
+			  "value": "15"
 			},
 			{
 			  "type": "formula",
@@ -36917,7 +37359,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 114
+			  "value": "114"
 			},
 			{
 			  "type": "formula",
@@ -37062,7 +37504,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 1
+			  "value": "1"
 			},
 			{
 			  "type": "formula",
@@ -37216,7 +37658,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 59
+			  "value": "59"
 			},
 			{
 			  "type": "formula",
@@ -37365,7 +37807,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 13
+			  "value": "13"
 			},
 			{
 			  "type": "formula",
@@ -37501,7 +37943,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 59
+			  "value": "59"
 			},
 			{
 			  "type": "formula",
@@ -37670,7 +38112,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 32
+			  "value": "32"
 			},
 			{
 			  "type": "formula",
@@ -37870,7 +38312,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 300
+			  "value": "300"
 			},
 			{
 			  "type": "formula",
@@ -37900,9 +38342,14 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -38095,7 +38542,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 200
+			  "value": "200"
 			},
 			{
 			  "type": "formula",
@@ -38125,9 +38572,14 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed",
-			"exhaustion",
-			"frightened"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed",
+				"exhaustion",
+				"frightened"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -38269,7 +38721,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 68
+			  "value": "68"
 			},
 			{
 			  "type": "formula",
@@ -38404,7 +38856,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 2
+			  "value": "2"
 			},
 			{
 			  "type": "formula",
@@ -38547,7 +38999,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 42
+			  "value": "42"
 			},
 			{
 			  "type": "formula",
@@ -38677,7 +39129,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 11
+			  "value": "11"
 			},
 			{
 			  "type": "formula",
@@ -38847,7 +39299,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 27
+			  "value": "27"
 			},
 			{
 			  "type": "formula",
@@ -39015,7 +39467,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 7
+			  "value": "7"
 			},
 			{
 			  "type": "formula",
@@ -39173,7 +39625,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 247
+			  "value": "247"
 			},
 			{
 			  "type": "formula",
@@ -39340,7 +39792,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 7
+			  "value": "7"
 			},
 			{
 			  "type": "formula",
@@ -39370,8 +39822,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -39516,7 +39973,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 1
+			  "value": "1"
 			},
 			{
 			  "type": "formula",
@@ -39689,7 +40146,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 110
+			  "value": "110"
 			},
 			{
 			  "type": "formula",
@@ -39720,13 +40177,12 @@
 		  ],
 		  "immunities": [
 			{
-			  "immune": [
+			  "type": "from nonmagical attacks",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks",
-			  "cond": true
+			  ]
 			}
 		  ],
 		  "resistances": [],
@@ -39844,7 +40300,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 1
+			  "value": "1"
 			},
 			{
 			  "type": "formula",
@@ -39975,7 +40431,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 1
+			  "value": "1"
 			},
 			{
 			  "type": "formula",
@@ -40112,7 +40568,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 75
+			  "value": "75"
 			},
 			{
 			  "type": "formula",
@@ -40142,7 +40598,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -40285,7 +40746,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -40429,7 +40890,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 195
+			  "value": "195"
 			},
 			{
 			  "type": "formula",
@@ -40459,8 +40920,13 @@
 			}
 		  ],
 		  "immunities": [
-			"cold",
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold",
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -40564,7 +41030,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 45
+			  "value": "45"
 			},
 			{
 			  "type": "formula",
@@ -40688,7 +41154,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 13
+			  "value": "13"
 			},
 			{
 			  "type": "formula",
@@ -40831,7 +41297,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 248
+			  "value": "248"
 			},
 			{
 			  "type": "formula",
@@ -41019,7 +41485,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 93
+			  "value": "93"
 			},
 			{
 			  "type": "formula",
@@ -41173,7 +41639,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 33
+			  "value": "33"
 			},
 			{
 			  "type": "formula",
@@ -41203,15 +41669,20 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"psychic",
-			"blinded",
-			"charmed",
-			"deafened",
-			"frightened",
-			"paralyzed",
-			"petrified",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"psychic",
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -41327,7 +41798,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 27
+			  "value": "27"
 			},
 			{
 			  "type": "formula",
@@ -41470,7 +41941,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 52
+			  "value": "52"
 			},
 			{
 			  "type": "formula",
@@ -41648,7 +42119,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -41806,7 +42277,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 90
+			  "value": "90"
 			},
 			{
 			  "type": "formula",
@@ -41836,7 +42307,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -41963,7 +42439,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 31
+			  "value": "31"
 			},
 			{
 			  "type": "formula",
@@ -42107,7 +42583,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 1
+			  "value": "1"
 			},
 			{
 			  "type": "formula",
@@ -42255,7 +42731,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 16
+			  "value": "16"
 			},
 			{
 			  "type": "formula",
@@ -42437,7 +42913,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 52
+			  "value": "52"
 			},
 			{
 			  "type": "formula",
@@ -42568,7 +43044,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 1
+			  "value": "1"
 			},
 			{
 			  "type": "formula",
@@ -42713,7 +43189,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 16
+			  "value": "16"
 			},
 			{
 			  "type": "formula",
@@ -42743,16 +43219,21 @@
 			}
 		  ],
 		  "immunities": [
-			"necrotic",
-			"poison",
-			"exhaustion",
-			"frightened",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"poisoned",
-			"prone",
-			"restrained"
+			{
+			  "type": "normal",
+			  "values": [
+				"necrotic",
+				"poison",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -42912,7 +43393,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 136
+			  "value": "136"
 			},
 			{
 			  "type": "formula",
@@ -42942,10 +43423,15 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning",
-			"blinded",
-			"deafened",
-			"exhaustion"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning",
+				"blinded",
+				"deafened",
+				"exhaustion"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -43092,7 +43578,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 142
+			  "value": "142"
 			},
 			{
 			  "type": "formula",
@@ -43122,12 +43608,17 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"charmed",
-			"exhaustion",
-			"frightened",
-			"paralyzed",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -43233,7 +43724,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 13
+			  "value": "13"
 			},
 			{
 			  "type": "formula",
@@ -43263,9 +43754,14 @@
 			}
 		  ],
 		  "immunities": [
-			"blinded",
-			"deafened",
-			"frightened"
+			{
+			  "type": "normal",
+			  "values": [
+				"blinded",
+				"deafened",
+				"frightened"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -43384,7 +43880,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 45
+			  "value": "45"
 			},
 			{
 			  "type": "formula",
@@ -43414,7 +43910,12 @@
 			}
 		  ],
 		  "immunities": [
-			"cold"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -43551,7 +44052,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 13
+			  "value": "13"
 			},
 			{
 			  "type": "formula",
@@ -43581,9 +44082,14 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"exhaustion",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"exhaustion",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -43773,7 +44279,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 243
+			  "value": "243"
 			},
 			{
 			  "type": "formula",
@@ -43803,12 +44309,17 @@
 			}
 		  ],
 		  "immunities": [
-			"necrotic",
-			"poison",
-			"charmed",
-			"exhaustion",
-			"frightened",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"necrotic",
+				"poison",
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -43957,7 +44468,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -43990,17 +44501,22 @@
 			}
 		  ],
 		  "immunities": [
-			"necrotic",
-			"poison",
-			"charmed",
-			"exhaustion",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"poisoned",
-			"prone",
-			"restrained",
-			"unconscious"
+			{
+			  "type": "normal",
+			  "values": [
+				"necrotic",
+				"poison",
+				"charmed",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -44156,7 +44672,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 1
+			  "value": "1"
 			},
 			{
 			  "type": "formula",
@@ -44341,7 +44857,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 75
+			  "value": "75"
 			},
 			{
 			  "type": "formula",
@@ -44371,9 +44887,14 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"charmed",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"charmed",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -44512,7 +45033,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 2
+			  "value": "2"
 			},
 			{
 			  "type": "formula",
@@ -44681,7 +45202,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 27
+			  "value": "27"
 			},
 			{
 			  "type": "formula",
@@ -44869,7 +45390,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 21
+			  "value": "21"
 			},
 			{
 			  "type": "formula",
@@ -44899,9 +45420,14 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -45001,7 +45527,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 2
+			  "value": "2"
 			},
 			{
 			  "type": "formula",
@@ -45151,7 +45677,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 126
+			  "value": "126"
 			},
 			{
 			  "type": "formula",
@@ -45334,7 +45860,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 178
+			  "value": "178"
 			},
 			{
 			  "type": "formula",
@@ -45364,23 +45890,27 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"psychic",
 			{
-			  "immune": [
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"psychic",
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			  ]
+			},
+			{
+			  "type": "from nonmagical attacks that aren't adamantine",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks that aren't adamantine",
-			  "cond": true
-			},
-			"charmed",
-			"exhaustion",
-			"frightened",
-			"paralyzed",
-			"petrified",
-			"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -45527,7 +46057,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 230
+			  "value": "230"
 			},
 			{
 			  "type": "formula",
@@ -45557,8 +46087,13 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning",
-			"thunder"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning",
+				"thunder"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -45743,7 +46278,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 66
+			  "value": "66"
 			},
 			{
 			  "type": "formula",
@@ -45953,7 +46488,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -45983,14 +46518,19 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed",
-			"frightened",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"prone",
-			"restrained",
-			"stunned"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -46115,7 +46655,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -46145,14 +46685,19 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed",
-			"frightened",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"prone",
-			"restrained",
-			"stunned"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -46278,7 +46823,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -46308,14 +46853,19 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed",
-			"frightened",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"prone",
-			"restrained",
-			"stunned"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -46440,7 +46990,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -46470,14 +47020,19 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed",
-			"frightened",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"prone",
-			"restrained",
-			"stunned"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -46602,7 +47157,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 36
+			  "value": "36"
 			},
 			{
 			  "type": "formula",
@@ -46632,14 +47187,19 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed",
-			"frightened",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"prone",
-			"restrained",
-			"stunned"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -46776,7 +47336,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 28
+			  "value": "28"
 			},
 			{
 			  "type": "formula",
@@ -46806,14 +47366,19 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed",
-			"frightened",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"prone",
-			"restrained",
-			"stunned"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -46944,7 +47509,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 24
+			  "value": "24"
 			},
 			{
 			  "type": "formula",
@@ -46974,14 +47539,19 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed",
-			"frightened",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"prone",
-			"restrained",
-			"stunned"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -47106,7 +47676,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 24
+			  "value": "24"
 			},
 			{
 			  "type": "formula",
@@ -47136,14 +47706,19 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed",
-			"frightened",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"prone",
-			"restrained",
-			"stunned"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -47292,7 +47867,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -47322,14 +47897,19 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed",
-			"frightened",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"prone",
-			"restrained",
-			"stunned"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -47454,7 +48034,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -47484,14 +48064,19 @@
 			}
 		  ],
 		  "immunities": [
-			"charmed",
-			"frightened",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"prone",
-			"restrained",
-			"stunned"
+			{
+			  "type": "normal",
+			  "values": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -47692,7 +48277,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 676
+			  "value": "676"
 			},
 			{
 			  "type": "formula",
@@ -47722,21 +48307,25 @@
 			}
 		  ],
 		  "immunities": [
-			"fire",
-			"poison",
 			{
-			  "immune": [
+			  "type": "normal",
+			  "values": [
+				"fire",
+				"poison",
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			  ]
+			},
+			{
+			  "type": "from nonmagical attacks",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks",
-			  "cond": true
-			},
-			"charmed",
-			"frightened",
-			"paralyzed",
-			"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -47876,7 +48465,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 32
+			  "value": "32"
 			},
 			{
 			  "type": "formula",
@@ -48027,7 +48616,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 37
+			  "value": "37"
 			},
 			{
 			  "type": "formula",
@@ -48194,7 +48783,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 138
+			  "value": "138"
 			},
 			{
 			  "type": "formula",
@@ -48348,7 +48937,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 11
+			  "value": "11"
 			},
 			{
 			  "type": "formula",
@@ -48487,7 +49076,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 95
+			  "value": "95"
 			},
 			{
 			  "type": "formula",
@@ -48637,7 +49226,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 84
+			  "value": "84"
 			},
 			{
 			  "type": "formula",
@@ -48781,7 +49370,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 136
+			  "value": "136"
 			},
 			{
 			  "type": "formula",
@@ -49001,7 +49590,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 67
+			  "value": "67"
 			},
 			{
 			  "type": "formula",
@@ -49031,10 +49620,15 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"charmed",
-			"paralyzed",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"charmed",
+				"paralyzed",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -49233,7 +49827,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 144
+			  "value": "144"
 			},
 			{
 			  "type": "formula",
@@ -49436,7 +50030,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 82
+			  "value": "82"
 			},
 			{
 			  "type": "formula",
@@ -49621,7 +50215,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 58
+			  "value": "58"
 			},
 			{
 			  "type": "formula",
@@ -49771,7 +50365,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 18
+			  "value": "18"
 			},
 			{
 			  "type": "formula",
@@ -49801,9 +50395,14 @@
 			}
 		  ],
 		  "immunities": [
-			"blinded",
-			"deafened",
-			"frightened"
+			{
+			  "type": "normal",
+			  "values": [
+				"blinded",
+				"deafened",
+				"frightened"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -49936,7 +50535,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 104
+			  "value": "104"
 			},
 			{
 			  "type": "formula",
@@ -49966,8 +50565,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -50122,7 +50726,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 5
+			  "value": "5"
 			},
 			{
 			  "type": "formula",
@@ -50259,7 +50863,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 19
+			  "value": "19"
 			},
 			{
 			  "type": "formula",
@@ -50384,7 +50988,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -50414,9 +51018,14 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"exhaustion",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"exhaustion",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": null,
@@ -50538,7 +51147,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 114
+			  "value": "114"
 			},
 			{
 			  "type": "formula",
@@ -50568,15 +51177,20 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"exhaustion",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"poisoned",
-			"prone",
-			"restrained",
-			"unconscious"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -50696,7 +51310,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 1
+			  "value": "1"
 			},
 			{
 			  "type": "formula",
@@ -50873,7 +51487,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 135
+			  "value": "135"
 			},
 			{
 			  "type": "formula",
@@ -50907,13 +51521,12 @@
 		  ],
 		  "immunities": [
 			{
-			  "immune": [
+			  "type": "from nonmagical attacks that aren't silvered",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks that aren't silvered",
-			  "cond": true
+			  ]
 			}
 		  ],
 		  "resistances": [],
@@ -51060,7 +51673,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 78
+			  "value": "78"
 			},
 			{
 			  "type": "formula",
@@ -51094,13 +51707,12 @@
 		  ],
 		  "immunities": [
 			{
-			  "immune": [
+			  "type": "from nonmagical attacks that aren't silvered",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks that aren't silvered",
-			  "cond": true
+			  ]
 			}
 		  ],
 		  "resistances": [],
@@ -51243,7 +51855,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 33
+			  "value": "33"
 			},
 			{
 			  "type": "formula",
@@ -51274,13 +51886,12 @@
 		  ],
 		  "immunities": [
 			{
-			  "immune": [
+			  "type": "from nonmagical attacks that aren't silvered",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks that aren't silvered",
-			  "cond": true
+			  ]
 			}
 		  ],
 		  "resistances": [],
@@ -51439,7 +52050,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 120
+			  "value": "120"
 			},
 			{
 			  "type": "formula",
@@ -51473,13 +52084,12 @@
 		  ],
 		  "immunities": [
 			{
-			  "immune": [
+			  "type": "from nonmagical attacks that aren't silvered",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks that aren't silvered",
-			  "cond": true
+			  ]
 			}
 		  ],
 		  "resistances": [],
@@ -51631,7 +52241,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 58
+			  "value": "58"
 			},
 			{
 			  "type": "formula",
@@ -51665,13 +52275,12 @@
 		  ],
 		  "immunities": [
 			{
-			  "immune": [
+			  "type": "from nonmagical attacks that aren't silvered",
+			  "values": [
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			  ],
-			  "note": "from nonmagical attacks that aren't silvered",
-			  "cond": true
+			  ]
 			}
 		  ],
 		  "resistances": [],
@@ -51788,7 +52397,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 32
+			  "value": "32"
 			},
 			{
 			  "type": "formula",
@@ -51818,7 +52427,12 @@
 			}
 		  ],
 		  "immunities": [
-			"cold"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -51975,7 +52589,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 45
+			  "value": "45"
 			},
 			{
 			  "type": "formula",
@@ -52005,9 +52619,14 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"exhaustion",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"exhaustion",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -52163,7 +52782,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -52196,15 +52815,20 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning",
-			"poison",
-			"exhaustion",
-			"grappled",
-			"paralyzed",
-			"poisoned",
-			"prone",
-			"restrained",
-			"unconscious"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning",
+				"poison",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -52367,7 +52991,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 75
+			  "value": "75"
 			},
 			{
 			  "type": "formula",
@@ -52397,7 +53021,12 @@
 			}
 		  ],
 		  "immunities": [
-			"cold"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -52521,7 +53150,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 11
+			  "value": "11"
 			},
 			{
 			  "type": "formula",
@@ -52664,7 +53293,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 26
+			  "value": "26"
 			},
 			{
 			  "type": "formula",
@@ -52817,7 +53446,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 67
+			  "value": "67"
 			},
 			{
 			  "type": "formula",
@@ -52850,16 +53479,21 @@
 			}
 		  ],
 		  "immunities": [
-			"necrotic",
-			"poison",
-			"charmed",
-			"exhaustion",
-			"grappled",
-			"paralyzed",
-			"petrified",
-			"poisoned",
-			"prone",
-			"restrained"
+			{
+			  "type": "normal",
+			  "values": [
+				"necrotic",
+				"poison",
+				"charmed",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			  ]
+			}
 		  ],
 		  "resistances": [
 			{
@@ -53014,7 +53648,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 110
+			  "value": "110"
 			},
 			{
 			  "type": "formula",
@@ -53175,7 +53809,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 73
+			  "value": "73"
 			},
 			{
 			  "type": "formula",
@@ -53347,7 +53981,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 127
+			  "value": "127"
 			},
 			{
 			  "type": "formula",
@@ -53377,7 +54011,12 @@
 			}
 		  ],
 		  "immunities": [
-			"acid"
+			{
+			  "type": "normal",
+			  "values": [
+				"acid"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -53527,7 +54166,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 152
+			  "value": "152"
 			},
 			{
 			  "type": "formula",
@@ -53557,7 +54196,12 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -53723,7 +54367,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 110
+			  "value": "110"
 			},
 			{
 			  "type": "formula",
@@ -53753,7 +54397,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -53931,7 +54580,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 142
+			  "value": "142"
 			},
 			{
 			  "type": "formula",
@@ -53961,7 +54610,12 @@
 			}
 		  ],
 		  "immunities": [
-			"lightning"
+			{
+			  "type": "normal",
+			  "values": [
+				"lightning"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -54132,7 +54786,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 119
+			  "value": "119"
 			},
 			{
 			  "type": "formula",
@@ -54162,7 +54816,12 @@
 			}
 		  ],
 		  "immunities": [
-			"acid"
+			{
+			  "type": "normal",
+			  "values": [
+				"acid"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -54340,7 +54999,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 178
+			  "value": "178"
 			},
 			{
 			  "type": "formula",
@@ -54370,7 +55029,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -54537,7 +55201,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 136
+			  "value": "136"
 			},
 			{
 			  "type": "formula",
@@ -54567,8 +55231,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -54723,7 +55392,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 178
+			  "value": "178"
 			},
 			{
 			  "type": "formula",
@@ -54753,7 +55422,12 @@
 			}
 		  ],
 		  "immunities": [
-			"fire"
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -54919,7 +55593,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 168
+			  "value": "168"
 			},
 			{
 			  "type": "formula",
@@ -54949,7 +55623,12 @@
 			}
 		  ],
 		  "immunities": [
-			"cold"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -55116,7 +55795,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 133
+			  "value": "133"
 			},
 			{
 			  "type": "formula",
@@ -55146,7 +55825,12 @@
 			}
 		  ],
 		  "immunities": [
-			"cold"
+			{
+			  "type": "normal",
+			  "values": [
+				"cold"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
@@ -55285,7 +55969,7 @@
 		  "hitpoints": [
 			{
 			  "type": "average",
-			  "value": 22
+			  "value": "22"
 			},
 			{
 			  "type": "formula",
@@ -55315,8 +55999,13 @@
 			}
 		  ],
 		  "immunities": [
-			"poison",
-			"poisoned"
+			{
+			  "type": "normal",
+			  "values": [
+				"poison",
+				"poisoned"
+			  ]
+			}
 		  ],
 		  "resistances": [],
 		  "languages": [
