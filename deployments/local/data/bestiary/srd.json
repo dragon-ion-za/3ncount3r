@@ -12591,24 +12591,22 @@
 					"{@spell light}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 3e}",
-					"entries": [
-					  "{@spell feather fall}",
-					  "{@spell fly}",
-					  "{@spell misty step}",
-					  "{@spell telekinesis}"
-					]
-				  },
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell control weather}",
-					  "{@spell gaseous form}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 3e}",
+				  "entries": [
+					"{@spell feather fall}",
+					"{@spell fly}",
+					"{@spell misty step}",
+					"{@spell telekinesis}"
+				  ]
+				},
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell control weather}",
+					"{@spell gaseous form}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -13368,28 +13366,26 @@
 					"{@spell detect thoughts}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 3e}",
-					"entries": [
-					  "{@spell bless}",
-					  "{@spell create food and water}",
-					  "{@spell cure wounds}",
-					  "{@spell lesser restoration}",
-					  "{@spell protection from poison}",
-					  "{@spell sanctuary}",
-					  "{@spell shield}"
-					]
-				  },
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell dream}",
-					  "{@spell greater restoration}",
-					  "{@spell scrying}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 3e}",
+				  "entries": [
+					"{@spell bless}",
+					"{@spell create food and water}",
+					"{@spell cure wounds}",
+					"{@spell lesser restoration}",
+					"{@spell protection from poison}",
+					"{@spell sanctuary}",
+					"{@spell shield}"
+				  ]
+				},
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell dream}",
+					"{@spell greater restoration}",
+					"{@spell scrying}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -14491,16 +14487,14 @@
 					"{@spell nondetection} (self only)"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell blindness/deafness}",
-					  "{@spell blur}",
-					  "{@spell disguise self}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell blindness/deafness}",
+					"{@spell blur}",
+					"{@spell disguise self}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -14812,15 +14806,13 @@
 					"{@spell detect evil and good}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell commune}",
-					  "{@spell raise dead}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell commune}",
+					"{@spell raise dead}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -15174,27 +15166,25 @@
 					"{@spell thunderwave}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 3e}",
-					"entries": [
-					  "{@spell create food and water} (can create wine instead of water)",
-					  "{@spell tongues}",
-					  "{@spell wind walk}"
-					]
-				  },
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell conjure elemental} ({@creature air elemental} only)",
-					  "{@spell creation}",
-					  "{@spell gaseous form}",
-					  "{@spell invisibility}",
-					  "{@spell major image}",
-					  "{@spell plane shift}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 3e}",
+				  "entries": [
+					"{@spell create food and water} (can create wine instead of water)",
+					"{@spell tongues}",
+					"{@spell wind walk}"
+				  ]
+				},
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell conjure elemental} ({@creature air elemental} only)",
+					"{@spell creation}",
+					"{@spell gaseous form}",
+					"{@spell invisibility}",
+					"{@spell major image}",
+					"{@spell plane shift}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -16052,15 +16042,13 @@
 					"{@spell dancing lights}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell darkness}",
-					  "{@spell faerie fire}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell darkness}",
+					"{@spell faerie fire}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -16230,15 +16218,13 @@
 					"{@spell dancing lights}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell darkness}",
-					  "{@spell faerie fire}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell darkness}",
+					"{@spell faerie fire}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -16592,23 +16578,21 @@
 					"{@spell druidcraft}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 3e}",
-					"entries": [
-					  "{@spell entangle}",
-					  "{@spell goodberry}"
-					]
-				  },
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell barkskin}",
-					  "{@spell pass without trace}",
-					  "{@spell shillelagh}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 3e}",
+				  "entries": [
+					"{@spell entangle}",
+					"{@spell goodberry}"
+				  ]
+				},
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell barkskin}",
+					"{@spell pass without trace}",
+					"{@spell shillelagh}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -16937,8 +16921,7 @@
 				  "entries": [
 					"{@spell sleep}"
 				  ]
-				},
-				[]
+				}
 			  ]
 			},
 			{
@@ -17419,26 +17402,24 @@
 					"{@spell detect magic}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 3e}",
-					"entries": [
-					  "{@spell enlarge/reduce}",
-					  "{@spell tongues}"
-					]
-				  },
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell conjure elemental} ({@creature fire elemental} only)",
-					  "{@spell gaseous form}",
-					  "{@spell invisibility}",
-					  "{@spell major image}",
-					  "{@spell plane shift}",
-					  "{@spell wall of fire}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 3e}",
+				  "entries": [
+					"{@spell enlarge/reduce}",
+					"{@spell tongues}"
+				  ]
+				},
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell conjure elemental} ({@creature fire elemental} only)",
+					"{@spell gaseous form}",
+					"{@spell invisibility}",
+					"{@spell major image}",
+					"{@spell plane shift}",
+					"{@spell wall of fire}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -24536,16 +24517,14 @@
 					"{@spell dispel magic}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell confusion}",
-					  "{@spell fly}",
-					  "{@spell power word stun}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell confusion}",
+					"{@spell fly}",
+					"{@spell power word stun}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -26095,8 +26074,7 @@
 					"{@spell minor illusion}",
 					"{@spell vicious mockery}"
 				  ]
-				},
-				[]
+				}
 			  ]
 			},
 			{
@@ -29613,8 +29591,7 @@
 				  "entries": [
 					"{@spell fog cloud}"
 				  ]
-				},
-				[]
+				}
 			  ]
 			},
 			{
@@ -31434,23 +31411,21 @@
 					"{@spell major image}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 1}",
-					"entries": [
-					  "{@spell geas}"
-					]
-				  },
-				  {
-					"name": "{@limit 3e}",
-					"entries": [
-					  "{@spell charm person}",
-					  "{@spell mirror image}",
-					  "{@spell scrying}",
-					  "{@spell suggestion}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 1}",
+				  "entries": [
+					"{@spell geas}"
+				  ]
+				},
+				{
+				  "name": "{@limit 3e}",
+				  "entries": [
+					"{@spell charm person}",
+					"{@spell mirror image}",
+					"{@spell scrying}",
+					"{@spell suggestion}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -32778,8 +32753,7 @@
 				  "entries": [
 					"{@spell heat metal}"
 				  ]
-				},
-				[]
+				}
 			  ]
 			},
 			{
@@ -35536,16 +35510,14 @@
 					"{@spell magic missile}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 2e}",
-					"entries": [
-					  "{@spell plane shift} (self only)",
-					  "{@spell ray of enfeeblement}",
-					  "{@spell sleep}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 2e}",
+				  "entries": [
+					"{@spell plane shift} (self only)",
+					"{@spell ray of enfeeblement}",
+					"{@spell sleep}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -36679,17 +36651,15 @@
 					"{@spell invisibility}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell charm person}",
-					  "{@spell cone of cold}",
-					  "{@spell gaseous form}",
-					  "{@spell sleep}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell charm person}",
+					"{@spell cone of cold}",
+					"{@spell gaseous form}",
+					"{@spell sleep}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -37962,15 +37932,13 @@
 					"{@spell fireball}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 3e}",
-					"entries": [
-					  "{@spell hold monster}",
-					  "{@spell wall of fire}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 3e}",
+				  "entries": [
+					"{@spell hold monster}",
+					"{@spell wall of fire}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -38182,25 +38150,23 @@
 					"{@spell invisibility} (self only)"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 3e}",
-					"entries": [
-					  "{@spell blade barrier}",
-					  "{@spell dispel evil and good}",
-					  "{@spell flame strike}",
-					  "{@spell raise dead}"
-					]
-				  },
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell commune}",
-					  "{@spell control weather}",
-					  "{@spell insect plague}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 3e}",
+				  "entries": [
+					"{@spell blade barrier}",
+					"{@spell dispel evil and good}",
+					"{@spell flame strike}",
+					"{@spell raise dead}"
+				  ]
+				},
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell commune}",
+					"{@spell control weather}",
+					"{@spell insect plague}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -39770,27 +39736,25 @@
 					"{@spell minor illusion}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 3e}",
-					"entries": [
-					  "{@spell charm person}",
-					  "{@spell detect magic}",
-					  "{@spell invisibility}",
-					  "{@spell major image}",
-					  "{@spell suggestion}"
-					]
-				  },
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell dominate person}",
-					  "{@spell fly}",
-					  "{@spell plane shift}",
-					  "{@spell true seeing}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 3e}",
+				  "entries": [
+					"{@spell charm person}",
+					"{@spell detect magic}",
+					"{@spell invisibility}",
+					"{@spell major image}",
+					"{@spell suggestion}"
+				  ]
+				},
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell dominate person}",
+					"{@spell fly}",
+					"{@spell plane shift}",
+					"{@spell true seeing}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -43889,23 +43853,21 @@
 					"{@spell invisibility} (self only)"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 3e}",
-					"entries": [
-					  "{@spell blade barrier}",
-					  "{@spell dispel evil and good}",
-					  "{@spell resurrection}"
-					]
-				  },
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell commune}",
-					  "{@spell control weather}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 3e}",
+				  "entries": [
+					"{@spell blade barrier}",
+					"{@spell dispel evil and good}",
+					"{@spell resurrection}"
+				  ]
+				},
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell commune}",
+					"{@spell control weather}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -45008,8 +44970,7 @@
 				  "entries": [
 					"{@spell blur}"
 				  ]
-				},
-				[]
+				}
 			  ]
 			},
 			{
@@ -45668,15 +45629,13 @@
 					"{@spell light}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 3e}",
-					"entries": [
-					  "{@spell control weather}",
-					  "{@spell water breathing}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 3e}",
+				  "entries": [
+					"{@spell control weather}",
+					"{@spell water breathing}"
+				  ]
+				}
 			  ]
 			},
 			{
@@ -49139,16 +49098,14 @@
 					"{@spell pass without trace}"
 				  ]
 				},
-				[
-				  {
-					"name": "{@limit 1e}",
-					"entries": [
-					  "{@spell calm emotions}",
-					  "{@spell dispel evil and good}",
-					  "{@spell entangle}"
-					]
-				  }
-				]
+				{
+				  "name": "{@limit 1e}",
+				  "entries": [
+					"{@spell calm emotions}",
+					"{@spell dispel evil and good}",
+					"{@spell entangle}"
+				  ]
+				}
 			  ]
 			},
 			{
