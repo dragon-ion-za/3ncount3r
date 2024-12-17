@@ -22,6 +22,8 @@ export class ArmourModel {
 
 export class ActionGroupModel {
     type: string = '';
+    ability: string = '';
+    entries: string[] = [];
     items: ActionGroupItemModel[] = [];
 }
 

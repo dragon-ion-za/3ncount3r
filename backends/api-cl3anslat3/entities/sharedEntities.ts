@@ -116,6 +116,8 @@ export interface Armour {
 
 export interface ActionGroup {
     type: string;
+    ability: string;
+    entries: string[];
     items: ActionGroupItem[];
 }
 

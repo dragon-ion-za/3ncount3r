@@ -6,8 +6,8 @@ import { buildActionGroupActionsFromLegendaryGroupActions } from "./sharedConver
 export function creatureEntityToModelConverter(host: string, entity: CreatureEntity, legendaryGroups: LegendaryGroupEntity[]): CreatureModel {
     let model: CreatureModel = {...entity, imageUrl: `${host}/creatures/image/${entity.source}/${entity.name}`};
 
-    if (entity.actionGroups.some(x => x.type === 'lair_region_mythic')) {
-        let legendaryGroupDetails = entity.actionGroups.find(x => x.type === 'lair_region_mythic');
+    if (model.actionGroups.some(x => x.type === 'lair_region_mythic')) {
+        let legendaryGroupDetails = model.actionGroups.find(x => x.type === 'lair_region_mythic');
 
         legendaryGroupDetails?.items?.forEach(x => {
             let legendaryGroup = legendaryGroups.find(y => y.name === x.name);
@@ -19,7 +19,7 @@ export function creatureEntityToModelConverter(host: string, entity: CreatureEnt
         });
 
         // Remove the legendary group indicator record as we've now enriched the object with the related action groups
-        entity.actionGroups.splice(entity.actionGroups.findIndex(x => x.type === 'lair_region_mythic'), 1);
+        model.actionGroups.splice(model.actionGroups.findIndex(x => x.type === 'lair_region_mythic'), 1);
     }
 
     return model;
