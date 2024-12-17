@@ -21,7 +21,7 @@ namespace DDD.Byoapi.Integrations.Services
       Dictionary<string, Task<HttpResponseMessage>> calls = new Dictionary<string, Task<HttpResponseMessage>>();
 
       HttpClient client = new HttpClient();
-      foreach (var byoapi in _config.Where(x => x.RuleSystem == ruleSystem))
+      foreach (var byoapi in _config.Where(x => x.RuleSystem == ruleSystem && !x.RequiresAuth))
       {
         calls.Add(byoapi.Id, client.GetAsync($"{byoapi.BaseUrl}creatures{queryString}"));
       }

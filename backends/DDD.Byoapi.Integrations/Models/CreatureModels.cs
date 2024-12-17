@@ -20,7 +20,7 @@ namespace DDD.Byoapi.Integrations.Models
     public object CopyFrom { get; set; }
 
     [JsonPropertyName("misc")]
-    public MiscModel Misc { get; set; }
+    public dynamic Misc { get; set; }
 
     [JsonPropertyName("armour")]
     public IEnumerable<ArmourModel> Armour { get; set; }
@@ -38,7 +38,7 @@ namespace DDD.Byoapi.Integrations.Models
     public IEnumerable<MovementModel> Movement { get; set; }
 
     [JsonPropertyName("immunities")]
-    public IEnumerable<string> Immunities { get; set; }
+    public IEnumerable<ResistanceModel> Immunities { get; set; }
 
     [JsonPropertyName("resistances")]
     public IEnumerable<ResistanceModel> Resistances { get; set; }

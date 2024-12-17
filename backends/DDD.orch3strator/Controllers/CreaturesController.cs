@@ -2,12 +2,14 @@ using DDD.Byoapi.Integrations.Models;
 using DDD.Byoapi.Integrations.Services;
 using DDD.orch3strator.Converters;
 using DDD.orch3strator.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDD.orch3strator.Controllers
 {
   [Route("api/[controller]/{ruleSystem}")]
   [ApiController]
+  [AllowAnonymous]
   public class CreaturesController : ControllerBase
   {
     private readonly IByoapiService _dataService;
