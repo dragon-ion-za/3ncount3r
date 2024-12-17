@@ -220,7 +220,9 @@ namespace DDD.orch3strator.Converters
           actionGroupsViewModel.Add(new ActionGroupViewModel()
           {
             Name = actionGroup.Type,
-            Items = actionGroup.Items.ToList().Select(x => BuildActionGroupItemFromModel(x))
+            Ability = actionGroup.Ability,
+            Entries = actionGroup.Entries,
+            Items = actionGroup.Items.ToList().Select(x => BuildActionGroupItemFromModel(x, actionGroup.Entries?.Any() ?? false))
           });
         }
       }
@@ -228,12 +230,12 @@ namespace DDD.orch3strator.Converters
       return actionGroupsViewModel;
     }
 
-    private ItemViewModel BuildActionGroupItemFromModel(ActionGroupItemModel actionGroupItemModel)
+    private ItemViewModel BuildActionGroupItemFromModel(ActionGroupItemModel actionGroupItemModel, bool isNested)
     {
       return new ItemViewModel()
       {
         Name = actionGroupItemModel.Name,
-        Type = "entry",
+        Type = isNested ? "list" : "entry",
         Entries = actionGroupItemModel.Entries,
         Items = actionGroupItemModel.Items?.Select(x => BuildNestedActionGroupItemFromModel(x))
       };

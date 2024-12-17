@@ -124,6 +124,12 @@ namespace DDD.orch3strator.ViewModels.DnD5e
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
+    [JsonPropertyName("ability")]
+    public string Ability { get; set; }
+
+    [JsonPropertyName("entries")]
+    public IEnumerable<string> Entries { get; set; }
+
     [JsonPropertyName("items")]
     public IEnumerable<ItemViewModel> Items { get; set; }
   }

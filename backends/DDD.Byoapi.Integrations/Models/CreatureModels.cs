@@ -83,8 +83,13 @@ namespace DDD.Byoapi.Integrations.Models
     [JsonPropertyName("type")]
     public string Type { get; set; }
 
+    [JsonPropertyName("ability")]
+    public string Ability { get; set; }
+
+    [JsonPropertyName("entries")]
+    public IEnumerable<string> Entries { get; set; }
+
     [JsonPropertyName("items")]
-   
     public IEnumerable<ActionGroupItemModel> Items { get; set; }
   }
 
