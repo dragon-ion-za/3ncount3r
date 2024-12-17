@@ -1,3 +1,4 @@
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace DDD.Byoapi.Integrations.Models
@@ -20,7 +21,7 @@ namespace DDD.Byoapi.Integrations.Models
     public object CopyFrom { get; set; }
 
     [JsonPropertyName("misc")]
-    public dynamic Misc { get; set; }
+    public JsonElement Misc { get; set; }
 
     [JsonPropertyName("armour")]
     public IEnumerable<ArmourModel> Armour { get; set; }
