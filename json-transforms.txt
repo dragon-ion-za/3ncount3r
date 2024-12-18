@@ -1,7 +1,11 @@
 .monster | filter(.srd, true) | map({
 name: .name,
 source: "SRD",
-difficulty: .cr,
+difficulty: if(
+    .cr | .cr == null,
+    .cr,
+    .cr | .cr
+),
 copyFrom: ._copy,
 misc: { 
     "size": .size, 
@@ -10,7 +14,10 @@ misc: {
         .type, 
         ((.type | .type + " (") + (.type | if(.tags == null, [], .tags) | flatten())) + (")")
     ), 
-    "alignment": .alignment 
+    "alignment": array(
+        .alignment | filter(get() in ["L", "E", "G", "N", "C", "NX", "NY"]) | if(get() | size() == 0, [], {type: get(), chance: 100}),
+        .alignment | filter(get() not in ["L", "E", "G", "N", "C", "NX", "NY"]) | if(size() == 0, [], map({type: .alignment, chance: .chance}))
+    ) | flatten()
 },
 armour: if(
     .ac > 0, 
@@ -24,7 +31,7 @@ actionGroups: array(
             .action == null, 
             [], 
             .action | map({ name: .name, entries: .entries | filter(.type == null), items: .entries | filter(.type != null) 
-                | mapObject({key: .key, value: .value.items}) | values() | map({
+                | mapObject({key: .key, value: .value.items}) | values() | flatten() | map({
                     name: .name,
                     entries: [.entry]
                 })

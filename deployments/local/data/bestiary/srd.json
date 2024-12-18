@@ -13,8 +13,13 @@
 			],
 			"type": "aberration",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -232,7 +237,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -390,8 +398,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -629,8 +642,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -862,8 +880,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "G"
+			  {
+				"type": [
+				  "C",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -1118,8 +1141,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -1383,8 +1411,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "G"
+			  {
+				"type": [
+				  "C",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -1634,8 +1667,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -1904,8 +1942,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -2159,8 +2202,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -2392,8 +2440,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -2656,8 +2709,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -2895,7 +2953,12 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -3083,8 +3146,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -3322,8 +3390,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -3555,8 +3628,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "G"
+			  {
+				"type": [
+				  "C",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -3819,8 +3897,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -4084,8 +4167,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "G"
+			  {
+				"type": [
+				  "C",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -4343,8 +4431,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -4613,8 +4706,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -4868,8 +4966,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -5101,8 +5204,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -5365,8 +5473,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -5604,8 +5717,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "L",
-			  "N"
+			  {
+				"type": [
+				  "L",
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -5910,7 +6028,10 @@
 			],
 			"type": "construct",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -6071,7 +6192,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -6208,7 +6332,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -6357,7 +6484,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -6612,11 +6742,16 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "L",
-			  "NX",
-			  "C",
-			  "NY",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "NX",
+				  "C",
+				  "NY",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -6813,7 +6948,10 @@
 			],
 			"type": "plant",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -6953,7 +7091,10 @@
 			],
 			"type": "plant",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -7099,7 +7240,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -7223,8 +7367,13 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "L",
-			  "N"
+			  {
+				"type": [
+				  "L",
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -7384,7 +7533,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -7515,7 +7667,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -7647,8 +7802,13 @@
 			],
 			"type": "fiend (demon)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -7873,11 +8033,16 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "NX",
-			  "C",
-			  "G",
-			  "NY",
-			  "E"
+			  {
+				"type": [
+				  "NX",
+				  "C",
+				  "G",
+				  "NY",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -8010,11 +8175,16 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "NX",
-			  "C",
-			  "G",
-			  "NY",
-			  "E"
+			  {
+				"type": [
+				  "NX",
+				  "C",
+				  "G",
+				  "NY",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -8187,8 +8357,13 @@
 			],
 			"type": "fiend (devil)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -8416,7 +8591,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -8550,7 +8728,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -8688,8 +8869,13 @@
 			],
 			"type": "fiend (devil)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -8890,8 +9076,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -9065,10 +9256,15 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "C",
-			  "G",
-			  "NY",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "G",
+				  "NY",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -9201,7 +9397,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -9352,8 +9551,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -9533,7 +9737,10 @@
 			],
 			"type": "ooze",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -9700,8 +9907,13 @@
 			],
 			"type": "fey",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -9853,7 +10065,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -9996,8 +10211,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -10170,7 +10390,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -10307,8 +10530,13 @@
 			],
 			"type": "fiend (devil)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -10513,8 +10741,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "G"
+			  {
+				"type": [
+				  "C",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -10700,8 +10933,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -10894,7 +11132,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -11045,8 +11286,13 @@
 			],
 			"type": "humanoid (goblinoid)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -11205,7 +11451,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -11351,7 +11600,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -11475,7 +11727,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -11617,8 +11872,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "N",
-			  "G"
+			  {
+				"type": [
+				  "N",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -11789,8 +12049,13 @@
 			],
 			"type": "fiend (devil)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -11993,8 +12258,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -12155,8 +12425,13 @@
 			],
 			"type": "aberration",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -12324,7 +12599,10 @@
 			],
 			"type": "construct",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -12519,8 +12797,13 @@
 			],
 			"type": "aberration",
 			"alignment": [
-			  "C",
-			  "N"
+			  {
+				"type": [
+				  "C",
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -12704,14 +12987,14 @@
 			"type": "giant",
 			"alignment": [
 			  {
-				"alignment": [
+				"type": [
 				  "N",
 				  "G"
 				],
 				"chance": 50
 			  },
 			  {
-				"alignment": [
+				"type": [
 				  "N",
 				  "E"
 				],
@@ -12919,7 +13202,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -13044,7 +13330,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -13170,7 +13459,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -13302,8 +13594,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "G"
+			  {
+				"type": [
+				  "C",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -13489,8 +13786,13 @@
 			],
 			"type": "celestial",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -13717,7 +14019,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -13855,7 +14160,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -13992,11 +14300,16 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "L",
-			  "NX",
-			  "C",
-			  "NY",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "NX",
+				  "C",
+				  "NY",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -14180,11 +14493,16 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "L",
-			  "NX",
-			  "C",
-			  "NY",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "NX",
+				  "C",
+				  "NY",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -14328,7 +14646,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -14481,8 +14802,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -14632,8 +14958,13 @@
 			],
 			"type": "humanoid (gnome)",
 			"alignment": [
-			  "N",
-			  "G"
+			  {
+				"type": [
+				  "N",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -14817,7 +15148,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -14941,8 +15275,13 @@
 			],
 			"type": "celestial",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -15168,7 +15507,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -15316,8 +15658,13 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "C",
-			  "G"
+			  {
+				"type": [
+				  "C",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -15522,7 +15869,12 @@
 			],
 			"type": "monstrosity (shapechanger)",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -15700,7 +16052,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -15824,7 +16179,12 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -16010,8 +16370,13 @@
 			],
 			"type": "fiend (demon)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -16187,8 +16552,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -16391,8 +16761,13 @@
 			],
 			"type": "humanoid (elf)",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -16569,7 +16944,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -16744,7 +17122,12 @@
 			],
 			"type": "fey",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -16941,8 +17324,13 @@
 			],
 			"type": "humanoid (dwarf)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -17111,8 +17499,13 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -17284,7 +17677,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -17421,7 +17817,12 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -17590,8 +17991,13 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -17791,7 +18197,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -17929,7 +18338,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -18067,8 +18479,13 @@
 			],
 			"type": "fiend (devil)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -18275,8 +18692,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -18457,8 +18879,13 @@
 			],
 			"type": "giant",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -18619,7 +19046,12 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -18797,8 +19229,13 @@
 			],
 			"type": "giant",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -18971,7 +19408,12 @@
 			],
 			"type": "construct",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -19165,7 +19607,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -19297,7 +19742,10 @@
 			],
 			"type": "construct",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -19459,7 +19907,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -19600,8 +20051,13 @@
 			],
 			"type": "giant",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -19774,8 +20230,13 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -19942,7 +20403,10 @@
 			],
 			"type": "ooze",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -20105,8 +20569,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -20270,7 +20739,10 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -20486,8 +20958,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -20631,7 +21108,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -20780,7 +21260,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -20926,7 +21409,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -21064,7 +21550,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -21201,7 +21690,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -21326,7 +21818,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -21464,7 +21959,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -21602,7 +22100,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -21753,8 +22254,13 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "N",
-			  "G"
+			  {
+				"type": [
+				  "N",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -21908,7 +22414,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -22055,7 +22564,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -22187,7 +22699,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -22343,7 +22858,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -22480,7 +22998,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -22617,7 +23138,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -22742,7 +23266,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -22904,7 +23431,12 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -23056,7 +23588,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -23187,7 +23722,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -23325,7 +23863,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -23464,7 +24005,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -23601,7 +24145,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -23745,7 +24292,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -23903,7 +24453,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -24049,8 +24602,13 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -24209,7 +24767,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -24333,7 +24894,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -24476,7 +25040,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -24632,7 +25199,12 @@
 			],
 			"type": "aberration",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -24791,8 +25363,13 @@
 			],
 			"type": "fiend (demon)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -25018,7 +25595,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -25204,8 +25784,13 @@
 			],
 			"type": "humanoid (gnoll)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -25353,7 +25938,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -25490,8 +26078,13 @@
 			],
 			"type": "humanoid (goblinoid)",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -25639,8 +26232,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -25833,7 +26431,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -25992,7 +26593,10 @@
 			],
 			"type": "ooze",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -26174,8 +26778,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -26356,8 +26965,13 @@
 			],
 			"type": "fey",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -26552,7 +27166,12 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -26707,7 +27326,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -26859,8 +27481,13 @@
 			],
 			"type": "humanoid (grimlock)",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -27029,7 +27656,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -27161,8 +27791,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -27394,8 +28029,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "L",
-			  "N"
+			  {
+				"type": [
+				  "L",
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -27655,7 +28295,10 @@
 			],
 			"type": "humanoid (human)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -27830,8 +28473,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -27980,7 +28628,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -28117,8 +28768,13 @@
 			],
 			"type": "fiend",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -28278,8 +28934,13 @@
 			],
 			"type": "fiend (demon)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -28485,8 +29146,13 @@
 			],
 			"type": "giant",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -28632,7 +29298,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -28783,8 +29452,13 @@
 			],
 			"type": "humanoid (goblinoid)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -28926,7 +29600,12 @@
 			],
 			"type": "construct",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -29069,8 +29748,13 @@
 			],
 			"type": "fiend (devil)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -29277,7 +29961,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -29421,7 +30108,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -29586,7 +30276,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -29723,8 +30416,13 @@
 			],
 			"type": "fiend (devil)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -29936,8 +30634,13 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -30116,8 +30819,13 @@
 			],
 			"type": "fiend (devil)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -30316,8 +31024,13 @@
 			],
 			"type": "fiend (shapechanger)",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -30541,7 +31254,12 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -30727,7 +31445,10 @@
 			],
 			"type": "construct",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -30923,7 +31644,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -31066,7 +31790,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -31216,7 +31943,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -31388,8 +32118,13 @@
 			],
 			"type": "humanoid (kobold)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -31537,8 +32272,13 @@
 			],
 			"type": "monstrosity (titan)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -31782,8 +32522,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -31975,8 +32720,13 @@
 			],
 			"type": "fiend (devil)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -32134,10 +32884,15 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "L",
-			  "NX",
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "NX",
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -32468,7 +33223,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -32635,7 +33393,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -32760,7 +33521,12 @@
 			],
 			"type": "humanoid (lizardfolk)",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -32937,7 +33703,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -33139,8 +33908,13 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -33314,8 +34088,13 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "C",
-			  "N"
+			  {
+				"type": [
+				  "C",
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -33471,7 +34250,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -33609,8 +34391,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -33765,8 +34552,13 @@
 			],
 			"type": "fiend (demon)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -33997,7 +34789,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -34134,8 +34929,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -34313,7 +35113,12 @@
 			],
 			"type": "humanoid (merfolk)",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -34453,8 +35258,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -34610,7 +35420,12 @@
 			],
 			"type": "monstrosity (shapechanger)",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -34781,8 +35596,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -34941,8 +35761,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -35092,7 +35917,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -35229,8 +36057,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -35399,8 +36232,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -35696,8 +36534,13 @@
 			],
 			"type": "fiend (demon)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -35916,8 +36759,13 @@
 			],
 			"type": "fiend",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -36156,8 +37004,13 @@
 			],
 			"type": "fiend",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -36310,7 +37163,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -36459,7 +37315,10 @@
 			],
 			"type": "ooze",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -36625,7 +37484,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -36787,8 +37649,13 @@
 			],
 			"type": "giant",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -36923,8 +37790,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -37072,8 +37944,13 @@
 			],
 			"type": "giant",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -37292,8 +38169,13 @@
 			],
 			"type": "humanoid (orc)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -37441,7 +38323,12 @@
 			],
 			"type": "aberration",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -37602,7 +38489,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -37751,7 +38641,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -37903,7 +38796,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -38058,8 +38954,13 @@
 			],
 			"type": "celestial",
 			"alignment": [
-			  "C",
-			  "G"
+			  {
+				"type": [
+				  "C",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -38209,7 +39110,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -38359,8 +39263,13 @@
 			],
 			"type": "fiend (devil)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -38594,8 +39503,13 @@
 			],
 			"type": "celestial",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -38830,7 +39744,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -38972,7 +39889,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -39097,7 +40017,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -39248,7 +40171,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -39372,7 +40298,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -39556,8 +40485,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "N",
-			  "G"
+			  {
+				"type": [
+				  "N",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -39722,7 +40656,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -39881,8 +40818,13 @@
 			],
 			"type": "fiend (demon)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -40078,7 +41020,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -40216,8 +41161,13 @@
 			],
 			"type": "fiend",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -40412,7 +41362,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -40544,7 +41497,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -40681,8 +41637,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -40855,7 +41816,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -40999,7 +41963,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -41148,7 +42115,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -41279,7 +42249,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -41403,7 +42376,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -41574,8 +42550,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -41751,7 +42732,10 @@
 			],
 			"type": "construct",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -41910,7 +42894,10 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -42056,7 +43043,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -42211,8 +43201,13 @@
 			],
 			"type": "humanoid (sahuagin)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -42385,8 +43380,13 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -42556,8 +43556,13 @@
 			],
 			"type": "fey",
 			"alignment": [
-			  "C",
-			  "N"
+			  {
+				"type": [
+				  "C",
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -42722,7 +43727,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -42847,7 +43855,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -43015,8 +44026,13 @@
 			],
 			"type": "fey",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -43178,7 +44194,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -43301,8 +44320,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -43508,7 +44532,10 @@
 			],
 			"type": "plant",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -43683,7 +44710,10 @@
 			],
 			"type": "construct",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -43856,7 +44886,10 @@
 			],
 			"type": "plant",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -43996,8 +45029,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -44183,8 +45221,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -44327,8 +45370,13 @@
 			],
 			"type": "celestial",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -44597,8 +45645,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -44797,7 +45850,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -44947,8 +46003,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -45161,8 +46222,13 @@
 			],
 			"type": "fey",
 			"alignment": [
-			  "N",
-			  "G"
+			  {
+				"type": [
+				  "N",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -45322,7 +46388,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -45511,8 +46580,13 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -45674,7 +46748,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -45800,7 +46877,12 @@
 			],
 			"type": "giant",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -45981,7 +47063,10 @@
 			],
 			"type": "construct",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -46163,8 +47248,13 @@
 			],
 			"type": "giant",
 			"alignment": [
-			  "C",
-			  "G"
+			  {
+				"type": [
+				  "C",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -46396,8 +47486,13 @@
 			],
 			"type": "fiend (shapechanger)",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -46621,7 +47716,10 @@
 			],
 			"type": "beast ()",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -46798,7 +47896,10 @@
 			],
 			"type": "beast ()",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -46963,7 +48064,10 @@
 			],
 			"type": "beast ()",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -47129,7 +48233,10 @@
 			],
 			"type": "beast ()",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -47294,7 +48401,10 @@
 			],
 			"type": "beast ()",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -47459,7 +48569,10 @@
 			],
 			"type": "beast ()",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -47636,7 +48749,10 @@
 			],
 			"type": "beast ()",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -47807,7 +48923,10 @@
 			],
 			"type": "beast ()",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -47977,7 +49096,10 @@
 			],
 			"type": "beast ()",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -48160,7 +49282,10 @@
 			],
 			"type": "beast ()",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -48325,7 +49450,10 @@
 			],
 			"type": "monstrosity (titan)",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -48573,11 +49701,16 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "L",
-			  "NX",
-			  "C",
-			  "NY",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "NX",
+				  "C",
+				  "NY",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -48730,7 +49863,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -48886,8 +50022,13 @@
 			],
 			"type": "plant",
 			"alignment": [
-			  "C",
-			  "G"
+			  {
+				"type": [
+				  "C",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -49063,7 +50204,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -49196,7 +50340,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -49334,8 +50481,13 @@
 			],
 			"type": "giant",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -49495,7 +50647,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -49639,8 +50794,13 @@
 			],
 			"type": "celestial",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -49871,8 +51031,13 @@
 			],
 			"type": "undead (shapechanger)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -50136,8 +51301,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -50337,7 +51507,10 @@
 			],
 			"type": "humanoid (any race)",
 			"alignment": [
-			  "A"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -50495,7 +51668,10 @@
 			],
 			"type": "plant",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -50643,8 +51819,13 @@
 			],
 			"type": "fiend (demon)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -50858,7 +52039,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -51001,7 +52185,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -51132,8 +52319,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -51267,7 +52459,12 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -51452,7 +52649,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -51594,8 +52794,13 @@
 			],
 			"type": "humanoid (human,shapechanger)",
 			"alignment": [
-			  "N",
-			  "G"
+			  {
+				"type": [
+				  "N",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -51777,8 +52982,13 @@
 			],
 			"type": "humanoid (human,shapechanger)",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -51959,8 +53169,13 @@
 			],
 			"type": "humanoid (human,shapechanger)",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -52141,7 +53356,12 @@
 			],
 			"type": "humanoid (human,shapechanger)",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -52338,8 +53558,13 @@
 			],
 			"type": "humanoid (human,shapechanger)",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -52526,8 +53751,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -52700,8 +53930,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -52892,8 +54127,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -53109,8 +54349,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -53282,7 +54527,10 @@
 			],
 			"type": "beast",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -53430,8 +54678,13 @@
 			],
 			"type": "monstrosity",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -53572,8 +54825,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -53778,7 +55036,10 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "U"
+			  {
+				"type": null,
+				"chance": null
+			  }
 			]
 		  },
 		  "armour": [
@@ -53930,7 +55191,12 @@
 			],
 			"type": "elemental",
 			"alignment": [
-			  "N"
+			  {
+				"type": [
+				  "N"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -54110,8 +55376,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -54306,8 +55577,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -54495,8 +55771,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "G"
+			  {
+				"type": [
+				  "C",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -54702,8 +55983,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -54916,8 +56202,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "G"
+			  {
+				"type": [
+				  "C",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -55123,8 +56414,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -55342,8 +56638,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "E"
+			  {
+				"type": [
+				  "L",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -55544,8 +56845,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -55733,8 +57039,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "L",
-			  "G"
+			  {
+				"type": [
+				  "L",
+				  "G"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -55945,8 +57256,13 @@
 			],
 			"type": "dragon",
 			"alignment": [
-			  "C",
-			  "E"
+			  {
+				"type": [
+				  "C",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [
@@ -56141,8 +57457,13 @@
 			],
 			"type": "undead",
 			"alignment": [
-			  "N",
-			  "E"
+			  {
+				"type": [
+				  "N",
+				  "E"
+				],
+				"chance": 100
+			  }
 			]
 		  },
 		  "armour": [

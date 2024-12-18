@@ -88,7 +88,10 @@ namespace DDD.orch3strator.Converters
 
       foreach (var alignment in alignments)
       {
-        alignmentViewModel.Add(alignment.GetString());
+        foreach (var alignmentType in alignment.GetProperty("type").EnumerateArray())
+        {
+          alignmentViewModel.Add(alignmentType.GetString());
+        }
       }
 
       return alignmentViewModel;
