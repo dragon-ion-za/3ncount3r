@@ -222,7 +222,7 @@ namespace DDD.orch3strator.Converters
             Name = actionGroup.Type,
             Ability = actionGroup.Ability,
             Entries = actionGroup.Entries,
-            Items = actionGroup.Items.ToList().Select(x => BuildActionGroupItemFromModel(x, actionGroup.Entries?.Any() ?? false))
+            Items = actionGroup.Items.ToList().Select(x => BuildActionGroupItemFromModel(x, (x.Items?.Any() ?? false) ? "list" : "entry"))
           });
         }
       }
@@ -230,27 +230,14 @@ namespace DDD.orch3strator.Converters
       return actionGroupsViewModel;
     }
 
-    private ItemViewModel BuildActionGroupItemFromModel(ActionGroupItemModel actionGroupItemModel, bool isNested)
+    private ItemViewModel BuildActionGroupItemFromModel(ActionGroupItemModel actionGroupItemModel, string nestedType)
     {
       return new ItemViewModel()
       {
         Name = actionGroupItemModel.Name,
-        Type = isNested ? "list" : "entry",
+        Type = nestedType,
         Entries = actionGroupItemModel.Entries,
-        Items = actionGroupItemModel.Items?.Select(x => BuildNestedActionGroupItemFromModel(x))
-      };
-    }
-
-    private ItemViewModel BuildNestedActionGroupItemFromModel(ActionGroupEntryItemModel actionGroupEntryItem)
-    {
-      string type = "list";
-
-
-      return new ItemViewModel()
-      {
-        Name = actionGroupEntryItem.Name,
-        Type = type,
-        Entries = actionGroupEntryItem.Entries
+        Items = actionGroupItemModel.Items?.Select(x => BuildActionGroupItemFromModel(x, (x.Items?.Any() ?? false) ? "list" : "entry"))
       };
     }
 

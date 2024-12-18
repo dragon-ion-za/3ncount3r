@@ -102,16 +102,7 @@ namespace DDD.Byoapi.Integrations.Models
     public IEnumerable<string> Entries { get; set; }
 
     [JsonPropertyName("items")]
-    public IEnumerable<ActionGroupEntryItemModel> Items { get; set; }
-  }
-
-  public class ActionGroupEntryItemModel
-  {
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    [JsonPropertyName("entries")]
-    public IEnumerable<string> Entries { get; set; }
+    public IEnumerable<ActionGroupItemModel> Items { get; set; }
   }
 
   public class HitpointModel
