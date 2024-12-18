@@ -26,11 +26,11 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
                         detailsNodes.push(
                             <Container sx={actionItemContainerStyle}>
                                 <RichTextEntry key={`${specialAction.name}_heading`} isHeading={true} entryIndex={0} entryText={`${specialAction.name}: `} />
-                                {specialAction.entries.map((x, entryIndex) => {
+                                {specialAction.entries?.map((x, entryIndex) => {
                                     return <RichTextEntry key={`${specialAction.name}_body_${entryIndex}`} entryIndex={entryIndex} entryText={x} />
                                     }
                                 )}
-                                {specialAction.items.map((x) => {
+                                {specialAction.items?.map((x) => {
                                         let castAction: SpecialActionViewModel = x;
                                             return (renderDetails([castAction]));
                                     }
@@ -38,14 +38,14 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
                             </Container>
                         );
                     } else {
-                        specialAction.entries.forEach((x, entryIndex) => detailsNodes.push(<RichTextEntry key={`${index}_no-name_${entryIndex}`} entryIndex={entryIndex} entryText={x} />))
+                        specialAction.entries?.forEach((x, entryIndex) => detailsNodes.push(<RichTextEntry key={`${index}_no-name_${entryIndex}`} entryIndex={entryIndex} entryText={x} />))
                     }
                 break;
 
                 case 'list': 
                     detailsNodes.push(
                         <List dense={true} sx={{zIndex: -1}}>
-                            {specialAction.entries.map((x, entryIndex) => {
+                            {specialAction.entries?.map((x, entryIndex) => {
                                     return (
                                         <ListItem key={`${index}_list-item_${entryIndex}`}>
                                             <ListItemText>
@@ -55,14 +55,14 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
                                         )
                                     }
                                 )}
-                            {specialAction.items.map((x, entryIndex) => {
+                            {specialAction.items?.map((x, entryIndex) => {
                                 let castAction: SpecialActionViewModel = x;
                                 return (
                                     <ListItem key={`${castAction.name}_container_${entryIndex}`}>
                                         <ListItemText>
                                             <Container sx={actionItemContainerStyle}>
                                                 <RichTextEntry key={`${castAction.name}_heading_${entryIndex}`} isHeading={true} entryIndex={1} entryText={`${castAction.name}: `} />
-                                                {castAction.entries.map(
+                                                {castAction.entries?.map(
                                                     (innerEntry, innerEntryIndex) => {
                                                         let display: number = 1;
 
