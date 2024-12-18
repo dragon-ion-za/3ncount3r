@@ -49,7 +49,10 @@ export const ActionDetails : React.FC<ActionDetailsProps> = ({actionGroups}) => 
                                     return (
                                         <ListItem key={`${index}_list-item_${entryIndex}`}>
                                             <ListItemText>
-                                                <RichTextEntry key='' entryIndex={entryIndex} entryText={`- ${x}`} />
+                                                <Container sx={actionItemContainerStyle}>
+                                                    <RichTextEntry key={`${index}_list-item_${entryIndex}_heading`} isHeading={true} entryIndex={0} entryText={`- ${specialAction.name}: `} />
+                                                    <RichTextEntry key='' entryIndex={entryIndex} entryText={`${(!specialAction.name ? '- ' : '')}${x}`} />
+                                                </Container>
                                             </ListItemText>
                                         </ListItem>
                                         )

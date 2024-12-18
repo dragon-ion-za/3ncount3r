@@ -225,7 +225,7 @@ namespace DDD.orch3strator.Converters
             Name = actionGroup.Type,
             Ability = actionGroup.Ability,
             Entries = actionGroup.Entries,
-            Items = actionGroup.Items.ToList().Select(x => BuildActionGroupItemFromModel(x, (x.Items?.Any() ?? false) ? "list" : "entry"))
+            Items = actionGroup.Items.ToList().Select(x => BuildActionGroupItemFromModel(x, "additional"))
           });
         }
       }
@@ -240,7 +240,7 @@ namespace DDD.orch3strator.Converters
         Name = actionGroupItemModel.Name,
         Type = nestedType,
         Entries = actionGroupItemModel.Entries,
-        Items = actionGroupItemModel.Items?.Select(x => BuildActionGroupItemFromModel(x, (x.Items?.Any() ?? false) ? "list" : "entry"))
+        Items = actionGroupItemModel.Items?.Select(x => BuildActionGroupItemFromModel(x, nestedType == "additional" ? "list" : (x.Items?.Any() ?? false) ? "list" : "entry"))
       };
     }
 
