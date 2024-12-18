@@ -3,5 +3,6 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:4211/v1/'
+  apiBaseUrl: 'https://localhost:7165/api/',
+  activeRuleSystem: 'dnd5e'
 };
