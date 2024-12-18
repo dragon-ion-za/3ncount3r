@@ -238,8 +238,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -6485,8 +6487,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -13331,8 +13335,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -16945,8 +16951,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -20740,8 +20748,10 @@
 			"type": "undead",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -25596,8 +25606,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -27657,8 +27669,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -28296,8 +28310,10 @@
 			"type": "humanoid (human)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -31944,8 +31960,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -33704,8 +33722,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -37164,8 +37184,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -40299,8 +40321,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -43856,8 +43880,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -46389,8 +46415,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -50205,8 +50233,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -51508,8 +51538,10 @@
 			"type": "humanoid (any race)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "A"
+				],
+				"chance": 100
 			  }
 			]
 		  },
