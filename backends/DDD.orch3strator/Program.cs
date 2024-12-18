@@ -9,6 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddCors(options => {
+  options.AddPolicy(name: "Allow3ncount3r", policy =>
+  {
+    policy.WithOrigins(builder.Configuration["AllowedHosts"]);
+  });
+});
 builder.Services.AddControllers();
 builder.Services.AddAuthentication(options => {
   options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -63,6 +69,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("Allow3ncount3r");
 
 app.UseAuthorization();
 app.UseAuthorization();
