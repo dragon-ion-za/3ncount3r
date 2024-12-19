@@ -370,3 +370,4 @@ FodyWeavers.xsd
 /localDocker
 /deployments/mine
 /.github/workflows/notes.txt
+/apps/shell/src/environments/environment.dev.ts
