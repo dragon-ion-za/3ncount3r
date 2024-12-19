@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { MainMenuComponent } from './main-menu/main-menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -16,9 +15,11 @@ import { MatCardModule } from '@angular/material/card';
 import { ModuleFederationToolsModule } from '@angular-architects/module-federation-tools';
 import { MatButtonModule } from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
+import { provideAuth0 } from '@auth0/auth0-angular';
+import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [AppComponent, LandingComponent, MainMenuComponent],
+  declarations: [AppComponent, LandingComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -34,7 +35,14 @@ import {MatMenuModule} from '@angular/material/menu';
     ModuleFederationToolsModule,
     RouterModule.forRoot(RouterService.getAppRoutes(), { initialNavigation: 'enabledBlocking' }),
   ],
-  providers: [],
+  providers: [provideAuth0({
+      domain: environment.auth.domain,
+      clientId: environment.auth.clientId,
+      authorizationParams:{
+        redirect_uri: window.location.origin
+      }
+    })
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
