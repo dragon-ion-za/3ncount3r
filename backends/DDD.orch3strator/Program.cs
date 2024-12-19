@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options => {
   options.AddPolicy(name: "Allow3ncount3r", policy =>
   {
-    policy.WithOrigins(builder.Configuration["AllowedHosts"]);
+    policy.WithOrigins(builder.Configuration["AllowedHosts"]).WithHeaders("*");
   });
 });
 builder.Services.AddControllers();

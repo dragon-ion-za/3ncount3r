@@ -17,6 +17,7 @@
     "@angular/platform-browser-dynamic": "~16.0.0",
     "@angular/router": "~16.0.0",
     "@auth0/auth0-angular": "^2.2.3",
+    "@auth0/auth0-react": "^2.2.4",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
