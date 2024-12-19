@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DDD.Byoapi.Integrations\DDD.Byoapi.Integrations.csproj" />
+    <ProjectReference Include="..\DDD.Common\DDD.Common.csproj" />
   </ItemGroup>
 
 </Project>

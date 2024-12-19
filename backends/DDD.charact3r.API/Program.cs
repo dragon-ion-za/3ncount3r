@@ -54,7 +54,6 @@ builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("char
 builder.Services.AddScoped<IDataService<CharacterModel>, CharactersService>();
 
 builder.Services.AddScoped<IModelConverterFactory, ModelConverterFactory>();
-builder.Services.AddKeyedScoped<IConverter, DnD5eModelConverter>("dnd5e");
 
 var app = builder.Build();
 

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DDD._3ncount3r.API.Controllers
 {
-  [Route("api/[controller]")]
+  [Route("api/[controller]/{ruleSystem}")]
   [ApiController]
   public class EncountersController : ControllerBase
   {
@@ -20,10 +20,10 @@ namespace DDD._3ncount3r.API.Controllers
       _mapper = mapper;
     }
 
-    [HttpGet]
-    public async Task<IEnumerable<EncounterViewModel>> Get()
+    [HttpGet("{userId}")]
+    public async Task<IEnumerable<EncounterViewModel>> Get([FromRoute]string ruleSystem, [FromRoute]string userId)
     {
-      IEnumerable<EncounterModel> models = await _dataService.Get(User.SubjectId());
+      IEnumerable<EncounterModel> models = await _dataService.Get(userId);
       return _mapper.Map<IEnumerable<EncounterViewModel>>(models);
     }
 
