@@ -5,6 +5,7 @@ import { EncounterCreatureViewModel } from "../view-models/encounter-creature.vi
 import { EncounterViewModel } from "../view-models/encounter.view-model";
 
 const BASE_URL = environment.apiBaseUrl;
+const RULE_SYSTEM = environment.activeRuleSystem;
 
 export async function saveEncounter(encounterName: string, encounterCreatures: EncounterCreatureViewModel[], 
     encounterParty: string, roundNumber: number, turnNumber: number): Promise<string> {
@@ -56,10 +57,10 @@ export async function updateEncounterTemplate(encounterName: string, encounterId
      return response.data as string;
 }
 
-export async function getEncounters() : Promise<EncounterViewModel[]> {
+export async function getEncounters(accessToken: string) : Promise<EncounterViewModel[]> {
     let calls: Promise<AxiosResponse<EncounterViewModel[], any>>[] = [];
-    calls.push(axios.get(`${BASE_URL}encounters`));
-    calls.push(axios.get(`${BASE_URL}encountertemplates`));
+    calls.push(axios.get(`${BASE_URL}encounters/${RULE_SYSTEM}`, { headers: {'Authorization': `bearer ${accessToken}`} }));
+    calls.push(axios.get(`${BASE_URL}encountertemplates/${RULE_SYSTEM}`, { headers: {'Authorization': `bearer ${accessToken}`} }));
 
     await Promise.all(calls);
 

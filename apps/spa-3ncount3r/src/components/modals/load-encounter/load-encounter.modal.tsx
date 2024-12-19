@@ -5,6 +5,7 @@ import { EncounterViewModel } from "../../../view-models/encounter.view-model";
 import { getEncounters } from "../../../services/encounter.service";
 
 import { modalContainerWide } from "../../../styles/modals.styles";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export interface LoadEncounterModalProps {
     handleAccept: (encounterId: string, isTemplate: boolean) => void;
@@ -13,9 +14,12 @@ export interface LoadEncounterModalProps {
 
 export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef(({ handleAccept, handleCancel }, ref) => {
     const [encounters, setEncounters] = useState<EncounterViewModel[]>([]);
+    const { getAccessTokenSilently } = useAuth0();
 
     useEffect(() => {
-        getEncounters().then(x => setEncounters(x));
+        (async () => { return await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } }); })().then((accessToken) => {
+            getEncounters(accessToken).then(x => setEncounters(x));
+        });
     }, []);
 
     useEffect(() => {}, [encounters])

@@ -6,7 +6,7 @@ export const environment = {
   apiBaseUrl: 'https://localhost:7165/api/',
   activeRuleSystem: 'dnd5e',
   auth: {
-    domain: '',
-    clientId: ''
+    domain: 'dev-2hlsed8fxycmhux5.eu.auth0.com',
+    clientId: 'DqKPjTjrGqb84gP0R5AkwGczSMEefoWc'
   } 
 };
