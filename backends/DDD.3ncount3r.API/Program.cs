@@ -45,7 +45,6 @@ builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("3nco
 builder.Services.Configure<List<ByoapiConfig>>(builder.Configuration.GetSection("Byoapis"));
 
 builder.Services.AddScoped<IDataService<EncounterModel>, EncountersService>();
-builder.Services.AddScoped<IByoapiService, ByoapiService>();
 
 builder.Services.AddAutoMapper(typeof(EncounterMapperProfile));
 builder.Services.AddAutoMapper(typeof(CreatureMapperProfile));

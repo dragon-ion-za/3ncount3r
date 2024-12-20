@@ -1,7 +1,6 @@
 using AutoMapper;
 using DDD._3ncount3r.API.Models;
 using DDD._3ncount3r.API.ViewModels;
-using DDD.Common.Extensions;
 using DDD.Common.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,16 +26,16 @@ namespace DDD._3ncount3r.API.Controllers
       return _mapper.Map<IEnumerable<EncounterViewModel>>(models);
     }
 
-    [HttpPost]
-    public async Task<string> Post(EncounterViewModel model)
+    [HttpPost("{userId}")]
+    public async Task<string> Post([FromRoute] string ruleSystem, [FromRoute] string userId, EncounterViewModel model)
     {
-      return await _dataService.Insert(User.SubjectId(), _mapper.Map<EncounterModel>(model));
+      return await _dataService.Insert(userId, _mapper.Map<EncounterModel>(model));
     }
 
-    [HttpPut]
-    public async Task<string> Put(EncounterViewModel model)
+    [HttpPut("{userId}")]
+    public async Task<string> Put([FromRoute] string ruleSystem, [FromRoute] string userId, EncounterViewModel model)
     {
-      return await _dataService.Update(User.SubjectId(), _mapper.Map<EncounterModel>(model));
+      return await _dataService.Update(userId, _mapper.Map<EncounterModel>(model));
     }
   }
 }
