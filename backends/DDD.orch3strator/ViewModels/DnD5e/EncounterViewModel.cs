@@ -7,7 +7,7 @@ namespace DDD.orch3strator.ViewModels.DnD5e
     [JsonPropertyName("id")]
     public string Id { get; set; }
 
-    [JsonPropertyName("id")]
+    [JsonPropertyName("userId")]
     public string UserId { get; set; }
 
     [JsonPropertyName("name")]

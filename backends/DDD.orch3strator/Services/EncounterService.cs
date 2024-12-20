@@ -24,12 +24,12 @@ namespace DDD.orch3strator.Services
       return list;
     }
 
-    public async override Task<TModel> Insert<TModel>(string ruleSystem, string userId, TModel model)
+    public async override Task<TModel> Insert<TModel>(string ruleSystem, TModel model)
     {
       Dictionary<string, Task<HttpResponseMessage>> calls = new Dictionary<string, Task<HttpResponseMessage>>();
 
       HttpClient client = new HttpClient();
-      HttpResponseMessage response = await client.GetAsync($"{_baseUrl}encounters/{ruleSystem}/{userId}");
+      HttpResponseMessage response = await client.PostAsJsonAsync($"{_baseUrl}encounters/{ruleSystem}", model);
 
       response.EnsureSuccessStatusCode();
       TModel insertedModel = await response.Content.ReadFromJsonAsync<TModel>();

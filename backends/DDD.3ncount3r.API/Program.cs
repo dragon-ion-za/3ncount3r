@@ -2,8 +2,11 @@ using DDD._3ncount3r.API.Configurations;
 using DDD._3ncount3r.API.MapperProfiles;
 using DDD._3ncount3r.API.Models;
 using DDD._3ncount3r.API.Services;
+using DDD._3ncount3r.API.Validators;
+using DDD._3ncount3r.API.ViewModels;
 using DDD.Common.Configurations;
 using DDD.Common.Services;
+using FluentValidation;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -48,6 +51,8 @@ builder.Services.AddScoped<IDataService<EncounterModel>, EncountersService>();
 
 builder.Services.AddAutoMapper(typeof(EncounterMapperProfile));
 builder.Services.AddAutoMapper(typeof(CreatureMapperProfile));
+
+builder.Services.AddScoped<IValidator<EncounterViewModel>, EncounterValidator>();
 
 var app = builder.Build();
 

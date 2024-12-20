@@ -7,6 +7,9 @@ namespace DDD._3ncount3r.API.ViewModels
     [JsonPropertyName("id")]
     public string Id { get; set; }
 
+    [JsonPropertyName("userId")]
+    public string UserId { get; set; }
+
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
@@ -21,5 +24,11 @@ namespace DDD._3ncount3r.API.ViewModels
 
     [JsonPropertyName("currentTurn")]
     public int CurrentTurn { get; set; }
+
+    [JsonPropertyName("campaign")]
+    public string Campaign { get; set; }
+
+    [JsonPropertyName("location")]
+    public string Location { get; set; }
   }
 }

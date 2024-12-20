@@ -2,7 +2,10 @@ using AutoMapper;
 using DDD._3ncount3r.API.Models;
 using DDD._3ncount3r.API.ViewModels;
 using DDD.Common.Services;
+using FluentValidation;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection;
 
 namespace DDD._3ncount3r.API.Controllers
 {
@@ -12,11 +15,13 @@ namespace DDD._3ncount3r.API.Controllers
   {
     private readonly IDataService<EncounterModel> _dataService;
     private readonly IMapper _mapper;
+    private readonly IValidator<EncounterViewModel> _validator;
 
-    public EncountersController(IDataService<EncounterModel> dataService, IMapper mapper)
+    public EncountersController(IValidator<EncounterViewModel> validator, IDataService<EncounterModel> dataService, IMapper mapper)
     {
       _dataService = dataService;
       _mapper = mapper;
+      _validator = validator;
     }
 
     [HttpGet("{userId}")]
@@ -26,10 +31,19 @@ namespace DDD._3ncount3r.API.Controllers
       return _mapper.Map<IEnumerable<EncounterViewModel>>(models);
     }
 
-    [HttpPost("{userId}")]
-    public async Task<string> Post([FromRoute] string ruleSystem, [FromRoute] string userId, EncounterViewModel model)
+    [HttpPost()]
+    public async Task<EncounterViewModel> Post([FromRoute] string ruleSystem, EncounterViewModel model)
     {
-      return await _dataService.Insert(userId, _mapper.Map<EncounterModel>(model));
+      ValidationResult result = _validator.Validate(model);
+
+      if (!result.IsValid)
+      {
+        throw new ValidationException(result.ToString());
+      }
+
+      string id = await _dataService.Insert(model.UserId, _mapper.Map<EncounterModel>(model));
+      EncounterModel viewModel = await _dataService.GetById(model.UserId, id);
+      return _mapper.Map<EncounterViewModel>(viewModel);
     }
 
     [HttpPut("{userId}")]

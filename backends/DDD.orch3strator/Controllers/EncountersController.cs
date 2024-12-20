@@ -55,7 +55,9 @@ namespace DDD.orch3strator.Controllers
     {
       IModelConverter<EncounterModel, EncounterViewModel> modelConverter = _modelConverterFactory.Create<EncounterModel, EncounterViewModel>(ruleSystem);
 
-      EncounterModel model = await _encounterService.Insert<EncounterModel>(ruleSystem, User.SubjectId(), modelConverter.ConvertReverse(viewModel));
+      EncounterModel model = modelConverter.ConvertReverse(viewModel);
+      model.UserId = User.SubjectId();
+      model = await _encounterService.Insert<EncounterModel>(ruleSystem, model);
 
       return modelConverter.Convert(model);
     }

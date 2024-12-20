@@ -25,6 +25,12 @@ namespace DDD.Common.Services
       return await _collection.Find(entity => entity.UserId == userId).ToListAsync();
     }
 
+    public async Task<TCollectionModel> GetById(string userId, string id)
+    {
+      InitDb();
+      return await _collection.Find(entity => entity.UserId == userId && entity.Id == ObjectId.Parse(id)).FirstAsync();
+    }
+
     public async Task<string> Insert(string userId, TCollectionModel model)
     {
       InitDb();
