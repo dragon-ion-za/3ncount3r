@@ -8,14 +8,16 @@ import { EncounterCreatureListItem } from "../encounter-creature-list-item/encou
 import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
 import { HitpointManagementModal } from "../../modals/hitpoint-management/hitpoint-management.modal";
 
-import { getEncounterById, getEncounterTemplateById } from "../../../services/encounter.service";
+import { getEncounterById } from "../../../services/encounter.service";
 import { EncounterViewModel } from "apps/spa-3ncount3r/src/view-models/encounter.view-model";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export const EncounterCreatures : React.FC = () => {
     const [open, setOpen] = useState(false);
     const [, setIsTemplate] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState<number>(-1);
     const [activeCreatures, setActiveCreatures] = useState<EncounterCreatureViewModel[]>([]);
+    const { getAccessTokenSilently } = useAuth0();
     
     const encounterContext = useEncounterContext();
 
@@ -31,39 +33,29 @@ export const EncounterCreatures : React.FC = () => {
     }, []);
 
     useEffect(() => {
-        if (id) {
-            let segments = location.pathname.split('/');
-            
-            if (segments[segments.length-1] === 'template') {
-                setIsTemplate(true);
-                getEncounterTemplateById(id).then((x: EncounterViewModel) => {
-                    encounterContext.setCreatures(x.creatures);
-                    encounterContext.setEncounterId(x.id);
-                    encounterContext.setEncounterName(x.name);
-                    encounterContext.setSelectedParty('');
-                    encounterContext.setRoundCounter(0);
-                    encounterContext.setTurnCounter(0);
-                });
-            } else {
-                getEncounterById(id).then((x: EncounterViewModel) => {
-                    encounterContext.setCreatures(x.creatures);
+        (async () => {
+            let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+
+            if (id) {            
+                getEncounterById(accessToken, id).then((x: EncounterViewModel) => {
+                    encounterContext.setCreatures(x.creatures ?? []);
                     encounterContext.setEncounterId(x.id);
                     encounterContext.setEncounterName(x.name);
                     encounterContext.setSelectedParty(x.selectedParty);
-                    encounterContext.setRoundCounter(Math.max(x.roundCount, 1));
-                    encounterContext.setTurnCounter(Math.max(x.currentTurn, 1));
+                    encounterContext.setRoundCounter(Math.max(x.roundCount ?? 0, 1));
+                    encounterContext.setTurnCounter(Math.max(x.currentTurn ?? 0, 1));
                 });
+            } else {
+                encounterContext.setCreatures([]);
+                encounterContext.setEncounterId('');
+                encounterContext.setEncounterName('');
+                encounterContext.setSelectedParty('');
+                encounterContext.setRoundCounter(0);
+                encounterContext.setTurnCounter(0);
             }
-        } else {
-            encounterContext.setCreatures([]);
-            encounterContext.setEncounterId('');
-            encounterContext.setEncounterName('');
-            encounterContext.setSelectedParty('');
-            encounterContext.setRoundCounter(0);
-            encounterContext.setTurnCounter(0);
-        }
-
-        encounterContext.setSelectedCreatureIndex(encounterContext.creatures ? 1 : 0);
+    
+            encounterContext.setSelectedCreatureIndex(encounterContext.creatures ? 1 : 0);
+        })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 

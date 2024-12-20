@@ -50,6 +50,30 @@ namespace DDD.orch3strator.Controllers
       return modelConverter.Map(models);
     }
 
+    [HttpGet("{id}")]
+    public async Task<IEnumerable<EncounterViewModel>> GetById([FromRoute] string ruleSystem, [FromRoute] string id)
+    {
+      IEnumerable<EncounterModel> models = await _encounterService.GetList<EncounterModel>(ruleSystem, User.SubjectId());
+
+      List<CreatureModel> creatures = new List<CreatureModel>();
+
+      foreach (var byoapiGroup in models.SelectMany(x => x.Creatures).GroupBy(x => x.ByoapiId).Select((x) => new { ByoapiId = x.Key, CreatureNames = x.Select(y => y.Name) }))
+      {
+        List<string> creatureQueries = new List<string>();
+
+        foreach (var creatureName in byoapiGroup.CreatureNames)
+        {
+          creatureQueries.Add($"name eq {creatureName}");
+        }
+
+        creatures.AddRange(await _dataService.SearchForCreatures(ruleSystem, byoapiGroup.ByoapiId, string.Join(" or ", creatureQueries)));
+      }
+
+      IModelConverter<EncounterModel, EncounterViewModel> modelConverter = _modelConverterFactory.Create<EncounterModel, EncounterViewModel>(ruleSystem);
+
+      return modelConverter.Map(models);
+    }
+
     [HttpPost]
     public async Task<EncounterViewModel> Post([FromRoute] string ruleSystem, EncounterViewModel viewModel)
     {

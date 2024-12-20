@@ -5,7 +5,6 @@ using DDD.Common.Services;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection;
 
 namespace DDD._3ncount3r.API.Controllers
 {
@@ -29,6 +28,13 @@ namespace DDD._3ncount3r.API.Controllers
     {
       IEnumerable<EncounterModel> models = await _dataService.Get(userId);
       return _mapper.Map<IEnumerable<EncounterViewModel>>(models);
+    }
+
+    [HttpGet("{userId}/{id}")]
+    public async Task<EncounterViewModel> GetById([FromRoute] string ruleSystem, [FromRoute] string userId, [FromRoute] string id)
+    {
+      EncounterModel model = await _dataService.GetById(userId, id);
+      return _mapper.Map<EncounterViewModel>(model);
     }
 
     [HttpPost()]

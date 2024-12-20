@@ -20,7 +20,7 @@ export const EncounterPage : React.FC = () => {
 
     useEffect(() => {
         if (!isAuthenticated) {
-            getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } })
+            getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
         }
     }, [isAuthenticated]);
 

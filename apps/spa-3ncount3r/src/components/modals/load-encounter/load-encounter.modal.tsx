@@ -17,12 +17,14 @@ export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef
     const { getAccessTokenSilently } = useAuth0();
 
     useEffect(() => {
-        (async () => { return await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } }); })().then((accessToken) => {
-            getEncounters(accessToken).then(x => setEncounters(x));
-        });
+        (async () => { 
+            let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+            let encounters = await getEncounters(accessToken);
+            setEncounters(encounters);
+        })();
     }, []);
 
-    useEffect(() => {}, [encounters])
+    useEffect(()=>{}, [encounters]);
 
     const doAccept = (encounterId: string) => {
         let encounter = encounters.find(x => x.id === encounterId);
@@ -42,6 +44,7 @@ export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef
                         <Select 
                             labelId="party_label"
                             onChange={(event: SelectChangeEvent) => {doAccept(event.target.value)}}>
+                            {encounters.length === 0 && (<MenuItem>Fetching Encounters...</MenuItem>)}
                             {encounters && encounters.map((x: EncounterViewModel) => (
                                 <MenuItem key={x.id} value={x.id}>
                                     {`${x.name}${x.selectedParty ? '(' + x.selectedParty + ')' : ''}`}

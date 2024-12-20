@@ -51,22 +51,12 @@ export async function updateEncounterTemplate(encounterName: string, encounterId
 }
 
 export async function getEncounters(accessToken: string) : Promise<EncounterViewModel[]> {
-    let calls: Promise<AxiosResponse<EncounterViewModel[], any>>[] = [];
-    calls.push(axios.get(`${BASE_URL}encounters/${RULE_SYSTEM}`, { headers: {'Authorization': `bearer ${accessToken}`} }));
-    calls.push(axios.get(`${BASE_URL}encountertemplates/${RULE_SYSTEM}`, { headers: {'Authorization': `bearer ${accessToken}`} }));
-
-    await Promise.all(calls);
-
-    let response: EncounterViewModel[] = [];
-    for (let call of calls) {
-        response.push(...(await call).data)
-    }
-
-    return response;
+    const response = await axios.get(`${BASE_URL}encounters/${RULE_SYSTEM}`, { headers: {'Authorization': `bearer ${accessToken}`} })
+    return response.data as EncounterViewModel[];
 }
 
-export async function getEncounterById(id: string) : Promise<EncounterViewModel> {
-    const response = await axios.get(`${BASE_URL}encounters/${id}`);
+export async function getEncounterById(accessToken: string, id: string) : Promise<EncounterViewModel> {
+    const response = await axios.get(`${BASE_URL}encounters/${RULE_SYSTEM}/${id}`, { headers: {'Authorization': `bearer ${accessToken}`} });
 
     return response.data as EncounterViewModel;
 }

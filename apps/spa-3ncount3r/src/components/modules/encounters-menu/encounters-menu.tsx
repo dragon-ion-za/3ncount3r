@@ -25,7 +25,7 @@ const EncountersMenu : React.FC<EncountersMenuProps> = (props: EncountersMenuPro
 
     const handleAccept = (encounterId: string, isTemplate: boolean) => {
         toggleModal(false);
-        routeChange(`/${encounterId}${isTemplate ? '/template' : ''}`);
+        routeChange(`/${encounterId}`);
     }
 
     return (
