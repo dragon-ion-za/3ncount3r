@@ -7,15 +7,8 @@ import { EncounterViewModel } from "../view-models/encounter.view-model";
 const BASE_URL = environment.apiBaseUrl;
 const RULE_SYSTEM = environment.activeRuleSystem;
 
-export async function saveEncounter(encounterName: string, encounterCreatures: EncounterCreatureViewModel[], 
-    encounterParty: string, roundNumber: number, turnNumber: number): Promise<string> {
-    const response = await axios.post(`${BASE_URL}encounters`, { 
-        name: encounterName,
-        creatures: encounterCreatures,
-        selectedParty: encounterParty,
-        roundCount: roundNumber,
-        currentTurn: turnNumber
-     });
+export async function saveEncounter(accessToken: string, viewModel: EncounterViewModel): Promise<string> {
+    const response = await axios.post(`${BASE_URL}encounters/${RULE_SYSTEM}`, viewModel, { headers: {'Authorization': `bearer ${accessToken}`} });
 
      return response.data as string;
 }
@@ -31,16 +24,16 @@ export async function saveEncounterTemplate(encounterName: string, encounterCrea
      return response.data as string;
 }
 
-export async function updateEncounter(encounterName: string, encounterId: string, encounterCreatures: EncounterCreatureViewModel[], 
+export async function updateEncounter(accessToken: string, encounterName: string, encounterId: string, encounterCreatures: EncounterCreatureViewModel[], 
     encounterParty: string, roundNumber: number, turnNumber: number): Promise<string> {
-    const response = await axios.put(`${BASE_URL}encounters`, { 
+    const response = await axios.put(`${BASE_URL}encounters/${RULE_SYSTEM}`, { 
         name: encounterName,
         id: encounterId,
         creatures: encounterCreatures,
         selectedParty: encounterParty,
         roundCount: roundNumber,
         currentTurn: turnNumber
-     });
+     }, { headers: {'Authorization': `bearer ${accessToken}`} });
 
      return response.data as string;
 }

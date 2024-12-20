@@ -8,10 +8,12 @@ import { EncounterCreatureViewModel } from "../../../view-models/encounter-creat
 
 import { initiativeButtonStyles } from "./initiative-handler.styles";
 import { saveEncounter, updateEncounter } from "../../../services/encounter.service";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export const InitiativeHandler : React.FC = () => { 
     const [open, setOpen] = useState(false);
     const encounterContext = useEncounterContext();
+    const { getAccessTokenSilently } = useAuth0();
 
     let navigate = useNavigate();
 
@@ -20,10 +22,19 @@ export const InitiativeHandler : React.FC = () => {
         // from a template or an update to an existing encounter
         let isNew: boolean = !encounterContext.selectedParty;
 
+        let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
         let encounterId: string = '';
         if (isNew) {
-            encounterId = await saveEncounter(encounterContext.encounterName, creatures, partyName, 
-                encounterContext.roundCounter, encounterContext.turnCounter);
+            encounterId = await saveEncounter(accessToken, {
+                id: '',
+                campaign: encounterContext.campaignName,
+                location: encounterContext.locationName, 
+                name: encounterContext.encounterName,
+                creatures: creatures,
+                selectedParty: partyName,
+                roundCount: encounterContext.roundCounter,
+                currentTurn: encounterContext.turnCounter
+            });
 
             if (encounterId !== '') {
                 encounterContext.setEncounterId(encounterId);
@@ -31,7 +42,7 @@ export const InitiativeHandler : React.FC = () => {
                 console.log('save failed!!!');
             }
         } else {
-            encounterId = await updateEncounter(encounterContext.encounterName, encounterContext.encounterId, creatures, partyName, 
+            encounterId = await updateEncounter(accessToken, encounterContext.encounterName, encounterContext.encounterId, creatures, partyName, 
                 encounterContext.roundCounter, encounterContext.turnCounter);
 
             if (encounterId === '') {

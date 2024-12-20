@@ -8,7 +8,6 @@ namespace DDD._3ncount3r.API.Models
   public class EncounterModel : BaseEntityModel
   {
     [BsonElement("name")]
-    [BsonRequired]
     public string Name { get; set; }
 
     [BsonElement("creatures")]
@@ -24,11 +23,9 @@ namespace DDD._3ncount3r.API.Models
     public int CurrentTurn { get; set; }
 
     [BsonElement("campaign")]
-    [BsonRequired]
     public string Campaign { get; set; }
 
     [BsonElement("location")]
-    [BsonRequired]
     public string Location { get; set; }
   }
 }

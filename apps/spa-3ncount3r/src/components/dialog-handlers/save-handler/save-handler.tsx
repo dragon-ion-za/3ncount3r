@@ -5,26 +5,35 @@ import { useEncounterContext } from "../../../providers/encounterContext/encount
 import { SaveEncounterModal } from "../../modals/save-encounter/save-encounter.modal";
 
 import { initiativeButtonStyles } from "../initiative-handler/initiative-handler.styles";
-import { saveEncounter, saveEncounterTemplate, updateEncounter, updateEncounterTemplate } from "../../../services/encounter.service";
+import { saveEncounter, updateEncounter } from "../../../services/encounter.service";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export const SaveHandler : React.FC = () => { 
     const [open, setOpen] = useState(false);
     const encounterContext = useEncounterContext();
+    const { getAccessTokenSilently } = useAuth0();
 
     useEffect(() => {}, [encounterContext.encounterId]);
 
-    const handleAccept = async (encounterName: string) => {
+    const handleAccept = async (campaignName: string, locationName: string, encounterName: string) => {
+        let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+        encounterContext.setCampaignName(campaignName);
+        encounterContext.setLocationName(locationName);
         encounterContext.setEncounterName(encounterName);
 
         if (encounterContext.encounterId === '') {
             let encounterId: string = '';
             
-            if (encounterContext.selectedParty === undefined || encounterContext.selectedParty === '') {
-                await saveEncounterTemplate(encounterName, encounterContext.creatures);
-            } else {
-                await saveEncounter(encounterName, encounterContext.creatures, 
-                    encounterContext.selectedParty, Math.max(encounterContext.roundCounter, 1), Math.max(encounterContext.turnCounter, 1));
-            }
+            encounterId = await saveEncounter(accessToken, {
+                id: '',
+                campaign: campaignName,
+                location: locationName, 
+                name: encounterName,
+                creatures: encounterContext.creatures,
+                selectedParty: encounterContext.selectedParty,
+                roundCount: Math.max(encounterContext.roundCounter, 1),
+                currentTurn: Math.max(encounterContext.turnCounter, 1)
+            });
 
             if (encounterId !== '') {
                 encounterContext.setEncounterId(encounterId);
@@ -34,12 +43,8 @@ export const SaveHandler : React.FC = () => {
         } else {
             let encounterId: string = '';
 
-            if (encounterContext.selectedParty === undefined || encounterContext.selectedParty === '') {
-                await updateEncounterTemplate(encounterName, encounterContext.encounterId, encounterContext.creatures);
-            } else {
-                await updateEncounter(encounterName, encounterContext.encounterId, encounterContext.creatures, 
-                    encounterContext.selectedParty, encounterContext.roundCounter, encounterContext.turnCounter);
-            }
+            await updateEncounter(accessToken, encounterName, encounterContext.encounterId, encounterContext.creatures, 
+                encounterContext.selectedParty, encounterContext.roundCounter, encounterContext.turnCounter);
 
             if (encounterId === '') {
                 console.log('save failed!!!');
@@ -66,6 +71,8 @@ export const SaveHandler : React.FC = () => {
                 disablePortal>
                     <DialogContent>
                         <SaveEncounterModal
+                            currentCampaignName={encounterContext.campaignName}
+                            currentLocationName={encounterContext.locationName}
                             currentEncounterName={encounterContext.encounterName}
                             handleCancel={() => toggleModal(false)} 
                             handleAccept={handleAccept} />
