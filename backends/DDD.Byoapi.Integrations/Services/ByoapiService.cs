@@ -45,6 +45,25 @@ namespace DDD.Byoapi.Integrations.Services
       return allCreatures;
     }
 
+    public async Task<IEnumerable<CreatureModel>> SearchForCreatures(string ruleSystem, string byoapiId, string queryString)
+    {
+      List<CreatureModel> allCreatures = new List<CreatureModel>();
+
+      Dictionary<string, Task<HttpResponseMessage>> calls = new Dictionary<string, Task<HttpResponseMessage>>();
+
+      HttpClient client = new HttpClient();
+      ByoapiConfig byoapi = _config.First(x => x.Id == byoapiId);
+      HttpResponseMessage response = await client.PostAsync($"{byoapi.BaseUrl}creatures/query", new StringContent(queryString));
+
+      if (response.IsSuccessStatusCode)
+      {
+        allCreatures.AddRange(await response.Content.ReadFromJsonAsync<List<CreatureModel>>());
+        allCreatures.ForEach(creature => { creature.ByoapiId = byoapi.Id; });
+      }
+
+      return allCreatures;
+    }
+
     public async Task<CreatureModel> GetCreatureByName(string ruleSystem, string byoapiId, string name)
     {
       ByoapiConfig endpoint = _config.FirstOrDefault(x => x.Id == byoapiId && x.RuleSystem == ruleSystem);

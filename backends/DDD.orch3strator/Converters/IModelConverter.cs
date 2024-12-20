@@ -2,10 +2,10 @@ using DDD.orch3strator.ViewModels;
 
 namespace DDD.orch3strator.Converters
 {
-  public interface IModelConverter<TModel>
+  public interface IModelConverter<TModel, TViewModel>
   {
-    IEnumerable<IViewModel> Map(IEnumerable<TModel> model);
-    IViewModel Convert(TModel model);
-    TModel ConvertReverse(IViewModel viewModel);
+    IEnumerable<TViewModel> Map(IEnumerable<TModel> model);
+    TViewModel Convert(TModel model);
+    TModel ConvertReverse(TViewModel viewModel);
   }
 }

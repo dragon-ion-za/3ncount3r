@@ -17,7 +17,7 @@ namespace DDD.orch3strator.Models.EncounterService
     public string ByoapiId { get; set; }
 
     [JsonPropertyName("hitpoints")]
-    public HitpointModel[] Hitpoints { get; set; }
+    public IEnumerable<HitpointModel> Hitpoints { get; set; }
 
     [JsonPropertyName("turnOrder")]
     public int TurnOrder { get; set; }

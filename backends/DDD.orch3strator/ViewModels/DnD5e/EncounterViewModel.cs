@@ -7,6 +7,9 @@ namespace DDD.orch3strator.ViewModels.DnD5e
     [JsonPropertyName("id")]
     public string Id { get; set; }
 
+    [JsonPropertyName("id")]
+    public string UserId { get; set; }
+
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
@@ -21,5 +24,11 @@ namespace DDD.orch3strator.ViewModels.DnD5e
 
     [JsonPropertyName("currentTurn")]
     public int CurrentTurn { get; set; }
+
+    [JsonPropertyName("campaign")]
+    public string Campaign { get; set; }
+
+    [JsonPropertyName("location")]
+    public string Location { get; set; }
   }
 }

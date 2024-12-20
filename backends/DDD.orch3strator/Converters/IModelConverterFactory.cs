@@ -2,6 +2,6 @@ namespace DDD.orch3strator.Converters
 {
   public interface IModelConverterFactory
   {
-    IModelConverter<TModel> Create<TModel>(string ruleSystem);
+    IModelConverter<TModel, TViewModel> Create<TModel, TViewModel>(string ruleSystem);
   }
 }

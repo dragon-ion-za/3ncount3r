@@ -2,19 +2,10 @@ using System.Text.Json.Serialization;
 
 namespace DDD.orch3strator.ViewModels.DnD5e
 {
-  public class EncounterCreatureViewModel
+  public class EncounterCreatureViewModel : CreatureViewModel
   {
     [JsonPropertyName("id")]
     public string Id { get; set; }
-
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    [JsonPropertyName("sourceId")]
-    public string SourceId { get; set; }
-
-    [JsonPropertyName("byoapiId")]
-    public string ByoapiId { get; set; }
 
     [JsonPropertyName("hitpointMax")]
     public int HitpointMax { get; set; }

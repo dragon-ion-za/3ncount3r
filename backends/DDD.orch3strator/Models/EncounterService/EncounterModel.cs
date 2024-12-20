@@ -24,5 +24,11 @@ namespace DDD.orch3strator.Models.EncounterService
 
     [JsonPropertyName("currentTurn")]
     public int CurrentTurn { get; set; }
+
+    [JsonPropertyName("campaign")]
+    public string Campaign { get; set; }
+
+    [JsonPropertyName("location")]
+    public string Location { get; set; }
   }
 }

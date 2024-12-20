@@ -1,82 +1,80 @@
 using DDD.Byoapi.Integrations.Models;
-using DDD.orch3strator.Models;
-using DDD.orch3strator.ViewModels;
 using DDD.orch3strator.ViewModels.DnD5e;
 using DDD.orch3strator.ViewModels.DnD5e.Enums;
 using System.Text.Json;
 
 namespace DDD.orch3strator.Converters
 {
-  public class DnD5eCreatureModelConverter : IModelConverter<CreatureModel>
+  public class DnD5eCreatureModelConverter : IModelConverter<CreatureModel, CreatureViewModel>
   {
-    public IViewModel Convert(CreatureModel model)
+    public CreatureViewModel Convert(CreatureModel model)
+    {
+      return new CreatureViewModel()
+      {
+        // Generic data
+        ByoapiId = model.ByoapiId,
+        Name = model.Name,
+        ImageUrl = model.ImageUrl,
+        SourceId = model.Source,
+
+        // Attributes
+        AttributeCha = model.Attributes.First(x => x.Key == "cha").Value,
+        AttributeCon = model.Attributes.First(x => x.Key == "con").Value,
+        AttributeDex = model.Attributes.First(x => x.Key == "dex").Value,
+        AttributeInt = model.Attributes.First(x => x.Key == "int").Value,
+        AttributeStr = model.Attributes.First(x => x.Key == "str").Value,
+        AttributeWis = model.Attributes.First(x => x.Key == "wis").Value,
+
+        // Hitpoints
+        HitpointAverage = int.Parse(model.Hitpoints.FirstOrDefault(x => x.Type == "average")?.Value ?? "0"),
+        HitpointFormula = model.Hitpoints.FirstOrDefault(x => x.Type == "formula")?.Value ?? "",
+
+        // Senses
+        PassivePerception = GetSenseFromModel("passive perception", model.Senses),
+        Senses = model.Senses.Where(x => !x.StartsWith("passive perception")),
+
+        // Actions
+        ActionGroups = BuildActionGroupsFromModel(model.ActionGroups),
+
+        // Proficiencies
+        SavingThrows = BuildProficienciesFromModel("save", model.Proficiencies),
+        SkillModifiers = BuildProficienciesFromModel("skill", model.Proficiencies),
+
+        // Combat Stats
+        ArmourClass = BuildArmourClassFromModel(model.Armour),
+        ChallengeRating = BuildChallengeRatingFromModel(model.Difficulty),
+        Immunities = BuildImmunitiesResistancesFromModel(model.Immunities),
+        Resistances = BuildImmunitiesResistancesFromModel(model.Resistances),
+
+        // Languages
+        Languages = model.Languages,
+
+        // Movement speeds
+        FlyingSpeed = model.Movement.FirstOrDefault(x => x.Type == "spd-fly")?.Value ?? 0,
+        WalkingSpeed = model.Movement.FirstOrDefault(x => x.Type == "spd-walk")?.Value ?? 0,
+        ClimbingSpeed = model.Movement.FirstOrDefault(x => x.Type == "spd-climb")?.Value ?? 0,
+        SwimmingSpeed = model.Movement.FirstOrDefault(x => x.Type == "spd-swim")?.Value ?? 0,
+        BurrowingSpeed = model.Movement.FirstOrDefault(x => x.Type == "spd-burrow")?.Value ?? 0,
+
+        // Misc stuff
+        Alignment = BuildAlignmentFromModel(model.Misc.GetProperty("alignment").EnumerateArray()),
+        Size = (int)BuildSizeFromModel(model.Misc.GetProperty("size").EnumerateArray()),
+        Type = model.Misc.GetProperty("type").GetString()
+      };
+    }
+
+    public CreatureModel ConvertReverse(CreatureViewModel viewModel)
     {
       throw new NotImplementedException();
     }
 
-    public CreatureModel ConvertReverse(IViewModel viewModel)
-    {
-      throw new NotImplementedException();
-    }
-
-    public IEnumerable<IViewModel> Map(IEnumerable<CreatureModel> model)
+    public IEnumerable<CreatureViewModel> Map(IEnumerable<CreatureModel> model)
     {
       List<CreatureViewModel> list = new List<CreatureViewModel>();
 
       foreach (var creature in model)
       {
-        list.Add(new CreatureViewModel()
-        {
-          // Generic data
-          ByoapiId = creature.ByoapiId,
-          Name = creature.Name,
-          ImageUrl = creature.ImageUrl,
-          SourceId = creature.Source,
-
-          // Attributes
-          AttributeCha = creature.Attributes.First(x => x.Key == "cha").Value,
-          AttributeCon = creature.Attributes.First(x => x.Key == "con").Value,
-          AttributeDex = creature.Attributes.First(x => x.Key == "dex").Value,
-          AttributeInt = creature.Attributes.First(x => x.Key == "int").Value,
-          AttributeStr = creature.Attributes.First(x => x.Key == "str").Value,
-          AttributeWis = creature.Attributes.First(x => x.Key == "wis").Value,
-
-          // Hitpoints
-          HitpointAverage = int.Parse(creature.Hitpoints.FirstOrDefault(x => x.Type == "average")?.Value ?? "0"),
-          HitpointFormula = creature.Hitpoints.FirstOrDefault(x => x.Type == "formula")?.Value ?? "",
-
-          // Senses
-          PassivePerception = GetSenseFromModel("passive perception", creature.Senses),
-          Senses = creature.Senses.Where(x => !x.StartsWith("passive perception")),
-
-          // Actions
-          ActionGroups = BuildActionGroupsFromModel(creature.ActionGroups),
-
-          // Proficiencies
-          SavingThrows = BuildProficienciesFromModel("save", creature.Proficiencies),
-          SkillModifiers = BuildProficienciesFromModel("skill", creature.Proficiencies),
-
-          // Combat Stats
-          ArmourClass = BuildArmourClassFromModel(creature.Armour),
-          ChallengeRating = BuildChallengeRatingFromModel(creature.Difficulty),
-          Immunities = BuildImmunitiesResistancesFromModel(creature.Immunities),
-          Resistances = BuildImmunitiesResistancesFromModel(creature.Resistances),
-
-          // Languages
-          Languages = creature.Languages,
-          
-          // Movement speeds
-          FlyingSpeed = creature.Movement.FirstOrDefault(x => x.Type == "spd-fly")?.Value ?? 0,
-          WalkingSpeed = creature.Movement.FirstOrDefault(x => x.Type == "spd-walk")?.Value ?? 0,
-          ClimbingSpeed = creature.Movement.FirstOrDefault(x => x.Type == "spd-climb")?.Value ?? 0,
-          SwimmingSpeed = creature.Movement.FirstOrDefault(x => x.Type == "spd-swim")?.Value ?? 0,
-          BurrowingSpeed = creature.Movement.FirstOrDefault(x => x.Type == "spd-burrow")?.Value ?? 0,
-
-          // Misc stuff
-          Alignment = BuildAlignmentFromModel(creature.Misc.GetProperty("alignment").EnumerateArray()),
-          Size = (int)BuildSizeFromModel(creature.Misc.GetProperty("size").EnumerateArray()),
-          Type = creature.Misc.GetProperty("type").GetString()
-        });
+        list.Add(Convert(creature));
       }
 
       return list;

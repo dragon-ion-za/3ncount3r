@@ -4,6 +4,7 @@ using DDD.Byoapi.Integrations.Services;
 using DDD.orch3strator.Converters;
 using DDD.orch3strator.Models.EncounterService;
 using DDD.orch3strator.Services;
+using DDD.orch3strator.ViewModels.DnD5e;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 
@@ -60,8 +61,8 @@ builder.Services.AddScoped<IByoapiService, ByoapiService>();
 builder.Services.AddScoped<DataApiBaseService, EncounterService>((x) => { return new EncounterService(builder.Configuration.GetValue<string>("3ncount3rServiceBaseUrl")); });
 
 builder.Services.AddScoped<IModelConverterFactory, ModelConverterFactory>();
-builder.Services.AddKeyedScoped<IModelConverter<CreatureModel>, DnD5eCreatureModelConverter>("dnd5e");
-builder.Services.AddKeyedScoped<IModelConverter<EncounterModel>, Dnd5eEncounterModelConverter>("dnd5e");
+builder.Services.AddKeyedScoped<IModelConverter<CreatureModel, CreatureViewModel>, DnD5eCreatureModelConverter>("dnd5e");
+builder.Services.AddKeyedScoped<IModelConverter<EncounterModel, EncounterViewModel>, Dnd5eEncounterModelConverter>("dnd5e");
 
 var app = builder.Build();
 
