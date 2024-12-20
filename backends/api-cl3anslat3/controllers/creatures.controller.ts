@@ -13,6 +13,10 @@ export class CreaturesController {
         res.send(this.doCreatureSearch(req.query.$filter ?? '', req.protocol + '://' + req.get('host')));
     }
 
+    public static queryCreatures = (req: any, res: any) => {    
+        res.send(this.doCreatureSearch(req.body ?? '', req.protocol + '://' + req.get('host')));
+    }
+
     public static getCreature = (req: any, res: any) => {
         let creatures: CreatureModel[] = this.doCreatureSearch(`name eq ${req.params.name}`, req.protocol + '://' + req.get('host'));
         if (creatures.length > 0) {
