@@ -6031,8 +6031,10 @@
 			"type": "construct",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -6195,8 +6197,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -6335,8 +6339,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -6953,8 +6959,10 @@
 			"type": "plant",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -7096,8 +7104,10 @@
 			"type": "plant",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -7245,8 +7255,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -7538,8 +7550,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -7672,8 +7686,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -8596,8 +8612,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -8733,8 +8751,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -9402,8 +9422,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -9742,8 +9764,10 @@
 			"type": "ooze",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -10070,8 +10094,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -10395,8 +10421,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -11137,8 +11165,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -11456,8 +11486,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -11605,8 +11637,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -11732,8 +11766,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -12604,8 +12640,10 @@
 			"type": "construct",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -13207,8 +13245,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -13466,8 +13506,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -14026,8 +14068,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -14167,8 +14211,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -14653,8 +14699,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -15155,8 +15203,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -15514,8 +15564,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -16059,8 +16111,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -17686,8 +17740,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -18206,8 +18262,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -18347,8 +18405,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -19616,8 +19676,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -19751,8 +19813,10 @@
 			"type": "construct",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -19916,8 +19980,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -20412,8 +20478,10 @@
 			"type": "ooze",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -21119,8 +21187,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -21271,8 +21341,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -21420,8 +21492,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -21561,8 +21635,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -21701,8 +21777,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -21829,8 +21907,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -21970,8 +22050,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -22111,8 +22193,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -22425,8 +22509,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -22575,8 +22661,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -22710,8 +22798,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -22869,8 +22959,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -23009,8 +23101,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -23149,8 +23243,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -23277,8 +23373,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -23599,8 +23697,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -23733,8 +23833,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -23874,8 +23976,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -24016,8 +24120,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -24156,8 +24262,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -24303,8 +24411,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -24464,8 +24574,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -24778,8 +24890,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -24905,8 +25019,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -25051,8 +25167,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -25951,8 +26069,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -26444,8 +26564,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -26606,8 +26728,10 @@
 			"type": "ooze",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -27339,8 +27463,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -28645,8 +28771,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -29315,8 +29443,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -29978,8 +30108,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -30125,8 +30257,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -30293,8 +30427,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -31462,8 +31598,10 @@
 			"type": "construct",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -31661,8 +31799,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -31807,8 +31947,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -33242,8 +33384,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -33412,8 +33556,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -34271,8 +34417,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -34810,8 +34958,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -35938,8 +36088,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -37338,8 +37490,10 @@
 			"type": "ooze",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -37507,8 +37661,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -38512,8 +38668,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -38664,8 +38822,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -38819,8 +38979,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -39133,8 +39295,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -39767,8 +39931,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -39912,8 +40078,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -40040,8 +40208,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -40194,8 +40364,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -40681,8 +40853,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -41045,8 +41219,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -41387,8 +41563,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -41522,8 +41700,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -41841,8 +42021,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -41988,8 +42170,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -42140,8 +42324,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -42274,8 +42460,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -42401,8 +42589,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -42757,8 +42947,10 @@
 			"type": "construct",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -42919,8 +43111,10 @@
 			"type": "monstrosity",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -43068,8 +43262,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -43752,8 +43948,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -44221,8 +44419,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -44559,8 +44759,10 @@
 			"type": "plant",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -44737,8 +44939,10 @@
 			"type": "construct",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -44913,8 +45117,10 @@
 			"type": "plant",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -45877,8 +46083,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -46777,8 +46985,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -47092,8 +47302,10 @@
 			"type": "construct",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -47745,8 +47957,10 @@
 			"type": "beast ()",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -47925,8 +48139,10 @@
 			"type": "beast ()",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -48093,8 +48309,10 @@
 			"type": "beast ()",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -48262,8 +48480,10 @@
 			"type": "beast ()",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -48430,8 +48650,10 @@
 			"type": "beast ()",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -48598,8 +48820,10 @@
 			"type": "beast ()",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -48778,8 +49002,10 @@
 			"type": "beast ()",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -48952,8 +49178,10 @@
 			"type": "beast ()",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -49125,8 +49353,10 @@
 			"type": "beast ()",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -49311,8 +49541,10 @@
 			"type": "beast ()",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -49479,8 +49711,10 @@
 			"type": "monstrosity (titan)",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -49892,8 +50126,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -50371,8 +50607,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -50678,8 +50916,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -51701,8 +51941,10 @@
 			"type": "plant",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -52072,8 +52314,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -52218,8 +52462,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -52682,8 +52928,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -54560,8 +54808,10 @@
 			"type": "beast",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },
@@ -55069,8 +55319,10 @@
 			"type": "dragon",
 			"alignment": [
 			  {
-				"type": null,
-				"chance": null
+				"type": [
+				  "U"
+				],
+				"chance": 100
 			  }
 			]
 		  },

@@ -15,8 +15,8 @@ misc: {
         ((.type | .type + " (") + (.type | if(.tags == null, [], .tags) | flatten())) + (")")
     ), 
     "alignment": array(
-        .alignment | filter(get() in ["L", "E", "G", "N", "C", "NX", "NY", "A"]) | if(get() | size() == 0, [], {type: get(), chance: 100}),
-        .alignment | filter(get() not in ["L", "E", "G", "N", "C", "NX", "NY", "A"]) | if(size() == 0, [], map({type: .alignment, chance: .chance}))
+        .alignment | filter(get() in ["L", "E", "G", "N", "C", "NX", "NY", "A", "U"]) | if(get() | size() == 0, [], {type: get(), chance: 100}),
+        .alignment | filter(get() not in ["L", "E", "G", "N", "C", "NX", "NY", "A", "U"]) | if(size() == 0, [], map({type: .alignment, chance: .chance}))
     ) | flatten()
 },
 armour: if(
