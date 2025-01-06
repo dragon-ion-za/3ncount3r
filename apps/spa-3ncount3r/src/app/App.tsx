@@ -7,6 +7,7 @@ import { Auth0Provider } from '@auth0/auth0-react';
 
 import { theme } from '../theme'
 import createRouter from '../Router';
+import { EncounterContextProvider } from '../providers/encounterContext/encounter.context-provider';
 
 interface AppProps {
   baseName: string;
@@ -20,7 +21,9 @@ class App extends React.Component<AppProps> {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Auth0Provider domain={this.props.authDomain} clientId={this.props.authClientId}>
-          <RouterProvider router={createRouter(this.props.baseName)} />
+          <EncounterContextProvider>
+            <RouterProvider router={createRouter(this.props.baseName)} />
+          </EncounterContextProvider>
         </Auth0Provider>
       </ThemeProvider>
     );
