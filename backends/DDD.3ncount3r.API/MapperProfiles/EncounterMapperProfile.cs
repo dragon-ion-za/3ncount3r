@@ -13,6 +13,7 @@ namespace DDD._3ncount3r.API.MapperProfiles
         .ReverseMap()
         .ForMember(dest => dest.Id, m => m.MapFrom(source => string.IsNullOrEmpty(source.Id) ? ObjectId.Empty : ObjectId.Parse(source.Id)));
       CreateMap<EncounterCreatureModel, EncounterCreatureViewModel>().ReverseMap();
+      CreateMap<HitpointModel, HitpointViewModel>().ReverseMap();
     }
   }
 }

@@ -16,22 +16,28 @@ namespace DDD._3ncount3r.API.ViewModels
     [JsonPropertyName("byoapiId")]
     public string ByoapiId { get; set; }
 
-    [JsonPropertyName("hitpointMax")]
-    public int HitpointMax { get; set; }
+    [JsonPropertyName("hitpoints")]
+    public IEnumerable<HitpointViewModel> Hitpoints { get; set; }
 
-    [JsonPropertyName("currentHitpoints")]
-    public int CurrentHitpoints { get; set; }
-
-    [JsonPropertyName("temporaryHitpoints")]
-    public int TemporaryHitpoints { get; set; }
-
-    [JsonPropertyName("initiative")]
-    public int Initiative { get; set; }
+    [JsonPropertyName("turnOrder")]
+    public int TurnOrder { get; set; }
 
     [JsonPropertyName("isPlayerCharacter")]
     public bool IsPlayerCharacter { get; set; } = false;
 
     [JsonPropertyName("isActive")]
     public bool IsActive { get; set; } = true;
+  }
+
+  public class HitpointViewModel
+  {
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+
+    [JsonPropertyName("maximum")]
+    public int Maximum { get; set; }
+
+    [JsonPropertyName("current")]
+    public int Current { get; set; }
   }
 }

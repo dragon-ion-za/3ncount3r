@@ -7,5 +7,7 @@ namespace DDD.orch3strator.Services
     public abstract Task<TModel> GetById<TModel>(string ruleSystem, string userId, string id);
 
     public abstract Task<TModel> Insert<TModel>(string ruleSystem, TModel model);
+
+    public abstract Task<TModel> Update<TModel>(string ruleSystem, TModel model);
   }
 }

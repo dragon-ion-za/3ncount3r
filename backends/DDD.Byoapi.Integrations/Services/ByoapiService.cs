@@ -53,7 +53,7 @@ namespace DDD.Byoapi.Integrations.Services
 
       HttpClient client = new HttpClient();
       ByoapiConfig byoapi = _config.First(x => x.Id == byoapiId);
-      HttpResponseMessage response = await client.PostAsync($"{byoapi.BaseUrl}creatures/query", new StringContent(queryString));
+      HttpResponseMessage response = await client.PostAsync($"{byoapi.BaseUrl}creatures/query", JsonContent.Create(new { Filter = queryString }));
 
       if (response.IsSuccessStatusCode)
       {

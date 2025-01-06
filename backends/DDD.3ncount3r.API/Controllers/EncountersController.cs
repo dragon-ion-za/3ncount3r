@@ -52,10 +52,19 @@ namespace DDD._3ncount3r.API.Controllers
       return _mapper.Map<EncounterViewModel>(viewModel);
     }
 
-    [HttpPut("{userId}")]
-    public async Task<string> Put([FromRoute] string ruleSystem, [FromRoute] string userId, EncounterViewModel model)
+    [HttpPut]
+    public async Task<EncounterViewModel> Put([FromRoute] string ruleSystem, EncounterViewModel model)
     {
-      return await _dataService.Update(userId, _mapper.Map<EncounterModel>(model));
+      ValidationResult result = _validator.Validate(model);
+
+      if (!result.IsValid)
+      {
+        throw new ValidationException(result.ToString());
+      }
+
+      string id = await _dataService.Update(model.UserId, _mapper.Map<EncounterModel>(model));
+      EncounterModel viewModel = await _dataService.GetById(model.UserId, id);
+      return _mapper.Map<EncounterViewModel>(viewModel);
     }
   }
 }

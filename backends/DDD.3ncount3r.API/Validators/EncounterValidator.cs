@@ -14,10 +14,9 @@ namespace DDD._3ncount3r.API.Validators
       RuleForEach(x => x.Creatures).ChildRules(x =>
       {
         x.RuleFor(y => y.Name).NotEmpty();
-        x.RuleFor(y => y.HitpointMax).NotNull();
-        x.RuleFor(y => y.Initiative).NotNull();
+        x.RuleFor(y => y.Hitpoints).NotNull();
+        x.RuleFor(y => y.TurnOrder).NotNull();
         x.RuleFor(y => y.ByoapiId).NotEmpty();
-        x.RuleFor(y => y.CurrentHitpoints).NotNull();
         x.RuleFor(y => y.SourceId).NotNull();
       });
     }

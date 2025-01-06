@@ -16,6 +16,7 @@ builder.Services.AddCors(options => {
   options.AddPolicy(name: "Allow3ncount3r", policy =>
   {
     policy.WithOrigins(builder.Configuration["AllowedHosts"]).WithHeaders("*");
+    policy.WithMethods("GET", "PUT", "POST");
   });
 });
 builder.Services.AddControllers();
