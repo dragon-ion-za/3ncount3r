@@ -9,7 +9,7 @@ const RULE_SYSTEM = environment.activeRuleSystem;
 export async function doCreatureSearch(criteria: string) : Promise<CreatureViewModel[]> {
     let creatures: CreatureViewModel[] = [];
 
-    const response = await axios.get(`${BASE_URL}creatures/${RULE_SYSTEM}?$filter=name like ${criteria}`);
+    const response = await axios.get(`${BASE_URL}creatures/${RULE_SYSTEM}?$filter=contains(tolower(name), tolower('${criteria}'))`);
 
     response.data.map((x: any) => creatures.push(x as CreatureViewModel));
     console.log(response.data);

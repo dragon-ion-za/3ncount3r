@@ -43,8 +43,16 @@ export const SaveHandler : React.FC = () => {
         } else {
             let encounterId: string = '';
 
-            await updateEncounter(accessToken, encounterName, encounterContext.encounterId, encounterContext.creatures, 
-                encounterContext.selectedParty, encounterContext.roundCounter, encounterContext.turnCounter);
+            await updateEncounter(accessToken, {
+                id: encounterContext.encounterId,
+                campaign: campaignName,
+                location: locationName, 
+                name: encounterName,
+                creatures: encounterContext.creatures,
+                selectedParty: encounterContext.selectedParty,
+                roundCount: Math.max(encounterContext.roundCounter, 1),
+                currentTurn: Math.max(encounterContext.turnCounter, 1)
+            });
 
             if (encounterId === '') {
                 console.log('save failed!!!');

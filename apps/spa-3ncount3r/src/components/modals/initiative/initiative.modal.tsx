@@ -50,7 +50,7 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
 
     const handlePartySelection = (partyName: string) => {
         setSelectedPary(partyName);
-        let selectedParty = parties.find(x => x.name === partyName ?? '');
+        let selectedParty = parties.find(x => x.name === partyName);
         let partyMembers: CharacterViewModel[] = selectedParty!.characters;
 
         let state = [...creatures];

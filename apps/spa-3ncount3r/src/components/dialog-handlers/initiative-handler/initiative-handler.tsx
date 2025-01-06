@@ -42,8 +42,16 @@ export const InitiativeHandler : React.FC = () => {
                 console.log('save failed!!!');
             }
         } else {
-            encounterId = await updateEncounter(accessToken, encounterContext.encounterName, encounterContext.encounterId, creatures, partyName, 
-                encounterContext.roundCounter, encounterContext.turnCounter);
+            encounterId = await updateEncounter(accessToken, {
+                id: encounterContext.encounterId,
+                campaign: encounterContext.campaignName,
+                location: encounterContext.locationName, 
+                name: encounterContext.encounterName,
+                creatures: creatures,
+                selectedParty: partyName,
+                roundCount: encounterContext.roundCounter,
+                currentTurn: encounterContext.turnCounter
+            });
 
             if (encounterId === '') {
                 console.log('save failed!!!');
