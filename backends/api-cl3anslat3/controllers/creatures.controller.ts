@@ -1,6 +1,8 @@
 const path = require('path');
 const config = require('config');
 
+import { createFilter } from 'odata-v4-inmemory'
+
 import { creatureEntityToModelConverter } from "../converters/creature.converter";
 import { CreatureEntity } from "../entities/creature.entity";
 import { LegendaryGroupEntity } from "../entities/legendary-group.entity";
@@ -13,8 +15,8 @@ export class CreaturesController {
         res.send(this.doCreatureSearch(req.query.$filter ?? '', req.protocol + '://' + req.get('host')));
     }
 
-    public static queryCreatures = (req: any, res: any) => {    
-        res.send(this.doCreatureSearch(req.body ?? '', req.protocol + '://' + req.get('host')));
+    public static queryCreatures = (req: any, res: any) => {
+        res.send(this.doCreatureSearch(req.body.filter ?? '', req.protocol + '://' + req.get('host')));
     }
 
     public static getCreature = (req: any, res: any) => {
@@ -35,7 +37,7 @@ export class CreaturesController {
         const legendaryDataFiles = config.get("legendary") as string[];
         
         let creatures: CreatureModel[] = [];
-        let dataFilter = this.buildOdataCreatureFilter(query);
+        let dataFilter = createFilter(query);
         
         let legendaryGroups: LegendaryGroupEntity[] = [];
         legendaryDataFiles.forEach(file => {
@@ -47,38 +49,11 @@ export class CreaturesController {
             let jsonCreatures = readFile(`${config.get("dataFileRoot")}data/bestiary/${file}`);
             jsonCreatures.monster
                 .filter((x: CreatureEntity) => x.copyFrom == null)
-                .filter((x: CreatureEntity) => dataFilter(x))
+                .filter(dataFilter)
                 .map((x: CreatureEntity) => creatureEntityToModelConverter(hostString, x, legendaryGroups))
                 .forEach((x: CreatureModel) => creatures.push(x));
         });
         
         return creatures;
     }
-    
-    private static buildOdataCreatureFilter(reqQuery: string) : (x: CreatureEntity) => any {
-    
-        if (reqQuery !== undefined) {
-            let filterValues: string[] = reqQuery.split(' ');
-    
-            return (x: CreatureEntity) => { 
-                type ObjectKey = keyof typeof x;
-                const filterKey = filterValues[0] as ObjectKey;
-    
-                let searchValue = filterValues.slice(2).join(' ');
-    
-                switch (filterValues[1]) {
-                    case 'like':
-                        return (x[filterKey] as string).toLocaleLowerCase().indexOf(searchValue) > -1;
-    
-                    default:
-                        return (x[filterKey] as string) === searchValue;
-                }
-    
-                
-            };
-        }
-    
-        return (x: CreatureEntity) => { return true; };
-    }
-
 }
