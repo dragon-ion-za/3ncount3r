@@ -12,19 +12,18 @@ const SplitThreeLayout : React.FC<SplitThreeLayoutProps> = ({longBarComponent, t
         <>
             <Grid container direction='row' sx={{marginLeft: '64px', width: '95vw', height: 'calc(100vh - 64px)'}}>
                 <Grid 
-                xs={4} 
-                sx={{}}
+                xs={4}
                 >
                     {longBarComponent}
                 </Grid>
                 <Grid container xs={8} direction='column'>
                     <Grid xs 
-                    sx={{height: '60vh', overflowY: 'auto'}}
+                    sx={{height: '60vh', overflowY: 'hidden'}}
                     >
                         {topRightComponent}
                     </Grid>
                     <Grid xs
-                    sx={{height: '40vh', overflowY: 'auto'}}
+                    sx={{height: '40vh', overflowY: 'hidden'}}
                     >
                     
                     </Grid>

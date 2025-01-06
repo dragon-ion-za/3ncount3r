@@ -111,7 +111,7 @@ export const CreatureDetails : React.FC = () => {
 
                         </Stack>
                     </Grid>
-                    <Grid xs={5}>
+                    <Grid xs={5} sx={{maxHeight: '100%', overflow: 'auto'}}>
                         <ActionDetails actionGroups={model.actionGroups} />
                     </Grid>
                 </Grid>

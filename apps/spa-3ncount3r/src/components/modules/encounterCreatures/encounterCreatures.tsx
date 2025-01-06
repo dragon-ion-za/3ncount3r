@@ -35,7 +35,7 @@ export const EncounterCreatures : React.FC = () => {
 
     return (
         <>
-            <Stack>
+            <Stack sx={{maxHeight: '90vh', overflowY: 'auto', overflowX: 'hidden'}}>
                 {activeCreatures.map((creature: EncounterCreatureViewModel, index: number) => (
                     <Badge color="secondary" variant='dot' invisible={index === (encounterContext.turnCounter - 1) ? false : true} component={"div"}>
                         <EncounterCreatureListItem key={creature.id} viewModel={creature} index={index}
@@ -43,10 +43,6 @@ export const EncounterCreatures : React.FC = () => {
                             isSelected={activeCreatures.indexOf(encounterContext.creatures[selectedIndex]) === index} />
                     </Badge>
                 ))}
-            </Stack>
-            
-            <Stack>
-                
             </Stack>
             
             <Modal 
