@@ -1,5 +1,3 @@
-using DDD.orch3strator.ViewModels;
-
 namespace DDD.orch3strator.Converters
 {
   public interface IModelConverter<TModel, TViewModel>

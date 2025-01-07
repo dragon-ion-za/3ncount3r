@@ -81,19 +81,20 @@ namespace DDD.orch3strator.Converters
 
       foreach (var creature in creatures)
       {
+        EncounterCreatureViewModel viewModel = creature as EncounterCreatureViewModel;
         list.Add(new EncounterCreatureModel()
         {
-          ByoapiId = creature.ByoapiId,
+          ByoapiId = viewModel.ByoapiId,
           Hitpoints = new List<HitpointModel>() {
-            new HitpointModel() { Type = "normal", Current = creature.CurrentHitpoints, Maximum = creature.HitpointMax },
-            new HitpointModel() { Type = "temp", Current = creature.TemporaryHitpoints }
+            new HitpointModel() { Type = "normal", Current = viewModel.CurrentHitpoints, Maximum = viewModel.HitpointMax },
+            new HitpointModel() { Type = "temp", Current = viewModel.TemporaryHitpoints }
           },
-          Id = creature.Id,
-          TurnOrder = creature.Initiative,
-          IsActive = creature.IsActive,
-          IsPlayerCharacter = creature.IsPlayerCharacter,
-          Name = creature.Name,
-          SourceId = creature.SourceId
+          Id = viewModel.Id,
+          TurnOrder = viewModel.Initiative,
+          IsActive = viewModel.IsActive,
+          IsPlayerCharacter = viewModel.IsPlayerCharacter,
+          Name = viewModel.Name,
+          SourceId = viewModel.SourceId
         });
       }
 

@@ -2,14 +2,8 @@ using System.Text.Json.Serialization;
 
 namespace DDD.orch3strator.ViewModels.DnD5e
 {
-  public class CreatureViewModel : IViewModel
+  public class CreatureViewModel : CreatureBaseViewModel
   {
-    [JsonPropertyName("byoapiId")]
-    public string ByoapiId { get; set; }
-
-    [JsonPropertyName("sourceId")]
-    public string SourceId { get; set; }
-
     [JsonPropertyName("size")]
     public int Size { get; set; }
 
@@ -87,12 +81,6 @@ namespace DDD.orch3strator.ViewModels.DnD5e
 
     [JsonPropertyName("actionGroups")]
     public IEnumerable<ActionGroupViewModel> ActionGroups { get; set; }
-
-    [JsonPropertyName("imageUrl")]
-    public string ImageUrl { get; set; }
-
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
   }
 
   public class ArmourClassViewModel

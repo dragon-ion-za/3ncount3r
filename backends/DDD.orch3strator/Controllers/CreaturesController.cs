@@ -1,7 +1,6 @@
-using DDD.Byoapi.Integrations.Models;
-using DDD.Byoapi.Integrations.Services;
-using DDD.orch3strator.Converters;
-using DDD.orch3strator.ViewModels.DnD5e;
+using DDD.orch3strator.Strategies;
+using DDD.orch3strator.Strategies.Creatures;
+using DDD.orch3strator.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,23 +11,18 @@ namespace DDD.orch3strator.Controllers
   [AllowAnonymous]
   public class CreaturesController : ControllerBase
   {
-    private readonly IByoapiService _dataService;
-    private readonly IModelConverterFactory _modelConverterFactory;
+    private readonly StrategyFactory _stratFactory;
 
-    public CreaturesController(IByoapiService dataService, IModelConverterFactory modelConverterFactory)
+    public CreaturesController(IServiceProvider serviceProvider)
     {
-      _dataService = dataService;
-      _modelConverterFactory = modelConverterFactory;
+      _stratFactory = new StrategyFactory(serviceProvider);
     }
 
     [HttpGet]
-    public async Task<IEnumerable<CreatureViewModel>> Get([FromRoute] string ruleSystem)
+    public async Task<IEnumerable<CreatureBaseViewModel>> Get([FromRoute] string ruleSystem)
     {
-      IEnumerable<CreatureModel> models = await _dataService.SearchForCreatures(ruleSystem, Request.QueryString.Value ?? "");
-
-      IModelConverter<CreatureModel, CreatureViewModel> modelConverter = _modelConverterFactory.Create<CreatureModel, CreatureViewModel>(ruleSystem);
-
-      return modelConverter.Map(models);
+      CreatureBaseStrategy strat = _stratFactory.Create<CreatureBaseStrategy>(ruleSystem);
+      return await strat.SearchCreatures(Request.QueryString.Value ?? "");
     }
   }
 }

@@ -4,6 +4,9 @@ using DDD.Byoapi.Integrations.Services;
 using DDD.orch3strator.Converters;
 using DDD.orch3strator.Models.EncounterService;
 using DDD.orch3strator.Services;
+using DDD.orch3strator.Strategies.Creatures;
+using DDD.orch3strator.Strategies.Encounters;
+using DDD.orch3strator.ViewModels;
 using DDD.orch3strator.ViewModels.DnD5e;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
@@ -64,6 +67,9 @@ builder.Services.AddScoped<DataApiBaseService, EncounterService>((x) => { return
 builder.Services.AddScoped<IModelConverterFactory, ModelConverterFactory>();
 builder.Services.AddKeyedScoped<IModelConverter<CreatureModel, CreatureViewModel>, DnD5eCreatureModelConverter>("dnd5e");
 builder.Services.AddKeyedScoped<IModelConverter<EncounterModel, EncounterViewModel>, Dnd5eEncounterModelConverter>("dnd5e");
+
+builder.Services.AddKeyedScoped<EncounterBaseStrategy, DnD5eEncounterStrategy>("dnd5e");
+builder.Services.AddKeyedScoped<CreatureBaseStrategy, DnD5eCreatureStrategy>("dnd5e");
 
 var app = builder.Build();
 
