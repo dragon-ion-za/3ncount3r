@@ -19,32 +19,34 @@ namespace DDD.Common.Services
       _config = config.Value;
     }
 
-    public async Task<IEnumerable<TCollectionModel>> Get(string userId)
+    public async Task<IEnumerable<TCollectionModel>> Get(string userId, string ruleSystem)
     {
       InitDb();
-      return await _collection.Find(entity => entity.UserId == userId).ToListAsync();
+      return await _collection.Find(entity => entity.UserId == userId && entity.ruleSystem == ruleSystem).ToListAsync();
     }
 
-    public async Task<TCollectionModel> GetById(string userId, string id)
+    public async Task<TCollectionModel> GetById(string userId, string ruleSystem, string id)
     {
       InitDb();
-      return await _collection.Find(entity => entity.UserId == userId && entity.Id == ObjectId.Parse(id)).FirstAsync();
+      return await _collection.Find(entity => entity.UserId == userId && entity.Id == ObjectId.Parse(id) && entity.ruleSystem == ruleSystem).FirstAsync();
     }
 
-    public async Task<string> Insert(string userId, TCollectionModel model)
+    public async Task<string> Insert(string userId, string ruleSystem, TCollectionModel model)
     {
       InitDb();
       model.Id = ObjectId.GenerateNewId();
       model.UserId = userId;
+      model.ruleSystem = ruleSystem;
       await _collection.InsertOneAsync(model);
 
       return model.Id.ToString();
     }
 
-    public async Task<string> Update(string userId, TCollectionModel model)
+    public async Task<string> Update(string userId, string ruleSystem, TCollectionModel model)
     {
       InitDb();
       model.UserId = userId;
+      model.ruleSystem = ruleSystem;
       await _collection.ReplaceOneAsync(entity => entity.Id == model.Id && entity.UserId == userId, model);
 
       return model.Id.ToString();
