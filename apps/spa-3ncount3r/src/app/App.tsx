@@ -8,6 +8,8 @@ import { Auth0Provider } from '@auth0/auth0-react';
 import { theme } from '../theme'
 import createRouter from '../Router';
 import { EncounterContextProvider } from '../providers/encounterContext/encounter.context-provider';
+import { BusyLoadingContextProvider } from '../providers/busy-loading-context/busy-loading.context-provider';
+import { BusyLoading } from '../components/modules/busy-loading/busy-loading';
 
 interface AppProps {
   baseName: string;
@@ -22,7 +24,10 @@ class App extends React.Component<AppProps> {
         <CssBaseline />
         <Auth0Provider domain={this.props.authDomain} clientId={this.props.authClientId}>
           <EncounterContextProvider>
-            <RouterProvider router={createRouter(this.props.baseName)} />
+            <BusyLoadingContextProvider>
+              <BusyLoading></BusyLoading>
+              <RouterProvider router={createRouter(this.props.baseName)} />
+            </BusyLoadingContextProvider>
           </EncounterContextProvider>
         </Auth0Provider>
       </ThemeProvider>
