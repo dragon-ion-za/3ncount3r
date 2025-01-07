@@ -7,6 +7,9 @@ namespace DDD._3ncount3r.API.Models
   [BsonIgnoreExtraElements]
   public class EncounterModel : BaseEntityModel
   {
+    [BsonElement("partyId")]
+    public string PartyId { get; set; }
+
     [BsonElement("name")]
     public string Name { get; set; }
 

@@ -26,14 +26,14 @@ namespace DDD._3ncount3r.API.Controllers
     [HttpGet("{userId}")]
     public async Task<IEnumerable<EncounterViewModel>> Get([FromRoute]string ruleSystem, [FromRoute]string userId)
     {
-      IEnumerable<EncounterModel> models = await _dataService.Get(userId);
+      IEnumerable<EncounterModel> models = await _dataService.Get(userId, ruleSystem);
       return _mapper.Map<IEnumerable<EncounterViewModel>>(models);
     }
 
     [HttpGet("{userId}/{id}")]
     public async Task<EncounterViewModel> GetById([FromRoute] string ruleSystem, [FromRoute] string userId, [FromRoute] string id)
     {
-      EncounterModel model = await _dataService.GetById(userId, id);
+      EncounterModel model = await _dataService.GetById(userId, ruleSystem, id);
       return _mapper.Map<EncounterViewModel>(model);
     }
 
@@ -47,8 +47,8 @@ namespace DDD._3ncount3r.API.Controllers
         throw new ValidationException(result.ToString());
       }
 
-      string id = await _dataService.Insert(model.UserId, _mapper.Map<EncounterModel>(model));
-      EncounterModel viewModel = await _dataService.GetById(model.UserId, id);
+      string id = await _dataService.Insert(model.UserId, ruleSystem, _mapper.Map<EncounterModel>(model));
+      EncounterModel viewModel = await _dataService.GetById(model.UserId, ruleSystem, id);
       return _mapper.Map<EncounterViewModel>(viewModel);
     }
 
@@ -62,8 +62,8 @@ namespace DDD._3ncount3r.API.Controllers
         throw new ValidationException(result.ToString());
       }
 
-      string id = await _dataService.Update(model.UserId, _mapper.Map<EncounterModel>(model));
-      EncounterModel viewModel = await _dataService.GetById(model.UserId, id);
+      string id = await _dataService.Update(model.UserId, ruleSystem, _mapper.Map<EncounterModel>(model));
+      EncounterModel viewModel = await _dataService.GetById(model.UserId, ruleSystem, id);
       return _mapper.Map<EncounterViewModel>(viewModel);
     }
   }

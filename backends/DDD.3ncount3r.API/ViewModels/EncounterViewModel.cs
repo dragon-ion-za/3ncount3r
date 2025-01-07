@@ -10,6 +10,12 @@ namespace DDD._3ncount3r.API.ViewModels
     [JsonPropertyName("userId")]
     public string UserId { get; set; }
 
+    [JsonPropertyName("ruleSystem")]
+    public string RuleSystem { get; set; }
+
+    [JsonPropertyName("partyId")]
+    public string PartyId { get; set; }
+
     [JsonPropertyName("name")]
     public string Name { get; set; }
 

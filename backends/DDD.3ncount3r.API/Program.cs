@@ -48,11 +48,13 @@ builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("3nco
 builder.Services.Configure<List<ByoapiConfig>>(builder.Configuration.GetSection("Byoapis"));
 
 builder.Services.AddScoped<IDataService<EncounterModel>, EncountersService>();
+builder.Services.AddScoped<IDataService<PartyModel>, PartiesService>();
 
 builder.Services.AddAutoMapper(typeof(EncounterMapperProfile));
-builder.Services.AddAutoMapper(typeof(CreatureMapperProfile));
+builder.Services.AddAutoMapper(typeof(PartyMapperProfile));
 
 builder.Services.AddScoped<IValidator<EncounterViewModel>, EncounterValidator>();
+builder.Services.AddScoped<IValidator<PartyViewModel>, PartyValidator>();
 
 var app = builder.Build();
 
