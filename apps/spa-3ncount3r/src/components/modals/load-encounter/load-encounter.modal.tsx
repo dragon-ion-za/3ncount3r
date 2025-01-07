@@ -1,5 +1,5 @@
 import React, { forwardRef, SyntheticEvent, useEffect, useState } from "react";
-import { Box, Grid, Typography, FormControl, InputLabel, Select, SelectChangeEvent, MenuItem, List, ListSubheader } from "@mui/material";
+import { Box, Grid, Typography, FormControl, InputLabel, Select, SelectChangeEvent, MenuItem, List, ListSubheader, Button } from "@mui/material";
 import { SimpleTreeView } from '@mui/x-tree-view/SimpleTreeView';
 import { TreeItem } from '@mui/x-tree-view/TreeItem';
 
@@ -83,6 +83,9 @@ export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef
                             ))}
                         </SimpleTreeView>
                     </FormControl>
+                </Grid>
+                <Grid xs={12}>
+                    <Button variant="outlined" onClick={handleCancel}>Cancel</Button>
                 </Grid>
             </Grid>
         </Box>
