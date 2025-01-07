@@ -23,7 +23,7 @@ namespace DDD.charact3r.API.Controllers
     [HttpGet]
     public async Task<IEnumerable<IViewModel>> Get([FromRoute]string ruleSystem)
     {
-      IEnumerable<CharacterModel> models = await _dataService.Get(User.SubjectId());
+      IEnumerable<CharacterModel> models = await _dataService.Get(User.SubjectId(), ruleSystem);
 
       IConverter modelConverter = _modelConverterFactory.Create(ruleSystem);
 
@@ -34,14 +34,14 @@ namespace DDD.charact3r.API.Controllers
     public async Task<string> Post([FromRoute] string ruleSystem, IViewModel model)
     {
       IConverter modelConverter = _modelConverterFactory.Create(ruleSystem);
-      return await _dataService.Insert(User.SubjectId(), modelConverter.ConvertReverse(model));
+      return await _dataService.Insert(User.SubjectId(), ruleSystem, modelConverter.ConvertReverse(model));
     }
 
     [HttpPut]
     public async Task<string> Put([FromRoute] string ruleSystem, IViewModel model)
     {
       IConverter modelConverter = _modelConverterFactory.Create(ruleSystem);
-      return await _dataService.Update(User.SubjectId(), modelConverter.ConvertReverse(model));
+      return await _dataService.Update(User.SubjectId(), ruleSystem, modelConverter.ConvertReverse(model));
     }
   }
 }
