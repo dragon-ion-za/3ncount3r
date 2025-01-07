@@ -3,6 +3,7 @@ using DDD.orch3strator.Strategies;
 using DDD.orch3strator.Strategies.Parties;
 using DDD.orch3strator.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json.Nodes;
 
 namespace DDD.orch3strator.Controllers
 {
@@ -32,14 +33,14 @@ namespace DDD.orch3strator.Controllers
     }
 
     [HttpPost]
-    public async Task<PartyBaseViewModel> Post([FromRoute] string ruleSystem, PartyBaseViewModel viewModel)
+    public async Task<PartyBaseViewModel> Post([FromRoute] string ruleSystem, JsonObject viewModel)
     {
       PartyBaseStrategy strat = _stratFactory.Create<PartyBaseStrategy>(ruleSystem);
       return await strat.SaveParty(User.SubjectId(), viewModel);
     }
 
     [HttpPut]
-    public async Task<PartyBaseViewModel> Put([FromRoute] string ruleSystem, PartyBaseViewModel viewModel)
+    public async Task<PartyBaseViewModel> Put([FromRoute] string ruleSystem, JsonObject viewModel)
     {
       PartyBaseStrategy strat = _stratFactory.Create<PartyBaseStrategy>(ruleSystem);
       return await strat.UpdateParty(User.SubjectId(), viewModel);

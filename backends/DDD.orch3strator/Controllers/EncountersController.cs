@@ -3,6 +3,8 @@ using DDD.orch3strator.Strategies;
 using DDD.orch3strator.Strategies.Encounters;
 using DDD.orch3strator.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 
 namespace DDD.orch3strator.Controllers
 {
@@ -32,14 +34,14 @@ namespace DDD.orch3strator.Controllers
     }
 
     [HttpPost]
-    public async Task<EncounterBaseViewModel> Post([FromRoute] string ruleSystem, EncounterBaseViewModel viewModel)
+    public async Task<EncounterBaseViewModel> Post([FromRoute] string ruleSystem, JsonObject viewModel)
     {
       EncounterBaseStrategy strat = _stratFactory.Create<EncounterBaseStrategy>(ruleSystem);
       return await strat.SaveEncounter(User.SubjectId(), viewModel);
     }
 
     [HttpPut]
-    public async Task<EncounterBaseViewModel> Put([FromRoute] string ruleSystem, EncounterBaseViewModel viewModel)
+    public async Task<EncounterBaseViewModel> Put([FromRoute] string ruleSystem, JsonObject viewModel)
     {
       EncounterBaseStrategy strat = _stratFactory.Create<EncounterBaseStrategy>(ruleSystem);
       return await strat.UpdateEncounter(User.SubjectId(), viewModel);

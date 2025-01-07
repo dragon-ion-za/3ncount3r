@@ -4,6 +4,8 @@ using DDD.orch3strator.Models.PartyService;
 using DDD.orch3strator.Services;
 using DDD.orch3strator.ViewModels;
 using DDD.orch3strator.ViewModels.DnD5e;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 
 namespace DDD.orch3strator.Strategies.Parties
 {
@@ -46,22 +48,22 @@ namespace DDD.orch3strator.Strategies.Parties
       return viewModel;
     }
 
-    public async override Task<PartyBaseViewModel> SaveParty(string userId, PartyBaseViewModel viewModel)
+    public async override Task<PartyBaseViewModel> SaveParty(string userId, JsonObject viewModel)
     {
       DnD5ePartyModelConverter modelConverter = new DnD5ePartyModelConverter();
 
-      PartyModel model = modelConverter.ConvertReverse(viewModel as PartyViewModel);
+      PartyModel model = modelConverter.ConvertReverse(viewModel.Deserialize<PartyViewModel>());
       model.UserId = userId;
       model = await _partyService.Insert(RuleSystem, model);
 
       return modelConverter.Convert(model);
     }
 
-    public async override Task<PartyBaseViewModel> UpdateParty(string userId, PartyBaseViewModel viewModel)
+    public async override Task<PartyBaseViewModel> UpdateParty(string userId, JsonObject viewModel)
     {
       DnD5ePartyModelConverter modelConverter = new DnD5ePartyModelConverter();
 
-      PartyModel model = modelConverter.ConvertReverse(viewModel as PartyViewModel);
+      PartyModel model = modelConverter.ConvertReverse(viewModel.Deserialize<PartyViewModel>());
       model.UserId = userId;
       model = await _partyService.Update(RuleSystem, model);
 

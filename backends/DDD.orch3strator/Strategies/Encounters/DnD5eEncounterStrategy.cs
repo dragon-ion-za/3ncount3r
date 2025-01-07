@@ -5,6 +5,8 @@ using DDD.orch3strator.Models.EncounterService;
 using DDD.orch3strator.Services;
 using DDD.orch3strator.ViewModels;
 using DDD.orch3strator.ViewModels.DnD5e;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 
 namespace DDD.orch3strator.Strategies.Encounters
 {
@@ -79,21 +81,21 @@ namespace DDD.orch3strator.Strategies.Encounters
       return viewModel;
     }
 
-    public override async Task<EncounterBaseViewModel> SaveEncounter(string userId, EncounterBaseViewModel viewModel)
+    public override async Task<EncounterBaseViewModel> SaveEncounter(string userId, JsonObject viewModel)
     {
       Dnd5eEncounterModelConverter modelConverter = new Dnd5eEncounterModelConverter();
 
-      EncounterModel model = modelConverter.ConvertReverse(viewModel as EncounterViewModel);
+      EncounterModel model = modelConverter.ConvertReverse(viewModel.Deserialize<EncounterViewModel>());
       model.UserId = userId;
       model = await _encounterService.Insert(RuleSystem, model);
 
       return modelConverter.Convert(model);
     }
-    public override async Task<EncounterBaseViewModel> UpdateEncounter(string userId, EncounterBaseViewModel viewModel)
+    public override async Task<EncounterBaseViewModel> UpdateEncounter(string userId, JsonObject viewModel)
     {
       Dnd5eEncounterModelConverter modelConverter = new Dnd5eEncounterModelConverter();
 
-      EncounterModel model = modelConverter.ConvertReverse(viewModel as EncounterViewModel);
+      EncounterModel model = modelConverter.ConvertReverse(viewModel.Deserialize<EncounterViewModel>());
       model.UserId = userId;
       model = await _encounterService.Update(RuleSystem, model);
 
