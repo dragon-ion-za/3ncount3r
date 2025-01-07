@@ -12,10 +12,10 @@ namespace DDD.orch3strator.Strategies.Encounters
   {
     protected override string RuleSystem { get { return "dnd5e"; } }
 
-    private readonly DataApiBaseService _encounterService;
+    private readonly DataApiBaseService<EncounterModel> _encounterService;
     private readonly IByoapiService _dataService;
 
-    public DnD5eEncounterStrategy(DataApiBaseService encounterService, IByoapiService byoapiService)
+    public DnD5eEncounterStrategy(DataApiBaseService<EncounterModel> encounterService, IByoapiService byoapiService)
     {
       _encounterService = encounterService;
       _dataService = byoapiService;
@@ -23,7 +23,7 @@ namespace DDD.orch3strator.Strategies.Encounters
 
     public override async Task<IEnumerable<EncounterBaseViewModel>> GetEncounters(string userId, bool includeCreatures = false)
     {
-      IEnumerable<EncounterModel> models = await _encounterService.GetList<EncounterModel>(RuleSystem, userId);
+      IEnumerable<EncounterModel> models = await _encounterService.GetList(RuleSystem, userId);
 
       List<CreatureModel> creatures = new List<CreatureModel>();
 
@@ -42,14 +42,14 @@ namespace DDD.orch3strator.Strategies.Encounters
         }
       }
 
-      IModelConverter<EncounterModel, EncounterViewModel> modelConverter = new Dnd5eEncounterModelConverter();
+      Dnd5eEncounterModelConverter modelConverter = new Dnd5eEncounterModelConverter();
 
       return modelConverter.Map(models);
     }
 
     public override async Task<EncounterBaseViewModel> GetEncounterById(string userId, string id)
     {
-      EncounterModel model = await _encounterService.GetById<EncounterModel>(RuleSystem, userId, id);
+      EncounterModel model = await _encounterService.GetById(RuleSystem, userId, id);
 
       List<CreatureModel> creatures = new List<CreatureModel>();
 
@@ -65,7 +65,7 @@ namespace DDD.orch3strator.Strategies.Encounters
         creatures.AddRange(await _dataService.SearchForCreatures(RuleSystem, byoapiGroup.ByoapiId, string.Join(" or ", creatureQueries)));
       }
 
-      IModelConverter<EncounterModel, EncounterViewModel> modelConverter = new Dnd5eEncounterModelConverter();
+      Dnd5eEncounterModelConverter modelConverter = new Dnd5eEncounterModelConverter();
       EncounterViewModel viewModel = modelConverter.Convert(model);
 
       // Enrich the viemodel creatures with the creature data from the BYOAPIs
@@ -81,21 +81,21 @@ namespace DDD.orch3strator.Strategies.Encounters
 
     public override async Task<EncounterBaseViewModel> SaveEncounter(string userId, EncounterBaseViewModel viewModel)
     {
-      IModelConverter<EncounterModel, EncounterViewModel> modelConverter = new Dnd5eEncounterModelConverter();
+      Dnd5eEncounterModelConverter modelConverter = new Dnd5eEncounterModelConverter();
 
       EncounterModel model = modelConverter.ConvertReverse(viewModel as EncounterViewModel);
       model.UserId = userId;
-      model = await _encounterService.Insert<EncounterModel>(RuleSystem, model);
+      model = await _encounterService.Insert(RuleSystem, model);
 
       return modelConverter.Convert(model);
     }
     public override async Task<EncounterBaseViewModel> UpdateEncounter(string userId, EncounterBaseViewModel viewModel)
     {
-      IModelConverter<EncounterModel, EncounterViewModel> modelConverter = new Dnd5eEncounterModelConverter();
+      Dnd5eEncounterModelConverter modelConverter = new Dnd5eEncounterModelConverter();
 
       EncounterModel model = modelConverter.ConvertReverse(viewModel as EncounterViewModel);
       model.UserId = userId;
-      model = await _encounterService.Update<EncounterModel>(RuleSystem, model);
+      model = await _encounterService.Update(RuleSystem, model);
 
       return modelConverter.Convert(model);
     }

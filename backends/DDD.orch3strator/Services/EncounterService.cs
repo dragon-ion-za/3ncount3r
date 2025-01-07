@@ -1,6 +1,8 @@
+using DDD.orch3strator.Models.EncounterService;
+
 namespace DDD.orch3strator.Services
 {
-  public class EncounterService : DataApiBaseService
+  public class EncounterService : DataApiBaseService<EncounterModel>
   {
     private readonly string _baseUrl;
 
@@ -9,9 +11,9 @@ namespace DDD.orch3strator.Services
         _baseUrl = baseUrl;
     }
 
-    public async override Task<IEnumerable<TModel>> GetList<TModel>(string ruleSystem, string userId)
+    public async override Task<IEnumerable<EncounterModel>> GetList(string ruleSystem, string userId)
     {
-      List<TModel> list = new List<TModel>();
+      List<EncounterModel> list = new List<EncounterModel>();
 
       Dictionary<string, Task<HttpResponseMessage>> calls = new Dictionary<string, Task<HttpResponseMessage>>();
 
@@ -19,12 +21,12 @@ namespace DDD.orch3strator.Services
       HttpResponseMessage response = await client.GetAsync($"{_baseUrl}encounters/{ruleSystem}/{userId}");
 
       response.EnsureSuccessStatusCode();
-      list.AddRange(await response.Content.ReadFromJsonAsync<List<TModel>>());
+      list.AddRange(await response.Content.ReadFromJsonAsync<List<EncounterModel>>());
 
       return list;
     }
 
-    public async override Task<TModel> GetById<TModel>(string ruleSystem, string userId, string id)
+    public async override Task<EncounterModel> GetById(string ruleSystem, string userId, string id)
     {
       Dictionary<string, Task<HttpResponseMessage>> calls = new Dictionary<string, Task<HttpResponseMessage>>();
 
@@ -33,27 +35,27 @@ namespace DDD.orch3strator.Services
 
       response.EnsureSuccessStatusCode();
 
-      return await response.Content.ReadFromJsonAsync<TModel>();
+      return await response.Content.ReadFromJsonAsync<EncounterModel>();
     }
 
-    public async override Task<TModel> Insert<TModel>(string ruleSystem, TModel model)
+    public async override Task<EncounterModel> Insert(string ruleSystem, EncounterModel model)
     {
       HttpClient client = new HttpClient();
       HttpResponseMessage response = await client.PostAsJsonAsync($"{_baseUrl}encounters/{ruleSystem}", model);
 
       response.EnsureSuccessStatusCode();
-      TModel insertedModel = await response.Content.ReadFromJsonAsync<TModel>();
+      EncounterModel insertedModel = await response.Content.ReadFromJsonAsync<EncounterModel>();
 
       return insertedModel;
     }
 
-    public async override Task<TModel> Update<TModel>(string ruleSystem, TModel model)
+    public async override Task<EncounterModel> Update(string ruleSystem, EncounterModel model)
     {
       HttpClient client = new HttpClient();
       HttpResponseMessage response = await client.PutAsJsonAsync($"{_baseUrl}encounters/{ruleSystem}", model);
 
       response.EnsureSuccessStatusCode();
-      TModel insertedModel = await response.Content.ReadFromJsonAsync<TModel>();
+      EncounterModel insertedModel = await response.Content.ReadFromJsonAsync<EncounterModel>();
 
       return insertedModel;
     }
