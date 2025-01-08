@@ -25,6 +25,7 @@ import { getPartyList } from "apps/spa-3ncount3r/src/services/party.service";
 import { usePartyContext } from "apps/spa-3ncount3r/src/providers/party-context/party.context-provider";
 import { PartyList } from "../../modules/party-list/party-list";
 import { PartyDetails } from "../../modules/party-details/party-details";
+import SearchCharacters from "../../modules/search-characters/search-characters";
 
 export const PartyPage : React.FC = () => {
     const { getAccessTokenSilently, isAuthenticated } = useAuth0();
@@ -50,7 +51,7 @@ export const PartyPage : React.FC = () => {
     }, [isAuthenticated]);
 
     return (<> 
-        <HeaderBar leftComponent={<></>} middleShortComponent={<></>} middleLongComponent={<></>} rightComponent={<></>} />
+        <HeaderBar leftComponent={<></>} middleShortComponent={<></>} middleLongComponent={<></>} rightComponent={<SearchCharacters></SearchCharacters>} />
         <Drawer variant='permanent'>
             <EncountersMenu isExpanded={false} />
         </Drawer>
