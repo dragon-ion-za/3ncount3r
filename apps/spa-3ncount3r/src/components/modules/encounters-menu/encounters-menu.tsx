@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { DialogContent, IconButton, Modal } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import { useNavigate } from "react-router";
-import { Download } from "@mui/icons-material";
+import { Download, Groups3 } from "@mui/icons-material";
 import { LoadEncounterModal } from "../../modals/load-encounter/load-encounter.modal";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -36,9 +36,14 @@ const EncountersMenu : React.FC<EncountersMenuProps> = (props: EncountersMenuPro
                 <AddIcon />
             </IconButton>
             {isAuthenticated && (
-                <IconButton aria-label="add" onClick={() => {toggleModal(true)}}>
-                    <Download />
-                </IconButton>
+                <>
+                    <IconButton aria-label="load" onClick={() => {toggleModal(true)}}>
+                        <Download />
+                    </IconButton>
+                    <IconButton aria-label="party" onClick={() => {routeChange('/party'); return;}}>
+                        <Groups3 />
+                    </IconButton>
+                </>
             )}
             
             <Modal 

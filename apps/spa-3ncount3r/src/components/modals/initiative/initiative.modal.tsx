@@ -11,6 +11,8 @@ import { CharacterViewModel } from "../../../view-models/character.view-model";
 
 import { modalContainerWide } from "../../../styles/modals.styles";
 import { convertCharacterToEncounterCreatureViewModel } from "../../../converters/characterToCreature.converter";
+import { useAuth0 } from "@auth0/auth0-react";
+import { useBusyLoadingContext } from "apps/spa-3ncount3r/src/providers/busy-loading-context/busy-loading.context-provider";
 
 export interface InitiativeModalProps {
     creaturesList: EncounterCreatureViewModel[];
@@ -21,6 +23,9 @@ export interface InitiativeModalProps {
 
 export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ creaturesList, partyName, handleAccept, handleCancel }, ref) => {
     const [creatures, setCreatures] = useState<EncounterCreatureViewModel[]>(creaturesList);
+    const { getAccessTokenSilently } = useAuth0();
+    const loadingContext = useBusyLoadingContext();
+    
     let [parties, setParties] = useState<PartyViewModel[]>([]);
     let [selectedParty, setSelectedPary] = useState<string>(partyName);
 
@@ -63,9 +68,16 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
     }
 
     useEffect(() => {
-        getPartyList().then(partyList => {
-            setParties(partyList);
-        });
+        (async () => { 
+            try {
+                loadingContext.setIsLoading(true);
+                let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+                let partyList = await getPartyList(accessToken);
+                setParties(partyList);
+            } finally {
+                loadingContext.setIsLoading(false);
+            }
+        })();
     }, []);
 
     useEffect(() => {}, [creatures, parties, selectedParty]);
