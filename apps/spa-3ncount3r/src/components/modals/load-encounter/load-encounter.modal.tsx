@@ -65,7 +65,9 @@ export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef
     useEffect(()=>{}, [encounters]);
 
     const doAccept = (itemId: string) => {
-        handleAccept(itemId);
+        if (itemId !== '') {
+            handleAccept(itemId);
+        }
     }
 
     return (
@@ -77,13 +79,13 @@ export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef
                 </Grid>
                 <Grid xs={12}>
                     <FormControl fullWidth>
-                        <SimpleTreeView onSelectedItemsChange={(event: SyntheticEvent, itemIds: string | null) => {doAccept(itemIds ?? '')}}>
+                        <SimpleTreeView>
                             {encounters && encounters.map((x: any) => (
                                 <TreeItem itemId={x.campaign} label={x.campaign}>
                                     {x.locations && x.locations.map((y: any) => (
                                         <TreeItem itemId={y.location} label={y.location}>
                                             {y.encounters && y.encounters.map((z: any) => (
-                                                <TreeItem itemId={z.id} label={`${z.name}${z.selectedParty ? '(' + z.selectedParty + ')' : ''}`}></TreeItem>
+                                                <TreeItem itemId={z.id} label={`${z.name}${z.selectedParty ? '(' + z.selectedParty + ')' : ''}`} onClick={() => { doAccept(z.id) }}></TreeItem>
                                             ))}
                                         </TreeItem>
                                     ))}
