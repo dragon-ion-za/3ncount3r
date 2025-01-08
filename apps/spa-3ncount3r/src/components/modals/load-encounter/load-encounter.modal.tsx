@@ -8,6 +8,7 @@ import { getEncounters } from "../../../services/encounter.service";
 
 import { modalContainerWide } from "../../../styles/modals.styles";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useBusyLoadingContext } from "apps/spa-3ncount3r/src/providers/busy-loading-context/busy-loading.context-provider";
 
 export interface LoadEncounterModalProps {
     handleAccept: (encounterId: string) => void;
@@ -27,30 +28,37 @@ class LocationListItemViewModel {
 export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef(({ handleAccept, handleCancel }, ref) => {
     const [encounters, setEncounters] = useState<CampaignListItemViewModel[]>([]);
     const { getAccessTokenSilently } = useAuth0();
+    const loadingContext = useBusyLoadingContext();
 
     useEffect(() => {
         (async () => { 
-            let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
-            let encounters = await getEncounters(accessToken);
-            let groupedEncounters: CampaignListItemViewModel[] = [];
-
-            encounters.forEach((x: EncounterViewModel) => {
-                let campaignIndex = groupedEncounters.findIndex(y => y.campaign === x.campaign);
-
-                if (campaignIndex < 0) {
-                    campaignIndex = groupedEncounters.push({ campaign: x.campaign, locations: [] }) - 1;
-                }
-
-                let locationIndex = groupedEncounters[campaignIndex].locations.findIndex(y => y.location === x.location);
-
-                if (locationIndex < 0) {
-                    locationIndex = groupedEncounters[campaignIndex].locations.push({ location: x.location, encounters: [] }) - 1;
-                }
-
-                groupedEncounters[campaignIndex].locations[locationIndex].encounters.push(x);
-            });
-
-            setEncounters(groupedEncounters);
+            try {
+                loadingContext.setIsLoading(true);
+                let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+                let encounters = await getEncounters(accessToken);
+                let groupedEncounters: CampaignListItemViewModel[] = [];
+    
+                encounters.forEach((x: EncounterViewModel) => {
+                    let campaignIndex = groupedEncounters.findIndex(y => y.campaign === x.campaign);
+    
+                    if (campaignIndex < 0) {
+                        campaignIndex = groupedEncounters.push({ campaign: x.campaign, locations: [] }) - 1;
+                    }
+    
+                    let locationIndex = groupedEncounters[campaignIndex].locations.findIndex(y => y.location === x.location);
+    
+                    if (locationIndex < 0) {
+                        locationIndex = groupedEncounters[campaignIndex].locations.push({ location: x.location, encounters: [] }) - 1;
+                    }
+    
+                    groupedEncounters[campaignIndex].locations[locationIndex].encounters.push(x);
+                });
+    
+                setEncounters(groupedEncounters);
+            } finally {
+                loadingContext.setIsLoading(false);
+            }
+            
         })();
     }, []);
 
