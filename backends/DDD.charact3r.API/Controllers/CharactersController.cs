@@ -1,7 +1,6 @@
-using DDD.charact3r.API.Converters;
+using AutoMapper;
 using DDD.charact3r.API.Models;
 using DDD.charact3r.API.ViewModels;
-using DDD.Common.Extensions;
 using DDD.Common.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,36 +11,35 @@ namespace DDD.charact3r.API.Controllers
   public class CharactersController : ControllerBase
   {
     private readonly IDataService<CharacterModel> _dataService;
-    private readonly IModelConverterFactory _modelConverterFactory;
+    private readonly IMapper _mapper;
 
-    public CharactersController(IDataService<CharacterModel> dataService, IModelConverterFactory modelConverterFactory)
+    public CharactersController(IDataService<CharacterModel> dataService, Mapper mapper)
     {
       _dataService = dataService;
-      _modelConverterFactory = modelConverterFactory;
+      _mapper = mapper;
     }
 
     [HttpGet]
-    public async Task<IEnumerable<IViewModel>> Get([FromRoute]string ruleSystem)
+    public async Task<IEnumerable<CharacterViewModel>> Get([FromRoute] string ruleSystem, [FromRoute] string userId)
     {
-      IEnumerable<CharacterModel> models = await _dataService.Get(User.SubjectId(), ruleSystem);
-
-      IConverter modelConverter = _modelConverterFactory.Create(ruleSystem);
-
-      return modelConverter.Map(models);
+      IEnumerable<CharacterModel> models = await _dataService.Get(userId, ruleSystem);
+      return _mapper.Map<IEnumerable<CharacterViewModel>>(models);
     }
 
     [HttpPost]
-    public async Task<string> Post([FromRoute] string ruleSystem, IViewModel model)
+    public async Task<CharacterViewModel> Post([FromRoute] string ruleSystem, [FromRoute] string userId, CharacterViewModel model)
     {
-      IConverter modelConverter = _modelConverterFactory.Create(ruleSystem);
-      return await _dataService.Insert(User.SubjectId(), ruleSystem, modelConverter.ConvertReverse(model));
+      string id = await _dataService.Insert(model.UserId, ruleSystem, _mapper.Map<CharacterModel>(model));
+      CharacterModel viewModel = await _dataService.GetById(model.UserId, ruleSystem, id);
+      return _mapper.Map<CharacterViewModel>(viewModel);
     }
 
     [HttpPut]
-    public async Task<string> Put([FromRoute] string ruleSystem, IViewModel model)
+    public async Task<CharacterViewModel> Put([FromRoute] string ruleSystem, [FromRoute] string userId, CharacterViewModel model)
     {
-      IConverter modelConverter = _modelConverterFactory.Create(ruleSystem);
-      return await _dataService.Update(User.SubjectId(), ruleSystem, modelConverter.ConvertReverse(model));
+      string id = await _dataService.Update(model.UserId, ruleSystem, _mapper.Map<CharacterModel>(model));
+      CharacterModel viewModel = await _dataService.GetById(model.UserId, ruleSystem, id);
+      return _mapper.Map<CharacterViewModel>(viewModel);
     }
   }
 }
