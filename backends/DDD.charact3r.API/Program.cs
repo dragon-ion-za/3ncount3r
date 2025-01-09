@@ -1,9 +1,8 @@
-using DDD.charact3r.API.Converters;
+using DDD.charact3r.API.MapperProfiles;
 using DDD.charact3r.API.Models;
 using DDD.charact3r.API.Services;
 using DDD.Common.Configurations;
 using DDD.Common.Services;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,14 +10,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-
-builder.Services.AddAuthentication(options => {
-  options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-  options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(options => {
-  options.Authority = builder.Configuration["Auth0:Authority"];
-  options.Audience = builder.Configuration["Auth0:Audience"];
-});
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -53,7 +44,7 @@ builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("char
 
 builder.Services.AddScoped<IDataService<CharacterModel>, CharactersService>();
 
-builder.Services.AddScoped<IModelConverterFactory, ModelConverterFactory>();
+builder.Services.AddAutoMapper(typeof(CharacterMapperProfile));
 
 var app = builder.Build();
 
@@ -66,9 +57,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthentication();
-app.UseAuthorization();
-
-app.MapControllers().RequireAuthorization();
+app.MapControllers();
 
 app.Run();

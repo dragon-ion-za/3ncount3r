@@ -13,20 +13,31 @@ namespace DDD.charact3r.API.Controllers
     private readonly IDataService<CharacterModel> _dataService;
     private readonly IMapper _mapper;
 
-    public CharactersController(IDataService<CharacterModel> dataService, Mapper mapper)
+    public CharactersController(IDataService<CharacterModel> dataService, IMapper mapper)
     {
       _dataService = dataService;
       _mapper = mapper;
     }
 
-    [HttpGet]
+    [HttpGet("{userId}")]
     public async Task<IEnumerable<CharacterViewModel>> Get([FromRoute] string ruleSystem, [FromRoute] string userId)
     {
       IEnumerable<CharacterModel> models = await _dataService.Get(userId, ruleSystem);
       return _mapper.Map<IEnumerable<CharacterViewModel>>(models);
     }
 
-    [HttpPost]
+    [HttpGet("search/{userId}/{characterName}")]
+    public async Task<IEnumerable<CharacterViewModel>> Search([FromRoute] string ruleSystem, [FromRoute] string userId, [FromRoute] string characterName)
+    {
+      // The in-memory search isn't brilliant, but it will get the job done for now.
+      // In the future, maybe I'll make this an OData controller but at this point
+      // the juice is not worth the squeeze
+      IEnumerable<CharacterModel> models = await _dataService.Get(userId, ruleSystem);
+      models = models.Where(x => x.Name.IndexOf(characterName, StringComparison.OrdinalIgnoreCase) >= 0);
+      return _mapper.Map<IEnumerable<CharacterViewModel>>(models);
+    }
+
+    [HttpPost("{userId}")]
     public async Task<CharacterViewModel> Post([FromRoute] string ruleSystem, [FromRoute] string userId, CharacterViewModel model)
     {
       string id = await _dataService.Insert(model.UserId, ruleSystem, _mapper.Map<CharacterModel>(model));
@@ -34,7 +45,7 @@ namespace DDD.charact3r.API.Controllers
       return _mapper.Map<CharacterViewModel>(viewModel);
     }
 
-    [HttpPut]
+    [HttpPut("{userId}")]
     public async Task<CharacterViewModel> Put([FromRoute] string ruleSystem, [FromRoute] string userId, CharacterViewModel model)
     {
       string id = await _dataService.Update(model.UserId, ruleSystem, _mapper.Map<CharacterModel>(model));

@@ -8,12 +8,6 @@ namespace DDD.charact3r.API.Models
     [BsonElement("name")]
     public string Name { get; set; }
 
-    [BsonElement("userId")]
-    public string UserId { get; set; }
-
-    [BsonElement("ruleSystem")]
-    public string RuleSystem { get; set; }
-
     [BsonElement("size")]
     public string[] Size { get; set; }
 
