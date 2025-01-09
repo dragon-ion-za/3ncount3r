@@ -75,8 +75,8 @@ namespace DDD.charact3r.API.ViewModels
 
   public class MovementSpeedViewModel
   {
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
 
     [JsonPropertyName("value")]
     public int Value { get; set; }

@@ -2,9 +2,11 @@ using DDD.Byoapi.Integrations.Configurations;
 using DDD.Byoapi.Integrations.Models;
 using DDD.Byoapi.Integrations.Services;
 using DDD.orch3strator.Converters;
+using DDD.orch3strator.Models.CharacterService;
 using DDD.orch3strator.Models.EncounterService;
 using DDD.orch3strator.Models.PartyService;
 using DDD.orch3strator.Services;
+using DDD.orch3strator.Strategies.Characters;
 using DDD.orch3strator.Strategies.Creatures;
 using DDD.orch3strator.Strategies.Encounters;
 using DDD.orch3strator.Strategies.Parties;
@@ -66,6 +68,7 @@ builder.Services.Configure<List<ByoapiConfig>>(builder.Configuration.GetSection(
 builder.Services.AddScoped<IByoapiService, ByoapiService>();
 builder.Services.AddScoped<DataApiBaseService<EncounterModel>, EncounterService>((x) => { return new EncounterService(builder.Configuration.GetValue<string>("3ncount3rServiceBaseUrl")); });
 builder.Services.AddScoped<DataApiBaseService<PartyModel>, PartyService>((x) => { return new PartyService(builder.Configuration.GetValue<string>("3ncount3rServiceBaseUrl")); });
+builder.Services.AddScoped<DataApiBaseService<CharacterModel>, CharacterService>((x) => { return new CharacterService(builder.Configuration.GetValue<string>("charact3rServiceBaseUrl")); });
 
 builder.Services.AddScoped<IModelConverterFactory, ModelConverterFactory>();
 builder.Services.AddKeyedScoped<IModelConverter<CreatureModel, CreatureViewModel>, DnD5eCreatureModelConverter>("dnd5e");
@@ -74,6 +77,7 @@ builder.Services.AddKeyedScoped<IModelConverter<EncounterModel, EncounterViewMod
 builder.Services.AddKeyedScoped<EncounterBaseStrategy, DnD5eEncounterStrategy>("dnd5e");
 builder.Services.AddKeyedScoped<CreatureBaseStrategy, DnD5eCreatureStrategy>("dnd5e");
 builder.Services.AddKeyedScoped<PartyBaseStrategy, DnD5ePartyStrategy>("dnd5e");
+builder.Services.AddKeyedScoped<CharacterBaseStrategy, DnD5eCharacterStrategy>("dnd5e");
 
 var app = builder.Build();
 

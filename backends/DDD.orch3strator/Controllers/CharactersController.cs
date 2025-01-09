@@ -17,11 +17,11 @@ namespace DDD.orch3strator.Controllers
       _stratFactory = new StrategyFactory(serviceProvider);
     }
 
-    [HttpGet]
-    public async Task<IEnumerable<CharacterBaseViewModel>> Get([FromRoute] string ruleSystem)
+    [HttpGet("{characterName}")]
+    public async Task<IEnumerable<CharacterBaseViewModel>> Search([FromRoute] string ruleSystem, [FromRoute] string characterName)
     {
       CharacterBaseStrategy strat = _stratFactory.Create<CharacterBaseStrategy>(ruleSystem);
-      return await strat.SearchCharacters(Request.QueryString.Value ?? "", User.SubjectId());
+      return await strat.SearchCharactersByName(User.SubjectId(), characterName);
     }
   }
 }

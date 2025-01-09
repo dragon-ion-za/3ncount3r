@@ -67,8 +67,8 @@ namespace DDD.charact3r.API.Models
 
   public class MovementSpeedModel
   {
-    [BsonElement("name")]
-    public string Name { get; set; }
+    [BsonElement("type")]
+    public string Type { get; set; }
 
     [BsonElement("value")]
     public int Value { get; set; }

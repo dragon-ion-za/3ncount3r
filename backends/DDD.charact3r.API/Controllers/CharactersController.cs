@@ -26,27 +26,23 @@ namespace DDD.charact3r.API.Controllers
       return _mapper.Map<IEnumerable<CharacterViewModel>>(models);
     }
 
-    [HttpGet("search/{userId}/{characterName}")]
-    public async Task<IEnumerable<CharacterViewModel>> Search([FromRoute] string ruleSystem, [FromRoute] string userId, [FromRoute] string characterName)
+    [HttpGet("{userId}/{id}")]
+    public async Task<CharacterViewModel> GetById([FromRoute] string ruleSystem, [FromRoute] string userId, [FromRoute] string id)
     {
-      // The in-memory search isn't brilliant, but it will get the job done for now.
-      // In the future, maybe I'll make this an OData controller but at this point
-      // the juice is not worth the squeeze
-      IEnumerable<CharacterModel> models = await _dataService.Get(userId, ruleSystem);
-      models = models.Where(x => x.Name.IndexOf(characterName, StringComparison.OrdinalIgnoreCase) >= 0);
-      return _mapper.Map<IEnumerable<CharacterViewModel>>(models);
+      CharacterModel model = await _dataService.GetById(userId, ruleSystem, id);
+      return _mapper.Map<CharacterViewModel>(model);
     }
 
-    [HttpPost("{userId}")]
-    public async Task<CharacterViewModel> Post([FromRoute] string ruleSystem, [FromRoute] string userId, CharacterViewModel model)
+    [HttpPost]
+    public async Task<CharacterViewModel> Post([FromRoute] string ruleSystem, CharacterViewModel model)
     {
       string id = await _dataService.Insert(model.UserId, ruleSystem, _mapper.Map<CharacterModel>(model));
       CharacterModel viewModel = await _dataService.GetById(model.UserId, ruleSystem, id);
       return _mapper.Map<CharacterViewModel>(viewModel);
     }
 
-    [HttpPut("{userId}")]
-    public async Task<CharacterViewModel> Put([FromRoute] string ruleSystem, [FromRoute] string userId, CharacterViewModel model)
+    [HttpPut]
+    public async Task<CharacterViewModel> Put([FromRoute] string ruleSystem, CharacterViewModel model)
     {
       string id = await _dataService.Update(model.UserId, ruleSystem, _mapper.Map<CharacterModel>(model));
       CharacterModel viewModel = await _dataService.GetById(model.UserId, ruleSystem, id);

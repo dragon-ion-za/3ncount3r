@@ -30,18 +30,6 @@ export async function updateEncounter(accessToken: string, viewModel: EncounterV
      return response.data as string;
 }
 
-export async function updateEncounterTemplate(encounterName: string, encounterId: string, encounterCreatures: EncounterCreatureViewModel[]): Promise<string> {
-    const response = await axios.put(`${BASE_URL}encountertemplates`, { 
-        name: encounterName,
-        id: encounterId,
-        creatures: encounterCreatures,
-        roundCount: 1,
-        currentTurn: 1
-     });
-
-     return response.data as string;
-}
-
 export async function getEncounters(accessToken: string) : Promise<EncounterViewModel[]> {
     const response = await axios.get(`${BASE_URL}encounters/${RULE_SYSTEM}`, { headers: {'Authorization': `bearer ${accessToken}`} })
     return response.data as EncounterViewModel[];
@@ -49,12 +37,6 @@ export async function getEncounters(accessToken: string) : Promise<EncounterView
 
 export async function getEncounterById(accessToken: string, id: string) : Promise<EncounterViewModel> {
     const response = await axios.get(`${BASE_URL}encounters/${RULE_SYSTEM}/${id}`, { headers: {'Authorization': `bearer ${accessToken}`} });
-
-    return response.data as EncounterViewModel;
-}
-
-export async function getEncounterTemplateById(id: string) : Promise<EncounterViewModel> {
-    const response = await axios.get(`${BASE_URL}encountertemplates/${id}`);
 
     return response.data as EncounterViewModel;
 }

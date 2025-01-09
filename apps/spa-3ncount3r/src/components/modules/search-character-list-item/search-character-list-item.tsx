@@ -21,7 +21,7 @@ const SearchCharacterListItem : React.FC<SearchCharacterListItemProps> = ({viewM
                         <Avatar sx={searchResultAvatarStyles} />
                     </Grid>
                     <Grid xs={7}>
-                        <Typography variant='subtitle1'>{viewModel.classes.map(x => `Level ${x.level} ${x.name}`)}</Typography>
+                        <Typography variant='subtitle1'>{viewModel.classes?.map(x => `Level ${x.level} ${x.name}`)}</Typography>
                         <Typography variant="h2">{viewModel.name}</Typography>        
                     </Grid>
                 </Grid>
