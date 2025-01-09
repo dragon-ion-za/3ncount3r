@@ -1,5 +1,6 @@
 using DDD.Byoapi.Integrations.Services;
 using DDD.orch3strator.Converters;
+using DDD.orch3strator.Models.CharacterService;
 using DDD.orch3strator.Models.PartyService;
 using DDD.orch3strator.Services;
 using DDD.orch3strator.ViewModels;
@@ -14,12 +15,14 @@ namespace DDD.orch3strator.Strategies.Parties
     protected override string RuleSystem { get { return "dnd5e"; } }
 
     private readonly DataApiBaseService<PartyModel> _partyService;
+    private readonly DataApiBaseService<CharacterModel> _characterService;
     private readonly IByoapiService _dataService;
 
-    public DnD5ePartyStrategy(DataApiBaseService<PartyModel> partyService, IByoapiService byoapiService)
+    public DnD5ePartyStrategy(DataApiBaseService<PartyModel> partyService, DataApiBaseService<CharacterModel> characterService, IByoapiService byoapiService)
     {
       _partyService = partyService;
       _dataService = byoapiService;
+      _characterService = characterService;
     }
 
     public override async Task<IEnumerable<PartyBaseViewModel>> GetParties(string userId, bool includeCreatures = false)
@@ -40,10 +43,22 @@ namespace DDD.orch3strator.Strategies.Parties
     {
       PartyModel model = await _partyService.GetById(RuleSystem, userId, id);
 
-      // Add character enrichment later
+      List<CharacterModel> characters = new List<CharacterModel>();
+      foreach (var characterId in model.CharacterIds)
+      {
+        characters.Add(await _characterService.GetById(RuleSystem, userId, characterId));
+      }
 
       DnD5ePartyModelConverter modelConverter = new DnD5ePartyModelConverter();
       PartyViewModel viewModel = modelConverter.Convert(model);
+
+      // Enrich the viemodel creatures with the creature data from the BYOAPIs
+      DnD5eCharacterModelConverter characterConverter = new DnD5eCharacterModelConverter();
+      viewModel.Characters.ToList().ForEach(x =>
+      {
+        CharacterViewModel character = characterConverter.Convert(characters.First(y => y.Id == x.Id));
+        EnrichPartyCharacter(x, character);
+      });
 
       return viewModel;
     }

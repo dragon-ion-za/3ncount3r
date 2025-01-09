@@ -10,6 +10,7 @@ namespace DDD.orch3strator.Converters
       return new CharacterViewModel()
       {
         // Generic data
+        Id = model.Id,
         Name = model.Name,
 
         // Attributes

@@ -4,6 +4,9 @@ namespace DDD.orch3strator.Models.CharacterService
 {
   public class CharacterModel
   {
+    [JsonPropertyName("id")]
+    public string Id { get; set; }
+
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
