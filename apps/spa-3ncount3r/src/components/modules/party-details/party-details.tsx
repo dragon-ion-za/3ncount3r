@@ -5,7 +5,8 @@ import Grid from '@mui/material/Unstable_Grid2';
 import { usePartyContext } from "apps/spa-3ncount3r/src/providers/party-context/party.context-provider";
 import { useBusyLoadingContext } from "apps/spa-3ncount3r/src/providers/busy-loading-context/busy-loading.context-provider";
 import { useAuth0 } from "@auth0/auth0-react";
-import { getPartyList, saveParty, updateParty } from "apps/spa-3ncount3r/src/services/party.service";
+import { getPartyList, getPartyMembers, saveParty, updateParty } from "apps/spa-3ncount3r/src/services/party.service";
+import { PartyCharacterListItem } from "../party-character-list-item/party-character";
 
 export const PartyDetails : React.FC = () => {
     const partyContext = usePartyContext();
@@ -14,11 +15,20 @@ export const PartyDetails : React.FC = () => {
     const { getAccessTokenSilently } = useAuth0();
 
     useEffect(() => {
-        if (partyContext.selectedPartyIndex === -2) {
-            partyContext.setCurrentParty({ id: '', name: 'Unnamed Party', characterIds: [], characters: [] });
-        } else {
-            partyContext.setCurrentParty({...partyContext.getSelectedParty()});
-        }
+        (async() => {
+            if (partyContext.selectedPartyIndex === -2) {
+                partyContext.setCurrentParty({ id: '', name: 'Unnamed Party', characterIds: [], characters: [] });
+            } else {
+                let party = partyContext.getSelectedParty();
+    
+                let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+                let characters = await getPartyMembers(partyContext.currentParty.id, accessToken);
+
+                party.characters = characters;
+
+                partyContext.setCurrentParty({...party});
+            }
+        })();
     }, [partyContext.selectedPartyIndex])
 
     useEffect(() => {}, [partyContext.currentParty]);
@@ -68,6 +78,12 @@ export const PartyDetails : React.FC = () => {
         }
     }
 
+    const removeCharacter = (index: number) => {
+        let state = partyContext.currentParty;
+        state.characters.splice(index, 1);
+        partyContext.setCurrentParty({...state});
+    }
+
     return (
         <>
             {partyContext.currentParty && (partyContext.selectedPartyIndex > -1 || partyContext.selectedPartyIndex === -2) &&
@@ -95,6 +111,11 @@ export const PartyDetails : React.FC = () => {
                         <Stack>
                             <Typography variant="h2">Party Members</Typography>
                             <Divider />
+                            {partyContext.currentParty.characters?.map((x, index) => 
+                                <>
+                                    <PartyCharacterListItem key={`partyChar_${x.id}_${index}`} viewModel={x} index={index} handleRemoveCharacter={(index) => removeCharacter(index)}></PartyCharacterListItem>
+                                </>
+                            )}
                         </Stack>
                     </Grid>
                 </Grid>

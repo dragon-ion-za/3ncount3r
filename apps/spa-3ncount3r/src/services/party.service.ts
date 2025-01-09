@@ -20,10 +20,22 @@ export async function getPartyList(accessToken: string) : Promise<PartyViewModel
     return creatures;
 }
 
-export async function getPartyMembers(partyName: string, accessToken: string) : Promise<CharacterViewModel[]> {
+export async function getPartyMembers(partyId: string, accessToken: string) : Promise<CharacterViewModel[]> {
     let creatures: CharacterViewModel[] = [];
 
-    const response = await axios.get(`${API_ROUTE}/${partyName}`, { headers: {'Authorization': `bearer ${accessToken}`} });
+    const response = await axios.get(`${API_ROUTE}/${partyId}/members`, { headers: {'Authorization': `bearer ${accessToken}`} });
+
+    (response.data as ExpandedPartyViewModel)?.characters.forEach((character: CharacterViewModel) => {
+        creatures.push(character);
+    });
+
+    return creatures;
+}
+
+export async function getPartyById(partyId: string, accessToken: string) : Promise<CharacterViewModel[]> {
+    let creatures: CharacterViewModel[] = [];
+
+    const response = await axios.get(`${API_ROUTE}/${partyId}`, { headers: {'Authorization': `bearer ${accessToken}`} });
 
     (response.data as ExpandedPartyViewModel)?.characters.forEach((character: CharacterViewModel) => {
         creatures.push(character);

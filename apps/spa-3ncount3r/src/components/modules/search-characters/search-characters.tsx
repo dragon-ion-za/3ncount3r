@@ -49,7 +49,7 @@ const SearchCharacters : React.FC = () => {
     const doCreatureSelect = (viewModel: CharacterViewModel) => {
         let state = partyContext.currentParty;
         state.characters.push(viewModel);
-        partyContext.setCurrentParty(state);
+        partyContext.setCurrentParty({...state});
     }
 
     return (
