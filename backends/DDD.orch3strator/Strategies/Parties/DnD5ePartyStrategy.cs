@@ -84,5 +84,26 @@ namespace DDD.orch3strator.Strategies.Parties
 
       return modelConverter.Convert(model);
     }
+
+    private void EnrichPartyCharacter(PartyCharacterViewModel characterViewModel, CharacterViewModel character)
+    {
+      characterViewModel.Name = character.Name;
+
+      // Attributes
+      characterViewModel.AttributeCha = character.AttributeCha;
+      characterViewModel.AttributeCon = character.AttributeCon;
+      characterViewModel.AttributeDex = character.AttributeDex;
+      characterViewModel.AttributeInt = character.AttributeInt;
+      characterViewModel.AttributeStr = character.AttributeStr;
+      characterViewModel.AttributeWis = character.AttributeWis;
+
+      // Movement speeds
+      characterViewModel.FlyingSpeed = character.FlyingSpeed;
+      characterViewModel.WalkingSpeed = character.WalkingSpeed;
+      characterViewModel.ClimbingSpeed = character.ClimbingSpeed;
+      characterViewModel.SwimmingSpeed = character.SwimmingSpeed;
+      characterViewModel.BurrowingSpeed = character.BurrowingSpeed;
+
+    }
   }
 }

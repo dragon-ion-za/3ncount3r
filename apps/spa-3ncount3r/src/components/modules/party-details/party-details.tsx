@@ -5,7 +5,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import { usePartyContext } from "apps/spa-3ncount3r/src/providers/party-context/party.context-provider";
 import { useBusyLoadingContext } from "apps/spa-3ncount3r/src/providers/busy-loading-context/busy-loading.context-provider";
 import { useAuth0 } from "@auth0/auth0-react";
-import { getPartyList, getPartyMembers, saveParty, updateParty } from "apps/spa-3ncount3r/src/services/party.service";
+import { getPartyById, getPartyList, getPartyMembers, saveParty, updateParty } from "apps/spa-3ncount3r/src/services/party.service";
 import { PartyCharacterListItem } from "../party-character-list-item/party-character";
 
 export const PartyDetails : React.FC = () => {
@@ -18,15 +18,18 @@ export const PartyDetails : React.FC = () => {
         (async() => {
             if (partyContext.selectedPartyIndex === -2) {
                 partyContext.setCurrentParty({ id: '', name: 'Unnamed Party', characterIds: [], characters: [] });
-            } else {
-                let party = partyContext.getSelectedParty();
+            } else if (partyContext.selectedPartyIndex > -1) {
+                try {
+                    loadingContext.setIsLoading(true);
+                    let party = partyContext.getSelectedParty();
     
-                let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
-                let characters = await getPartyMembers(partyContext.currentParty.id, accessToken);
-
-                party.characters = characters;
-
-                partyContext.setCurrentParty({...party});
+                    let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+                    let retreivedParty = await getPartyById(party.id, accessToken);
+    
+                    partyContext.setCurrentParty({...retreivedParty});
+                } finally {
+                    loadingContext.setIsLoading(false);
+                }
             }
         })();
     }, [partyContext.selectedPartyIndex])
@@ -49,8 +52,8 @@ export const PartyDetails : React.FC = () => {
                 partyId = await saveParty(accessToken, {
                     id: '',
                     name: partyContext.currentParty.name,
-                    characterIds: partyContext.currentParty.characters.map(x => x.id),
-                    characters: []
+                    characterIds: [],
+                    characters: partyContext.currentParty.characters
                 });
     
                 if (partyId === '') {
@@ -61,8 +64,8 @@ export const PartyDetails : React.FC = () => {
                 await updateParty(accessToken, {
                     id: partyContext.currentParty.id,
                     name: partyContext.currentParty.name,
-                    characterIds: partyContext.currentParty.characters.map(x => x.id),
-                    characters: []
+                    characterIds: [],
+                    characters: partyContext.currentParty.characters
                 });
     
                 if (partyId === '') {
