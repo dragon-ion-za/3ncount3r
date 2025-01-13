@@ -5,114 +5,114 @@ namespace DDD.charact3r.API.Models
 {
   public class CharacterModel : BaseEntityModel
   {
-    [BsonElement("name")]
+    [BsonElement("name"), BsonIgnoreIfNull]
     public string Name { get; set; }
 
-    [BsonElement("size")]
+    [BsonElement("size"), BsonIgnoreIfNull]
     public string[] Size { get; set; }
 
-    [BsonElement("race")]
+    [BsonElement("race"), BsonIgnoreIfNull]
     public RaceModel Race { get; set; }
 
-    [BsonElement("classes")]
+    [BsonElement("classes"), BsonIgnoreIfNull]
     public CharacterClassModel[] Classes { get; set; }
 
-    [BsonElement("hitpoints")]
+    [BsonElement("hitpoints"), BsonIgnoreIfNull]
     public HitpointModel[] Hitpoints { get; set; }
 
-    [BsonElement("movementSpeeds")]
+    [BsonElement("movementSpeeds"), BsonIgnoreIfNull]
     public MovementSpeedModel[] MovementSpeeds { get; set; }
 
     public Dictionary<string, int> Attributes { get; set; }
 
-    [BsonElement("bonuses")]
+    [BsonElement("bonuses"), BsonIgnoreIfNull]
     public BonusModel[] Bonuses { get; set; }
 
-    [BsonElement("languages")]
+    [BsonElement("languages"), BsonIgnoreIfNull]
     public string[] Languages { get; set; }
 
-    [BsonElement("feats")]
+    [BsonElement("feats"), BsonIgnoreIfNull]
     public FeatModel[] Feats { get; set; }
 
-    [BsonElement("inventory")]
+    [BsonElement("inventory"), BsonIgnoreIfNull]
     public EquipmentModel[] Inventory { get; set; }
   }
 
   public class CharacterClassModel
   {
-    [BsonElement("id")]
+    [BsonElement("id"), BsonIgnoreIfNull]
     public string Id { get; set; }
 
-    [BsonElement("level")]
+    [BsonElement("level"), BsonIgnoreIfNull]
     public int Level { get; set; }
 
-    [BsonElement("byoapiId")]
+    [BsonElement("byoapiId"), BsonIgnoreIfNull]
     public string ByoapiId { get; set; }
   }
 
   public class EquipmentModel
   {
-    [BsonElement("id")]
+    [BsonElement("id"), BsonIgnoreIfNull]
     public string Id { get; set; }
 
-    [BsonElement("byoapiId")]
+    [BsonElement("byoapiId"), BsonIgnoreIfNull]
     public string ByoapiId { get; set; }
 
-    [BsonElement("containerId")]
+    [BsonElement("containerId"), BsonIgnoreIfNull]
     public int ContainerId { get; set; }
 
-    [BsonElement("quantity")]
+    [BsonElement("quantity"), BsonIgnoreIfNull]
     public int Quantity { get; set; }
   }
 
   public class MovementSpeedModel
   {
-    [BsonElement("type")]
+    [BsonElement("type"), BsonIgnoreIfNull]
     public string Type { get; set; }
 
-    [BsonElement("value")]
+    [BsonElement("value"), BsonIgnoreIfNull]
     public int Value { get; set; }
   }
 
   public class BonusModel
   {
-    [BsonElement("type")]
+    [BsonElement("type"), BsonIgnoreIfNull]
     public string Type { get; set; }
 
-    [BsonElement("target")]
+    [BsonElement("target"), BsonIgnoreIfNull]
     public string Target { get; set; }
 
-    [BsonElement("value")]
+    [BsonElement("value"), BsonIgnoreIfNull]
     public int Value { get; set; }
   }
 
   public class HitpointModel
   {
-    [BsonElement("type")]
+    [BsonElement("type"), BsonIgnoreIfNull]
     public string Type { get; set; }
 
-    [BsonElement("maximum")]
+    [BsonElement("maximum"), BsonIgnoreIfNull]
     public int Maximum { get; set; }
 
-    [BsonElement("current")]
+    [BsonElement("current"), BsonIgnoreIfNull]
     public int Current { get; set; }
   }
 
   public class FeatModel
   {
-    [BsonElement("id")]
+    [BsonElement("id"), BsonIgnoreIfNull]
     public string Id { get; set; }
 
-    [BsonElement("byoapiId")]
+    [BsonElement("byoapiId"), BsonIgnoreIfNull]
     public string ByoapiId { get; set; }
   }
 
   public class RaceModel
   {
-    [BsonElement("id")]
+    [BsonElement("id"), BsonIgnoreIfNull]
     public string Id { get; set; }
 
-    [BsonElement("byoapiId")]
+    [BsonElement("byoapiId"), BsonIgnoreIfNull]
     public string ByoapiId { get; set; }
   }
 

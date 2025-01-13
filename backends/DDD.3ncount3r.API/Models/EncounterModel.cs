@@ -7,28 +7,28 @@ namespace DDD._3ncount3r.API.Models
   [BsonIgnoreExtraElements]
   public class EncounterModel : BaseEntityModel
   {
-    [BsonElement("partyId")]
+    [BsonElement("partyId"), BsonIgnoreIfNull]
     public string PartyId { get; set; }
 
-    [BsonElement("name")]
+    [BsonElement("name"), BsonIgnoreIfNull]
     public string Name { get; set; }
 
-    [BsonElement("creatures")]
+    [BsonElement("creatures"), BsonIgnoreIfNull]
     public IEnumerable<EncounterCreatureModel> Creatures { get; set; }
 
-    [BsonElement("selectedParty")]
+    [BsonElement("selectedParty"), BsonIgnoreIfNull]
     public string SelectedParty { get; set; }
 
-    [BsonElement("roundCount")]
+    [BsonElement("roundCount"), BsonIgnoreIfNull]
     public int RoundCount { get; set; }
 
-    [BsonElement("currentTurn")]
+    [BsonElement("currentTurn"), BsonIgnoreIfNull]
     public int CurrentTurn { get; set; }
 
-    [BsonElement("campaign")]
+    [BsonElement("campaign"), BsonIgnoreIfNull]
     public string Campaign { get; set; }
 
-    [BsonElement("location")]
+    [BsonElement("location"), BsonIgnoreIfNull]
     public string Location { get; set; }
   }
 }

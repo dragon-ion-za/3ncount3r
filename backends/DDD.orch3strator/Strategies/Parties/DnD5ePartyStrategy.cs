@@ -52,7 +52,7 @@ namespace DDD.orch3strator.Strategies.Parties
       DnD5ePartyModelConverter modelConverter = new DnD5ePartyModelConverter();
       PartyViewModel viewModel = modelConverter.Convert(model);
 
-      // Enrich the viemodel creatures with the creature data from the BYOAPIs
+      // Enrich the viewmodel creatures with the creature data from the BYOAPIs
       DnD5eCharacterModelConverter characterConverter = new DnD5eCharacterModelConverter();
       viewModel.Characters.ToList().ForEach(x =>
       {

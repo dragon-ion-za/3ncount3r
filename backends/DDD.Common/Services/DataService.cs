@@ -1,6 +1,5 @@
 using DDD.Common.Configurations;
 using DDD.Common.Models;
-using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
@@ -11,58 +10,100 @@ namespace DDD.Common.Services
     private readonly MongoDbConfig _config;
     private bool _isInitialised = false;
     private IMongoCollection<TCollectionModel> _collection;
+    private IMongoCollection<HistoryModel<TCollectionModel>> _historyCollection;
+
+    private IMongoDatabase _mongoDatabase;
 
     public abstract string CollectionName { get; }
+    public abstract bool DoVersioning { get; }
+    protected abstract TCollectionModel CalculateModelDelta(TCollectionModel prevModel, TCollectionModel model);
 
-    public DataService(IOptions<MongoDbConfig> config)
+    public DataService(IMongoDatabase mongoDatabase)
     {
-      _config = config.Value;
+      _mongoDatabase = mongoDatabase;
     }
 
     public async Task<IEnumerable<TCollectionModel>> Get(string userId, string ruleSystem)
     {
       InitDb();
-      return await _collection.Find(entity => entity.UserId == userId && entity.ruleSystem == ruleSystem).ToListAsync();
+      return await _collection.Find(entity => entity.UserId == userId && entity.RuleSystem == ruleSystem).ToListAsync();
     }
 
     public async Task<TCollectionModel> GetById(string userId, string ruleSystem, string id)
     {
       InitDb();
-      return await _collection.Find(entity => entity.UserId == userId && entity.Id == ObjectId.Parse(id) && entity.ruleSystem == ruleSystem).FirstAsync();
+      return await _collection.Find(entity => entity.UserId == userId && entity.Id == ObjectId.Parse(id) && entity.RuleSystem == ruleSystem).FirstAsync();
     }
 
     public async Task<string> Insert(string userId, string ruleSystem, TCollectionModel model)
     {
       InitDb();
-      model.Id = ObjectId.GenerateNewId();
-      model.UserId = userId;
-      model.ruleSystem = ruleSystem;
-      await _collection.InsertOneAsync(model);
 
-      return model.Id.ToString();
+      using (IClientSession session = _mongoDatabase.Client.StartSession())
+      {
+        try
+        {
+          session.StartTransaction();
+
+          model.Id = ObjectId.GenerateNewId();
+          model.UserId = userId;
+          model.RuleSystem = ruleSystem;
+
+          if (DoVersioning)
+          {
+            await _historyCollection.InsertOneAsync(new HistoryModel<TCollectionModel>(model, userId, ruleSystem));
+          }
+
+          await _collection.InsertOneAsync(model);
+
+          session.CommitTransaction();
+
+          return model.Id.ToString();
+        }
+        catch { throw; }
+      }
     }
 
     public async Task<string> Update(string userId, string ruleSystem, TCollectionModel model)
     {
       InitDb();
-      model.UserId = userId;
-      model.ruleSystem = ruleSystem;
-      await _collection.ReplaceOneAsync(entity => entity.Id == model.Id && entity.UserId == userId, model);
 
-      return model.Id.ToString();
+      using (IClientSession session = _mongoDatabase.Client.StartSession())
+      {
+        try
+        {
+          session.StartTransaction();
+
+          model.UserId = userId;
+          model.RuleSystem = ruleSystem;
+
+          if (DoVersioning)
+          {
+            TCollectionModel prevModel = await GetById(userId, ruleSystem, model.Id.ToString());
+            TCollectionModel delta = CalculateModelDelta(prevModel, model);
+            await _historyCollection.InsertOneAsync(new HistoryModel<TCollectionModel>(delta, userId, ruleSystem));
+          }
+
+          await _collection.ReplaceOneAsync(entity => entity.Id == model.Id && entity.UserId == userId, model);
+
+          session.CommitTransaction();
+
+          return model.Id.ToString();
+        }
+        catch { throw; }
+      }
     }
 
     private void InitDb()
     {
       if (!_isInitialised)
       {
-        IMongoClient mongoClient = new MongoClient(
-            _config.ConnectionString);
+        _collection = _mongoDatabase.GetCollection<TCollectionModel>(CollectionName);
 
-        IMongoDatabase mongoDatabase = mongoClient.GetDatabase(
-            _config.DatabaseName);
-
-        _collection = mongoDatabase.GetCollection<TCollectionModel>(CollectionName);
+        if (DoVersioning)
+        {
+          _historyCollection = _mongoDatabase.GetCollection<HistoryModel<TCollectionModel>>($"{CollectionName}_history");
+        }
 
         _isInitialised = true;
       }

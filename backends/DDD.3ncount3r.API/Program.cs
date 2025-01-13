@@ -7,7 +7,9 @@ using DDD._3ncount3r.API.ViewModels;
 using DDD.Common.Configurations;
 using DDD.Common.Services;
 using FluentValidation;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,6 +48,16 @@ builder.Services.AddSwaggerGen(option =>
 
 builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("3ncount3rContext"));
 builder.Services.Configure<List<ByoapiConfig>>(builder.Configuration.GetSection("Byoapis"));
+
+builder.Services.AddScoped<IMongoClient, MongoClient>(provider =>
+{
+  return new MongoClient(provider.GetService<IOptions<MongoDbConfig>>().Value.ConnectionString);
+});
+builder.Services.AddScoped<IMongoDatabase>(provider =>
+{
+  var client = provider.GetService<IMongoClient>();
+  return client.GetDatabase(provider.GetService<IOptions<MongoDbConfig>>().Value.DatabaseName);
+});
 
 builder.Services.AddScoped<IDataService<EncounterModel>, EncountersService>();
 builder.Services.AddScoped<IDataService<PartyModel>, PartiesService>();

@@ -4,6 +4,7 @@ using DDD.charact3r.API.Services;
 using DDD.Common.Configurations;
 using DDD.Common.Services;
 using Microsoft.OpenApi.Models;
+using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,6 +42,16 @@ builder.Services.AddSwaggerGen(option =>
 });
 
 builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("charact3rContext"));
+
+builder.Services.AddScoped<IMongoClient, MongoClient>(provider =>
+{
+  return new MongoClient(provider.GetService<MongoDbConfig>().ConnectionString);
+});
+builder.Services.AddScoped<IMongoDatabase>(provider =>
+{
+  var client = provider.GetService<IMongoClient>();
+  return client.GetDatabase(provider.GetService<MongoDbConfig>().DatabaseName);
+});
 
 builder.Services.AddScoped<IDataService<CharacterModel>, CharactersService>();
 

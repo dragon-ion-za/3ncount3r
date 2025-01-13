@@ -12,6 +12,6 @@ namespace DDD.Common.Models
     public string UserId { get; set; }
 
     [BsonElement("ruleSystem")]
-    public string ruleSystem { get; set; }
+    public string RuleSystem { get; set; }
   }
 }
