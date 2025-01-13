@@ -3,6 +3,7 @@ using DDD.charact3r.API.Models;
 using DDD.charact3r.API.Services;
 using DDD.Common.Configurations;
 using DDD.Common.Services;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
 
@@ -45,12 +46,12 @@ builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection("char
 
 builder.Services.AddScoped<IMongoClient, MongoClient>(provider =>
 {
-  return new MongoClient(provider.GetService<MongoDbConfig>().ConnectionString);
+  return new MongoClient(provider.GetService<IOptions<MongoDbConfig>>().Value.ConnectionString);
 });
 builder.Services.AddScoped<IMongoDatabase>(provider =>
 {
   var client = provider.GetService<IMongoClient>();
-  return client.GetDatabase(provider.GetService<MongoDbConfig>().DatabaseName);
+  return client.GetDatabase(provider.GetService<IOptions<MongoDbConfig>>().Value.DatabaseName);
 });
 
 builder.Services.AddScoped<IDataService<CharacterModel>, CharactersService>();
