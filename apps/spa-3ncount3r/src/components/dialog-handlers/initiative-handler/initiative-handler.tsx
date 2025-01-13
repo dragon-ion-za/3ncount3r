@@ -10,6 +10,7 @@ import { initiativeButtonStyles } from "./initiative-handler.styles";
 import { saveEncounter, updateEncounter } from "../../../services/encounter.service";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useBusyLoadingContext } from "apps/spa-3ncount3r/src/providers/busy-loading-context/busy-loading.context-provider";
+import { EncounterViewModel } from "apps/spa-3ncount3r/src/view-models/encounter.view-model";
 
 export const InitiativeHandler : React.FC = () => { 
     const [open, setOpen] = useState(false);
@@ -24,9 +25,9 @@ export const InitiativeHandler : React.FC = () => {
         try {
             loadingContext.setIsLoading(true);
             let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
-            let encounterId: string = '';
+            let encounter: EncounterViewModel;
             if (encounterContext.encounterId === '') {
-                encounterId = await saveEncounter(accessToken, {
+                encounter = await saveEncounter(accessToken, {
                     id: '',
                     campaign: encounterContext.campaignName,
                     location: encounterContext.locationName, 
@@ -37,13 +38,13 @@ export const InitiativeHandler : React.FC = () => {
                     currentTurn: encounterContext.turnCounter
                 });
 
-                if (encounterId !== '') {
-                    encounterContext.setEncounterId(encounterId);
+                if (encounter !== undefined) {
+                    encounterContext.setEncounterId(encounter.id);
                 } else {
                     console.log('save failed!!!');
                 }
             } else {
-                encounterId = await updateEncounter(accessToken, {
+                encounter = await updateEncounter(accessToken, {
                     id: encounterContext.encounterId,
                     campaign: encounterContext.campaignName,
                     location: encounterContext.locationName, 
@@ -54,13 +55,13 @@ export const InitiativeHandler : React.FC = () => {
                     currentTurn: encounterContext.turnCounter
                 });
 
-                if (encounterId === '') {
+                if (encounter === undefined) {
                     console.log('save failed!!!');
                 }
             }
 
             encounterContext.setCreatures(creatures);
-            navigate(`/${encounterId}`);
+            navigate(`/${encounter.id}`);
             toggleModal(false);
         } finally {
             loadingContext.setIsLoading(false);

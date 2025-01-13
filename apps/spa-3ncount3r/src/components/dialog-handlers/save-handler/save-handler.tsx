@@ -27,9 +27,7 @@ export const SaveHandler : React.FC = () => {
             encounterContext.setEncounterName(encounterName);
     
             if (encounterContext.encounterId === '') {
-                let encounterId: string = '';
-                
-                encounterId = await saveEncounter(accessToken, {
+                let encounter = await saveEncounter(accessToken, {
                     id: '',
                     campaign: campaignName,
                     location: locationName, 
@@ -40,8 +38,8 @@ export const SaveHandler : React.FC = () => {
                     currentTurn: Math.max(encounterContext.turnCounter, 1)
                 });
     
-                if (encounterId !== '') {
-                    encounterContext.setEncounterId(encounterId);
+                if (encounter !== undefined) {
+                    encounterContext.setEncounterId(encounter.id);
                 } else {
                     console.log('save failed!!!');
                 }
