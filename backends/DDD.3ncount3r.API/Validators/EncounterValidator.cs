@@ -16,7 +16,7 @@ namespace DDD._3ncount3r.API.Validators
         x.RuleFor(y => y.Name).NotEmpty();
         x.RuleFor(y => y.Hitpoints).NotNull();
         x.RuleFor(y => y.TurnOrder).NotNull();
-        x.RuleFor(y => y.ByoapiId).NotEmpty();
+        x.RuleFor(y => y.ByoapiId).NotEmpty().When(y => !y.IsPlayerCharacter);
         x.RuleFor(y => y.SourceId).NotNull();
       });
     }

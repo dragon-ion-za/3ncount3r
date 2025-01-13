@@ -89,6 +89,10 @@ namespace DDD.orch3strator.Strategies.Parties
     {
       characterViewModel.Name = character.Name;
 
+      characterViewModel.ArmourClass = character.ArmourClass;
+      characterViewModel.Classes = character.Classes;
+      characterViewModel.Race = character.Race;
+
       // Attributes
       characterViewModel.AttributeCha = character.AttributeCha;
       characterViewModel.AttributeCon = character.AttributeCon;

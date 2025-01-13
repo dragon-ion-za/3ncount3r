@@ -4,7 +4,6 @@ namespace DDD.orch3strator.ViewModels
 {
   public class CharacterBaseViewModel
   {
-
     [JsonPropertyName("id")]
     public string Id { get; set; }
 

@@ -31,7 +31,7 @@ namespace DDD.orch3strator.Strategies.Encounters
 
       if (includeCreatures)
       {
-        foreach (var byoapiGroup in models.SelectMany(x => x.Creatures).GroupBy(x => x.ByoapiId).Select((x) => new { ByoapiId = x.Key, CreatureNames = x.Select(y => y.Name) }))
+        foreach (var byoapiGroup in models.SelectMany(x => x.Creatures.Where(y => !y.IsPlayerCharacter)).GroupBy(x => x.ByoapiId).Select((x) => new { ByoapiId = x.Key, CreatureNames = x.Select(y => y.Name) }))
         {
           List<string> creatureQueries = new List<string>();
 
@@ -55,7 +55,7 @@ namespace DDD.orch3strator.Strategies.Encounters
 
       List<CreatureModel> creatures = new List<CreatureModel>();
 
-      foreach (var byoapiGroup in model.Creatures.GroupBy(x => x.ByoapiId).Select((x) => new { ByoapiId = x.Key, CreatureNames = x.Select(y => y.Name) }))
+      foreach (var byoapiGroup in model.Creatures.Where(x => !x.IsPlayerCharacter).GroupBy(x => x.ByoapiId).Select((x) => new { ByoapiId = x.Key, CreatureNames = x.Select(y => y.Name) }))
       {
         List<string> creatureQueries = new List<string>();
 
@@ -74,8 +74,11 @@ namespace DDD.orch3strator.Strategies.Encounters
       IModelConverter<CreatureModel, CreatureViewModel> creatureConverter = new DnD5eCreatureModelConverter();
       viewModel.Creatures.ToList().ForEach(x =>
       {
-         CreatureViewModel creature = creatureConverter.Convert(creatures.First(y => y.Name == x.Name && y.Source == x.SourceId && y.ByoapiId == x.ByoapiId));
-         EnrichEncounterCreature(x, creature);
+        if (!x.IsPlayerCharacter)
+        {
+          CreatureViewModel creature = creatureConverter.Convert(creatures.First(y => y.Name == x.Name && y.Source == x.SourceId && y.ByoapiId == x.ByoapiId));
+          EnrichEncounterCreature(x, creature);
+        }
       });
 
       return viewModel;

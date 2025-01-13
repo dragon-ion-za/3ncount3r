@@ -8,7 +8,10 @@ namespace DDD.orch3strator.ViewModels.DnD5e
     public ArmourClassViewModel ArmourClass { get; set; }
 
     [JsonPropertyName("classes")]
-    public CharacterClassViewModel Classes { get; set; }
+    public List<CharacterClassViewModel> Classes { get; set; }
+
+    [JsonPropertyName("race")]
+    public string Race { get; set; }
 
     [JsonPropertyName("hitpointMaximum")]
     public int HitpointMaximum { get; set; }

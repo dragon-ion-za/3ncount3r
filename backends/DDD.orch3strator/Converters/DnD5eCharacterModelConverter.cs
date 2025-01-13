@@ -13,6 +13,10 @@ namespace DDD.orch3strator.Converters
         Id = model.Id,
         Name = model.Name,
 
+        // Other details
+        Classes = model.Classes.Select(x => new CharacterClassViewModel() { Level = x.Level, Name = x.Id }).ToList(),
+        Race = model.Race.Id,
+
         // Attributes
         AttributeCha = model.Attributes.First(x => x.Key == "cha").Value,
         AttributeCon = model.Attributes.First(x => x.Key == "con").Value,
