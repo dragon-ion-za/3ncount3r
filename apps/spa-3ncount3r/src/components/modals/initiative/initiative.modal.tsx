@@ -4,7 +4,7 @@ import { Box, Grid, Typography, Button, Table, TableHead, TableRow, TableCell, T
 import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
 import { doDiceFormulaCalculation } from "../../../services/dice.service";
 import { calculateAbilityScoreModifier } from "../../../services/creature.service";
-import { getPartyList } from "../../../services/party.service";
+import { getPartyById, getPartyList } from "../../../services/party.service";
 
 import { PartyViewModel } from "../../../view-models/party.view-model";
 import { CharacterViewModel } from "../../../view-models/character.view-model";
@@ -53,18 +53,25 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
         setCreatures(state);
     }
 
-    const handlePartySelection = (partyName: string) => {
-        setSelectedPary(partyName);
-        let selectedParty = parties.find(x => x.name === partyName);
-        let partyMembers: CharacterViewModel[] = selectedParty!.characters;
+    const handlePartySelection = async (partyId: string) => {
+        setSelectedPary(partyId);
 
-        let state = [...creatures];
+        try {
+            loadingContext.setIsLoading(true);
+            let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+            let selectedParty = await getPartyById(partyId, accessToken);
+            let partyMembers: CharacterViewModel[] = selectedParty!.characters;
             
-        partyMembers.forEach((member: CharacterViewModel) => {
-            state.push(convertCharacterToEncounterCreatureViewModel(member));
-        });
+            let state = [...creatures];
+            
+            partyMembers.forEach((member: CharacterViewModel) => {
+                state.push(convertCharacterToEncounterCreatureViewModel(member));
+            });
         
-        setCreatures(state);
+            setCreatures(state);
+        } finally {
+            loadingContext.setIsLoading(false);
+        }        
     }
 
     useEffect(() => {
@@ -97,7 +104,7 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
                                 disabled={selectedParty !== ''}
                                 value={selectedParty}
                                 onChange={(event: SelectChangeEvent) => {handlePartySelection(event.target.value)}}>
-                                {parties && parties.map(x => (<MenuItem key={x.name} value={x.name}>{x.name}</MenuItem>))}
+                                {parties && parties.map(x => (<MenuItem key={x.name} value={x.id}>{x.name}</MenuItem>))}
                             </Select>
                         </FormControl>
                     </Grid>

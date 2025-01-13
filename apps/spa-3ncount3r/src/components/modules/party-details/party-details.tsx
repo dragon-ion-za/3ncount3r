@@ -5,7 +5,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import { usePartyContext } from "apps/spa-3ncount3r/src/providers/party-context/party.context-provider";
 import { useBusyLoadingContext } from "apps/spa-3ncount3r/src/providers/busy-loading-context/busy-loading.context-provider";
 import { useAuth0 } from "@auth0/auth0-react";
-import { getPartyById, getPartyList, getPartyMembers, saveParty, updateParty } from "apps/spa-3ncount3r/src/services/party.service";
+import { getPartyById, getPartyList, saveParty, updateParty } from "apps/spa-3ncount3r/src/services/party.service";
 import { PartyCharacterListItem } from "../party-character-list-item/party-character";
 
 export const PartyDetails : React.FC = () => {
