@@ -1,6 +1,7 @@
 using DDD.Byoapi.Integrations.Models;
 using DDD.Byoapi.Integrations.Services;
 using DDD.orch3strator.Converters;
+using DDD.orch3strator.Models.CharacterService;
 using DDD.orch3strator.Models.EncounterService;
 using DDD.orch3strator.Services;
 using DDD.orch3strator.ViewModels;
@@ -15,11 +16,13 @@ namespace DDD.orch3strator.Strategies.Encounters
     protected override string RuleSystem { get { return "dnd5e"; } }
 
     private readonly DataApiBaseService<EncounterModel> _encounterService;
+    private readonly DataApiBaseService<CharacterModel> _characterService;
     private readonly IByoapiService _dataService;
 
-    public DnD5eEncounterStrategy(DataApiBaseService<EncounterModel> encounterService, IByoapiService byoapiService)
+    public DnD5eEncounterStrategy(DataApiBaseService<EncounterModel> encounterService, DataApiBaseService<CharacterModel> characterService, IByoapiService byoapiService)
     {
       _encounterService = encounterService;
+      _characterService = characterService;
       _dataService = byoapiService;
     }
 
@@ -53,8 +56,8 @@ namespace DDD.orch3strator.Strategies.Encounters
     {
       EncounterModel model = await _encounterService.GetById(RuleSystem, userId, id);
 
+      // Get Creatures
       List<CreatureModel> creatures = new List<CreatureModel>();
-
       foreach (var byoapiGroup in model.Creatures.Where(x => !x.IsPlayerCharacter).GroupBy(x => x.ByoapiId).Select((x) => new { ByoapiId = x.Key, CreatureNames = x.Select(y => y.Name) }))
       {
         List<string> creatureQueries = new List<string>();
@@ -67,17 +70,30 @@ namespace DDD.orch3strator.Strategies.Encounters
         creatures.AddRange(await _dataService.SearchForCreatures(RuleSystem, byoapiGroup.ByoapiId, string.Join(" or ", creatureQueries)));
       }
 
+      // Get Characters
+      List<CharacterModel> characters = new List<CharacterModel>();
+      foreach (var characterId in model.Creatures.Where(x => x.IsPlayerCharacter).Select(x => x.Id))
+      {
+        characters.Add(await _characterService.GetById(RuleSystem, userId, characterId));
+      }
+
       Dnd5eEncounterModelConverter modelConverter = new Dnd5eEncounterModelConverter();
       EncounterViewModel viewModel = modelConverter.Convert(model);
 
       // Enrich the viemodel creatures with the creature data from the BYOAPIs
       IModelConverter<CreatureModel, CreatureViewModel> creatureConverter = new DnD5eCreatureModelConverter();
+      IModelConverter<CharacterModel, CharacterViewModel> characterConverter = new DnD5eCharacterModelConverter();
       viewModel.Creatures.ToList().ForEach(x =>
       {
         if (!x.IsPlayerCharacter)
         {
           CreatureViewModel creature = creatureConverter.Convert(creatures.First(y => y.Name == x.Name && y.Source == x.SourceId && y.ByoapiId == x.ByoapiId));
           EnrichEncounterCreature(x, creature);
+        }
+        else
+        {
+          CharacterViewModel character = characterConverter.Convert(characters.First(y => y.Id == x.Id));
+          EnrichEncounterCharacter(x, character);
         }
       });
 
@@ -94,6 +110,7 @@ namespace DDD.orch3strator.Strategies.Encounters
 
       return modelConverter.Convert(model);
     }
+
     public override async Task<EncounterBaseViewModel> UpdateEncounter(string userId, JsonObject viewModel)
     {
       Dnd5eEncounterModelConverter modelConverter = new Dnd5eEncounterModelConverter();
@@ -150,7 +167,53 @@ namespace DDD.orch3strator.Strategies.Encounters
       creatureViewModel.Alignment = creature.Alignment;
       creatureViewModel.Size = creature.Size;
       creatureViewModel.Type = creature.Type;
+    }
 
+    private void EnrichEncounterCharacter(EncounterCreatureViewModel creatureViewModel, CharacterViewModel character)
+    {
+      // Attributes
+      creatureViewModel.AttributeCha = character.AttributeCha;
+      creatureViewModel.AttributeCon = character.AttributeCon;
+      creatureViewModel.AttributeDex = character.AttributeDex;
+      creatureViewModel.AttributeInt = character.AttributeInt;
+      creatureViewModel.AttributeStr = character.AttributeStr;
+      creatureViewModel.AttributeWis = character.AttributeWis;
+
+      // Hitpoints
+      creatureViewModel.HitpointAverage = character.HitpointMaximum;
+      creatureViewModel.HitpointFormula = "hit dice";
+
+      // Senses
+      creatureViewModel.PassivePerception = 0;
+      creatureViewModel.Senses = new List<string>();
+
+      // Actions
+      creatureViewModel.ActionGroups = new List<ActionGroupViewModel>();
+
+      // Proficiencies
+      creatureViewModel.SavingThrows = new List<SkillModifierViewModel>();
+      creatureViewModel.SkillModifiers = new List<SkillModifierViewModel>();
+
+      // Combat Stats
+      creatureViewModel.ArmourClass = character.ArmourClass;
+      creatureViewModel.ChallengeRating = new ChallengeRatingViewModel();
+      creatureViewModel.Immunities = new List<ResistanceImmunityViewModel>();
+      creatureViewModel.Resistances = new List<ResistanceImmunityViewModel>();
+
+      // Languages
+      creatureViewModel.Languages = new List<string>();
+
+      // Movement speeds
+      creatureViewModel.FlyingSpeed = character.FlyingSpeed;
+      creatureViewModel.WalkingSpeed = character.WalkingSpeed;
+      creatureViewModel.ClimbingSpeed = character.ClimbingSpeed;
+      creatureViewModel.SwimmingSpeed = character.SwimmingSpeed;
+      creatureViewModel.BurrowingSpeed = character.BurrowingSpeed;
+
+      // Misc stuff
+      creatureViewModel.Alignment = new List<string>();
+      creatureViewModel.Size = 0;
+      creatureViewModel.Type = $"{character.Race} {string.Join(' ', character.Classes.Select(x => $"Level {x.Level} {x.Name}"))}";
     }
   }
 }
