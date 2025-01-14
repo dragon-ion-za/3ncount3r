@@ -140,6 +140,13 @@ export const theme = createTheme({
                 display: 'block'
             }
         }
+    },
+    MuiChip: {
+        styleOverrides: {
+            icon: {
+                color: '#bab888'
+            }
+        }
     }
    }
 });

@@ -47,6 +47,16 @@ export const creatureDeathStateStyle = {
 }
 
 export const selectedCreatureStyles = {
+    backgroundColor: 'rgb(150, 108, 99)',
+    'div.MuiChip-filledDefault': {
+        backgroundColor: 'rgba(255, 255, 255,0.16)'
+    },
+    'svg.MuiChip-iconColorDefault': {
+        color: 'rgb(97, 96, 70)'
+    }
+};
+
+export const currentRoundCreatureStyles = {
     border: 'initial',
     borderStyle: 'solid',
     borderImageRepeat: 'stretch',

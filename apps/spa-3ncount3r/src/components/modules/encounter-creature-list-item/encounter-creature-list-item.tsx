@@ -12,7 +12,7 @@ import { SwimmingSpeedIcon } from "../../icons/speed.swimming.icon";
 import { ClimbingSpeedIcon } from "../../icons/speed.climbing.icon";
 import { BurrowingSpeedIcon } from "../../icons/speed.burrowing.icon";
 
-import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreatureChipContainer, creatureDeathStateStyle, creatureAvatarStyle, selectedCreatureStyles } from './encounter-creature-list-item.styles';
+import { encounterCreatureCardStyles, encounterCreatureChipStyle, encounterCreatureChipContainer, creatureDeathStateStyle, creatureAvatarStyle, selectedCreatureStyles, currentRoundCreatureStyles } from './encounter-creature-list-item.styles';
 import { useEncounterContext } from "apps/spa-3ncount3r/src/providers/encounterContext/encounter.context-provider";
 
 interface EncounterCreatureListItemProps {
@@ -30,7 +30,9 @@ export const EncounterCreatureListItem : React.FC<EncounterCreatureListItemProps
 
     return (
         <>
-            <Card sx={{...encounterCreatureCardStyles, ...(isSelected ? selectedCreatureStyles : {}) }} onClick={() => { handleSelection(index) }} >
+            <Card 
+                sx={{...encounterCreatureCardStyles, ...(isSelected ? selectedCreatureStyles : {}), ...(index === (encounterContext.turnCounter - 1) ? currentRoundCreatureStyles : {}) }} 
+                onClick={() => { handleSelection(index) }} >
                 <CardContent>                     
                     <Grid container>
                         <Grid xs={2}>                                 

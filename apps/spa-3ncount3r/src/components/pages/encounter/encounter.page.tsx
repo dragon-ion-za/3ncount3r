@@ -40,6 +40,7 @@ export const EncounterPage : React.FC = () => {
         encounterContext.setSelectedParty('');
         encounterContext.setRoundCounter(0);
         encounterContext.setTurnCounter(0);
+        encounterContext.setSelectedCreatureIndex(-1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -61,6 +62,7 @@ export const EncounterPage : React.FC = () => {
                             encounterContext.setSelectedParty(x.selectedParty);
                             encounterContext.setRoundCounter(Math.max(x.roundCount ?? 0, 1));
                             encounterContext.setTurnCounter(Math.max(x.currentTurn ?? 0, 1));
+                            encounterContext.setSelectedCreatureIndex(-1);
                         });
                     } else {
                         encounterContext.setCreatures([]);
@@ -72,6 +74,7 @@ export const EncounterPage : React.FC = () => {
                         encounterContext.setSelectedParty('');
                         encounterContext.setRoundCounter(0);
                         encounterContext.setTurnCounter(0);
+                        encounterContext.setSelectedCreatureIndex(-1);
                     }
                 }
             } finally {
