@@ -12,6 +12,7 @@ interface EncounterContextProviderProps {
 const EncounterContext = createContext<IEncounterContext>({ 
     creatures: [], 
     selectedCreatureIndex: 0,
+    partyId: '',
     selectedParty: '',
     campaignName: '',
     locationName: '',
@@ -19,6 +20,7 @@ const EncounterContext = createContext<IEncounterContext>({
     encounterId: '',
     roundCounter: 0,
     turnCounter: 0,
+    setPartyId: () => { throw new Error('Encounter State is uninitialised.')},
     setSelectedParty: () => { throw new Error('Encounter State is uninitialised.')},
     setCreatures: () => { throw new Error('Encounter State is uninitialised.')},
     setCampaignName: () => { throw new Error('Encounter State is uninitialised.')},
@@ -39,6 +41,7 @@ export const useEncounterContext = () => useContext(EncounterContext);
 export const EncounterContextProvider : React.FC<EncounterContextProviderProps> = ({children}) => {
     const [creatures, setCreaturesInternal] = useState<EncounterCreatureViewModel[]>([]);
     const [selectedCreatureIndex, setSelectedCreatureIndexInternal] = useState<number>(0);
+    const [partyId, setPartyIdInternal] = useState<string>('');
     const [selectedParty, setSelectedPartyInternal] = useState<string>('');
     const [campaignName, setCampaignNameInternal] = useState<string>('');
     const [locationName, setLocationNameInternal] = useState<string>('');
@@ -80,6 +83,10 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
         setSelectedPartyInternal(partyName);
     }
 
+    const setPartyId = (partyId: string) => {
+        setPartyIdInternal(partyId);
+    }
+
     const setCampaignName = (name: string) => {
         setCampaignNameInternal(name);
     }
@@ -112,6 +119,7 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
         <EncounterContext.Provider value={{
             creatures,
             selectedCreatureIndex,
+            partyId,
             selectedParty,
             campaignName,
             locationName,
@@ -119,6 +127,7 @@ export const EncounterContextProvider : React.FC<EncounterContextProviderProps> 
             encounterId,
             roundCounter,
             turnCounter,
+            setPartyId,
             setSelectedParty,
             setCreatures,
             setCampaignName,

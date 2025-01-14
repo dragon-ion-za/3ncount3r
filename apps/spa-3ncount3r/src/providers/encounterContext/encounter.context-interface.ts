@@ -3,6 +3,7 @@ import { EncounterCreatureViewModel } from "../../view-models/encounter-creature
 export interface IEncounterContext {
     creatures: EncounterCreatureViewModel[];
     selectedCreatureIndex: number;
+    partyId: string;
     selectedParty: string;
     campaignName: string;
     locationName: string;
@@ -10,6 +11,7 @@ export interface IEncounterContext {
     encounterId: string;
     roundCounter: number;
     turnCounter: number;
+    setPartyId: (partyName: string) => void;
     setSelectedParty: (partyName: string) => void;
     setCreatures: (creatures: EncounterCreatureViewModel[]) => void;
     setCampaignName: (name: string) => void;

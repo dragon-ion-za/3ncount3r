@@ -16,18 +16,18 @@ import { useBusyLoadingContext } from "apps/spa-3ncount3r/src/providers/busy-loa
 
 export interface InitiativeModalProps {
     creaturesList: EncounterCreatureViewModel[];
-    partyName: string;
+    partyId: string;
     handleAccept: (creatures: EncounterCreatureViewModel[], partyName: string) => void;
     handleCancel: () => void;
 }
 
-export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ creaturesList, partyName, handleAccept, handleCancel }, ref) => {
+export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ creaturesList, partyId, handleAccept, handleCancel }, ref) => {
     const [creatures, setCreatures] = useState<EncounterCreatureViewModel[]>(creaturesList);
     const { getAccessTokenSilently } = useAuth0();
     const loadingContext = useBusyLoadingContext();
     
     let [parties, setParties] = useState<PartyViewModel[]>([]);
-    let [selectedParty, setSelectedPary] = useState<string>(partyName);
+    let [selectedParty, setSelectedPary] = useState<string>(partyId);
 
     const rollInitiativeForCreature = (index: number) => {
         let state = [...creatures];

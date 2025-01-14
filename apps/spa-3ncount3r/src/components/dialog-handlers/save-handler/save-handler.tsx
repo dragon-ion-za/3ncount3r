@@ -33,7 +33,7 @@ export const SaveHandler : React.FC = () => {
                     location: locationName, 
                     name: encounterName,
                     creatures: encounterContext.creatures,
-                    partyId: encounterContext.selectedParty,
+                    partyId: encounterContext.partyId,
                     selectedParty: '',
                     roundCount: Math.max(encounterContext.roundCounter, 1),
                     currentTurn: Math.max(encounterContext.turnCounter, 1)
@@ -53,7 +53,7 @@ export const SaveHandler : React.FC = () => {
                     location: locationName, 
                     name: encounterName,
                     creatures: encounterContext.creatures,
-                    partyId: encounterContext.selectedParty,
+                    partyId: encounterContext.partyId,
                     selectedParty: '',
                     roundCount: Math.max(encounterContext.roundCounter, 1),
                     currentTurn: Math.max(encounterContext.turnCounter, 1)

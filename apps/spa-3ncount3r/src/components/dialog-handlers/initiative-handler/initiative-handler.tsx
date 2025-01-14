@@ -103,7 +103,7 @@ export const InitiativeHandler : React.FC = () => {
                     <DialogContent>
                         <InitiativeModal
                             creaturesList={encounterContext.creatures} 
-                            partyName={encounterContext.selectedParty}
+                            partyId={encounterContext.partyId}
                             handleCancel={() => toggleModal(false)} 
                             handleAccept={handleAccept} />
                     </DialogContent>
