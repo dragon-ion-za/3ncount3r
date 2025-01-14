@@ -9,8 +9,9 @@ namespace DDD.Common.Services
   {
     private readonly MongoDbConfig _config;
     private bool _isInitialised = false;
-    private IMongoCollection<TCollectionModel> _collection;
     private IMongoCollection<HistoryModel<TCollectionModel>> _historyCollection;
+
+    protected IMongoCollection<TCollectionModel> _collection;
 
     private IMongoDatabase _mongoDatabase;
 
@@ -26,12 +27,22 @@ namespace DDD.Common.Services
     public async Task<IEnumerable<TCollectionModel>> Get(string userId, string ruleSystem)
     {
       InitDb();
+      return await DoGet(userId, ruleSystem);
+    }
+
+    protected virtual async Task<IEnumerable<TCollectionModel>> DoGet(string userId, string ruleSystem)
+    {
       return await _collection.Find(entity => entity.UserId == userId && entity.RuleSystem == ruleSystem).ToListAsync();
     }
 
     public async Task<TCollectionModel> GetById(string userId, string ruleSystem, string id)
     {
       InitDb();
+      return await DoGetById(userId, ruleSystem, id);
+    }
+
+    protected virtual async Task<TCollectionModel> DoGetById(string userId, string ruleSystem, string id)
+    {
       return await _collection.Find(entity => entity.UserId == userId && entity.Id == ObjectId.Parse(id) && entity.RuleSystem == ruleSystem).FirstAsync();
     }
 
@@ -100,6 +111,8 @@ namespace DDD.Common.Services
       {
         _collection = _mongoDatabase.GetCollection<TCollectionModel>(CollectionName);
 
+        InitRelatedCollections(_mongoDatabase);
+
         if (DoVersioning)
         {
           _historyCollection = _mongoDatabase.GetCollection<HistoryModel<TCollectionModel>>($"{CollectionName}_history");
@@ -108,5 +121,8 @@ namespace DDD.Common.Services
         _isInitialised = true;
       }
     }
+
+    protected virtual void InitRelatedCollections(IMongoDatabase mongoDatabase) { /* No implementation needed at this level */ }
+
   }
 }

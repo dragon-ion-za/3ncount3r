@@ -1,5 +1,6 @@
 using DDD._3ncount3r.API.Models;
 using DDD.Common.Services;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace DDD._3ncount3r.API.Services
@@ -9,8 +10,31 @@ namespace DDD._3ncount3r.API.Services
     public override string CollectionName => "Encounters";
     public override bool DoVersioning => true;
 
+    private IMongoCollection<PartyModel> _partyCollection;
+
     public EncountersService(IMongoDatabase mongoDatabase) : base(mongoDatabase)
     {
+    }
+
+    protected override void InitRelatedCollections(IMongoDatabase mongoDatabase)
+    {
+      _partyCollection = mongoDatabase.GetCollection<PartyModel>("Parties");
+    }
+
+    protected override async Task<IEnumerable<EncounterModel>> DoGet(string userId, string ruleSystem)
+    {
+      return await _collection.Aggregate()
+        .Match(entity => entity.UserId == userId && entity.RuleSystem == ruleSystem)
+        .Lookup<EncounterModel, PartyModel, EncounterModel>(_partyCollection, x => x.PartyId, y => y.Id, x => x.Parties)
+        .ToListAsync();
+    }
+
+    protected override async Task<EncounterModel> DoGetById(string userId, string ruleSystem, string id)
+    {
+      return await _collection.Aggregate()
+        .Match(entity => entity.UserId == userId && entity.Id == ObjectId.Parse(id) && entity.RuleSystem == ruleSystem)
+        .Lookup<EncounterModel, PartyModel, EncounterModel>(_partyCollection, x => x.PartyId, y => y.Id, x => x.Parties)
+        .FirstAsync();
     }
 
     protected override EncounterModel CalculateModelDelta(EncounterModel prevModel, EncounterModel model)
@@ -24,10 +48,9 @@ namespace DDD._3ncount3r.API.Services
       delta.CurrentTurn = model.CurrentTurn != prevModel.CurrentTurn ? model.CurrentTurn : prevModel.CurrentTurn;
       delta.Location = model.Location != prevModel.Location ? model.Location : null;
       delta.Name = model.Name != prevModel.Name ? model.Name : null;
-      delta.PartyId = model.PartyId != prevModel.PartyId ? model.PartyId : null;
+      delta.PartyId = model.PartyId != prevModel.PartyId ? model.PartyId : ObjectId.Empty;
       delta.RoundCount = model.RoundCount != prevModel.RoundCount ? model.RoundCount : prevModel.RoundCount;
       delta.RuleSystem = model.RuleSystem != prevModel.RuleSystem ? model.RuleSystem : null;
-      delta.SelectedParty = model.SelectedParty != prevModel.SelectedParty ? model.SelectedParty : null;
       delta.UserId = model.UserId != prevModel.UserId ? model.UserId : null;
 
       foreach (var prevCreature in prevModel.Creatures)
