@@ -10,8 +10,8 @@ export const EncounterTitle : React.FC = () => {
     return (
     <>
         <Stack>
-            <Typography variant="h3">{encounterContext.encounterName}</Typography>
-            <Typography variant="h4">{encounterContext.selectedParty}</Typography>
+            <Typography variant="h2">{encounterContext.encounterName}</Typography>
+            <Typography variant="h3">{encounterContext.selectedParty}</Typography>
         </Stack>
     </>);
 }
