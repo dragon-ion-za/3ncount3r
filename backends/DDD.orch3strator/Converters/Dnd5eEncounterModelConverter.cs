@@ -13,6 +13,7 @@ namespace DDD.orch3strator.Converters
         CurrentTurn = model.CurrentTurn,
         Name = model.Name,
         RoundCount = model.RoundCount,
+        PartyId = model.PartyId,
         SelectedParty = model.SelectedParty,
         Creatures = BuildCreaturesFromModel(model.Creatures),
         UserId = model.UserId,
@@ -30,7 +31,7 @@ namespace DDD.orch3strator.Converters
         Id = viewModel.Id,
         Name = viewModel.Name,
         RoundCount = viewModel.RoundCount,
-        SelectedParty = viewModel.SelectedParty,
+        PartyId = viewModel.PartyId,
         UserId = viewModel.UserId,
         Campaign = viewModel.Campaign,
         Location = viewModel.Location

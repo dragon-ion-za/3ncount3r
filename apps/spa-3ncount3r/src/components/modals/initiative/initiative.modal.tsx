@@ -59,8 +59,8 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
         try {
             loadingContext.setIsLoading(true);
             let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
-            let selectedParty = await getPartyById(partyId, accessToken);
-            let partyMembers: CharacterViewModel[] = selectedParty!.characters;
+            let party = await getPartyById(partyId, accessToken);
+            let partyMembers: CharacterViewModel[] = party!.characters;
             
             let state = [...creatures];
             

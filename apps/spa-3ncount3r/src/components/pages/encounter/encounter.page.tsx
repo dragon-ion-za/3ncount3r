@@ -56,7 +56,7 @@ export const EncounterPage : React.FC = () => {
                             encounterContext.setCampaignName(x.campaign);
                             encounterContext.setLocationName(x.location);
                             encounterContext.setEncounterName(x.name);
-                            encounterContext.setSelectedParty(x.selectedParty);
+                            encounterContext.setSelectedParty(x.partyId);
                             encounterContext.setRoundCounter(Math.max(x.roundCount ?? 0, 1));
                             encounterContext.setTurnCounter(Math.max(x.currentTurn ?? 0, 1));
                         });

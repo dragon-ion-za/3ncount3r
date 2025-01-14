@@ -21,7 +21,7 @@ export const InitiativeHandler : React.FC = () => {
 
     let navigate = useNavigate();
 
-    const handleAccept = async (creatures: EncounterCreatureViewModel[], partyName: string) => {
+    const handleAccept = async (creatures: EncounterCreatureViewModel[], partyId: string) => {
         try {
             loadingContext.setIsLoading(true);
             let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
@@ -33,7 +33,8 @@ export const InitiativeHandler : React.FC = () => {
                     location: encounterContext.locationName, 
                     name: encounterContext.encounterName,
                     creatures: creatures,
-                    selectedParty: partyName,
+                    partyId: partyId,
+                    selectedParty: '',
                     roundCount: encounterContext.roundCounter,
                     currentTurn: encounterContext.turnCounter
                 });
@@ -50,7 +51,8 @@ export const InitiativeHandler : React.FC = () => {
                     location: encounterContext.locationName, 
                     name: encounterContext.encounterName,
                     creatures: creatures,
-                    selectedParty: partyName,
+                    partyId: partyId,
+                    selectedParty: '',
                     roundCount: encounterContext.roundCounter,
                     currentTurn: encounterContext.turnCounter
                 });
