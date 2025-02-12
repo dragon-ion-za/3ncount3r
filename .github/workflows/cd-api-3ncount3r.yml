@@ -13,9 +13,9 @@ env:
 
 jobs:
   build:
-    uses: ./.github/workflows/step_build.yml
+    uses: ./.github/workflows/step_build_dotnet.yml
     with:
-      sourcePath: "backends/api-3ncount3r"
+      sourcePath: "backends/DDD.3ncount3r.API"
       artifactName: "api-3ncount3r"
       tagName: '3ncount3r-api'
 
