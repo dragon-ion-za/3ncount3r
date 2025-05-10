@@ -58,3 +58,8 @@ export class ProficiencyModel {
     target: string = '';
     value: number = 0;
 }
+
+export class VulnerabilityModel {
+    type: string = '';
+    value: string[] = [];
+}

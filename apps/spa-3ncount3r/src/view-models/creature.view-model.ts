@@ -28,6 +28,7 @@ export class CreatureViewModel {
     passivePerception: number = 0;
     resistances: ResistanceViewModel[] = [];
     immunities: ResistanceViewModel[] = [];
+    vulnerabilities: ResistanceViewModel[] = [];
     languages: string[] = [];
     challengeRating: ChallengeViewModel | null = null;
     legendaryCount: number = 3;

@@ -151,6 +151,15 @@ resistances: if(
     { type: "normal", values: [get()] }, 
     { values: get() | .resist, type: get() | .note } 
 )) | flatten(),
+vulnerabilities: if(
+    .vulnerable == null, 
+    [], 
+    .vulnerable
+) | map(if(
+    get() | .vulnerable == null, 
+    { type: "normal", values: [get()] }, 
+    { values: get() | .resist, type: get() | .note } 
+)) | flatten(),
 languages: .languages,
 senses: array(
     if(.senses == null, [], .senses), 

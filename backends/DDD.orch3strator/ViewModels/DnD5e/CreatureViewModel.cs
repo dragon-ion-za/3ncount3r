@@ -67,6 +67,9 @@ namespace DDD.orch3strator.ViewModels.DnD5e
     [JsonPropertyName("immunities")]
     public IEnumerable<ResistanceImmunityViewModel> Immunities { get; set; }
 
+    [JsonPropertyName("vulnerabilities")]
+    public IEnumerable<ResistanceImmunityViewModel> Vulnerabilities { get; set; }
+
     [JsonPropertyName("languages")]
     public IEnumerable<string> Languages { get; set; }
 

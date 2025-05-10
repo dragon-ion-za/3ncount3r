@@ -1,4 +1,4 @@
-import { ResistanceModel, ActionGroupModel, ArmourModel, HitpointModel, MovementModel, ProficiencyModel } from "./sharedModels";
+import { ResistanceModel, ActionGroupModel, ArmourModel, HitpointModel, MovementModel, ProficiencyModel, VulnerabilityModel } from "./sharedModels";
 
 export class CreatureModel {
     name: string;
@@ -14,6 +14,7 @@ export class CreatureModel {
     movement: MovementModel[] = [];
     immunities: string[] = [];
     resistances: ResistanceModel[] = [];
+    vulnerabilities: VulnerabilityModel[] = [];
     languages: string[] = [];
     senses: string[] = [];
     proficiencies: ProficiencyModel[] = [];

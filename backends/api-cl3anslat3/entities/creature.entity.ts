@@ -1,4 +1,4 @@
-import { Armour, ActionGroup, Hitpoint, Movement, Resistance, Proficiency } from "./sharedEntities";
+import { Armour, ActionGroup, Hitpoint, Movement, Resistance, Proficiency, Vulnerability } from "./sharedEntities";
 
 export interface CreatureEntity {
     name: string;
@@ -13,6 +13,7 @@ export interface CreatureEntity {
     movement: Movement[];
     immunities: string[];
     resistances: Resistance[];
+    vulnerabilities: Vulnerability[];
     languages: string[];
     senses: string[];
     proficiencies: Proficiency[];

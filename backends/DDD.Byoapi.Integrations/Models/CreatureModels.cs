@@ -44,6 +44,9 @@ namespace DDD.Byoapi.Integrations.Models
     [JsonPropertyName("resistances")]
     public IEnumerable<ResistanceModel> Resistances { get; set; }
 
+    [JsonPropertyName("vulnerabilities")]
+    public IEnumerable<ResistanceModel> Vulnerabilities { get; set; }
+
     [JsonPropertyName("languages")]
     public IEnumerable<string> Languages { get; set; }
 

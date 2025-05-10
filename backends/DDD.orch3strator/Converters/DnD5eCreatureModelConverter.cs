@@ -45,6 +45,7 @@ namespace DDD.orch3strator.Converters
         ChallengeRating = BuildChallengeRatingFromModel(model.Difficulty),
         Immunities = BuildImmunitiesResistancesFromModel(model.Immunities),
         Resistances = BuildImmunitiesResistancesFromModel(model.Resistances),
+        Vulnerabilities = BuildImmunitiesResistancesFromModel(model.Vulnerabilities),
 
         // Languages
         Languages = model.Languages,

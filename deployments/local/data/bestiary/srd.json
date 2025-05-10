@@ -190,6 +190,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Deep Speech",
 			"telepathy 120 ft."
@@ -370,6 +371,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language (usually Common)"
 		  ],
@@ -591,6 +593,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -829,6 +832,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -1080,6 +1084,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -1355,6 +1360,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -1611,6 +1617,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -1881,6 +1888,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -2136,6 +2144,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -2389,6 +2398,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -2648,6 +2658,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -2902,6 +2913,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -3128,6 +3140,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Auran"
 		  ],
@@ -3339,6 +3352,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -3577,6 +3591,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -3836,6 +3851,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -4111,6 +4127,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -4375,6 +4392,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -4645,6 +4663,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -4900,6 +4919,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -5153,6 +5173,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -5412,6 +5433,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -5666,6 +5688,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -5973,6 +5996,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Sphinx"
@@ -6178,6 +6202,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft. (blind beyond this radius)",
@@ -6319,6 +6344,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -6464,6 +6490,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -6712,6 +6739,7 @@
 			  "type": "(from stoneskin)"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any six languages"
 		  ],
@@ -6819,7 +6847,7 @@
 				{
 				  "name": "Sneak Attack (1/Turn)",
 				  "entries": [
-					"The assassin deals an extra 14 ({@dice 4d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the assassin that isn't {@condition incapacitated} and the assassin doesn't have disadvantage on the attack roll."
+					"The assassin deals an extra 14 ({@damage 4d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the assassin that isn't {@condition incapacitated} and the assassin doesn't have disadvantage on the attack roll."
 				  ]
 				}
 			  ]
@@ -6908,6 +6936,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Thieves' cant plus any two languages"
 		  ],
@@ -7084,6 +7113,14 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
+		  ],
 		  "languages": [
 			"one language known by its creator"
 		  ],
@@ -7235,6 +7272,14 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
+		  ],
 		  "languages": [
 			"one language known by its creator"
 		  ],
@@ -7366,6 +7411,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -7524,6 +7570,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Ignan"
 		  ],
@@ -7668,6 +7715,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 11"
@@ -7804,6 +7852,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 30 ft.",
@@ -8011,6 +8060,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"telepathy 120 ft."
@@ -8176,6 +8226,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language (usually Common)"
 		  ],
@@ -8332,6 +8383,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any two languages"
 		  ],
@@ -8554,6 +8606,7 @@
 			  "type": "from nonmagical attacks that aren't silvered"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Infernal",
 			"telepathy 120 ft."
@@ -8732,6 +8785,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -8875,6 +8929,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft.",
@@ -8929,7 +8984,7 @@
 				{
 				  "name": "Glaive",
 				  "entries": [
-					"{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}8 ({@damage 1d10 + 3}) slashing damage. If the target is a creature other than an undead or a construct, it must succeed on a {@dc 12} Constitution saving throw or lose 5 ({@dice 1d10}) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 5 ({@dice 1d10}). Any creature can take an action to stanch the wound with a successful {@dc 12} Wisdom ({@skill Medicine}) check. The wound also closes if the target receives magical healing."
+					"{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}8 ({@damage 1d10 + 3}) slashing damage. If the target is a creature other than an undead or a construct, it must succeed on a {@dc 12} Constitution saving throw or lose 5 ({@dice 1d10}) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 5 ({@damage 1d10}). Any creature can take an action to stanch the wound with a successful {@dc 12} Wisdom ({@skill Medicine}) check. The wound also closes if the target receives magical healing."
 				  ],
 				  "items": []
 				}
@@ -9063,6 +9118,7 @@
 			  "type": "from nonmagical attacks that aren't silvered"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Infernal",
 			"telepathy 120 ft."
@@ -9249,6 +9305,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Draconic"
 		  ],
@@ -9402,6 +9459,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language (usually Common)"
 		  ],
@@ -9554,6 +9612,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -9711,6 +9770,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Draconic"
 		  ],
@@ -9917,6 +9977,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft. (blind beyond this radius)",
@@ -10062,6 +10123,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Blink Dog",
 			"understands Sylvan but can't speak it"
@@ -10218,6 +10280,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 14"
@@ -10368,6 +10431,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Draconic"
 		  ],
@@ -10545,6 +10609,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 9"
@@ -10726,6 +10791,7 @@
 			  "type": "from nonmagical attacks that aren't silvered"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Infernal",
 			"telepathy 120 ft."
@@ -10913,6 +10979,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Draconic"
 		  ],
@@ -11112,6 +11179,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Draconic"
 		  ],
@@ -11297,6 +11365,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -11371,7 +11440,7 @@
 				{
 				  "name": "Surprise Attack",
 				  "entries": [
-					"If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 ({@dice 2d6}) damage from the attack."
+					"If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 ({@damage 2d6}) damage from the attack."
 				  ]
 				}
 			  ]
@@ -11453,6 +11522,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Goblin"
@@ -11611,6 +11681,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -11748,6 +11819,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 9"
@@ -11884,6 +11956,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -12053,6 +12126,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Elvish",
 			"Sylvan"
@@ -12261,6 +12335,7 @@
 			  "type": "from nonmagical attacks that aren't silvered"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Infernal",
 			"telepathy 120 ft."
@@ -12439,6 +12514,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands Draconic but can't speak"
 		  ],
@@ -12613,6 +12689,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands Deep Speech but can't speak"
 		  ],
@@ -12819,6 +12896,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands the languages of its creator but can't speak"
 		  ],
@@ -13001,6 +13079,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Deep Speech",
 			"Undercommon"
@@ -13198,6 +13277,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Giant"
@@ -13356,6 +13436,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -13486,6 +13567,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language (usually Common)"
 		  ],
@@ -13624,6 +13706,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -13782,6 +13865,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Draconic"
 		  ],
@@ -14030,6 +14114,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"all",
 			"telepathy 120 ft."
@@ -14186,6 +14271,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 30 ft.",
@@ -14329,6 +14415,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -14510,6 +14597,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language (usually Common)"
 		  ],
@@ -14668,6 +14756,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language (usually Common)"
 		  ],
@@ -14832,6 +14921,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft.",
@@ -14983,6 +15073,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 120 ft.",
@@ -15164,6 +15255,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Gnomish",
 			"Terran",
@@ -15314,6 +15406,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 12"
@@ -15391,7 +15484,7 @@
 				{
 				  "name": "Angelic Weapons",
 				  "entries": [
-					"The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra {@dice 4d8} radiant damage (included in the attack)."
+					"The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra {@damage 4d8} radiant damage (included in the attack)."
 				  ]
 				},
 				{
@@ -15521,6 +15614,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"all",
 			"telepathy 120 ft."
@@ -15688,6 +15782,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -15891,6 +15986,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Auran"
 		  ],
@@ -15990,7 +16086,7 @@
 				{
 				  "name": "Surprise Attack",
 				  "entries": [
-					"If the doppelganger surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 10 ({@dice 3d6}) damage from the attack."
+					"If the doppelganger surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 10 ({@damage 3d6}) damage from the attack."
 				  ]
 				}
 			  ]
@@ -16079,6 +16175,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common"
 		  ],
@@ -16222,6 +16319,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -16393,6 +16491,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Aquan",
 			"Draconic"
@@ -16591,6 +16690,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"telepathy 60 ft. (works only with creatures that understand Abyssal)"
@@ -16789,6 +16889,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Elvish",
 			"Undercommon"
@@ -16972,6 +17073,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Elvish",
 			"Undercommon"
@@ -17149,6 +17251,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Druidic plus any two languages"
 		  ],
@@ -17354,6 +17457,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Elvish",
 			"Sylvan"
@@ -17540,6 +17644,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Dwarvish",
 			"Undercommon"
@@ -17707,6 +17812,14 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
+		  ],
 		  "languages": [
 			"Auran",
 			"Terran"
@@ -17858,6 +17971,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 14"
@@ -18032,6 +18146,14 @@
 				"slashing"
 			  ],
 			  "type": "from nonmagical attacks"
+			}
+		  ],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"thunder"
+			  ]
 			}
 		  ],
 		  "languages": [
@@ -18225,6 +18347,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Ignan"
 		  ],
@@ -18387,6 +18510,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -18448,7 +18572,7 @@
 				{
 				  "name": "Charge",
 				  "entries": [
-					"If the elk moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 ({@dice 2d6}) damage. If the target is a creature, it must succeed on a {@dc 13} Strength saving throw or be knocked {@condition prone}."
+					"If the elk moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 ({@damage 2d6}) damage. If the target is a creature, it must succeed on a {@dc 13} Strength saving throw or be knocked {@condition prone}."
 				  ]
 				}
 			  ]
@@ -18530,6 +18654,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -18718,6 +18843,7 @@
 			  "type": "from nonmagical attacks that aren't silvered"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Infernal",
 			"telepathy 120 ft."
@@ -18913,6 +19039,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -19087,6 +19214,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Giant",
 			"Orc"
@@ -19277,6 +19405,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Ignan"
 		  ],
@@ -19431,6 +19560,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Giant"
 		  ],
@@ -19655,6 +19785,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands the languages of its creator but can't speak"
 		  ],
@@ -19794,6 +19925,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -19955,6 +20087,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft. (blind beyond this radius)",
@@ -20096,6 +20229,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 30 ft.",
@@ -20259,6 +20393,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Giant"
 		  ],
@@ -20457,6 +20592,7 @@
 			  "type": "from nonmagical attacks that aren't adamantine"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Terran"
 		  ],
@@ -20627,6 +20763,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft. (blind beyond this radius)",
@@ -20795,6 +20932,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common"
 		  ],
@@ -21016,6 +21154,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any languages it knew in life"
 		  ],
@@ -21166,6 +21305,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common"
 		  ],
@@ -21312,6 +21452,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 14"
@@ -21473,6 +21614,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 30 ft.",
@@ -21616,6 +21758,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft.",
@@ -21759,6 +21902,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 8"
@@ -21888,6 +22032,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 30 ft.",
@@ -22025,6 +22170,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -22168,6 +22314,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 30 ft.",
@@ -22325,6 +22472,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -22482,6 +22630,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Giant Eagle",
 			"understands Common and Auran but can't speak them"
@@ -22552,7 +22701,7 @@
 				{
 				  "name": "Charge",
 				  "entries": [
-					"If the elk moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 ({@dice 2d6}) damage. If the target is a creature, it must succeed on a {@dc 14} Strength saving throw or be knocked {@condition prone}."
+					"If the elk moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 ({@damage 2d6}) damage. If the target is a creature, it must succeed on a {@dc 14} Strength saving throw or be knocked {@condition prone}."
 				  ]
 				}
 			  ]
@@ -22634,6 +22783,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Giant Elk",
 			"understands Common, Elvish, Sylvan but can't speak them"
@@ -22779,6 +22929,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 30 ft.",
@@ -22929,6 +23080,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 30 ft.",
@@ -23083,6 +23235,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 11"
@@ -23219,6 +23372,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -23354,6 +23508,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 30 ft.",
@@ -23510,6 +23665,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -23664,6 +23820,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Giant Owl",
 			"understands Common, Elvish, and Sylvan but can't speak them"
@@ -23808,6 +23965,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -23957,6 +24115,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -24101,6 +24260,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft.",
@@ -24244,6 +24404,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 11"
@@ -24386,6 +24547,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft.",
@@ -24548,6 +24710,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -24706,6 +24869,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 30 ft.",
@@ -24864,6 +25028,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands Common but can't speak"
 		  ],
@@ -25001,6 +25166,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -25137,6 +25303,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -25297,6 +25464,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -25473,6 +25641,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -25681,6 +25850,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"telepathy 120 ft."
@@ -25869,6 +26039,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language (usually Common)"
 		  ],
@@ -26048,6 +26219,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Gnoll"
 		  ],
@@ -26193,6 +26365,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -26337,6 +26510,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Goblin"
@@ -26511,6 +26685,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Draconic"
 		  ],
@@ -26703,6 +26878,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -26890,6 +27066,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft. (blind beyond this radius)",
@@ -27049,6 +27226,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Draconic"
 		  ],
@@ -27259,6 +27437,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic",
@@ -27444,6 +27623,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -27595,6 +27775,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -27758,6 +27939,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Undercommon"
 		  ],
@@ -27906,6 +28088,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language (usually Common)"
 		  ],
@@ -28122,6 +28305,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Celestial",
 			"Common"
@@ -28393,6 +28577,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Sphinx"
@@ -28582,6 +28767,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -28751,6 +28937,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common"
 		  ],
@@ -28889,6 +29076,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 14"
@@ -29052,6 +29240,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands Infernal but can't speak it"
 		  ],
@@ -29253,6 +29442,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"telepathy 120 ft."
@@ -29417,6 +29607,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Giant"
 		  ],
@@ -29575,6 +29766,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 15"
@@ -29643,7 +29835,7 @@
 				{
 				  "name": "Martial Advantage",
 				  "entries": [
-					"Once per turn, the hobgoblin can deal an extra 7 ({@dice 2d6}) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the hobgoblin that isn't {@condition incapacitated}."
+					"Once per turn, the hobgoblin can deal an extra 7 ({@damage 2d6}) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the hobgoblin that isn't {@condition incapacitated}."
 				  ]
 				}
 			  ]
@@ -29725,6 +29917,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Goblin"
@@ -29874,6 +30067,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands the languages of its creator but can't speak"
 		  ],
@@ -29930,7 +30124,7 @@
 				{
 				  "name": "Tail",
 				  "entries": [
-					"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}10 ({@damage 1d8 + 6}) piercing damage. If the target is a creature other than an undead or a construct, it must succeed on a {@dc 17} Constitution saving throw or lose 10 ({@dice 3d6}) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 10 ({@dice 3d6}). Any creature can take an action to stanch the wound with a successful {@dc 12} Wisdom ({@skill Medicine}) check. The wound also closes if the target receives magical healing."
+					"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}10 ({@damage 1d8 + 6}) piercing damage. If the target is a creature other than an undead or a construct, it must succeed on a {@dc 17} Constitution saving throw or lose 10 ({@dice 3d6}) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 10 ({@damage 3d6}). Any creature can take an action to stanch the wound with a successful {@dc 12} Wisdom ({@skill Medicine}) check. The wound also closes if the target receives magical healing."
 				  ],
 				  "items": []
 				},
@@ -30065,6 +30259,7 @@
 			  "type": "from nonmagical attacks that aren't silvered"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Infernal",
 			"telepathy 120 ft."
@@ -30232,6 +30427,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 30 ft.",
@@ -30402,6 +30598,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -30545,6 +30742,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -30743,6 +30941,7 @@
 			  "type": "from nonmagical attacks that aren't silvered"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Infernal",
 			"telepathy 120 ft."
@@ -30939,6 +31138,20 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"bludgeoning"
+			  ]
+			},
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
+		  ],
 		  "languages": [
 			"Aquan",
 			"Auran"
@@ -31134,6 +31347,7 @@
 			  "type": "from nonmagical attacks not made with silvered weapons"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Infernal",
 			"Common"
@@ -31357,6 +31571,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"Common",
@@ -31565,6 +31780,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Auran",
 			"understands Common but doesn't speak it"
@@ -31778,6 +31994,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands the languages of its creator but can't speak"
 		  ],
@@ -31923,6 +32140,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -32077,6 +32295,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 120 ft.",
@@ -32248,6 +32467,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language (usually Common)"
 		  ],
@@ -32411,6 +32631,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -32632,6 +32853,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"Celestial",
@@ -32843,6 +33065,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"Common"
@@ -33024,6 +33247,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands Infernal but can't speak"
 		  ],
@@ -33327,6 +33551,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common plus up to five other languages"
 		  ],
@@ -33527,6 +33752,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -33667,6 +33893,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 30 ft.",
@@ -33832,6 +34059,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Draconic"
 		  ],
@@ -34034,6 +34262,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any four languages"
 		  ],
@@ -34227,6 +34456,14 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"cold"
+			  ]
+			}
+		  ],
 		  "languages": [
 			"Ignan",
 			"Terran"
@@ -34396,6 +34633,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Ignan"
 		  ],
@@ -34542,6 +34780,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -34700,6 +34939,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common"
 		  ],
@@ -34915,6 +35155,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"telepathy 120 ft."
@@ -35076,6 +35317,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -35242,6 +35484,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common"
 		  ],
@@ -35402,6 +35645,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Aquan",
 			"Common"
@@ -35569,6 +35813,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"Aquan"
@@ -35742,6 +35987,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -35905,6 +36151,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal"
 		  ],
@@ -36067,6 +36314,14 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"bludgeoning"
+			  ]
+			}
+		  ],
 		  "languages": [
 			"understands Abyssal but can't speak"
 		  ],
@@ -36212,6 +36467,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -36376,6 +36632,14 @@
 				"slashing"
 			  ],
 			  "type": "from nonmagical attacks"
+			}
+		  ],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
 			}
 		  ],
 		  "languages": [
@@ -36655,6 +36919,14 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
+		  ],
 		  "languages": [
 			"the languages it knew in life"
 		  ],
@@ -36889,6 +37161,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"telepathy 120 ft."
@@ -37132,6 +37405,7 @@
 			  "type": "from nonmagical attacks that aren't silvered"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"Common",
@@ -37316,6 +37590,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands Abyssal, Common, and Infernal but can't speak "
 		  ],
@@ -37454,6 +37729,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any two languages"
 		  ],
@@ -37642,6 +37918,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft. (blind beyond this radius)",
@@ -37798,6 +38075,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 30 ft.",
@@ -37947,6 +38225,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Giant"
@@ -38096,6 +38375,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands Common and Giant but can't speak"
 		  ],
@@ -38290,6 +38570,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Giant"
@@ -38474,6 +38755,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Orc"
@@ -38641,6 +38923,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Otyugh"
 		  ],
@@ -38792,6 +39075,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 120 ft.",
@@ -38954,6 +39238,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -39110,6 +39395,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 14"
@@ -39251,6 +39537,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands Celestial",
 			"Common",
@@ -39425,6 +39712,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -39652,6 +39940,7 @@
 			  "type": "from nonmagical attacks that aren't silvered"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Infernal",
 			"telepathy 120 ft."
@@ -39741,7 +40030,7 @@
 				{
 				  "name": "Angelic Weapons",
 				  "entries": [
-					"The planetar's weapon attacks are magical. When the planetar hits with any weapon, the weapon deals an extra {@dice 5d8} radiant damage (included in the attack)."
+					"The planetar's weapon attacks are magical. When the planetar hits with any weapon, the weapon deals an extra {@damage 5d8} radiant damage (included in the attack)."
 				  ]
 				},
 				{
@@ -39888,6 +40177,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"all",
 			"telepathy 120 ft."
@@ -40049,6 +40339,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -40189,6 +40480,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -40340,6 +40632,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -40475,6 +40768,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -40529,7 +40823,7 @@
 				{
 				  "name": "Divine Eminence",
 				  "entries": [
-					"As a bonus action, the priest can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 ({@damage 3d6}) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If the priest expends a spell slot of 2nd level or higher, the extra damage increases by {@dice 1d6} for each level above 1st."
+					"As a bonus action, the priest can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 ({@damage 3d6}) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If the priest expends a spell slot of 2nd level or higher, the extra damage increases by {@damage 1d6} for each level above 1st."
 				  ]
 				}
 			  ]
@@ -40646,6 +40940,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any two languages"
 		  ],
@@ -40820,6 +41115,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands Common and Draconic but can't speak"
 		  ],
@@ -40986,6 +41282,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 30 ft.",
@@ -41191,6 +41488,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"Common"
@@ -41343,6 +41641,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -41530,6 +41829,14 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [
+			{
+			  "values": [
+				"piercing"
+			  ],
+			  "type": "from magic weapons wielded by good creatures"
+			}
+		  ],
 		  "languages": [
 			"Common",
 			"Infernal"
@@ -41681,6 +41988,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 30 ft.",
@@ -41818,6 +42126,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -41968,6 +42277,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Draconic"
 		  ],
@@ -42145,6 +42455,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 30 ft.",
@@ -42304,6 +42615,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -42442,6 +42754,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 11"
@@ -42571,6 +42884,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -42721,6 +43035,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 14"
@@ -42917,6 +43232,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -43092,6 +43408,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft. (blind beyond this radius)",
@@ -43243,6 +43560,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -43393,6 +43711,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -43574,6 +43893,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Sahuagin"
 		  ],
@@ -43756,6 +44076,14 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"cold"
+			  ]
+			}
+		  ],
 		  "languages": [
 			"Ignan"
 		  ],
@@ -43910,6 +44238,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Elvish",
@@ -44059,6 +44388,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -44210,6 +44540,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language (usually Common)"
 		  ],
@@ -44396,6 +44727,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Aquan",
 			"Common",
@@ -44529,6 +44861,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -44734,6 +45067,14 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"radiant"
+			  ]
+			}
+		  ],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -44914,6 +45255,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft. (blind beyond this radius)",
@@ -45095,6 +45437,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands commands given in any language but can't speak"
 		  ],
@@ -45243,6 +45586,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 30 ft. (blind beyond this radius)",
@@ -45401,6 +45745,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Draconic"
 		  ],
@@ -45582,6 +45927,14 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"bludgeoning"
+			  ]
+			}
+		  ],
 		  "languages": [
 			"understands all languages it spoke in life but can't speak"
 		  ],
@@ -45668,7 +46021,7 @@
 				{
 				  "name": "Angelic Weapons",
 				  "entries": [
-					"The solar's weapon attacks are magical. When the solar hits with any weapon, the weapon deals an extra {@dice 6d8} radiant damage (included in the attack)."
+					"The solar's weapon attacks are magical. When the solar hits with any weapon, the weapon deals an extra {@damage 6d8} radiant damage (included in the attack)."
 				  ]
 				},
 				{
@@ -45835,6 +46188,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"all",
 			"telepathy 120 ft."
@@ -46062,6 +46416,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands all languages it knew in life but can't speak"
 		  ],
@@ -46213,6 +46568,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 30 ft.",
@@ -46414,6 +46770,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"Common"
@@ -46590,6 +46947,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Elvish",
@@ -46679,7 +47037,7 @@
 				{
 				  "name": "Sneak Attack (1/Turn)",
 				  "entries": [
-					"The spy deals an extra 7 ({@dice 2d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the spy that isn't {@condition incapacitated} and the spy doesn't have disadvantage on the attack roll."
+					"The spy deals an extra 7 ({@damage 2d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the spy that isn't {@condition incapacitated} and the spy doesn't have disadvantage on the attack roll."
 				  ]
 				}
 			  ]
@@ -46761,6 +47119,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any two languages"
 		  ],
@@ -46963,6 +47322,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Aquan",
 			"Ignan"
@@ -47097,6 +47457,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -47255,6 +47616,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Giant"
 		  ],
@@ -47468,6 +47830,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands the languages of its creator but can't speak"
 		  ],
@@ -47665,6 +48028,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Giant"
@@ -47907,6 +48271,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"Common",
@@ -48120,6 +48485,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 60 ft.",
@@ -48290,6 +48656,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -48461,6 +48828,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -48631,6 +48999,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -48801,6 +49170,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -48983,6 +49353,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -49159,6 +49530,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 30 ft.",
@@ -49329,6 +49701,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 15"
@@ -49522,6 +49895,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -49692,6 +50066,7 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 10 ft.",
@@ -49929,6 +50304,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 120 ft.",
@@ -50100,6 +50476,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language (usually Common)"
 		  ],
@@ -50257,6 +50634,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -50446,6 +50824,14 @@
 			  ]
 			}
 		  ],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"fire"
+			  ]
+			}
+		  ],
 		  "languages": [
 			"Common",
 			"Druidic",
@@ -50587,6 +50973,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language"
 		  ],
@@ -50732,6 +51119,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 10"
@@ -50889,6 +51277,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Giant"
 		  ],
@@ -51041,6 +51430,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 14"
@@ -51278,6 +51668,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Celestial",
 			"Elvish",
@@ -51525,6 +51916,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"the languages it knew in life"
 		  ],
@@ -51736,6 +52128,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"the languages it knew in life"
 		  ],
@@ -51910,6 +52303,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"any one language (usually Common)"
 		  ],
@@ -52075,6 +52469,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"blindsight 30 ft. (blind beyond this radius)",
@@ -52276,6 +52671,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Abyssal",
 			"telepathy 120 ft."
@@ -52438,6 +52834,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -52580,6 +52977,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 11"
@@ -52719,6 +53117,14 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [
+			{
+			  "type": "normal",
+			  "values": [
+				"bludgeoning"
+			  ]
+			}
+		  ],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -52907,6 +53313,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Aquan"
 		  ],
@@ -53046,6 +53453,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -53237,6 +53645,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common (can't speak in bear form)"
 		  ],
@@ -53424,6 +53833,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common (can't speak in boar form)"
 		  ],
@@ -53605,6 +54015,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common (can't speak in rat form)"
 		  ],
@@ -53807,6 +54218,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common (can't speak in tiger form)"
 		  ],
@@ -54001,6 +54413,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common (can't speak in wolf form)"
 		  ],
@@ -54158,6 +54571,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Draconic"
 		  ],
@@ -54376,6 +54790,7 @@
 			  "type": "from nonmagical attacks that aren't silvered"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"the languages it knew in life"
 		  ],
@@ -54609,6 +55024,7 @@
 			  "type": "from nonmagical attacks"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"the languages it knew in life"
 		  ],
@@ -54775,6 +55191,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Giant",
@@ -54932,6 +55349,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"passive perception 13"
@@ -55080,6 +55498,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Goblin",
 			"Worg"
@@ -55298,6 +55717,7 @@
 			  "type": "from nonmagical attacks that aren't silvered"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"the languages it knew in life"
 		  ],
@@ -55451,6 +55871,7 @@
 		  ],
 		  "immunities": [],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": null,
 		  "senses": [
 			"darkvision 60 ft.",
@@ -55628,6 +56049,7 @@
 			  "type": "from nonmagical attacks that aren't adamantine"
 			}
 		  ],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Terran"
 		  ],
@@ -55808,6 +56230,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -56002,6 +56425,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -56209,6 +56633,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -56428,6 +56853,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -56640,6 +57066,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -56859,6 +57286,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -57071,6 +57499,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -57270,6 +57699,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -57477,6 +57907,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -57688,6 +58119,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"Common",
 			"Draconic"
@@ -57869,6 +58301,7 @@
 			}
 		  ],
 		  "resistances": [],
+		  "vulnerabilities": [],
 		  "languages": [
 			"understands all languages it spoke in life but can't speak"
 		  ],

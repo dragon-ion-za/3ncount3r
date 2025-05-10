@@ -152,3 +152,8 @@ export interface Proficiency {
     target: string;
     value: number;
 }
+
+export interface Vulnerability {
+    type: string;
+    value: string[];
+}
