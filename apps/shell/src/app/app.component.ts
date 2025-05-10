@@ -21,7 +21,7 @@ export class AppComponent {
   }
 
   public async doLogin() {
-    await this.auth.loginWithRedirect({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+    await this.auth.loginWithRedirect();
   }
 
   public async doLogout() {
