@@ -1,4 +1,4 @@
-FROM ghcr.io/dragon-ion-za/3ncount3r-api:bagofbeans-6thlevel
+FROM 3ncount3r-calllightning-cantrip-1
 
 WORKDIR /api
 

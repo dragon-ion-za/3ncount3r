@@ -2,7 +2,7 @@
     {
         "baseUrl": "3ncount3r",
         "moduleName": "./spa-3ncount3r-app",
-        "remoteEntry": "http://localhost:13132/remoteEntry.js",
+        "remoteEntry": "http://localhost:13133/remoteEntry.js",
         "remoteName": "",
         "exposedModule": "./spa-3ncount3r-app",
         "elementName": "spa-3ncount3r-app"

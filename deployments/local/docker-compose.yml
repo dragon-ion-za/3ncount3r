@@ -18,27 +18,41 @@ services:
     volumes:
       - ./data:/data
     ports:
-      - '5001:5001'
+      - '6001:5001'
   3ncount3r-api:
     build:
       context: .
       dockerfile: 3ncount3r-api.dockerfile
     restart: always
     ports:
-      - '5002:5002'
+      - '6002:8080'
+  charact3r-api:
+    build:
+      context: .
+      dockerfile: charact3r-api.dockerfile
+    restart: always
+    ports:
+      - '6003:8080'
+  orch3strator-api:
+    build:
+      context: .
+      dockerfile: orch3strator-api.dockerfile
+    restart: always
+    ports:
+      - '6004:8080'
   3ncount3r-spa:
     build:
       context: .
       dockerfile: 3ncount3r-spa.dockerfile
     restart: always
     ports:
-      - '13132:80'
+      - '13133:80'
   shell:
     build:
       context: .
       dockerfile: 3ncount3r-shell.dockerfile
     restart: always
     ports:
-      - '13131:80'
+      - '13134:80'
 volumes:
   3ncount3rDataRepl:

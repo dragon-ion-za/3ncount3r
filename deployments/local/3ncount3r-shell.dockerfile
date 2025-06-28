@@ -1,4 +1,4 @@
-FROM ghcr.io/dragon-ion-za/3ncount3r-shell:bane-5thlevel
+FROM spa-shell-calllightning-cantrip-1
 
 COPY config/shell/nginx/default.conf /etc/nginx/conf.d/default.conf
 
