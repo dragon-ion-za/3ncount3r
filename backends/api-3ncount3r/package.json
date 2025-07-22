@@ -31,6 +31,6 @@
     "@types/uuid": "^9.0.0",
     "nodemon": "^2.0.20",
     "ts-loader": "^9.4.2",
-    "webpack-cli": "^5.0.2"
+    "webpack-cli": "^5.1.4"
   }
 }
