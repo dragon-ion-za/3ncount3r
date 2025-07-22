@@ -1,4 +1,4 @@
-FROM spa-3ncount3r-calllightning-cantrip-1
+FROM spa-3ncount3r-calllightning-cantrip-5
 
 COPY config/nginx-cors/default.conf /etc/nginx/conf.d/default.conf
 

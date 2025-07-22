@@ -1,4 +1,4 @@
-FROM spa-shell-calllightning-cantrip-1
+FROM spa-shell-calllightning-cantrip-5
 
 COPY config/shell/nginx/default.conf /etc/nginx/conf.d/default.conf
 

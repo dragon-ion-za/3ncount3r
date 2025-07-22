@@ -1,7 +1,7 @@
-FROM charact3r-calllightning-cantrip-1
+FROM charact3r-calllightning-cantrip-5
 
 WORKDIR /api
 
-COPY config/charact3r/** ./config/
+COPY config/charact3r/** ./
 
-CMD ["node", "api.bundle.js"]
+ENTRYPOINT ["dotnet", "DDD.charact3r.API.dll"]

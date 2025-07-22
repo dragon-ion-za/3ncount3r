@@ -1,4 +1,4 @@
-$versionNumber = 'calllightning-cantrip-1'
+$versionNumber = 'calllightning-cantrip-5'
 
 ubuntu run docker buildx build /mnt/c/Development/dragon-ion-za/3ncount3r/backends/DDD.3ncount3r.API -t "3ncount3r-$versionNumber"
 ubuntu run docker buildx build /mnt/c/Development/dragon-ion-za/3ncount3r/backends/DDD.charact3r.API -t "charact3r-$versionNumber"

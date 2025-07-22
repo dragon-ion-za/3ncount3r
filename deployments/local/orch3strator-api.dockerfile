@@ -1,7 +1,7 @@
-FROM orch3strator-calllightning-cantrip-1
+FROM orch3strator-calllightning-cantrip-5
 
 WORKDIR /api
 
-COPY config/orch3strator/** ./config/
+COPY config/orch3strator/** ./
 
-CMD ["node", "api.bundle.js"]
+ENTRYPOINT ["dotnet", "DDD.orch3strator.dll"]

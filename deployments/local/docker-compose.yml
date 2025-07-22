@@ -10,6 +10,8 @@ services:
       - 27017
     ports:
       - '27017:27017'
+    networks:
+      - 3ncount3rNetwork
   cl3anslat3-api:
     build:
       context: .
@@ -17,22 +19,22 @@ services:
     restart: always
     volumes:
       - ./data:/data
-    ports:
-      - '6001:5001'
+    networks:
+      - 3ncount3rNetwork
   3ncount3r-api:
     build:
       context: .
       dockerfile: 3ncount3r-api.dockerfile
     restart: always
-    ports:
-      - '6002:8080'
+    networks:
+      - 3ncount3rNetwork
   charact3r-api:
     build:
       context: .
       dockerfile: charact3r-api.dockerfile
     restart: always
-    ports:
-      - '6003:8080'
+    networks:
+      - 3ncount3rNetwork
   orch3strator-api:
     build:
       context: .
@@ -40,6 +42,8 @@ services:
     restart: always
     ports:
       - '6004:8080'
+    networks:
+      - 3ncount3rNetwork
   3ncount3r-spa:
     build:
       context: .
@@ -47,6 +51,8 @@ services:
     restart: always
     ports:
       - '13133:80'
+    networks:
+      - 3ncount3rNetwork
   shell:
     build:
       context: .
@@ -54,5 +60,11 @@ services:
     restart: always
     ports:
       - '13134:80'
+    networks:
+      - 3ncount3rNetwork
 volumes:
   3ncount3rDataRepl:
+
+networks:
+  3ncount3rNetwork:
+    driver: bridge
