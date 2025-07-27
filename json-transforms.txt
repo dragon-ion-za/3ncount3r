@@ -1,4 +1,4 @@
-.monster | filter(.srd, true) | map({
+.monster | map({
 name: .name,
 source: "SRD",
 difficulty: if(
@@ -15,15 +15,11 @@ misc: {
         ((.type | .type + " (") + (.type | if(.tags == null, [], .tags) | flatten())) + (")")
     ), 
     "alignment": array(
-        .alignment | filter(get() in ["L", "E", "G", "N", "C", "NX", "NY", "A", "U"]) | if(get() | size() == 0, [], {type: get(), chance: 100}),
+        if(.alignment | .alignment == null, .alignment, []) | filter(get() in ["L", "E", "G", "N", "C", "NX", "NY", "A", "U"]) | if(get() | size() == 0, [], {type: get(), chance: 100}),
         .alignment | filter(get() not in ["L", "E", "G", "N", "C", "NX", "NY", "A", "U"]) | if(size() == 0, [], map({type: .alignment, chance: .chance}))
     ) | flatten()
 },
-armour: if(
-    .ac > 0, 
-    .ac | map({ value: get(), source: "" }), 
-    .ac | map({ value: .ac, source: if(.from == null, "", .from | join(",")) })
-),
+armour: .ac | map({ value: if(get() | .ac == null, get(), get() | .ac), source: if(.from == null, "", .from | join(",")) }),
 actionGroups: array(
     {
         type: "action", 
@@ -109,11 +105,11 @@ hitpoints: [
     { type: "formula", value: .hp.formula } 
 ],
 movement: [ 
-    { type: "spd-walk", value: .speed.walk }, 
-    { type: "spd-climb", value: .speed.climb }, 
-    { type: "spd-swim", value: .speed.swim }, 
-    { type: "spd-fly", value: .speed.fly }, 
-    { type: "spd-burrow", value: .speed.burrow } 
+    { type: "spd-walk", value: if(.speed.walk >= 0, .speed.walk, .speed.walk.number) }, 
+    { type: "spd-climb", value: if(.speed.climb >= 0, .speed.climb, .speed.climb.number) }, 
+    { type: "spd-swim", value: if(.speed.swim >= 0, .speed.swim, .speed.swim.number) }, 
+    { type: "spd-fly", value: if(.speed.fly >= 0, .speed.fly, .speed.fly.number) }, 
+    { type: "spd-burrow", value: if(.speed.burrow >= 0, .speed.burrow, .speed.burrow.number) } 
 ],
 immunities: array(
     if(
@@ -128,8 +124,15 @@ immunities: array(
     )
 ) | flatten() | array(
     map(if(
-        get() | .immune == null, 
-        { type: "normal", list: [get()] }, 
+        get() | .immune == null,
+        if(
+            get() | .conditionImmune == null,
+            { type: "normal", list: [get()] },
+            {
+                list: get() | .conditionImmune, 
+                type: get() | .note
+            }
+        ),
         { 
             list: get() | .immune, 
             type: get() | .note 
@@ -148,7 +151,7 @@ resistances: if(
     .resist
 ) | map(if(
     get() | .resist == null, 
-    { type: "normal", values: [get()] }, 
+    { type: "normal", values: [if(get() | .special == null, get(), .special)] }, 
     { values: get() | .resist, type: get() | .note } 
 )) | flatten(),
 vulnerabilities: if(
