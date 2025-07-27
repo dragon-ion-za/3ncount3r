@@ -14,12 +14,33 @@ misc: {
         .type, 
         ((.type | .type + " (") + (.type | if(.tags == null, [], .tags) | flatten())) + (")")
     ), 
-    "alignment": array(
-        if(.alignment | .alignment == null, .alignment, []) | filter(get() in ["L", "E", "G", "N", "C", "NX", "NY", "A", "U"]) | if(get() | size() == 0, [], {type: get(), chance: 100}),
-        .alignment | filter(get() not in ["L", "E", "G", "N", "C", "NX", "NY", "A", "U"]) | if(size() == 0, [], map({type: .alignment, chance: .chance}))
-    ) | flatten()
+    "alignment": if(
+        .alignment == null, 
+        {type: "N"}, 
+        array(
+            if(
+                .alignment | .alignment == null, 
+                .alignment, 
+                []
+            ) 
+            | filter(
+                    get() in ["L", "E", "G", "N", "C", "NX", "NY", "A", "U"]) | if(
+                                                                                    get() | size() == 0, 
+                                                                                    [], 
+                                                                                    {type: get(), chance: 100}
+                                                                                ),
+                    if(.alignment == null, [], .alignment) 
+                    | filter(
+                            get() not in ["L", "E", "G", "N", "C", "NX", "NY", "A", "U"]) 
+                            | if(
+                                    size() == 0, 
+                                    [], 
+                                    map({type: .alignment, chance: .chance})
+                                )
+        ) | flatten()
+    )
 },
-armour: .ac | map({ value: if(get() | .ac == null, get(), get() | .ac), source: if(.from == null, "", .from | join(",")) }),
+armour: if(.ac == null, null,  .ac | map({ value: if(get() | .ac == null, get(), get() | .ac), source: if(.from == null, "", .from | join(",")) })),
 actionGroups: array(
     {
         type: "action", 
