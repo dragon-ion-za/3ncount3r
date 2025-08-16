@@ -11,6 +11,7 @@ namespace DDD.orch3strator.Converters
       {
         // Generic data
         Id = model.Id,
+        UserId = model.UserId,
         Name = model.Name,
 
         // Other details
@@ -39,7 +40,41 @@ namespace DDD.orch3strator.Converters
 
     public CharacterModel ConvertReverse(CharacterViewModel viewModel)
     {
-      throw new NotImplementedException();
+      return new CharacterModel()
+      {
+        // Generic data
+        Id = viewModel.Id,
+        UserId = viewModel.UserId,
+        Name = viewModel.Name,
+
+        // Other details
+        //Classes = viewModel.Classes.Select(x => new CharacterClassViewModel() { Level = x.Level, Name = x.Id }).ToList(),
+        //Race = viewModel.Race.Id,
+
+        // Attributes
+        Attributes = new Dictionary<string, int>()
+        {
+          { "cha", viewModel.AttributeCha },
+          { "con", viewModel.AttributeCon },
+          { "dex", viewModel.AttributeDex },
+          { "int", viewModel.AttributeInt },
+          { "str", viewModel.AttributeStr },
+          { "wis", viewModel.AttributeWis },
+        },
+
+        // Hitpoints
+        Hitpoints = new List<HitpointModel>() { new HitpointModel() { Type = "current", Maximum = viewModel.HitpointMaximum } },
+
+        // Movement speeds
+        MovementSpeeds = new List<MovementSpeedModel>()
+        {
+          new MovementSpeedModel() { Type = "spd-fly", Value = viewModel.FlyingSpeed },
+          new MovementSpeedModel() { Type = "spd-walk", Value = viewModel.WalkingSpeed },
+          new MovementSpeedModel() { Type = "spd-climb", Value = viewModel.ClimbingSpeed },
+          new MovementSpeedModel() { Type = "spd-swim", Value = viewModel.SwimmingSpeed },
+          new MovementSpeedModel() { Type = "spd-burrow", Value = viewModel.BurrowingSpeed },
+        },
+      };
     }
 
     public IEnumerable<CharacterViewModel> Map(IEnumerable<CharacterModel> model)

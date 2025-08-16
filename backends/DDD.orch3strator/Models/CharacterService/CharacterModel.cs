@@ -7,6 +7,9 @@ namespace DDD.orch3strator.Models.CharacterService
     [JsonPropertyName("id")]
     public string Id { get; set; }
 
+    [JsonPropertyName("userId")]
+    public string UserId { get; set; }
+
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
