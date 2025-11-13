@@ -25,7 +25,7 @@ namespace DDD.orch3strator.Controllers
       return await strat.SearchCharactersByName(User.SubjectId(), characterName);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("/id/{id}")]
     public async Task<CharacterBaseViewModel> GetById([FromRoute] string ruleSystem, [FromRoute] string id)
     {
       CharacterBaseStrategy strat = _stratFactory.Create<CharacterBaseStrategy>(ruleSystem);
