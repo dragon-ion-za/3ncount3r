@@ -40,7 +40,7 @@ misc: {
         ) | flatten()
     )
 },
-armour: if(.ac == null, null,  .ac | map({ value: if(get() | .ac == null, get(), get() | .ac), source: if(.from == null, "", .from | join(",")) })),
+armour: if(.ac | .ac == null, .ac,  .ac | map({ value: if(get() | .ac == null, get(), get() | .ac), source: if(.from == null, "", .from | join(",")) })),
 actionGroups: array(
     {
         type: "action", 
