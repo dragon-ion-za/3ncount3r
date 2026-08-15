@@ -7,19 +7,20 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { MatExpansionModule } from '@angular/material/expansion'
+import { MatExpansionModule } from '@angular/material/expansion';
 import { RouterService } from './services/router.service';
 import { LandingComponent } from './landing/landing.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { ModuleFederationToolsModule } from '@angular-architects/module-federation-tools';
 import { MatButtonModule } from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { provideAuth0 } from '@auth0/auth0-angular';
 import { environment } from '../environments/environment';
+import { CallbackComponent } from './callback/callback.component';
 
 @NgModule({
-  declarations: [AppComponent, LandingComponent],
+  declarations: [AppComponent, LandingComponent, CallbackComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -33,15 +34,22 @@ import { environment } from '../environments/environment';
     MatButtonModule,
     MatMenuModule,
     ModuleFederationToolsModule,
-    RouterModule.forRoot(RouterService.getAppRoutes(), { initialNavigation: 'enabledBlocking' }),
+    RouterModule.forRoot(RouterService.getAppRoutes(), {
+      initialNavigation: 'enabledBlocking',
+    }),
   ],
-  providers: [provideAuth0({
+  providers: [
+    provideAuth0({
       domain: environment.auth.domain,
       clientId: environment.auth.clientId,
-      authorizationParams:{
-        redirect_uri: window.location.origin
-      }
-    })
+      authorizationParams: {
+        redirect_uri: `${window.location.origin}/callback`,
+        scope: 'openid profile email offline_access',
+      },
+      useRefreshTokens: true,
+      useRefreshTokensFallback: true,
+      cacheLocation: 'localstorage',
+    }),
   ],
   bootstrap: [AppComponent],
 })
