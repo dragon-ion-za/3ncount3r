@@ -3,5 +3,8 @@
     "dataFileRoot": "../../deployments/local/",
     "bestiaries": [
         "srd.json"
+    ],
+    "legendary": [
+        "legendarygroups.json"
     ]
 }

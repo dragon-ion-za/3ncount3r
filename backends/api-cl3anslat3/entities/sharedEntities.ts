@@ -108,3 +108,52 @@ export interface ChallengeRating {
     cr: string;
     xp: string;
 }
+
+export interface Armour {
+    source: string;
+    value: number;
+}
+
+export interface ActionGroup {
+    type: string;
+    ability: string;
+    entries: string[];
+    items: ActionGroupItem[];
+}
+
+export interface ActionGroupItem {
+    name: string;
+    entries: string[];
+    items: ActionGroupEntryItem[];
+}
+
+export interface ActionGroupEntryItem {
+    name: string ;
+    entries: string[];
+}
+
+export interface Hitpoint {
+    type: string;
+    value: string;
+}
+
+export interface Movement {
+    type: string;
+    value: number;
+}
+
+export interface Resistance {
+    type: string;
+    value: string[];
+}
+
+export interface Proficiency {
+    type: string;
+    target: string;
+    value: number;
+}
+
+export interface Vulnerability {
+    type: string;
+    value: string[];
+}

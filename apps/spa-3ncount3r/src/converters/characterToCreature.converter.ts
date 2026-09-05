@@ -40,7 +40,7 @@ const buildSavingThrows = (model: CharacterViewModel): SkillModifierViewModel[] 
             case 'cha': modifier.modifier = calculateAbilityScoreModifier(model.attributeCha); break;
         }
 
-        modifier.modifier += model.proficiencyBonus;
+        modifier.modifier += model.proficiencyBonus ?? 0;
         savingThrows.push(modifier);
     });
 
@@ -55,7 +55,7 @@ export const convertCharacterToEncounterCreatureViewModel = (model: CharacterVie
     creature.type = `${model.race} ${parseClasses(model.classes)}`;
     creature.name = model.name;
     creature.walkingSpeed = model.walkingSpeed;
-    creature.armourClass = buildArmourClass(model.equipment);
+    creature.armourClass = buildArmourClass(model.equipment ?? []);
     creature.hitpointMax = creature.currentHitpoints = model.hitpointMaximum;
     creature.actionGroups = model.actionGroups;
     creature.attributeCha = model.attributeCha;

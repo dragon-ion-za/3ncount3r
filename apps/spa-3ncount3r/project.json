@@ -27,6 +27,12 @@
       },
       "configurations": {
         "development": {
+          "fileReplacements": [
+            {
+              "replace": "apps/spa-3ncount3r/src/environments/environment.ts",
+              "with": "apps/spa-3ncount3r/src/environments/environment.dev.ts"
+            }
+          ],
           "extractLicenses": false,
           "optimization": false,
           "sourceMap": true,

@@ -1,0 +1,128 @@
+import React, { useEffect } from "react";
+import { Button, Divider, Stack, TextField, Typography } from "@mui/material";
+import Grid from '@mui/material/Unstable_Grid2';
+
+import { usePartyContext } from "apps/spa-3ncount3r/src/providers/party-context/party.context-provider";
+import { useBusyLoadingContext } from "apps/spa-3ncount3r/src/providers/busy-loading-context/busy-loading.context-provider";
+import { useAuth0 } from "@auth0/auth0-react";
+import { getPartyById, getPartyList, saveParty, updateParty } from "apps/spa-3ncount3r/src/services/party.service";
+import { PartyCharacterListItem } from "../party-character-list-item/party-character";
+
+export const PartyDetails : React.FC = () => {
+    const partyContext = usePartyContext();
+    const loadingContext = useBusyLoadingContext();
+
+    const { getAccessTokenSilently } = useAuth0();
+
+    useEffect(() => {
+        (async() => {
+            if (partyContext.selectedPartyIndex === -2) {
+                partyContext.setCurrentParty({ id: '', name: 'Unnamed Party', characterIds: [], characters: [] });
+            } else if (partyContext.selectedPartyIndex > -1) {
+                try {
+                    loadingContext.setIsLoading(true);
+                    let party = partyContext.getSelectedParty();
+    
+                    let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+                    let retreivedParty = await getPartyById(party.id, accessToken);
+    
+                    partyContext.setCurrentParty({...retreivedParty});
+                } finally {
+                    loadingContext.setIsLoading(false);
+                }
+            }
+        })();
+    }, [partyContext.selectedPartyIndex])
+
+    useEffect(() => {}, [partyContext.currentParty]);
+
+    const updatePartyName = (event: any) => {
+        let state = partyContext.currentParty;
+        state.name = event.target.value;
+        partyContext.setCurrentParty({...state});
+    }
+
+    const savePartyDetails = async () => {
+        try {
+            loadingContext.setIsLoading(true);
+            let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+            let partyId: string = '';
+
+            if (partyContext.selectedPartyIndex === -2) {
+                partyId = await saveParty(accessToken, {
+                    id: '',
+                    name: partyContext.currentParty.name,
+                    characterIds: [],
+                    characters: partyContext.currentParty.characters
+                });
+    
+                if (partyId === '') {
+                    console.log('save failed!!!');
+                }
+            } else {
+                partyId = partyContext.currentParty.id;
+                await updateParty(accessToken, {
+                    id: partyContext.currentParty.id,
+                    name: partyContext.currentParty.name,
+                    characterIds: [],
+                    characters: partyContext.currentParty.characters
+                });
+    
+                if (partyId === '') {
+                    console.log('save failed!!!');
+                }
+            }
+
+            let partyList = await getPartyList(accessToken);
+            partyContext.setParties(partyList);
+            partyContext.setSelectedPartyIndex(partyContext.parties.findIndex(x => x.id === partyId));
+        } finally {
+            loadingContext.setIsLoading(false);
+        }
+    }
+
+    const removeCharacter = (index: number) => {
+        let state = partyContext.currentParty;
+        state.characters.splice(index, 1);
+        partyContext.setCurrentParty({...state});
+    }
+
+    return (
+        <>
+            {partyContext.currentParty && (partyContext.selectedPartyIndex > -1 || partyContext.selectedPartyIndex === -2) &&
+            (
+                <Grid container direction='row' sx={{height: '100%'}}>
+                    <Grid xs={7}>
+                        <Stack>
+                            <Typography variant="h1">{partyContext.currentParty.name}</Typography>
+                            <Typography variant='subtitle1'>No Campaign Assigned</Typography>
+                            <Divider />
+                            <TextField
+                                fullWidth
+                                label="Party Name"
+                                variant="standard"
+                                value={partyContext.currentParty.name}
+                                onChange={(e) => { updatePartyName(e) }} />
+                            <Divider />
+                            <Grid xs={12}>
+                                <Button variant="outlined" onClick={() => savePartyDetails()}>Save</Button>
+                                <Button variant="outlined" onClick={() => partyContext.setSelectedPartyIndex(-1)}>Cancel</Button>
+                            </Grid>
+                        </Stack>
+                    </Grid>
+                    <Grid xs={5} sx={{maxHeight: '100%', overflow: 'auto'}}>
+                        <Stack>
+                            <Typography variant="h2">Party Members</Typography>
+                            <Divider />
+                            {partyContext.currentParty.characters?.map((x, index) => 
+                                <>
+                                    <PartyCharacterListItem key={`partyChar_${x.id}_${index}`} viewModel={x} index={index} handleRemoveCharacter={(index) => removeCharacter(index)}></PartyCharacterListItem>
+                                </>
+                            )}
+                        </Stack>
+                    </Grid>
+                </Grid>
+            )}
+        </>
+    );
+};

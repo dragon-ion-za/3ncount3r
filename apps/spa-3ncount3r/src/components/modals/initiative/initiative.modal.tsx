@@ -4,25 +4,30 @@ import { Box, Grid, Typography, Button, Table, TableHead, TableRow, TableCell, T
 import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
 import { doDiceFormulaCalculation } from "../../../services/dice.service";
 import { calculateAbilityScoreModifier } from "../../../services/creature.service";
-import { getPartyList } from "../../../services/party.service";
+import { getPartyById, getPartyList } from "../../../services/party.service";
 
 import { PartyViewModel } from "../../../view-models/party.view-model";
 import { CharacterViewModel } from "../../../view-models/character.view-model";
 
 import { modalContainerWide } from "../../../styles/modals.styles";
 import { convertCharacterToEncounterCreatureViewModel } from "../../../converters/characterToCreature.converter";
+import { useAuth0 } from "@auth0/auth0-react";
+import { useBusyLoadingContext } from "apps/spa-3ncount3r/src/providers/busy-loading-context/busy-loading.context-provider";
 
 export interface InitiativeModalProps {
     creaturesList: EncounterCreatureViewModel[];
-    partyName: string;
+    partyId: string;
     handleAccept: (creatures: EncounterCreatureViewModel[], partyName: string) => void;
     handleCancel: () => void;
 }
 
-export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ creaturesList, partyName, handleAccept, handleCancel }, ref) => {
+export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ creaturesList, partyId, handleAccept, handleCancel }, ref) => {
     const [creatures, setCreatures] = useState<EncounterCreatureViewModel[]>(creaturesList);
+    const { getAccessTokenSilently } = useAuth0();
+    const loadingContext = useBusyLoadingContext();
+    
     let [parties, setParties] = useState<PartyViewModel[]>([]);
-    let [selectedParty, setSelectedPary] = useState<string>(partyName);
+    let [selectedParty, setSelectedPary] = useState<string>(partyId);
 
     const rollInitiativeForCreature = (index: number) => {
         let state = [...creatures];
@@ -48,24 +53,38 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
         setCreatures(state);
     }
 
-    const handlePartySelection = (partyName: string) => {
-        setSelectedPary(partyName);
-        let selectedParty = parties.find(x => x.name === partyName ?? '');
-        let partyMembers: CharacterViewModel[] = selectedParty!.characters;
+    const handlePartySelection = async (partyId: string) => {
+        setSelectedPary(partyId);
 
-        let state = [...creatures];
+        try {
+            loadingContext.setIsLoading(true);
+            let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+            let party = await getPartyById(partyId, accessToken);
+            let partyMembers: CharacterViewModel[] = party!.characters;
             
-        partyMembers.forEach((member: CharacterViewModel) => {
-            state.push(convertCharacterToEncounterCreatureViewModel(member));
-        });
+            let state = [...creatures];
+            
+            partyMembers.forEach((member: CharacterViewModel) => {
+                state.push(convertCharacterToEncounterCreatureViewModel(member));
+            });
         
-        setCreatures(state);
+            setCreatures(state);
+        } finally {
+            loadingContext.setIsLoading(false);
+        }        
     }
 
     useEffect(() => {
-        getPartyList().then(partyList => {
-            setParties(partyList);
-        });
+        (async () => { 
+            try {
+                loadingContext.setIsLoading(true);
+                let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+                let partyList = await getPartyList(accessToken);
+                setParties(partyList);
+            } finally {
+                loadingContext.setIsLoading(false);
+            }
+        })();
     }, []);
 
     useEffect(() => {}, [creatures, parties, selectedParty]);
@@ -85,7 +104,7 @@ export const InitiativeModal : React.FC<InitiativeModalProps> = forwardRef(({ cr
                                 disabled={selectedParty !== ''}
                                 value={selectedParty}
                                 onChange={(event: SelectChangeEvent) => {handlePartySelection(event.target.value)}}>
-                                {parties && parties.map(x => (<MenuItem key={x.name} value={x.name}>{x.name}</MenuItem>))}
+                                {parties && parties.map(x => (<MenuItem key={x.name} value={x.id}>{x.name}</MenuItem>))}
                             </Select>
                         </FormControl>
                     </Grid>

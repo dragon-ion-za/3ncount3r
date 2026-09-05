@@ -3,5 +3,8 @@
     "dataFileRoot": "/",
     "bestiaries": [
         "srd.json"
+    ],
+    "legendary": [
+        "legendarygroups.json"
     ]
 }

@@ -50,6 +50,28 @@ export const RichTextEntry : React.FC<RichTextEntryProps> = ({key, entryIndex, e
                                 case '@chance': text = translateChance(parts[2]); break;
                                 case '@recharge': text = `(recharges on ${parts[2]})`; break;
                                 case '@i': text = parts[2]; break;
+                                case '@limit':
+                                    if (parts[2] === 'atWill') text = 'At Will:'
+                                    else {
+                                        let split = parts[2].split('e');
+                                        let ordinality = parseInt(split[0]);
+                                        if (ordinality === 1) {
+                                            text = `Once each/daily`;
+                                        } else if (ordinality === 2) {
+                                            text = `Twice each/daily`;
+                                        } else {
+                                            text = `${ordinality} times each/daily`;
+                                        }
+                                    } 
+                                break;
+                                case '@slot':
+                                    let splitSlot = parts[2].split('|');
+                                    if (splitSlot[0] === "0") {
+                                        text = 'Cantrips';
+                                    } else {
+                                        text = `Level ${splitSlot[0]} (${splitSlot[1]} slots)`;
+                                    }
+                                    break;
                                 default: text = `${parts[1]} ${parts[2]}`; break;
                             }
 

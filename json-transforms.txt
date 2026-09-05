@@ -1,0 +1,197 @@
+.monster | map({
+name: .name,
+source: "SRD",
+difficulty: if(
+    .cr | .cr == null,
+    .cr,
+    .cr | .cr
+),
+copyFrom: ._copy,
+misc: { 
+    "size": .size, 
+    "type": if(
+        .type | .type == null, 
+        .type, 
+        ((.type | .type + " (") + (.type | if(.tags == null, [], .tags) | flatten())) + (")")
+    ), 
+    "alignment": if(
+        .alignment == null, 
+        {type: "N"}, 
+        array(
+            if(
+                .alignment | .alignment == null, 
+                .alignment, 
+                []
+            ) 
+            | filter(
+                    get() in ["L", "E", "G", "N", "C", "NX", "NY", "A", "U"]) | if(
+                                                                                    get() | size() == 0, 
+                                                                                    [], 
+                                                                                    {type: get(), chance: 100}
+                                                                                ),
+                    if(.alignment == null, [], .alignment) 
+                    | filter(
+                            get() not in ["L", "E", "G", "N", "C", "NX", "NY", "A", "U"]) 
+                            | if(
+                                    size() == 0, 
+                                    [], 
+                                    map({type: .alignment, chance: .chance})
+                                )
+        ) | flatten()
+    )
+},
+armour: if(.ac | .ac == null, .ac,  .ac | map({ value: if(get() | .ac == null, get(), get() | .ac), source: if(.from == null, "", .from | join(",")) })),
+actionGroups: array(
+    {
+        type: "action", 
+        items: if(
+            .action == null, 
+            [], 
+            .action | map({ name: .name, entries: .entries | filter(.type == null), items: .entries | filter(.type != null) 
+                | mapObject({key: .key, value: .value.items}) | values() | flatten() | map({
+                    name: .name,
+                    entries: [.entry]
+                })
+            })
+        )
+    }, 
+    {type: "reaction", items: .reaction}, 
+    {type: "trait", items: .trait}, 
+    {type: "legendary", items: .legendary}, 
+    if(
+        .spellcasting == null, 
+        {type: "spellcasting", items: null}, 
+        .spellcasting | filter(.name == "Spellcasting") | mapObject({key: .value.type, value: .value}) | if(
+            .spellcasting == null, 
+            {type: "spellcasting", items: null}, 
+            {
+                type: "spellcasting", 
+                ability: .spellcasting.ability, 
+                entries: .spellcasting.headerEntries, 
+                items: array(
+                    if(
+                        .spellcasting.spells == null, 
+                        [], 
+                        .spellcasting.spells | mapObject({
+                            key: .key, 
+                            value: {
+                                name: ["{@slot ", .key, "|", if(.value.slots == null, "atwill", .value.slots), "}"] | join(""), 
+                                entries: .value.spells
+                            }
+                        })
+                    ) | values()
+                ) | flatten()
+            }
+        )
+    ), 
+    if(
+        .spellcasting == null, 
+        {type: "innateSpellcasting", items: null}, 
+        .spellcasting | filter(.name != "Spellcasting") | mapObject({key: .value.type, value: .value}) | if (
+            .spellcasting == null, 
+            {type: "innateSpellcasting", items: null}, 
+            {
+                type: "innateSpellcasting", 
+                ability: .spellcasting.ability, 
+                entries: .spellcasting.headerEntries, 
+                items: array(
+                    {name: "{@limit atWill}", entries: .spellcasting.will}, 
+                    if(
+                        .spellcasting.daily == null, 
+                        [], 
+                        .spellcasting.daily | mapObject({
+                            key: .key, 
+                            value: {
+                                name: ["{@limit ", .key, "}"] | join("") , 
+                                entries: .value
+                            }
+                        }) 
+                    ) | values()
+                ) | flatten()
+            }
+        )
+    ), 
+    {type: "lair_region_mythic", items: if(.legendaryGroup.name == null, null, [{name: .legendaryGroup.name}])}
+),
+attributes: [
+    {key: "cha", value: .cha},
+    {key: "con", value: .con},
+    {key: "dex", value: .dex},
+    {key: "int", value: .int},
+    {key: "wis", value: .wis},
+    {key: "str", value: .str}
+],
+hitpoints: [ 
+    { type: "average", value: string(.hp.average) }, 
+    { type: "formula", value: .hp.formula } 
+],
+movement: [ 
+    { type: "spd-walk", value: if(.speed.walk >= 0, .speed.walk, .speed.walk.number) }, 
+    { type: "spd-climb", value: if(.speed.climb >= 0, .speed.climb, .speed.climb.number) }, 
+    { type: "spd-swim", value: if(.speed.swim >= 0, .speed.swim, .speed.swim.number) }, 
+    { type: "spd-fly", value: if(.speed.fly >= 0, .speed.fly, .speed.fly.number) }, 
+    { type: "spd-burrow", value: if(.speed.burrow >= 0, .speed.burrow, .speed.burrow.number) } 
+],
+immunities: array(
+    if(
+        .immune == null, 
+        [], 
+        .immune
+    ), 
+    if(
+        .conditionImmune == null, 
+        [], 
+        .conditionImmune
+    )
+) | flatten() | array(
+    map(if(
+        get() | .immune == null,
+        if(
+            get() | .conditionImmune == null,
+            { type: "normal", list: [get()] },
+            {
+                list: get() | .conditionImmune, 
+                type: get() | .note
+            }
+        ),
+        { 
+            list: get() | .immune, 
+            type: get() | .note 
+        }
+    ))
+) | flatten() | groupBy(.type) | mapObject({
+    key: .key, 
+    value: { 
+        type: .key, 
+        values: .value | map(.list) | flatten() 
+    }
+}) | values(),
+resistances: if(
+    .resist == null, 
+    [], 
+    .resist
+) | map(if(
+    get() | .resist == null, 
+    { type: "normal", values: [if(get() | .special == null, get(), .special)] }, 
+    { values: get() | .resist, type: get() | .note } 
+)) | flatten(),
+vulnerabilities: if(
+    .vulnerable == null, 
+    [], 
+    .vulnerable
+) | map(if(
+    get() | .vulnerable == null, 
+    { type: "normal", values: [get()] }, 
+    { values: get() | .resist, type: get() | .note } 
+)) | flatten(),
+languages: .languages,
+senses: array(
+    if(.senses == null, [], .senses), 
+    [ "passive perception " + .passive ]
+) | flatten(),
+proficiencies: array(
+    if(
+        .save == null, 
+        [], 
+        .save | mapObject({key: .key, value: { type: "save", target: .key, value: .value}}) | values()), if(.skill == null, [], .skill | mapObject({key: .key, value: { type: "skill", target: .key, value: .value}}) | values())) | flatten()
+})

@@ -1,28 +1,73 @@
-import React, { forwardRef, useEffect, useState } from "react";
-import { Box, Grid, Typography, FormControl, InputLabel, Select, SelectChangeEvent, MenuItem } from "@mui/material";
+import React, { forwardRef, SyntheticEvent, useEffect, useState } from "react";
+import { Box, Grid, Typography, FormControl, InputLabel, Select, SelectChangeEvent, MenuItem, List, ListSubheader, Button } from "@mui/material";
+import { SimpleTreeView } from '@mui/x-tree-view/SimpleTreeView';
+import { TreeItem } from '@mui/x-tree-view/TreeItem';
 
 import { EncounterViewModel } from "../../../view-models/encounter.view-model";
 import { getEncounters } from "../../../services/encounter.service";
 
 import { modalContainerWide } from "../../../styles/modals.styles";
+import { useAuth0 } from "@auth0/auth0-react";
+import { useBusyLoadingContext } from "apps/spa-3ncount3r/src/providers/busy-loading-context/busy-loading.context-provider";
 
 export interface LoadEncounterModalProps {
-    handleAccept: (encounterId: string, isTemplate: boolean) => void;
+    handleAccept: (encounterId: string) => void;
     handleCancel: () => void;
 }
 
+class CampaignListItemViewModel { 
+    campaign: string = '';
+    locations: LocationListItemViewModel[] = [];
+}
+
+class LocationListItemViewModel {
+    location: string = '';
+    encounters: EncounterViewModel[] = [];
+}
+
 export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef(({ handleAccept, handleCancel }, ref) => {
-    const [encounters, setEncounters] = useState<EncounterViewModel[]>([]);
+    const [encounters, setEncounters] = useState<CampaignListItemViewModel[]>([]);
+    const { getAccessTokenSilently } = useAuth0();
+    const loadingContext = useBusyLoadingContext();
 
     useEffect(() => {
-        getEncounters().then(x => setEncounters(x));
+        (async () => { 
+            try {
+                loadingContext.setIsLoading(true);
+                let accessToken = await getAccessTokenSilently({ authorizationParams: { audience: 'https://api.3ncount3r.co.za' } });
+                let encounters = await getEncounters(accessToken);
+                let groupedEncounters: CampaignListItemViewModel[] = [];
+    
+                encounters.forEach((x: EncounterViewModel) => {
+                    let campaignIndex = groupedEncounters.findIndex(y => y.campaign === x.campaign);
+    
+                    if (campaignIndex < 0) {
+                        campaignIndex = groupedEncounters.push({ campaign: x.campaign, locations: [] }) - 1;
+                    }
+    
+                    let locationIndex = groupedEncounters[campaignIndex].locations.findIndex(y => y.location === x.location);
+    
+                    if (locationIndex < 0) {
+                        locationIndex = groupedEncounters[campaignIndex].locations.push({ location: x.location, encounters: [] }) - 1;
+                    }
+    
+                    groupedEncounters[campaignIndex].locations[locationIndex].encounters.push(x);
+                });
+    
+                setEncounters(groupedEncounters);
+            } finally {
+                loadingContext.setIsLoading(false);
+            }
+            
+        })();
     }, []);
 
-    useEffect(() => {}, [encounters])
+    useEffect(()=>{}, [encounters]);
 
-    const doAccept = (encounterId: string) => {
-        let encounter = encounters.find(x => x.id === encounterId);
-        handleAccept(encounterId, !encounter?.selectedParty);
+    const doAccept = (itemId: string) => {
+        if (itemId !== '') {
+            handleAccept(itemId);
+        }
     }
 
     return (
@@ -34,17 +79,23 @@ export const LoadEncounterModal : React.FC<LoadEncounterModalProps> = forwardRef
                 </Grid>
                 <Grid xs={12}>
                     <FormControl fullWidth>
-                        <InputLabel id="party_label">Select Encounter</InputLabel>
-                        <Select 
-                            labelId="party_label"
-                            onChange={(event: SelectChangeEvent) => {doAccept(event.target.value)}}>
-                            {encounters && encounters.map((x: EncounterViewModel) => (
-                                <MenuItem key={x.id} value={x.id}>
-                                    {`${x.name}${x.selectedParty ? '(' + x.selectedParty + ')' : ''}`}
-                                </MenuItem>
+                        <SimpleTreeView>
+                            {encounters && encounters.map((x: any) => (
+                                <TreeItem itemId={x.campaign} label={x.campaign}>
+                                    {x.locations && x.locations.map((y: any) => (
+                                        <TreeItem itemId={y.location} label={y.location}>
+                                            {y.encounters && y.encounters.map((z: any) => (
+                                                <TreeItem itemId={z.id} label={`${z.name}${z.selectedParty ? '(' + z.selectedParty + ')' : ''}`} onClick={() => { doAccept(z.id) }}></TreeItem>
+                                            ))}
+                                        </TreeItem>
+                                    ))}
+                                </TreeItem>
                             ))}
-                        </Select>
+                        </SimpleTreeView>
                     </FormControl>
+                </Grid>
+                <Grid xs={12}>
+                    <Button variant="outlined" onClick={handleCancel}>Cancel</Button>
                 </Grid>
             </Grid>
         </Box>

@@ -1,5 +1,3 @@
-import { SpecialActionModel } from "./sharedModels";
-
 export enum ItemTypes {
     Unknown = 0,
     Weapon,
@@ -39,7 +37,7 @@ export class ItemModel {
     wondrous: boolean = false;
     attunementRequirements: string = '';
     properties: ItemPropertyModel[] = [];
-    entries: SpecialActionModel[] = [];
+    entries: string[] = [];
 
     constructor(name: string, type: ItemTypes) {
         this.name = name;

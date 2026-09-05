@@ -35,7 +35,8 @@ export class ResistanceViewModel {
 export class SpecialActionViewModel {
     type: string = '';
     name: string = '';
-    items: (string | SpecialActionViewModel)[] = [];
+    items: SpecialActionViewModel[] = [];
+    entries: string[] = [];
 }
 
 export interface KeyValuePair<TKey, TValue> {

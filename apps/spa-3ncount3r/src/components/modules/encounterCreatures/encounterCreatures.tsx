@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router";
-import { Badge, DialogContent, Divider, Modal, Stack } from "@mui/material";
+import { Badge, DialogContent, Modal, Stack } from "@mui/material";
 
 import { useEncounterContext } from "../../../providers/encounterContext/encounter.context-provider";
 import { EncounterCreatureListItem } from "../encounter-creature-list-item/encounter-creature-list-item";
@@ -8,68 +7,17 @@ import { EncounterCreatureListItem } from "../encounter-creature-list-item/encou
 import { EncounterCreatureViewModel } from "../../../view-models/encounter-creature.view-model";
 import { HitpointManagementModal } from "../../modals/hitpoint-management/hitpoint-management.modal";
 
-import { getEncounterById, getEncounterTemplateById } from "../../../services/encounter.service";
-import { EncounterViewModel } from "apps/spa-3ncount3r/src/view-models/encounter.view-model";
-
 export const EncounterCreatures : React.FC = () => {
     const [open, setOpen] = useState(false);
-    const [, setIsTemplate] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState<number>(-1);
     const [activeCreatures, setActiveCreatures] = useState<EncounterCreatureViewModel[]>([]);
     
     const encounterContext = useEncounterContext();
 
-    const {id} = useParams();
-    const location = useLocation();
-
-    useEffect(() => {
-        encounterContext.setCreatures([]);
-        encounterContext.setEncounterId('');
-        encounterContext.setEncounterName('');
-        encounterContext.setSelectedParty('');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    useEffect(() => {
-        if (id) {
-            let segments = location.pathname.split('/');
-            
-            if (segments[segments.length-1] === 'template') {
-                setIsTemplate(true);
-                getEncounterTemplateById(id).then((x: EncounterViewModel) => {
-                    encounterContext.setCreatures(x.creatures);
-                    encounterContext.setEncounterId(x.id);
-                    encounterContext.setEncounterName(x.name);
-                    encounterContext.setSelectedParty('');
-                    encounterContext.setRoundCounter(0);
-                    encounterContext.setTurnCounter(0);
-                });
-            } else {
-                getEncounterById(id).then((x: EncounterViewModel) => {
-                    encounterContext.setCreatures(x.creatures);
-                    encounterContext.setEncounterId(x.id);
-                    encounterContext.setEncounterName(x.name);
-                    encounterContext.setSelectedParty(x.selectedParty);
-                    encounterContext.setRoundCounter(Math.max(x.roundCount, 1));
-                    encounterContext.setTurnCounter(Math.max(x.currentTurn, 1));
-                });
-            }
-        } else {
-            encounterContext.setCreatures([]);
-            encounterContext.setEncounterId('');
-            encounterContext.setEncounterName('');
-            encounterContext.setSelectedParty('');
-            encounterContext.setRoundCounter(0);
-            encounterContext.setTurnCounter(0);
-        }
-
-        encounterContext.setSelectedCreatureIndex(encounterContext.creatures ? 1 : 0);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [id]);
-
     useEffect(() => {
         setActiveCreatures(encounterContext.creatures?.filter(x => x.isActive));
-    }, [encounterContext.creatures])
+        setSelectedIndex(encounterContext.getSelectedCreatureIndex);
+    }, [encounterContext])
 
     const doHitpointManagement = () => {
         setOpen(true);
@@ -88,18 +36,12 @@ export const EncounterCreatures : React.FC = () => {
 
     return (
         <>
-            <Stack>
+            <Stack sx={{maxHeight: '90vh', overflowY: 'auto', overflowX: 'hidden'}}>
                 {activeCreatures.map((creature: EncounterCreatureViewModel, index: number) => (
-                    <Badge color="secondary" variant='dot' invisible={index === (encounterContext.turnCounter - 1) ? false : true} component={"div"}>
-                        <EncounterCreatureListItem key={creature.id} viewModel={creature} index={index}
-                            handleSelection={handleCreatureSelection} manageHitpoints={doHitpointManagement} 
-                            isSelected={activeCreatures.indexOf(encounterContext.creatures[selectedIndex]) === index} />
-                    </Badge>
+                    <EncounterCreatureListItem key={creature.id} viewModel={creature} index={index}
+                        handleSelection={handleCreatureSelection} manageHitpoints={doHitpointManagement} 
+                        isSelected={activeCreatures.indexOf(encounterContext.creatures[selectedIndex]) === index} />
                 ))}
-            </Stack>
-            
-            <Stack>
-                
             </Stack>
             
             <Modal 

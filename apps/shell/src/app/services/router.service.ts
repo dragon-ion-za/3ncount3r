@@ -3,6 +3,7 @@ import { LandingComponent } from "../landing/landing.component";
 import {
     WebComponentWrapper, WebComponentWrapperOptions
   } from '@angular-architects/module-federation-tools';
+import { CallbackComponent } from "../callback/callback.component";
 
 export class RouterService {
 
@@ -13,6 +14,10 @@ export class RouterService {
             {
                 path: '',
                 component: LandingComponent
+            },
+            {
+                path: 'callback',
+                component: CallbackComponent
             },
             ...microFrontends.map((mf: any) => ({
                 path: mf.baseUrl,

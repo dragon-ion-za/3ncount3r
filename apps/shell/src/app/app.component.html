@@ -7,6 +7,9 @@
     </button>
     <mat-menu #menu="matMenu">
         <button mat-menu-item [routerLink]="'/3ncount3r'">3ncount3r</button>
+        <mat-divider/>
+        <button *ngIf="!(auth.isAuthenticated$ | async)" mat-menu-item (click)="doLogin()">Login/Sign-up</button>
+        <button *ngIf="(auth.isAuthenticated$ | async)" mat-menu-item (click)="doLogout()">Log out</button>
     </mat-menu>
 </div>
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { Observable, map } from 'rxjs';
+import { NavigationEnd, Router } from '@angular/router';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'nctr-root',
@@ -10,12 +10,21 @@ import { Observable, map } from 'rxjs';
 export class AppComponent {
   title = 'shell';
   currentAppRoot = '';
+  public loggedIn = false;
 
-  constructor (private router: Router) {
-    router.events.subscribe((val) => {
+  constructor (public auth: AuthService, private router: Router) {
+    this.router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
         this.currentAppRoot = val.url;
       }
-  });
+    });
+  }
+
+  public async doLogin() {
+    await this.auth.loginWithRedirect();
+  }
+
+  public async doLogout() {
+    await this.auth.logout({ logoutParams: { returnTo: document.location.origin } });
   }
 }

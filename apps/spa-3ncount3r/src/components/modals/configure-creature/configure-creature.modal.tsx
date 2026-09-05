@@ -1,5 +1,5 @@
 import React, { forwardRef, useState } from 'react';
-import { Box, ToggleButtonGroup, ToggleButton, Button, Typography, Stack } from '@mui/material'
+import { Box, ToggleButtonGroup, ToggleButton, Button, Typography, Stack, TextField } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2';
 import { v4 as uuid } from 'uuid';
 
@@ -19,6 +19,7 @@ interface ConfigureCreatureModalProps {
 export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = forwardRef(({ viewModel, handleAccept, handleCancel }, ref) => {
     const [showAvg, setShowAvg] = useState(false);
     const [showDice, setShowDice] = useState(false);
+    const [showManual, setShowManual] = useState(false);
     const [rolledHitpoints, setRolledHitpoints] = useState(0);
 
     const handleChange = (
@@ -29,12 +30,20 @@ export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = fo
             case 'avg':
                 setShowAvg(true);
                 setShowDice(false);
+                setShowManual(false);
                 setRolledHitpoints(viewModel.hitpointAverage);
                 break;
             case 'dice':
                 setShowAvg(false);
                 setShowDice(true);
+                setShowManual(false);
                 setRolledHitpoints(0);
+                break;
+            case 'manual':
+                setShowAvg(false);
+                setShowDice(false);
+                setShowManual(true);
+                setRolledHitpoints(viewModel.hitpointAverage);
                 break;
         }
       };
@@ -67,6 +76,7 @@ export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = fo
                             >
                             <ToggleButton value="avg">Use Average</ToggleButton>
                             <ToggleButton value="dice">Roll Hit Points</ToggleButton>
+                            <ToggleButton value="manual">Enter Hit Points</ToggleButton>
                         </ToggleButtonGroup>
                     </Grid>
                     <Grid xs={12} sx={showAvg ? {'display': 'block'} : {'display': 'none'}}>
@@ -79,9 +89,20 @@ export const ConfigureCreatureModal : React.FC<ConfigureCreatureModalProps> = fo
                             {rolledHitpoints}
                         </Stack>                        
                     </Grid>
+                    <Grid xs={12} sx={showManual ? {'display': 'block'} : {'display': 'none'}}>
+                        <Stack>
+                            <TextField 
+                                type="number"
+                                fullWidth
+                                label="Enter Hit Points"
+                                variant="standard"
+                                value={rolledHitpoints}
+                                onChange={(e) => { setRolledHitpoints(parseInt(e.target.value)) }} />
+                        </Stack>                        
+                    </Grid>
                     <Grid xs={12}>
                         <Button variant="outlined" 
-                            disabled={showAvg || (showDice && rolledHitpoints > 0) ? false : true}
+                            disabled={showAvg || (showDice && rolledHitpoints > 0) || showManual ? false : true}
                             onClick={() => handleAccept(acceptConfiguration())}>Accept</Button>
                         <Button variant="outlined" onClick={handleCancel}>Cancel</Button>
                     </Grid>

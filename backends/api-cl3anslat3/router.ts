@@ -6,6 +6,7 @@ import { CreaturesController } from './controllers/creatures.controller';
 export const router = express.Router();
 
 router.get('/creatures', CreaturesController.getCreatures);
+router.post('/creatures/query', CreaturesController.queryCreatures);
 router.get('/creatures/:name', CreaturesController.getCreature);
 router.get('/creatures/image/:sourceId/:name', CreaturesController.getCreatureImage);
 

@@ -2,10 +2,16 @@ services:
   mongo:
     image: mongo:latest
     restart: always
+    command: ["--replSet", "rs0", "--bind_ip_all", "--port", "27017"]
     volumes:
-      - 3ncount3rData:/data/db
+      - 3ncount3rDataRepl:/data/db
+      - ./scripts/rs-initiate.js:/docker-entrypoint-initdb.d/rs-initiate.js
     expose:
       - 27017
+    ports:
+      - '27017:27017'
+    networks:
+      - 3ncount3rNetwork
   cl3anslat3-api:
     build:
       context: .
@@ -13,28 +19,52 @@ services:
     restart: always
     volumes:
       - ./data:/data
-    ports:
-      - '5001:5001'
+    networks:
+      - 3ncount3rNetwork
   3ncount3r-api:
     build:
       context: .
       dockerfile: 3ncount3r-api.dockerfile
     restart: always
+    networks:
+      - 3ncount3rNetwork
+  charact3r-api:
+    build:
+      context: .
+      dockerfile: charact3r-api.dockerfile
+    restart: always
+    networks:
+      - 3ncount3rNetwork
+  orch3strator-api:
+    build:
+      context: .
+      dockerfile: orch3strator-api.dockerfile
+    restart: always
     ports:
-      - '5002:5002'
+      - '6004:8080'
+    networks:
+      - 3ncount3rNetwork
   3ncount3r-spa:
     build:
       context: .
       dockerfile: 3ncount3r-spa.dockerfile
     restart: always
     ports:
-      - '13132:80'
+      - '13133:80'
+    networks:
+      - 3ncount3rNetwork
   shell:
     build:
       context: .
       dockerfile: 3ncount3r-shell.dockerfile
     restart: always
     ports:
-      - '13131:80'
+      - '13134:80'
+    networks:
+      - 3ncount3rNetwork
 volumes:
-  3ncount3rData:
+  3ncount3rDataRepl:
+
+networks:
+  3ncount3rNetwork:
+    driver: bridge

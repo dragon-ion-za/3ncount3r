@@ -1,5 +1,5 @@
 import { ItemViewModel } from "./item.view-model";
-import { ActionGroupViewModel, CreatureSizes, ResistanceViewModel } from "./shared.view-model";
+import { ActionGroupViewModel, ArmourClassViewModel, CreatureSizes, ResistanceViewModel } from "./shared.view-model";
 
 export interface ClassViewModel {
     name: string;
@@ -12,6 +12,7 @@ export class CharacterViewModel {
     size: CreatureSizes = CreatureSizes.Unknown;
     level: number = 0;
     race: string = '';
+    armourClass: ArmourClassViewModel = { alternateForms: [], appliedFrom: '', armourClass: 0, condition: '' };
     classes: ClassViewModel[] = [];
     hitpointMaximum: number = 0;
     proficiencyBonus: number = 0;

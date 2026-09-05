@@ -109,9 +109,22 @@ export const CreatureDetails : React.FC = () => {
                                 
                             )}
 
+                            {model.vulnerabilities?.length > 0 && 
+                            (
+                                <>
+                                    <Typography variant="h3">Vulnerabilities</Typography>
+                                    <Container>
+                                        {model.vulnerabilities.map((vulnerability: ResistanceViewModel) => 
+                                            (<DamageConditionType key={`vuln_${vulnerability.resistantTo}`} type={vulnerability.resistantTo} condition={vulnerability.condition} />)
+                                        )}
+                                    </Container>
+                                </>
+                                
+                            )}
+
                         </Stack>
                     </Grid>
-                    <Grid xs={5}>
+                    <Grid xs={5} sx={{maxHeight: '100%', overflow: 'auto'}}>
                         <ActionDetails actionGroups={model.actionGroups} />
                     </Grid>
                 </Grid>

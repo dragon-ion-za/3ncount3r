@@ -1,0 +1,236 @@
+{
+	"_license": "This work includes material taken from the System Reference Document 5.1 ('SRD 5.1') by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+	"ruleSystem": "dnd5e",
+	"classes": [
+        {
+            "name": "Ranger",
+            "id": "cls-ranger",
+            "hitDice": "d10",
+            "savingThrowProficiencies": ["str", "dex"],
+            "skillProficiencyOptions": {
+                "number": 3,
+                "options": ["Animal Handling", "Athletcis", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival"]
+            },
+            "proficiencyBonus": [ [1, 2], [2, 2], [3, 2], [4, 2], [5, 3], [6, 3], [7, 3], [8, 3], [9, 4], [10, 4], [11, 4], 
+            [12, 4], [13, 5], [14, 5], [15, 5], [16, 5], [17, 6], [18, 6], [19, 6], [20, 6] ],
+            "weaponProficiencies": ["__simple", "__martial"],
+            "armourProficiencies": ["Light Armour", "Medium Armour", "Shields"],
+            "startingEquipmentOptions":[
+                {
+                    "items": [
+                        { "id": "std-lthr-arm", "byoapiId": "cl3anslat3", "quantity": 1},
+                        { "id": "scmtr", "byoapiId": "cl3anslat3", "quantity": 1},
+                        { "id": "srt-swrd", "byoapiId": "cl3anslat3", "quantity": 1},
+                        { "id": "lngbw", "byoapiId": "cl3anslat3", "quantity": 1},
+                        { "id": "arws", "byoapiId": "cl3anslat3", "quantity": 20},
+                        { "id": "qvr", "byoapiId": "cl3anslat3", "quantity": 1},
+                        { "id": "druid-fcs", "byoapiId": "cl3anslat3", "quantity": 1},
+                        { "id": "explrs-pck", "byoapiId": "cl3anslat3", "quantity": 1}
+                    ],
+                    "coins": { "gold": 7, "silver": 0, "copper": 0 }
+                },
+                {
+                    "items":[],
+                    "coins": { "gold": 150, "silver": 0, "copper": 0 }
+                }
+            ],
+            "spellcasting": {
+                "minimumLevel": 1,
+                "ability": "wis",
+                "spellList": "Ranger",
+                "preparedSpells": [ [1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 6], [7, 7], [8, 7], [9, 9], [10, 9], [11, 10], 
+                [12, 10], [13, 11], [14, 11], [15, 12], [16, 12], [17, 14], [18, 14], [19, 15], [20, 15] ],
+                "slots": [ { "level": 1, "slotsPerLevel": [ [1, 2] ] }, { "level": 2, "slotsPerLevel": [ [1, 2] ] }, { "level": 3, "slotsPerLevel": [ [1, 3] ] }
+                , { "level": 4, "slotsPerLevel": [ [1, 3] ] }, { "level": 5, "slotsPerLevel": [ [1, 4], [2, 2] ] }, { "level": 6, "slotsPerLevel": [ [1, 4], [2, 2] ] }
+                , { "level": 7, "slotsPerLevel": [ [1, 4], [2, 3] ] }, { "level": 8, "slotsPerLevel": [ [1, 4], [2, 3] ] }, { "level": 9, "slotsPerLevel": [ [1, 4], [2, 3], [3, 2] ] }
+                , { "level": 10, "slotsPerLevel": [ [1, 4], [2, 3], [3, 2] ] }, { "level": 11, "slotsPerLevel": [ [1, 4], [2, 3], [3, 3] ] }, { "level": 12, "slotsPerLevel": [ [1, 4], [2, 3], [3, 3] ] }
+                , { "level": 13, "slotsPerLevel": [ [1, 4], [2, 3], [3, 2], [4, 1] ] }, { "level": 14, "slotsPerLevel": [ [1, 4], [2, 3], [3, 2], [4, 1] ] }
+                , { "level": 15, "slotsPerLevel": [ [1, 4], [2, 3], [3, 2], [4, 2] ] }, { "level": 16, "slotsPerLevel": [ [1, 4], [2, 3], [3, 2], [4, 2] ] }
+                , { "level": 17, "slotsPerLevel": [ [1, 4], [2, 3], [3, 2], [4, 3], [5, 1] ] }, { "level": 18, "slotsPerLevel": [ [1, 4], [2, 3], [3, 2], [4, 3], [5, 1] ] }
+                , { "level": 19, "slotsPerLevel": [ [1, 4], [2, 3], [3, 2], [4, 3], [5, 2] ] }, { "level": 20, "slotsPerLevel": [ [1, 4], [2, 3], [3, 2], [4, 3], [5, 2] ] } ],
+                "text": [
+                    { "header": "", "entries": ["You have learned to channel the magical essence of nature to cast spells. See chapter 7 for the rules on spellcasting. The information below details how you use those rules with Ranger spells, which appear in the Ranger spell list later in the class's description."] },
+                    { "header": "Spell Slots.","entries": ["The Ranger Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest."] },
+                    { "header": "Prepared Spells of Level 1+.", "entries": [
+                        "You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose two level 1 Ranger spells. Cure Wounds and Ensnaring Strike are recommended.",
+                        "The number of spells on your list increases as you gain Ranger levels, as shown in the Prepared Spells column of the Ranger Features table. Whenever that number increases, choose additional Ranger spells until the number of spells on your list matches the number in the Ranger Features table. The chosen spells must be of a level for which you have spell slots. For example, if you're a level 5 Ranger, your list of prepared spells can include six Ranger spells of level 1 or 2 in any combination.",
+                        "If another Ranger feature gives you spells that you always have prepared, those spells don't count against the number of spells you can prepare with this feature, but those spells otherwise count as Ranger spells for you."
+                        ] },
+                    { "header": "Changing Your Prepared Spells.", "entries": ["Whenever you finish a Long Rest, you can replace one spell on your list with another Ranger spell for which you have spell slots."] },
+                    { "header": "Spellcasting Ability.", "entries": ["Wisdom is your spellcasting ability for your Ranger spells."] },
+                    { "header": "Spellcasting Focus.", "entries": ["You can use a Druidic Focus as a Spellcasting Focus for your Ranger spells."] }
+                ]
+            },
+            "features": [
+                {
+                    "name": "Favoured Enemy",
+                    "minimumLevel": 1,
+                    "text": [
+                        {"header": "",  "entries": ["You always have the Hunter's Mark spell prepared. You can cast it twice without expending a spell slot, and you regain all expended uses of this ability when you finish a Long Rest."]},
+                        {"header": "",  "entries": ["The number of times you can cast the spell without a spell slot increases when you reach certain Ranger levels, as shown in the Favored Enemy column of the Ranger Features table."]}
+                    ],
+                    "effects": [ { "type": "addition", "spells": [ { "id": "spll-huntersmark", "byoapiId": "cl3anslat3"} ] } ],
+                    "resourceScaling": [ [1, 2], [2, 2], [3, 2], [4, 2], [5, 3], [6, 3], [7, 3], [8, 3], [9, 4], [10, 4], [11, 4], 
+                    [12, 4], [13, 5], [14, 5], [15, 5], [16, 5], [17, 6], [18, 6], [19, 6], [20, 6] ]
+                },
+                {
+                    "name": "Weapon Mastery",
+                    "minimumLevel": 1,
+                    "text": [
+                        {"header": "",  "entries": [ "Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longbows and Shortswords."]},
+                        {"header": "",  "entries": [ "Whenever you finish a Long Rest, you can change the kinds of weapons you chose. For example, you could switch to using the mastery properties of Scimitars and Longswords."]}
+                    ],
+                    "options": [ { "title": "Mastery", "maxSelection": 2, "items": [ { "id": "__profWeapons" } ] } ]
+                },
+                {
+                    "name": "Deft Explorer",
+                    "minimumLevel": 2,
+                    "text": [
+                        {"header": "",  "entries": [ "Thanks to your travels, you gain the following benefits."]},
+                        {"header": "Expertise.",  "entries": [ "Choose one of your skill proficiencies with which you lack Expertise. You gain Expertise in that skill."]},
+                        {"header": "Languages.",  "entries": [ "You know two languages of your choice from the language tables in chapter 2."]}
+                    ],
+                    "options": [ { "title": "Experties", "items": [ { "id": "__profSkills" } ] } ] 
+                },
+                {
+                    "name": "Fighting Style",
+                    "minimumLevel": 2,
+                    "text": [
+                        {"header": "",  "entries": [ "You gain a Fighting Style feat of your choice. Instead of choosing one of those feats, you can choose the option below."]},
+                        {"header": "Druidic Warrior.",  "entries": [ "You learn two Druid cantrips of your choice. Guidance and Starry Wisp are recommended. The chosen cantrips count as Ranger spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a Ranger level, you can replace one of these cantrips with another Druid cantrip."]}
+                    ],
+                    "options": [ { "title": "Fighting Style", "items": [ { "id": "feat-fs-archery", "byoapiId": "cl3anslat3"}, { "id": "feat-fs-blindfighting", "byoapiId": "cl3anslat3"}
+                    , { "id": "feat-fs-defense", "byoapiId": "cl3anslat3"}, { "id": "feat-fs-dueling", "byoapiId": "cl3anslat3"}, { "id": "feat-fs-greatweaponfighting", "byoapiId": "cl3anslat3"}
+                    , { "id": "feat-fs-interception", "byoapiId": "cl3anslat3"}, { "id": "feat-fs-protection", "byoapiId": "cl3anslat3"}, { "id": "feat-fs-thrownweaponfighting", "byoapiId": "cl3anslat3"}
+                    , { "id": "feat-fs-twoweaponfighting", "byoapiId": "cl3anslat3"}, { "id": "feat-fs-unarmedfighting", "byoapiId": "cl3anslat3"}, { "id": "feat-fs-druidicwarrior", "byoapiId": "cl3anslat3"} ] } ] 
+                },
+                {
+                    "name": "Ranger Subclass",
+                    "minimumLevel": 3,
+                    "text": [
+                        {"header": "",  "entries": [ "You gain a Ranger subclass of your choice. A subclass is a specialization that grants you features at certain Ranger levels. For the rest of your career, you gain each of your subclass's features that are of your Ranger level or lower."]}
+                    ],
+                    "options": [ { "title": "Subclass", "items": [ { "id": "__subclassRanger" } ] } ] 
+                },
+                {
+                    "name": "Ability Score Improvement",
+                    "minimumLevel": 4,
+                    "text": [
+                        {"header": "",  "entries": [ "You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Ranger levels 8, 12, and 16."]}
+                    ],
+                    "options": [ { "title": "Ability Score", "maxSelect": 2, "andOr": "or", "items": [ { "id": "__abilityScores" } ] },
+                    { "title": "Feat", "andOr": "or", "items": [ { "id": "__featsGeneral" } ] } ] 
+                },
+                {
+                    "name": "Extra Attack",
+                    "minimumLevel": 5,
+                    "text": [
+                        {"header": "",  "entries": [ "You can attack twice instead of once whenever you take the Attack action on your turn."]}
+                    ]
+                },
+                {
+                    "name": "Roving",
+                    "minimumLevel": 6,
+                    "text": [
+                        {"header": "",  "entries": [ "Your Speed increases by 10 feet while you aren't wearing Heavy armor. You also have a Climb Speed and a Swim Speed equal to your Speed."]}
+                    ],
+                    "effects": [ { "type": "increment", "target": "spd_walk", "value": 10 }, { "type": "addition", "target": "spd_climb", "valueFrom": "spd_walk" }
+                    , { "type": "addition", "target": "spd_swim", "valueFrom": "spd_walk" } ]
+                },
+                {
+                    "name": "Ability Score Improvement",
+                    "minimumLevel": 8,
+                    "text": [
+                        {"header": "",  "entries": [ "You gain the Ability Score Improvement feat or another feat of your choice for which you qualify."]}
+                    ],
+                    "options": [ { "title": "Ability Score", "maxSelect": 2, "andOr": "or", "items": [ { "id": "__abilityScores" } ] },
+                    { "title": "Feat", "andOr": "or", "items": [ { "id": "__featsGeneral" } ] } ] 
+                },
+                {
+                    "name": "Experties",
+                    "minimumLevel": 9,
+                    "text": [
+                        {"header": "",  "entries": [ "Choose two of your skill proficiencies with which you lack Expertise. You gain Expertise in those skills"]}
+                    ],
+                    "options": [ { "title": "Experties", "items": [ { "id": "__profSkills" } ] } ] 
+                },
+                {
+                    "name": "Tireless",
+                    "minimumLevel": 10,
+                    "text": [
+                        {"header": "",  "entries": [ "Primal forces now help fuel you on your journeys, granting you the following benefits."]},
+                        {"header": "Temporary Hit Points",  "entries": [ "As a Magic action, you can give yourself a number of Temporary Hit Points equal to 1d8 plus your Wisdom modifier (minimum of 1). You can use this action a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest."]},
+                        {"header": "Decrease Exhaustion",  "entries": [ "Whenever you finish a Short Rest, your Exhaustion level, if any, decreases by 1."]}
+                    ],
+                    "options": [ { "title": "Experties", "items": [ { "id": "__profSkills" } ] } ],
+                    "effects": [ { "type": "addition", "feats": [ { "id": "feat-cl-rangertemphp", "byoapiId": "cl3anslat3"}, { "id": "feat-cl-rangerdecexhaustion", "byoapiId": "cl3anslat3"} ] } ]
+                },
+                {
+                    "name": "Ability Score Improvement",
+                    "minimumLevel": 12,
+                    "text": [
+                        {"header": "",  "entries": [ "You gain the Ability Score Improvement feat or another feat of your choice for which you qualify."]}
+                    ],
+                    "options": [ { "title": "Ability Score", "maxSelect": 2, "andOr": "or", "items": [ { "id": "__abilityScores" } ] },
+                    { "title": "Feat", "andOr": "or", "items": [ { "id": "__featsGeneral" } ] } ] 
+                },
+                {
+                    "name": "Relentless Hunter",
+                    "minimumLevel": 13,
+                    "text": [
+                        {"header": "",  "entries": [ "Taking damage can't break your Concentration on Hunter's Mark."]}
+                    ]
+                },
+                {
+                    "name": "Nature's Veil",
+                    "minimumLevel": 14,
+                    "text": [
+                        {"header": "",  "entries": [ "You invoke spirits of nature to magically hide yourself. As a Bonus Action, you can give yourself the Invisible condition until the end of your next turn."]},
+                        {"header": "",  "entries": [ "You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest."]}
+                    ],
+                    "effects": [ { "type": "addition", "actions": [ { "id": "act-naturesveil", "byoapiId": "cl3anslat3"} ] } ]
+                },
+                {
+                    "name": "Ability Score Improvement",
+                    "minimumLevel": 16,
+                    "text": [
+                        {"header": "",  "entries": [ "You gain the Ability Score Improvement feat or another feat of your choice for which you qualify."]}
+                    ],
+                    "options": [ { "title": "Ability Score", "maxSelect": 2, "andOr": "or", "items": [ { "id": "__abilityScores" } ] },
+                    { "title": "Feat", "andOr": "or", "items": [ { "id": "__featsGeneral" } ] } ] 
+                },
+                {
+                    "name": "Precise Hunter",
+                    "minimumLevel": 17,
+                    "text": [
+                        {"header": "",  "entries": [ "You have Advantage on attack rolls against the creature currently marked by your Hunter's Mark."]}
+                    ]
+                },
+                {
+                    "name": "Feral Senses",
+                    "minimumLevel": 18,
+                    "text": [
+                        {"header": "",  "entries": [ "Your connection to the forces of nature grants you Blindsight with a range of 30 feet."]}
+                    ],
+                    "effects": [ { "type": "addition", "target": "sense-blindsight", "value": 30 } ]
+                },
+                {
+                    "name": "Epic Boon",
+                    "minimumLevel": 19,
+                    "text": [
+                        {"header": "",  "entries": [ "You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended."]}
+                    ],
+                    "options": [ { "title": "Epic Boon", "items": [ { "id": "__featsEpicBoons" } ] } ] 
+                },
+                {
+                    "name": "Foe Slayer",
+                    "minimumLevel": 20,
+                    "text": [
+                        {"header": "",  "entries": [ "The damage die of your Hunter's Mark is a d10 rather than a d6."]}
+                    ],
+                    "effects": [ { "type": "replaceDice", "target": "spll-huntersmark", "dice": "d10" } ]
+                }
+            ]
+        }
+    ]
+}

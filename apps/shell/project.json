@@ -40,7 +40,13 @@
           "outputHashing": "all",
           "customWebpackConfig": {
             "path": "apps/shell/webpack.prod.config.js"
-          }
+          },
+          "fileReplacements": [
+            {
+              "replace": "apps/shell/src/environments/environment.ts",
+              "with": "apps/shell/src/environments/environment.prod.ts"
+            }
+          ]
         },
         "development": {
           "buildOptimizer": false,
@@ -48,7 +54,13 @@
           "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
-          "namedChunks": true
+          "namedChunks": true,
+          "fileReplacements": [
+            {
+              "replace": "apps/shell/src/environments/environment.ts",
+              "with": "apps/shell/src/environments/environment.dev.ts"
+            }
+          ]
         }
       },
       "defaultConfiguration": "production"

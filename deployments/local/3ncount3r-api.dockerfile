@@ -1,7 +1,7 @@
-FROM ghcr.io/dragon-ion-za/3ncount3r-api:bagofbeans-6thlevel
+FROM 3ncount3r-calllightning-cantrip-5
 
 WORKDIR /api
 
-COPY config/3ncount3r/** ./config/
+COPY config/3ncount3r/** ./
 
-CMD ["node", "api.bundle.js"]
+ENTRYPOINT ["dotnet", "DDD.3ncount3r.API.dll"]

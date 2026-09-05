@@ -1,8 +1,11 @@
 const path = require('path');
 const config = require('config');
 
+import { createFilter } from 'odata-v4-inmemory'
+
 import { creatureEntityToModelConverter } from "../converters/creature.converter";
 import { CreatureEntity } from "../entities/creature.entity";
+import { LegendaryGroupEntity } from "../entities/legendary-group.entity";
 import { CreatureModel } from "../models/creature.model";
 import { readFile } from "../services/readFile.service";
 
@@ -10,6 +13,10 @@ export class CreaturesController {
 
     public static getCreatures = (req: any, res: any) => {    
         res.send(this.doCreatureSearch(req.query.$filter ?? '', req.protocol + '://' + req.get('host')));
+    }
+
+    public static queryCreatures = (req: any, res: any) => {
+        res.send(this.doCreatureSearch(req.body.filter ?? '', req.protocol + '://' + req.get('host')));
     }
 
     public static getCreature = (req: any, res: any) => {
@@ -27,48 +34,26 @@ export class CreaturesController {
 
     private static doCreatureSearch = (query: string, hostString: string): CreatureModel[] => {
         const files = config.get("bestiaries") as string[];
+        const legendaryDataFiles = config.get("legendary") as string[];
         
         let creatures: CreatureModel[] = [];
-        let dataFilter = this.buildOdataCreatureFilter(query);
+        let dataFilter = createFilter(query);
         
-        let legendaryGroups = readFile(`${config.get("dataFileRoot")}data/bestiary/legendarygroups.json`);
+        let legendaryGroups: LegendaryGroupEntity[] = [];
+        legendaryDataFiles.forEach(file => {
+            let legendaryFile = readFile(`${config.get("dataFileRoot")}data/bestiary/${file}`);            
+            legendaryGroups.push(legendaryFile.legendaryGroup);
+        });
     
         files.forEach(file => {
             let jsonCreatures = readFile(`${config.get("dataFileRoot")}data/bestiary/${file}`);
             jsonCreatures.monster
-                .filter((x: CreatureEntity) => x._copy == null)
-                .filter((x: CreatureEntity) => dataFilter(x))
-                .map((x: CreatureEntity) => creatureEntityToModelConverter(hostString, x, legendaryGroups.legendaryGroup))
+                .filter((x: CreatureEntity) => x.copyFrom == null)
+                .filter(dataFilter)
+                .map((x: CreatureEntity) => creatureEntityToModelConverter(hostString, x, legendaryGroups))
                 .forEach((x: CreatureModel) => creatures.push(x));
         });
         
         return creatures;
     }
-    
-    private static buildOdataCreatureFilter(reqQuery: string) : (x: CreatureEntity) => any {
-    
-        if (reqQuery !== undefined) {
-            let filterValues: string[] = reqQuery.split(' ');
-    
-            return (x: CreatureEntity) => { 
-                type ObjectKey = keyof typeof x;
-                const filterKey = filterValues[0] as ObjectKey;
-    
-                let searchValue = filterValues.slice(2).join(' ');
-    
-                switch (filterValues[1]) {
-                    case 'like':
-                        return (x[filterKey] as string).toLocaleLowerCase().indexOf(searchValue) > -1;
-    
-                    default:
-                        return (x[filterKey] as string) === searchValue;
-                }
-    
-                
-            };
-        }
-    
-        return (x: CreatureEntity) => { return true; };
-    }
-
 }
