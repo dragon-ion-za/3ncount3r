@@ -1,4 +1,4 @@
-using AutoMapper;
+﻿using AutoMapper;
 using DDD.charact3r.API.Models;
 using DDD.charact3r.API.ViewModels;
 using MongoDB.Bson;
@@ -16,9 +16,16 @@ namespace DDD.charact3r.API.MapperProfiles
       CreateMap<CharacterClassModel, CharacterClassViewModel>().ReverseMap();
       CreateMap<HitpointModel, HitpointViewModel>().ReverseMap();
       CreateMap<MovementSpeedModel, MovementSpeedViewModel>().ReverseMap();
-      CreateMap<BonusModel, CharacterClassViewModel>().ReverseMap();
+      CreateMap<BonusModel, BonusViewModel>().ReverseMap();
       CreateMap<FeatModel, FeatViewModel>().ReverseMap();
       CreateMap<EquipmentModel, EquipmentViewModel>().ReverseMap();
+      CreateMap<ProficiencyModel, ProficiencyViewModel>().ReverseMap();
+      CreateMap<SkillProficiencyModel, SkillProficiencyViewModel>().ReverseMap();
+      CreateMap<SpellcastingModel, SpellcastingViewModel>().ReverseMap();
+      CreateMap<SpellcastingClassModel, SpellcastingClassViewModel>().ReverseMap();
+      CreateMap<SpellRefModel, SpellRefViewModel>().ReverseMap();
+      CreateMap<SlotTrackerModel, SlotTrackerViewModel>().ReverseMap();
+      CreateMap<PactMagicModel, PactMagicViewModel>().ReverseMap();
     }
   }
 }

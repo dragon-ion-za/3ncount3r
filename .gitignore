@@ -371,3 +371,5 @@ FodyWeavers.xsd
 /deployments/mine
 /.github/workflows/notes.txt
 /apps/shell/src/environments/environment.dev.ts
+/.kiro/skills
+/_bmad

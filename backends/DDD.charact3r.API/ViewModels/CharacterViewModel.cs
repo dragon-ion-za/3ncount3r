@@ -1,4 +1,4 @@
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace DDD.charact3r.API.ViewModels
 {
@@ -36,6 +36,12 @@ namespace DDD.charact3r.API.ViewModels
     [JsonPropertyName("bonuses")]
     public IEnumerable<BonusViewModel> Bonuses { get; set; }
 
+    [JsonPropertyName("proficiencies")]
+    public ProficiencyViewModel Proficiencies { get; set; }
+
+    [JsonPropertyName("spellcasting")]
+    public SpellcastingViewModel Spellcasting { get; set; }
+
     [JsonPropertyName("languages")]
     public IEnumerable<string> Languages { get; set; }
 
@@ -56,6 +62,18 @@ namespace DDD.charact3r.API.ViewModels
 
     [JsonPropertyName("byoapiId")]
     public string ByoapiId { get; set; }
+
+    [JsonPropertyName("subclass")]
+    public string Subclass { get; set; }
+
+    [JsonPropertyName("isPrimaryClass")]
+    public bool IsPrimaryClass { get; set; }
+
+    [JsonPropertyName("casterType")]
+    public string CasterType { get; set; }
+
+    [JsonPropertyName("hitDie")]
+    public string HitDie { get; set; }
   }
 
   public class EquipmentViewModel
@@ -122,5 +140,104 @@ namespace DDD.charact3r.API.ViewModels
 
     [JsonPropertyName("byoapiId")]
     public string ByoapiId { get; set; }
+  }
+
+  public class ProficiencyViewModel
+  {
+    [JsonPropertyName("savingThrows")]
+    public IEnumerable<string> SavingThrows { get; set; }
+
+    [JsonPropertyName("skills")]
+    public IEnumerable<SkillProficiencyViewModel> Skills { get; set; }
+
+    [JsonPropertyName("armor")]
+    public IEnumerable<string> Armor { get; set; }
+
+    [JsonPropertyName("weapons")]
+    public IEnumerable<string> Weapons { get; set; }
+
+    [JsonPropertyName("tools")]
+    public IEnumerable<string> Tools { get; set; }
+
+    [JsonPropertyName("halfProficiencyAll")]
+    public bool HalfProficiencyAll { get; set; }
+
+    [JsonPropertyName("reliableTalent")]
+    public bool ReliableTalent { get; set; }
+  }
+
+  public class SkillProficiencyViewModel
+  {
+    [JsonPropertyName("skill")]
+    public string Skill { get; set; }
+
+    [JsonPropertyName("expertise")]
+    public bool Expertise { get; set; }
+  }
+
+  public class SpellcastingViewModel
+  {
+    [JsonPropertyName("classes")]
+    public IEnumerable<SpellcastingClassViewModel> Classes { get; set; }
+
+    [JsonPropertyName("spellSlots")]
+    public Dictionary<string, SlotTrackerViewModel> SpellSlots { get; set; }
+
+    [JsonPropertyName("pactMagic")]
+    public PactMagicViewModel PactMagic { get; set; }
+  }
+
+  public class SpellcastingClassViewModel
+  {
+    [JsonPropertyName("className")]
+    public string ClassName { get; set; }
+
+    [JsonPropertyName("ability")]
+    public string Ability { get; set; }
+
+    [JsonPropertyName("preparationType")]
+    public string PreparationType { get; set; }
+
+    [JsonPropertyName("cantripsKnown")]
+    public int CantripsKnown { get; set; }
+
+    [JsonPropertyName("spells")]
+    public IEnumerable<SpellRefViewModel> Spells { get; set; }
+  }
+
+  public class SpellRefViewModel
+  {
+    [JsonPropertyName("id")]
+    public string Id { get; set; }
+
+    [JsonPropertyName("byoapiId")]
+    public string ByoapiId { get; set; }
+
+    [JsonPropertyName("level")]
+    public int Level { get; set; }
+
+    [JsonPropertyName("prepared")]
+    public bool Prepared { get; set; }
+  }
+
+  public class SlotTrackerViewModel
+  {
+    [JsonPropertyName("max")]
+    public int Max { get; set; }
+
+    [JsonPropertyName("used")]
+    public int Used { get; set; }
+  }
+
+  public class PactMagicViewModel
+  {
+    [JsonPropertyName("slotLevel")]
+    public int SlotLevel { get; set; }
+
+    [JsonPropertyName("slots")]
+    public SlotTrackerViewModel Slots { get; set; }
+
+    [JsonPropertyName("spells")]
+    public IEnumerable<SpellRefViewModel> Spells { get; set; }
   }
 }
