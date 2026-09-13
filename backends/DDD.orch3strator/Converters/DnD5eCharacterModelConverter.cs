@@ -1,11 +1,11 @@
-using DDD.orch3strator.Models.CharacterService;
+using DDD.Common.Contracts.Character;
 using DDD.orch3strator.ViewModels.DnD5e;
 
 namespace DDD.orch3strator.Converters
 {
-  public class DnD5eCharacterModelConverter : IModelConverter<CharacterModel, CharacterViewModel>
+  public class DnD5eCharacterModelConverter : IModelConverter<CharacterContract, CharacterViewModel>
   {
-    public CharacterViewModel Convert(CharacterModel model)
+    public CharacterViewModel Convert(CharacterContract model)
     {
       return new CharacterViewModel()
       {
@@ -15,8 +15,8 @@ namespace DDD.orch3strator.Converters
         Name = model.Name,
 
         // Other details
-        Classes = model.Classes.Select(x => new CharacterClassViewModel() { Level = x.Level, Name = x.Id }).ToList(),
-        //Race = model.Race.Id,
+        Classes = model.Classes?.Select(x => new CharacterClassViewModel() { Level = x.Level, Name = x.Id }).ToList() ?? new List<CharacterClassViewModel>(),
+        Race = model.Race?.Id,
 
         // Attributes
         AttributeCha = model.Attributes.First(x => x.Key == "cha").Value,
@@ -38,9 +38,9 @@ namespace DDD.orch3strator.Converters
       };
     }
 
-    public CharacterModel ConvertReverse(CharacterViewModel viewModel)
+    public CharacterContract ConvertReverse(CharacterViewModel viewModel)
     {
-      return new CharacterModel()
+      return new CharacterContract()
       {
         // Generic data
         Id = viewModel.Id,
@@ -63,21 +63,21 @@ namespace DDD.orch3strator.Converters
         },
 
         // Hitpoints
-        Hitpoints = new List<HitpointModel>() { new HitpointModel() { Type = "current", Maximum = viewModel.HitpointMaximum } },
+        Hitpoints = new List<HitpointContract>() { new HitpointContract() { Type = "current", Maximum = viewModel.HitpointMaximum } },
 
         // Movement speeds
-        MovementSpeeds = new List<MovementSpeedModel>()
+        MovementSpeeds = new List<MovementSpeedContract>()
         {
-          new MovementSpeedModel() { Type = "spd-fly", Value = viewModel.FlyingSpeed },
-          new MovementSpeedModel() { Type = "spd-walk", Value = viewModel.WalkingSpeed },
-          new MovementSpeedModel() { Type = "spd-climb", Value = viewModel.ClimbingSpeed },
-          new MovementSpeedModel() { Type = "spd-swim", Value = viewModel.SwimmingSpeed },
-          new MovementSpeedModel() { Type = "spd-burrow", Value = viewModel.BurrowingSpeed },
+          new MovementSpeedContract() { Type = "spd-fly", Value = viewModel.FlyingSpeed },
+          new MovementSpeedContract() { Type = "spd-walk", Value = viewModel.WalkingSpeed },
+          new MovementSpeedContract() { Type = "spd-climb", Value = viewModel.ClimbingSpeed },
+          new MovementSpeedContract() { Type = "spd-swim", Value = viewModel.SwimmingSpeed },
+          new MovementSpeedContract() { Type = "spd-burrow", Value = viewModel.BurrowingSpeed },
         },
       };
     }
 
-    public IEnumerable<CharacterViewModel> Map(IEnumerable<CharacterModel> model)
+    public IEnumerable<CharacterViewModel> Map(IEnumerable<CharacterContract> model)
     {
       List<CharacterViewModel> list = new List<CharacterViewModel>();
 

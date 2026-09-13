@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using DDD.charact3r.API.Models;
-using DDD.charact3r.API.ViewModels;
+using DDD.Common.Contracts.Character;
 using MongoDB.Bson;
 
 namespace DDD.charact3r.API.MapperProfiles
@@ -9,23 +9,23 @@ namespace DDD.charact3r.API.MapperProfiles
   {
     public CharacterMapperProfile()
     {
-      CreateMap<CharacterModel, CharacterViewModel>()
+      CreateMap<CharacterModel, CharacterContract>()
         .ReverseMap()
         .ForMember(dest => dest.Id, m => m.MapFrom(source => string.IsNullOrEmpty(source.Id) ? ObjectId.Empty : ObjectId.Parse(source.Id)));
-      CreateMap<RaceModel, RaceViewModel>().ReverseMap();
-      CreateMap<CharacterClassModel, CharacterClassViewModel>().ReverseMap();
-      CreateMap<HitpointModel, HitpointViewModel>().ReverseMap();
-      CreateMap<MovementSpeedModel, MovementSpeedViewModel>().ReverseMap();
-      CreateMap<BonusModel, BonusViewModel>().ReverseMap();
-      CreateMap<FeatModel, FeatViewModel>().ReverseMap();
-      CreateMap<EquipmentModel, EquipmentViewModel>().ReverseMap();
-      CreateMap<ProficiencyModel, ProficiencyViewModel>().ReverseMap();
-      CreateMap<SkillProficiencyModel, SkillProficiencyViewModel>().ReverseMap();
-      CreateMap<SpellcastingModel, SpellcastingViewModel>().ReverseMap();
-      CreateMap<SpellcastingClassModel, SpellcastingClassViewModel>().ReverseMap();
-      CreateMap<SpellRefModel, SpellRefViewModel>().ReverseMap();
-      CreateMap<SlotTrackerModel, SlotTrackerViewModel>().ReverseMap();
-      CreateMap<PactMagicModel, PactMagicViewModel>().ReverseMap();
+      CreateMap<RaceModel, RaceContract>().ReverseMap();
+      CreateMap<CharacterClassModel, CharacterClassContract>().ReverseMap();
+      CreateMap<HitpointModel, HitpointContract>().ReverseMap();
+      CreateMap<MovementSpeedModel, MovementSpeedContract>().ReverseMap();
+      CreateMap<BonusModel, BonusContract>().ReverseMap();
+      CreateMap<FeatModel, FeatContract>().ReverseMap();
+      CreateMap<EquipmentModel, EquipmentContract>().ReverseMap();
+      CreateMap<ProficiencyModel, ProficiencyContract>().ReverseMap();
+      CreateMap<SkillProficiencyModel, SkillProficiencyContract>().ReverseMap();
+      CreateMap<SpellcastingModel, SpellcastingContract>().ReverseMap();
+      CreateMap<SpellcastingClassModel, SpellcastingClassContract>().ReverseMap();
+      CreateMap<SpellRefModel, SpellRefContract>().ReverseMap();
+      CreateMap<SlotTrackerModel, SlotTrackerContract>().ReverseMap();
+      CreateMap<PactMagicModel, PactMagicContract>().ReverseMap();
     }
   }
 }

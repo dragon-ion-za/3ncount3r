@@ -1,0 +1,305 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Create `CharacterContract` and all nested contract types": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304478163
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304488930
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304601609
+      }
+    ],
+    "2. Verify `DDD.Common` builds clean": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304478285
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304831512
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789308479853
+      }
+    ],
+    "3.1 Update `CharacterMapperProfile` to map model ↔ contract": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304478410
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304612874
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304724916
+      }
+    ],
+    "3.2 Update charact3r `CharactersController` to use the contract": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304478505
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304614312
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304726055
+      }
+    ],
+    "3.3 Delete the old charact3r view model": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304478598
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789308492886
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789312077482
+      }
+    ],
+    "4. Verify `DDD.charact3r.API` builds clean": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304478683
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789312082350
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789312094828
+      }
+    ],
+    "5.1 Update `Services/CharacterService.cs`": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304478764
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304615272
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304723451
+      }
+    ],
+    "5.2 Update orchestrator DI registration in `Program.cs`": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304478849
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304616644
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304727225
+      }
+    ],
+    "5.3 Update `DnD5eCharacterStrategy`": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304478941
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304732909
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304805454
+      }
+    ],
+    "5.4 Update `DnD5eEncounterStrategy`": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304479016
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304733864
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304806399
+      }
+    ],
+    "5.5 Update `DnD5ePartyStrategy`": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304479106
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304734835
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304807237
+      }
+    ],
+    "5.6 Update `DnD5eCharacterModelConverter` input type": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304479195
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304617360
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304727924
+      }
+    ],
+    "5.7 Delete the old orchestrator character model": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304479276
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789312101931
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789318350624
+      }
+    ],
+    "6.1 Finalize `Classes` and `Race` projections in `DnD5eCharacterModelConverter.Convert`": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304479361
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789318356118
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789319512526
+      }
+    ],
+    "7. Verify `DDD.orch3strator` builds clean": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304479441
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789319518406
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789320006572
+      }
+    ],
+    "8. Final checkpoint - Full solution build and drift-free confirmation": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304479533
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789320013236
+      },
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789323755272
+      }
+    ],
+    "1. Add the shared `CharacterContract` to `DDD.Common`": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789304601717
+      }
+    ],
+    "3. Repoint `DDD.charact3r.API` at the shared contract": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789312077589
+      }
+    ],
+    "5. Repoint `DDD.orch3strator` at the shared contract (all six sites)": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789318350720
+      }
+    ],
+    "6. Re-enable class and race mapping in the converter": [
+      {
+        "executionId": "d4712093-58a1-43d7-a8a5-c5e7c8904c4d",
+        "chatSessionId": "sess_5cd58163-5ea5-4b71-af1c-cdfee16239dd",
+        "timestamp": 1789319512632
+      }
+    ]
+  }
+}

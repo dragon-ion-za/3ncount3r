@@ -1,6 +1,6 @@
 using DDD.Byoapi.Integrations.Services;
+using DDD.Common.Contracts.Character;
 using DDD.orch3strator.Converters;
-using DDD.orch3strator.Models.CharacterService;
 using DDD.orch3strator.Services;
 using DDD.orch3strator.ViewModels;
 using DDD.orch3strator.ViewModels.DnD5e;
@@ -13,10 +13,10 @@ namespace DDD.orch3strator.Strategies.Characters
   {
     protected override string RuleSystem { get { return "dnd5e"; } }
 
-    private readonly DataApiBaseService<CharacterModel> _characterService;
+    private readonly DataApiBaseService<CharacterContract> _characterService;
     private readonly IByoapiService _dataService;
 
-    public DnD5eCharacterStrategy(DataApiBaseService<CharacterModel> characterService, IByoapiService byoapiService)
+    public DnD5eCharacterStrategy(DataApiBaseService<CharacterContract> characterService, IByoapiService byoapiService)
     {
       _characterService = characterService;
       _dataService = byoapiService;
@@ -27,7 +27,7 @@ namespace DDD.orch3strator.Strategies.Characters
       // This call and post in-memory filtering is really shit, but it will do for now.
       // In the future, this should change to OData. For now, load should be minimal (I really don't see a user having
       // millions of characters but stranger things have happened)
-      IEnumerable<CharacterModel> models = await _characterService.GetList(RuleSystem, userId);
+      IEnumerable<CharacterContract> models = await _characterService.GetList(RuleSystem, userId);
       models = models.Where(x => x.Name.IndexOf(characterName, StringComparison.OrdinalIgnoreCase) >= 0);
 
       DnD5eCharacterModelConverter modelConverter = new DnD5eCharacterModelConverter();
@@ -44,7 +44,7 @@ namespace DDD.orch3strator.Strategies.Characters
     {
       DnD5eCharacterModelConverter modelConverter = new DnD5eCharacterModelConverter();
 
-      CharacterModel model = modelConverter.ConvertReverse(viewModel.Deserialize<CharacterViewModel>());
+      CharacterContract model = modelConverter.ConvertReverse(viewModel.Deserialize<CharacterViewModel>());
       model.UserId = userId;
       model = await _characterService.Insert(RuleSystem, model);
 
@@ -55,7 +55,7 @@ namespace DDD.orch3strator.Strategies.Characters
     {
       DnD5eCharacterModelConverter modelConverter = new DnD5eCharacterModelConverter();
 
-      CharacterModel model = modelConverter.ConvertReverse(viewModel.Deserialize<CharacterViewModel>());
+      CharacterContract model = modelConverter.ConvertReverse(viewModel.Deserialize<CharacterViewModel>());
       model.UserId = userId;
       model = await _characterService.Update(RuleSystem, model);
 

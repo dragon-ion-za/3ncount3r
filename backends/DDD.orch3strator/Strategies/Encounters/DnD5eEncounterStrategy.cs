@@ -1,7 +1,7 @@
 using DDD.Byoapi.Integrations.Models;
 using DDD.Byoapi.Integrations.Services;
+using DDD.Common.Contracts.Character;
 using DDD.orch3strator.Converters;
-using DDD.orch3strator.Models.CharacterService;
 using DDD.orch3strator.Models.EncounterService;
 using DDD.orch3strator.Services;
 using DDD.orch3strator.ViewModels;
@@ -16,10 +16,10 @@ namespace DDD.orch3strator.Strategies.Encounters
     protected override string RuleSystem { get { return "dnd5e"; } }
 
     private readonly DataApiBaseService<EncounterModel> _encounterService;
-    private readonly DataApiBaseService<CharacterModel> _characterService;
+    private readonly DataApiBaseService<CharacterContract> _characterService;
     private readonly IByoapiService _dataService;
 
-    public DnD5eEncounterStrategy(DataApiBaseService<EncounterModel> encounterService, DataApiBaseService<CharacterModel> characterService, IByoapiService byoapiService)
+    public DnD5eEncounterStrategy(DataApiBaseService<EncounterModel> encounterService, DataApiBaseService<CharacterContract> characterService, IByoapiService byoapiService)
     {
       _encounterService = encounterService;
       _characterService = characterService;
@@ -71,7 +71,7 @@ namespace DDD.orch3strator.Strategies.Encounters
       }
 
       // Get Characters
-      List<CharacterModel> characters = new List<CharacterModel>();
+      List<CharacterContract> characters = new List<CharacterContract>();
       foreach (var characterId in model.Creatures.Where(x => x.IsPlayerCharacter).Select(x => x.Id))
       {
         characters.Add(await _characterService.GetById(RuleSystem, userId, characterId));
@@ -82,7 +82,7 @@ namespace DDD.orch3strator.Strategies.Encounters
 
       // Enrich the viemodel creatures with the creature data from the BYOAPIs
       IModelConverter<CreatureModel, CreatureViewModel> creatureConverter = new DnD5eCreatureModelConverter();
-      IModelConverter<CharacterModel, CharacterViewModel> characterConverter = new DnD5eCharacterModelConverter();
+      IModelConverter<CharacterContract, CharacterViewModel> characterConverter = new DnD5eCharacterModelConverter();
       viewModel.Creatures.ToList().ForEach(x =>
       {
         if (!x.IsPlayerCharacter)

@@ -1,6 +1,6 @@
 using AutoMapper;
 using DDD.charact3r.API.Models;
-using DDD.charact3r.API.ViewModels;
+using DDD.Common.Contracts.Character;
 using DDD.Common.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,33 +20,33 @@ namespace DDD.charact3r.API.Controllers
     }
 
     [HttpGet("{userId}")]
-    public async Task<IEnumerable<CharacterViewModel>> Get([FromRoute] string ruleSystem, [FromRoute] string userId)
+    public async Task<IEnumerable<CharacterContract>> Get([FromRoute] string ruleSystem, [FromRoute] string userId)
     {
       IEnumerable<CharacterModel> models = await _dataService.Get(userId, ruleSystem);
-      return _mapper.Map<IEnumerable<CharacterViewModel>>(models);
+      return _mapper.Map<IEnumerable<CharacterContract>>(models);
     }
 
     [HttpGet("{userId}/{id}")]
-    public async Task<CharacterViewModel> GetById([FromRoute] string ruleSystem, [FromRoute] string userId, [FromRoute] string id)
+    public async Task<CharacterContract> GetById([FromRoute] string ruleSystem, [FromRoute] string userId, [FromRoute] string id)
     {
       CharacterModel model = await _dataService.GetById(userId, ruleSystem, id);
-      return _mapper.Map<CharacterViewModel>(model);
+      return _mapper.Map<CharacterContract>(model);
     }
 
     [HttpPost]
-    public async Task<CharacterViewModel> Post([FromRoute] string ruleSystem, CharacterViewModel model)
+    public async Task<CharacterContract> Post([FromRoute] string ruleSystem, CharacterContract model)
     {
       string id = await _dataService.Insert(model.UserId, ruleSystem, _mapper.Map<CharacterModel>(model));
       CharacterModel viewModel = await _dataService.GetById(model.UserId, ruleSystem, id);
-      return _mapper.Map<CharacterViewModel>(viewModel);
+      return _mapper.Map<CharacterContract>(viewModel);
     }
 
     [HttpPut]
-    public async Task<CharacterViewModel> Put([FromRoute] string ruleSystem, CharacterViewModel model)
+    public async Task<CharacterContract> Put([FromRoute] string ruleSystem, CharacterContract model)
     {
       string id = await _dataService.Update(model.UserId, ruleSystem, _mapper.Map<CharacterModel>(model));
       CharacterModel viewModel = await _dataService.GetById(model.UserId, ruleSystem, id);
-      return _mapper.Map<CharacterViewModel>(viewModel);
+      return _mapper.Map<CharacterContract>(viewModel);
     }
   }
 }

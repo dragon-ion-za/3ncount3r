@@ -1,6 +1,6 @@
 using DDD.Byoapi.Integrations.Services;
+using DDD.Common.Contracts.Character;
 using DDD.orch3strator.Converters;
-using DDD.orch3strator.Models.CharacterService;
 using DDD.orch3strator.Models.PartyService;
 using DDD.orch3strator.Services;
 using DDD.orch3strator.ViewModels;
@@ -15,10 +15,10 @@ namespace DDD.orch3strator.Strategies.Parties
     protected override string RuleSystem { get { return "dnd5e"; } }
 
     private readonly DataApiBaseService<PartyModel> _partyService;
-    private readonly DataApiBaseService<CharacterModel> _characterService;
+    private readonly DataApiBaseService<CharacterContract> _characterService;
     private readonly IByoapiService _dataService;
 
-    public DnD5ePartyStrategy(DataApiBaseService<PartyModel> partyService, DataApiBaseService<CharacterModel> characterService, IByoapiService byoapiService)
+    public DnD5ePartyStrategy(DataApiBaseService<PartyModel> partyService, DataApiBaseService<CharacterContract> characterService, IByoapiService byoapiService)
     {
       _partyService = partyService;
       _dataService = byoapiService;
@@ -43,7 +43,7 @@ namespace DDD.orch3strator.Strategies.Parties
     {
       PartyModel model = await _partyService.GetById(RuleSystem, userId, id);
 
-      List<CharacterModel> characters = new List<CharacterModel>();
+      List<CharacterContract> characters = new List<CharacterContract>();
       foreach (var characterId in model.CharacterIds)
       {
         characters.Add(await _characterService.GetById(RuleSystem, userId, characterId));
